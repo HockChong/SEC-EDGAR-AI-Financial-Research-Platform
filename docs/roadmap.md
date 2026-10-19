@@ -1,6 +1,6 @@
 # Implementation roadmap — architecture 3.1
 
-Status: planned work only. Phase 0 delivers documentation; no later phase has started. Each listed work package is a separate assignment with audit → plan → implementation → verification → review → stop. Explicit authorization is required for the next package, even within one phase. A user may explicitly assign a whole phase; keep its packages bounded and report their individual outcomes within that authorized scope.
+Status: Phase 0 planning and Phase 1 foundation are implemented; see the [Phase 1 review](phase-1-review.md) for evidence and limits. Phases 2–8 remain planned. Each listed work package is a separate assignment with audit → plan → implementation → verification → review → stop. Explicit authorization is required for the next package, even within one phase. A user may explicitly assign a whole phase; keep its packages bounded and report their individual outcomes within that authorized scope.
 
 ## Sequence, estimates, and shared definition of done
 
@@ -22,7 +22,7 @@ Effort estimates assume one experienced full-time engineer, a small curated init
 
 Every package is done only when its assigned acceptance criteria pass, relevant tests actually execute, contracts/docs/ADRs match behavior, the diff has no secrets or unrelated changes, and the review records failures, skips, limitations, and the next package. Preserve code and data provenance. Stop at the assignment gate; do not automatically begin the next package.
 
-All paths below are proposed implementation locations. They do not exist merely because they appear in this roadmap.
+Paths below describe implementation destinations; consult the actual checkout and phase review to determine which exist. Phase 1 creates only the foundation modules needed for its scope.
 
 ## Phase 1 — Engineering foundation
 
@@ -169,4 +169,4 @@ All paths below are proposed implementation locations. They do not exist merely 
 
 ## Recommended next assignment
 
-Authorize **1A only** first: inspect the Phase 0 docs; verify Python/uv compatibility; create and lock the minimal package and test/tool dependencies; implement meaningful baseline tests; run install/build/lint/type/test checks; update the developer guide; then stop with a review. Database/Compose configuration follows in 1B, and CI/reusable cloud startup configuration follows in 1C.
+Phase 1 packages 1A–1C have been implemented under explicit whole-phase authorization. The next assignment is **2A: SEC transport and contracts**, after Phase 1 review and explicit authorization. No SEC client, download, discovery, or ingestion code is included in the foundation.

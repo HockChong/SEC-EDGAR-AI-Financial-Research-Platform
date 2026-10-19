@@ -4,7 +4,7 @@
 
 - Follow architecture version 3.1 in [requirements](docs/requirements.md) and the architecture documents. Inspect existing code, documentation, tests, configuration, and Git status before editing.
 - Implement only the explicitly assigned phase or work package. Do not combine major phases into an uncontrolled change. Stop at the end of every assigned package, report the results, and wait for explicit authorization to continue.
-- Phase 0 is documentation only. Application implementation starts only when a Phase 1 package is explicitly assigned. Documents that describe proposed modules or commands do not establish that those modules or commands exist.
+- Phase 0 is documentation only; Phase 1 foundation is now implemented. Later-phase modules in architecture diagrams remain proposed. Documents that describe proposed modules or commands do not establish that those modules or commands exist.
 - Each Codex cloud task already has an isolated environment. Use the existing checkout; do not create a Git worktree unless the user explicitly requests one. Use a feature branch or PR when available and appropriate; preserve the current branch and user work when changing it would be disruptive. Do not push or publish without authorization.
 
 ## Before implementation
@@ -45,4 +45,4 @@ At every phase or package gate report:
 5. Acceptance criteria satisfied or outstanding.
 6. The next recommended package, without starting it automatically.
 
-No application test commands exist at Phase 0. Do not invent passing test results or run later-phase implementation merely to satisfy a planning checklist.
+Run `bash scripts/check.sh` for locked dependencies, lint/format, strict typing, and offline tests. With `TEST_DATABASE_URL` set to a dedicated database ending in `_test`, it runs the entire suite. Integration tests create/drop uniquely named databases and require a role with CREATEDB; never point them at a user/production database. Run `bash scripts/verify-wheel.sh` for distribution validation. See [development instructions](docs/development.md) for Compose/build/start commands. Do not invent passing results or implement later phases to satisfy a checklist.

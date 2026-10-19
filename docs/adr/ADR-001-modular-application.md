@@ -1,6 +1,6 @@
 # ADR-001 — Modular application with explicit boundaries
 
-Status: Proposed. Architecture: 3.1. Implementation phase: 1.
+Status: Accepted for the Phase 1 foundation. Architecture: 3.1. Implementation phase: 1.
 
 ## Context
 
@@ -21,3 +21,7 @@ The frontend has its own build toolchain. Avoid duplicating authoritative financ
 ## Validation and reconsideration
 
 Phase 1 verifies package installation and imports, no network side effects, typed boundary tests, and API/worker entry-point configuration. Revisit a service split only for measured scaling, isolation, release, or ownership requirements. Record its transaction and failure model before separating deployment units.
+
+## Phase 1 evidence
+
+The typed package, configuration, health API, PostgreSQL adapter, and safe logging are implemented and tested. A wheel installs and imports outside the checkout. Only an API entry point is needed now; worker processes remain assigned to Phase 5. No empty placeholders for later components were created. See the [foundation review](../phase-1-review.md).

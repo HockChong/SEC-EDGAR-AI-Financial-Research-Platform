@@ -1,6 +1,6 @@
 # System overview — architecture 3.1
 
-Status: proposed design; no components are implemented in Phase 0. See [requirements](../requirements.md), [data architecture](data-architecture.md), and [AI architecture](ai-architecture.md).
+Status: target design. Phase 1 implements typed configuration, safe errors/logging, the PostgreSQL foundation, migrations, and health endpoints. Research, ingestion, datasets, and UI components remain proposed. See [requirements](../requirements.md), [data architecture](data-architecture.md), and [AI architecture](ai-architecture.md).
 
 ## Research flow
 

@@ -1,6 +1,6 @@
 # Deployment and observability architecture
 
-Status: proposed; no container, service, CI workflow, or cloud deployment exists yet. [ADR-008](../adr/ADR-008-deployment-security.md) records the local-to-cloud decision.
+Status: the local Phase 1 foundation, containers, migrations, and CI workflow are implemented; managed deployment remains proposed. See [development](../development.md) for tested commands. [ADR-008](../adr/ADR-008-deployment-security.md) records the local-to-cloud decision.
 
 ## Local development
 

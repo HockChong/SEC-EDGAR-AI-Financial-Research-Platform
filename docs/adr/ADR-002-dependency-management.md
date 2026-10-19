@@ -1,6 +1,6 @@
 # ADR-002 — Locked, reproducible development dependencies
 
-Status: Proposed. Architecture: 3.1. Implementation phase: 1.
+Status: Accepted. Architecture: 3.1. Implementation phase: 1.
 
 ## Context
 
@@ -21,3 +21,7 @@ Exact pins require scheduled maintenance and security updates. A lockfile does n
 ## Validation and reconsideration
 
 Package 1A must demonstrate a clean frozen install, nonzero baseline tests, lint/type checks, and package build. Package 1B verifies PostgreSQL/pgvector and migrations. Add framework packages incrementally when their phases begin, preserving a compatible lock. Revisit tooling only for a documented packaging/platform problem, not preference alone.
+
+## Phase 1 evidence
+
+Python 3.12.14 and uv 0.12.23 are pinned with verified FastAPI/Pydantic, SQLAlchemy/psycopg, Alembic, pytest, Ruff, and mypy dependencies. `httpx2` is used by the current Starlette TestClient. Frozen installation, strict typing, nonzero tests, wheel/sdist creation, and a clean installed-wheel smoke check passed. Exact versions and commands are in [development](../development.md). Frontend dependencies remain deferred.

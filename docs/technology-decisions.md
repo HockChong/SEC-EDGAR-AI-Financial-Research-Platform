@@ -1,6 +1,6 @@
 # Technology decision matrix
 
-All selections below are proposed; compatibility and exact versions must be verified during their assigned packages. This matrix summarizes rationale; ADRs contain decision details.
+Phase 1 verifies and pins foundation choices; see [development](development.md) for exact versions. Later-phase selections remain proposed and require validation in their assigned packages. This matrix summarizes rationale; ADRs contain decision details.
 
 | Area | Proposed choice | Alternatives and tradeoff | Adoption or revisit condition |
 | --- | --- | --- | --- |

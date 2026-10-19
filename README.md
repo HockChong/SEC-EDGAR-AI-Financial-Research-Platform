@@ -2,7 +2,25 @@
 
 An AI-first research platform designed to answer questions about public companies using SEC filings, structured XBRL facts, deterministic calculations, and verifiable citations.
 
-**Status: Phase 0 planning complete; application implementation has not started.** Architecture version: **3.1**. The repository currently contains design and governance documents only. There is no running API, UI, ingestion pipeline, database, model integration, or benchmark result. No installation command is available yet.
+**Status: Phase 1 engineering foundation implemented.** Architecture version: **3.1**. The repository provides a typed Python package, safe configuration/logging, a health-only FastAPI service, PostgreSQL/pgvector development infrastructure, migrations, tests, and CI. SEC ingestion, research, model integrations, financial calculations, and the frontend remain future work.
+
+## Run the foundation
+
+Prerequisites: Python **3.12.14**, uv **0.12.23**, Docker Engine and Compose v2. From the repository root:
+
+```bash
+bash scripts/setup.sh
+bash scripts/start.sh
+```
+
+The API binds to loopback on port 8000. Check `/health/live` and `/health/ready` with a local HTTP client. Setup explicitly applies migrations; API startup does not migrate the database. See [development instructions](docs/development.md) for container startup, configuration, integration tests, and troubleshooting.
+
+```bash
+bash scripts/check.sh              # lint, format, strict typing, offline tests
+bash scripts/verify-wheel.sh       # build and validate a wheel outside the checkout
+```
+
+The database uses public disposable development credentials and a persistent Compose volume. This foundation supports isolated development only; shared deployment and authentication are assigned to Phase 7.
 
 ## Intended research experience
 
@@ -38,12 +56,14 @@ See the [system overview](docs/architecture/system-overview.md) for component bo
 | [Evaluation strategy](docs/evaluation-strategy.md) | Datasets, metrics, baselines, and release gates |
 | [Roadmap](docs/roadmap.md) | Phases 1–8, work packages, acceptance criteria, and effort estimates |
 | [Phase 0 review](docs/phase-0-review.md) | Audit, completion checklist, risks, and recommended next package |
+| [Development guide](docs/development.md) | Tested installation, configuration, services, migrations, and checks |
+| [Phase 1 review](docs/phase-1-review.md) | Foundation implementation, verification evidence, and limitations |
 | [AGENTS.md](AGENTS.md) | Instructions for future development agents |
 
 ## Development status and next step
 
-Phase 0 introduces no runtime dependencies or application features. Python project metadata, a lockfile, Compose configuration, CI, and baseline tests belong to Phase 1. Exact tool and dependency versions must be selected and verified together in its first package.
+Phase 1 implements packages 1A–1C. Dependencies are pinned in `pyproject.toml` and `uv.lock`; container images and CI actions are pinned to immutable digests/revisions. The CI workflow builds distributions and validates containers; cloud deployment automation remains in Phase 7.
 
-Recommended next assignment: **Phase 1, package 1A — Python package and reproducible tooling**. Explicit authorization is required before starting that package. Each subsequent package also ends with a review gate; see the [execution rules](AGENTS.md) and [roadmap](docs/roadmap.md).
+Recommended next assignment: **Phase 2, package 2A — SEC transport and contracts**. It requires explicit authorization and a real SEC contact identity before live access. Phase 2 has not started. See the [Phase 1 review](docs/phase-1-review.md), [execution rules](AGENTS.md), and [roadmap](docs/roadmap.md).
 
 This is a portfolio project under development. Production readiness, financial accuracy, security, performance, and deployment are goals to demonstrate through evidence, not current guarantees.

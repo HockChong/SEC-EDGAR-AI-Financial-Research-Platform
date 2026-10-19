@@ -1,0 +1,65 @@
+[build-system]
+requires = ["hatchling==1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sec-research"
+version = "0.1.0"
+description = "SEC EDGAR financial research platform: engineering foundation"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "alembic==1.20.0",
+    "fastapi==0.146.0",
+    "psycopg[binary]==3.3.6",
+    "pydantic==2.14.1",
+    "pydantic-settings==2.16.0",
+    "sqlalchemy==2.1.5",
+    "uvicorn==0.54.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sec_research"]
+
+[tool.hatch.build.targets.sdist]
+include = ["/src", "/tests", "/migrations", "/scripts", "/docs", "/README.md", "/AGENTS.md", "/pyproject.toml", "/uv.lock", "/alembic.ini", "/compose.yaml", "/Dockerfile", "/.python-version", "/.env.example", "/.dockerignore"]
+
+[tool.uv]
+required-version = "==0.12.23"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+extend-exclude = [".uv-cache", ".runtime"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+explicit_package_bases = true
+mypy_path = "$MYPY_CONFIG_FILE_DIR/src"
+files = ["src", "tests", "migrations"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--strict-config --strict-markers -ra"
+markers = ["integration: requires a dedicated PostgreSQL database via TEST_DATABASE_URL"]
+filterwarnings = ["error"]
+
+[tool.coverage.run]
+source = ["sec_research"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+
+[dependency-groups]
+dev = [
+    "httpx2==2.14.0",
+    "mypy==2.4.0",
+    "pytest==9.1.1",
+    "pytest-cov==7.1.0",
+    "ruff==0.17.1",
+]

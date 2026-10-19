@@ -1,6 +1,6 @@
 # Repository conventions
 
-Status: proposed structure. Only the Markdown documentation exists in Phase 0. Paths in the tree below are implementation destinations, not created scaffolding.
+Status: target structure with Phase 1 foundation implemented. The tree below includes future module destinations; only settings, contracts, the PostgreSQL adapter, observability, and health API are implemented so far. See [development](development.md) for current commands.
 
 ## Proposed layout
 
@@ -50,17 +50,17 @@ Keep modules small enough to evolve without creating an interface for every clas
 
 ## Toolchain policy
 
-Use `uv` for environment and dependency management with a committed `uv.lock`. Propose Python 3.12 as the initial compatibility target; Phase 1 must verify it against the selected dependency set before pinning. Use pytest, Ruff, and mypy; select and lock compatible versions in package 1A. Later introduce Next.js, TypeScript, an active supported Node LTS, and npm with `package-lock.json`; use `npm ci` in CI. No exact versions have been tested in Phase 0.
+Use `uv` 0.12.23 and Python 3.12.14 with the committed `uv.lock`. Phase 1 verifies pytest, Ruff, mypy, FastAPI/Pydantic, SQLAlchemy/psycopg, and Alembic together; exact direct dependencies are pinned in `pyproject.toml`. Later introduce Next.js, TypeScript, a supported Node LTS, and npm with `package-lock.json`; use `npm ci` in CI. No frontend tooling is installed in Phase 1.
 
 Dependency updates require lockfile review and relevant tests. Use frozen installation in CI. Avoid top-level import side effects, network calls during tests, and framework objects in domain contracts. API models use explicit field constraints and reject unexpected input where feasible.
 
 ## Repository hygiene
 
-Track small, licensed or publicly sourced fixtures with provenance and checksums. Exclude local virtual environments, `.env` secrets, database volumes, downloaded filings, indexes, checkpoints, traces, benchmark output, build artifacts, and provider credentials. Add actual ignore rules with the Phase 1 tooling package; Phase 0 creates no generated artifacts in the checkout.
+Track small, licensed or publicly sourced fixtures with provenance and checksums. Exclude local virtual environments, `.env` secrets, database volumes, downloaded filings, indexes, checkpoints, traces, benchmark output, build artifacts, and provider credentials. Phase 1 supplies `.gitignore`, an allowlisted Docker build context, and an explicit source-distribution file allowlist.
 
 Commit migrations and schema versions, not live database state. Never edit published immutable source objects or historical dataset manifests in place. Keep derived local data outside the tracked source tree or in an explicitly ignored runtime directory.
 
-Use descriptive feature branches and focused changes when a normal Git history is available. The initial checkout currently has an unborn `work` branch; a first commit and remote publication are separate authorized actions. Do not manufacture a remote branch or claim a PR exists.
+Use descriptive feature branches and focused changes. Phase 0 was committed and pushed to `main`; Phase 1 uses `feat/phase-1-foundation` locally. Do not push or publish without authorization, and do not claim a PR exists without evidence.
 
 ## Documentation and change lifecycle
 

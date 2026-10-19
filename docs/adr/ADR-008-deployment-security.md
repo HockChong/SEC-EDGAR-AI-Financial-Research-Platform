@@ -1,6 +1,6 @@
 # ADR-008 — Local Compose and gated managed deployment
 
-Status: Proposed. Architecture: 3.1. Implementation phases: 1 and 7.
+Status: Accepted for local Phase 1 development; Phase 7 cloud/security decisions remain Proposed. Architecture: 3.1. Implementation phases: 1 and 7.
 
 ## Context
 
@@ -21,3 +21,7 @@ Managed infrastructure reduces operational burden but still requires migration, 
 ## Validation and reconsideration
 
 Phase 1 tests clean setup, database/extension readiness, migrations, and repeatable startup. Phase 7 tests identity/access isolation, secret rotation, TLS/network policy, load, failure recovery, rollback, and actual backup restore. Revisit infrastructure only from measured operating requirements and an updated threat model.
+
+## Phase 1 implementation boundaries
+
+Compose binds the API/database to host loopback; the API image runs as non-root. The local database uses explicitly public development credentials and a role able to create extensions/test databases. Migrations are explicit, and downgrade retains the vector extension/data. App production mode is rejected until shared-deployment controls are implemented. Container builds can mount an approved CA bundle for verified package access without embedding it. These local checks do not establish production readiness.

@@ -1,6 +1,6 @@
 # Architecture decision records
 
-All records are **Proposed** during Phase 0. They establish an implementation direction for review, not completed functionality. Accept or revise the relevant ADR during its implementation package after compatibility and behavioral evidence is available. Preserve superseded records with a link to their replacement.
+All records began as **Proposed** in Phase 0. Phase 1 accepts ADR-001/002 and the local-development portion of ADR-008 with validation evidence. Other records remain proposed implementation directions. Preserve superseded records with a link to their replacement; accepted direction does not imply later-phase functionality exists.
 
 | ADR | Decision | Primary delivery |
 | --- | --- | --- |

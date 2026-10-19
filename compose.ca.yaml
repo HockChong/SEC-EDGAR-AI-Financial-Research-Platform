@@ -1,0 +1,11 @@
+# Optional build-only trust bundle. No certificate or secret is copied into the image.
+services:
+  api:
+    build:
+      secrets: [package_ca]
+  migrate:
+    build:
+      secrets: [package_ca]
+secrets:
+  package_ca:
+    file: ${BUILD_CA_BUNDLE:?Set BUILD_CA_BUNDLE to a trusted PEM CA bundle}

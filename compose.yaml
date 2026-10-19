@@ -1,0 +1,52 @@
+name: sec-research
+services:
+  db:
+    image: pgvector/pgvector:0.8.1-pg17@sha256:3e8b3adfd27b5707128f60956f62a793c3c9326ea8cfaf0eab7adccb5d700b21
+    environment:
+      POSTGRES_USER: sec_research
+      POSTGRES_PASSWORD: sec_research_dev
+      POSTGRES_DB: sec_research
+    ports:
+      - "127.0.0.1:${DATABASE_PORT:-5432}:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sec_research -d sec_research"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+    stop_grace_period: 30s
+  migrate:
+    build: .
+    profiles: ["app"]
+    environment:
+      DATABASE_URL: postgresql+psycopg://sec_research:sec_research_dev@db:5432/sec_research
+    command: ["alembic", "upgrade", "head"]
+    depends_on:
+      db:
+        condition: service_healthy
+  api:
+    build: .
+    profiles: ["app"]
+    environment:
+      APP_ENV: development
+      DATABASE_URL: postgresql+psycopg://sec_research:sec_research_dev@db:5432/sec_research
+      ARTIFACT_ROOT: /app/.runtime/artifacts
+      LOG_LEVEL: INFO
+    ports:
+      - "127.0.0.1:${API_PORT:-8000}:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health/ready', timeout=5)"]
+      interval: 5s
+      timeout: 6s
+      retries: 12
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop: ["ALL"]
+    security_opt: ["no-new-privileges:true"]
+volumes:
+  postgres-data:

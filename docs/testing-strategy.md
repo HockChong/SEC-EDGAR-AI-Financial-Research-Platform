@@ -1,6 +1,6 @@
 # Testing strategy
 
-Status: requirements for future implementation. Phase 0 has no application tests or runtime checks; documentation verification is recorded in the phase review.
+Status: Phase 1 unit, contract, and real PostgreSQL integration tests are implemented. Later-phase scenarios remain requirements. Current commands and results are in [development](development.md) and the [Phase 1 review](phase-1-review.md).
 
 ## Test layers
 
@@ -36,7 +36,7 @@ Use parameterized and property-based tests where they check real invariants: reo
 
 ## CI and developer commands
 
-Phase 1 will define executable commands and scripts after dependency/tool versions are pinned. Intended checks are frozen environment sync, Ruff, mypy, pytest unit/contract, PostgreSQL integration, package build, and container build. These are planned checks, not commands verified in Phase 0. Frontend lint/type/test/build checks begin when `web/` exists.
+Phase 1 provides `scripts/check.sh`, `scripts/test-integration.sh`, `scripts/verify-wheel.sh`, and `scripts/build.sh`. CI runs locked install, Ruff, mypy, all pytest cases against PostgreSQL, installed-wheel validation, and a container migration/start/health smoke check. `check.sh` without `TEST_DATABASE_URL` explicitly deselects integration tests; with it, all tests run. Frontend checks begin when `web/` exists.
 
 Keep fast deterministic checks mandatory on PRs. Run database tests on an isolated CI service. Live SEC/model checks are explicitly marked and gated by access, fair-use limits, and budget; they must not silently make offline CI flaky. Provider outage cannot be reported as an application assertion passing. Trusted scheduled evaluation may run separately from PR checks.
 
