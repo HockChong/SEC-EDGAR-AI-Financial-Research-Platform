@@ -1,0 +1,17 @@
+# Architecture decision records
+
+All records are **Proposed** during Phase 0. They establish an implementation direction for review, not completed functionality. Accept or revise the relevant ADR during its implementation package after compatibility and behavioral evidence is available. Preserve superseded records with a link to their replacement.
+
+| ADR | Decision | Primary delivery |
+| --- | --- | --- |
+| [ADR-001](ADR-001-modular-application.md) | Modular Python application and dependency boundaries | 1 |
+| [ADR-002](ADR-002-dependency-management.md) | Reproducible toolchain and locked dependencies | 1 |
+| [ADR-003](ADR-003-data-pipeline.md) | Immutable Bronze, versioned Silver/Gold, source-resolvable data | 2–3 |
+| [ADR-004](ADR-004-retrieval.md) | PostgreSQL/pgvector and evaluated retrieval stages | 4 |
+| [ADR-005](ADR-005-research-orchestration.md) | One bounded LangGraph research workflow | 5 |
+| [ADR-006](ADR-006-financial-correctness.md) | Deterministic fact selection and calculation | 3, 5 |
+| [ADR-007](ADR-007-model-adapters.md) | LangChain-backed provider abstraction | 4–6 |
+| [ADR-008](ADR-008-deployment-security.md) | Local Compose, managed deployment, application security | 1, 7 |
+| [ADR-009](ADR-009-evaluation.md) | Versioned benchmarks and explicit quality gates | 3–6 |
+
+Each record states context, decision, alternatives, consequences, validation, and triggers for reconsideration. Significant departures require an updated or superseding ADR before implementation expands.
