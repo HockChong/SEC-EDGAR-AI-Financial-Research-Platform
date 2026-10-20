@@ -1,0 +1,3225 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "decimal_encoding": "string",
+  "identity_version": "id-1",
+  "schema_version": "canonical-1",
+  "schemas": {
+    "CanonicalFiling": {
+      "$defs": {
+        "Filing": {
+          "additionalProperties": false,
+          "properties": {
+            "accepted_at": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Accepted At"
+            },
+            "accession": {
+              "title": "Accession",
+              "type": "string"
+            },
+            "cik": {
+              "title": "Cik",
+              "type": "string"
+            },
+            "filing_date": {
+              "format": "date",
+              "title": "Filing Date",
+              "type": "string"
+            },
+            "form": {
+              "enum": [
+                "10-K",
+                "10-Q",
+                "10-K/A",
+                "10-Q/A"
+              ],
+              "title": "Form",
+              "type": "string"
+            },
+            "primary_document": {
+              "pattern": "^[A-Za-z0-9_-][A-Za-z0-9_.-]*\\.(?:htm|html)$",
+              "title": "Primary Document",
+              "type": "string"
+            },
+            "report_date": {
+              "anyOf": [
+                {
+                  "format": "date",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Report Date"
+            },
+            "schema_version": {
+              "const": "1",
+              "default": "1",
+              "title": "Schema Version",
+              "type": "string"
+            }
+          },
+          "required": [
+            "cik",
+            "accession",
+            "form",
+            "filing_date",
+            "primary_document"
+          ],
+          "title": "Filing",
+          "type": "object"
+        },
+        "Source": {
+          "additionalProperties": false,
+          "properties": {
+            "cik": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Cik"
+            },
+            "filing": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Filing"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "kind": {
+              "enum": [
+                "submissions",
+                "history",
+                "filing",
+                "company_facts",
+                "companies"
+              ],
+              "title": "Kind",
+              "type": "string"
+            },
+            "schema_version": {
+              "const": "1",
+              "default": "1",
+              "title": "Schema Version",
+              "type": "string"
+            },
+            "url": {
+              "title": "Url",
+              "type": "string"
+            }
+          },
+          "required": [
+            "url",
+            "kind"
+          ],
+          "title": "Source",
+          "type": "object"
+        },
+        "SourceReference": {
+          "additionalProperties": false,
+          "description": "Artifact identity, deliberately independent of fetch time and local storage paths.",
+          "properties": {
+            "byte_count": {
+              "minimum": 0,
+              "title": "Byte Count",
+              "type": "integer"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "title": "Sha256",
+              "type": "string"
+            },
+            "source": {
+              "$ref": "#/$defs/Source"
+            }
+          },
+          "required": [
+            "source",
+            "sha256",
+            "byte_count"
+          ],
+          "title": "SourceReference",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "amends_accession": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{10}-[0-9]{2}-[0-9]{6}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Amends Accession"
+        },
+        "filing": {
+          "$ref": "#/$defs/Filing"
+        },
+        "id": {
+          "pattern": "^filing:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "pipeline_version": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Pipeline Version",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "canonical-1",
+          "default": "canonical-1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/$defs/SourceReference"
+        }
+      },
+      "required": [
+        "amends_accession",
+        "filing",
+        "id",
+        "pipeline_version",
+        "schema_version",
+        "source"
+      ],
+      "title": "CanonicalFiling",
+      "type": "object"
+    },
+    "Company": {
+      "$defs": {
+        "Filing": {
+          "additionalProperties": false,
+          "properties": {
+            "accepted_at": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Accepted At"
+            },
+            "accession": {
+              "title": "Accession",
+              "type": "string"
+            },
+            "cik": {
+              "title": "Cik",
+              "type": "string"
+            },
+            "filing_date": {
+              "format": "date",
+              "title": "Filing Date",
+              "type": "string"
+            },
+            "form": {
+              "enum": [
+                "10-K",
+                "10-Q",
+                "10-K/A",
+                "10-Q/A"
+              ],
+              "title": "Form",
+              "type": "string"
+            },
+            "primary_document": {
+              "pattern": "^[A-Za-z0-9_-][A-Za-z0-9_.-]*\\.(?:htm|html)$",
+              "title": "Primary Document",
+              "type": "string"
+            },
+            "report_date": {
+              "anyOf": [
+                {
+                  "format": "date",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Report Date"
+            },
+            "schema_version": {
+              "const": "1",
+              "default": "1",
+              "title": "Schema Version",
+              "type": "string"
+            }
+          },
+          "required": [
+            "cik",
+            "accession",
+            "form",
+            "filing_date",
+            "primary_document"
+          ],
+          "title": "Filing",
+          "type": "object"
+        },
+        "Source": {
+          "additionalProperties": false,
+          "properties": {
+            "cik": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Cik"
+            },
+            "filing": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Filing"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "kind": {
+              "enum": [
+                "submissions",
+                "history",
+                "filing",
+                "company_facts",
+                "companies"
+              ],
+              "title": "Kind",
+              "type": "string"
+            },
+            "schema_version": {
+              "const": "1",
+              "default": "1",
+              "title": "Schema Version",
+              "type": "string"
+            },
+            "url": {
+              "title": "Url",
+              "type": "string"
+            }
+          },
+          "required": [
+            "url",
+            "kind"
+          ],
+          "title": "Source",
+          "type": "object"
+        },
+        "SourceReference": {
+          "additionalProperties": false,
+          "description": "Artifact identity, deliberately independent of fetch time and local storage paths.",
+          "properties": {
+            "byte_count": {
+              "minimum": 0,
+              "title": "Byte Count",
+              "type": "integer"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "title": "Sha256",
+              "type": "string"
+            },
+            "source": {
+              "$ref": "#/$defs/Source"
+            }
+          },
+          "required": [
+            "source",
+            "sha256",
+            "byte_count"
+          ],
+          "title": "SourceReference",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "cik": {
+          "pattern": "^[0-9]{10}$",
+          "title": "Cik",
+          "type": "string"
+        },
+        "fiscal_year_end": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{4}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Fiscal Year End"
+        },
+        "id": {
+          "pattern": "^company:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "legal_name": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Legal Name",
+          "type": "string"
+        },
+        "pipeline_version": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Pipeline Version",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "canonical-1",
+          "default": "canonical-1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "sic": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{4}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Sic"
+        },
+        "source": {
+          "$ref": "#/$defs/SourceReference"
+        },
+        "tickers": {
+          "default": [],
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "title": "Tickers",
+          "type": "array"
+        }
+      },
+      "required": [
+        "cik",
+        "fiscal_year_end",
+        "id",
+        "legal_name",
+        "pipeline_version",
+        "schema_version",
+        "sic",
+        "source",
+        "tickers"
+      ],
+      "title": "Company",
+      "type": "object"
+    },
+    "ContentBlock": {
+      "$defs": {
+        "SourceLocator": {
+          "additionalProperties": false,
+          "properties": {
+            "end": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "End"
+            },
+            "kind": {
+              "enum": [
+                "dom",
+                "json_pointer"
+              ],
+              "title": "Kind",
+              "type": "string"
+            },
+            "path": {
+              "minLength": 1,
+              "pattern": "\\S",
+              "title": "Path",
+              "type": "string"
+            },
+            "start": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Start"
+            },
+            "text_sha256": {
+              "anyOf": [
+                {
+                  "pattern": "^[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Text Sha256"
+            }
+          },
+          "required": [
+            "kind",
+            "path"
+          ],
+          "title": "SourceLocator",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "document_id": {
+          "pattern": "^[a-z_]+:[0-9a-f]{64}$",
+          "title": "Document Id",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^block:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "heading",
+            "paragraph",
+            "list",
+            "table",
+            "footnote",
+            "other"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "locator": {
+          "$ref": "#/$defs/SourceLocator"
+        },
+        "ordinal": {
+          "minimum": 0,
+          "title": "Ordinal",
+          "type": "integer"
+        },
+        "pipeline_version": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Pipeline Version",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "canonical-1",
+          "default": "canonical-1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "section_id": {
+          "anyOf": [
+            {
+              "pattern": "^[a-z_]+:[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Section Id"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "text_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Text Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "document_id",
+        "id",
+        "kind",
+        "locator",
+        "ordinal",
+        "pipeline_version",
+        "schema_version",
+        "section_id",
+        "text",
+        "text_sha256"
+      ],
+      "title": "ContentBlock",
+      "type": "object"
+    },
+    "DatasetPublication": {
+      "$defs": {
+        "DatasetObject": {
+          "additionalProperties": false,
+          "properties": {
+            "dataset": {
+              "minLength": 1,
+              "pattern": "\\S",
+              "title": "Dataset",
+              "type": "string"
+            },
+            "path": {
+              "minLength": 1,
+              "pattern": "\\S",
+              "title": "Path",
+              "type": "string"
+            },
+            "row_count": {
+              "minimum": 0,
+              "title": "Row Count",
+              "type": "integer"
+            },
+            "schema_sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "title": "Schema Sha256",
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "title": "Sha256",
+              "type": "string"
+            }
+          },
+          "required": [
+            "dataset",
+            "path",
+            "sha256",
+            "row_count",
+            "schema_sha256"
+          ],
+          "title": "DatasetObject",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "chunker_version": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Chunker Version"
+        },
+        "code_revision": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Code Revision",
+          "type": "string"
+        },
+        "config_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Config Sha256",
+          "type": "string"
+        },
+        "dataset_version": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Dataset Version",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^publication:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "input_publication_ids": {
+          "default": [],
+          "items": {
+            "pattern": "^[a-z_]+:[0-9a-f]{64}$",
+            "type": "string"
+          },
+          "title": "Input Publication Ids",
+          "type": "array"
+        },
+        "input_source_sha256s": {
+          "items": {
+            "pattern": "^[0-9a-f]{64}$",
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Input Source Sha256S",
+          "type": "array"
+        },
+        "layer": {
+          "enum": [
+            "silver",
+            "gold"
+          ],
+          "title": "Layer",
+          "type": "string"
+        },
+        "normalizer_version": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Normalizer Version"
+        },
+        "objects": {
+          "items": {
+            "$ref": "#/$defs/DatasetObject"
+          },
+          "minItems": 1,
+          "title": "Objects",
+          "type": "array"
+        },
+        "parser_version": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Parser Version"
+        },
+        "pipeline_version": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Pipeline Version",
+          "type": "string"
+        },
+        "published_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Published At"
+        },
+        "quality": {
+          "enum": [
+            "passed",
+            "warning",
+            "failed"
+          ],
+          "title": "Quality",
+          "type": "string"
+        },
+        "quality_event_ids": {
+          "default": [],
+          "items": {
+            "pattern": "^[a-z_]+:[0-9a-f]{64}$",
+            "type": "string"
+          },
+          "title": "Quality Event Ids",
+          "type": "array"
+        },
+        "schema_version": {
+          "const": "canonical-1",
+          "default": "canonical-1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "selection_policy_version": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Selection Policy Version"
+        },
+        "state": {
+          "enum": [
+            "staged",
+            "validated",
+            "published",
+            "failed"
+          ],
+          "title": "State",
+          "type": "string"
+        },
+        "validated_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Validated At"
+        }
+      },
+      "required": [
+        "chunker_version",
+        "code_revision",
+        "config_sha256",
+        "dataset_version",
+        "id",
+        "input_publication_ids",
+        "input_source_sha256s",
+        "layer",
+        "normalizer_version",
+        "objects",
+        "parser_version",
+        "pipeline_version",
+        "published_at",
+        "quality",
+        "quality_event_ids",
+        "schema_version",
+        "selection_policy_version",
+        "state",
+        "validated_at"
+      ],
+      "title": "DatasetPublication",
+      "type": "object"
+    },
+    "DocumentVersion": {
+      "$defs": {
+        "Filing": {
+          "additionalProperties": false,
+          "properties": {
+            "accepted_at": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Accepted At"
+            },
+            "accession": {
+              "title": "Accession",
+              "type": "string"
+            },
+            "cik": {
+              "title": "Cik",
+              "type": "string"
+            },
+            "filing_date": {
+              "format": "date",
+              "title": "Filing Date",
+              "type": "string"
+            },
+            "form": {
+              "enum": [
+                "10-K",
+                "10-Q",
+                "10-K/A",
+                "10-Q/A"
+              ],
+              "title": "Form",
+              "type": "string"
+            },
+            "primary_document": {
+              "pattern": "^[A-Za-z0-9_-][A-Za-z0-9_.-]*\\.(?:htm|html)$",
+              "title": "Primary Document",
+              "type": "string"
+            },
+            "report_date": {
+              "anyOf": [
+                {
+                  "format": "date",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Report Date"
+            },
+            "schema_version": {
+              "const": "1",
+              "default": "1",
+              "title": "Schema Version",
+              "type": "string"
+            }
+          },
+          "required": [
+            "cik",
+            "accession",
+            "form",
+            "filing_date",
+            "primary_document"
+          ],
+          "title": "Filing",
+          "type": "object"
+        },
+        "Source": {
+          "additionalProperties": false,
+          "properties": {
+            "cik": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Cik"
+            },
+            "filing": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Filing"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "kind": {
+              "enum": [
+                "submissions",
+                "history",
+                "filing",
+                "company_facts",
+                "companies"
+              ],
+              "title": "Kind",
+              "type": "string"
+            },
+            "schema_version": {
+              "const": "1",
+              "default": "1",
+              "title": "Schema Version",
+              "type": "string"
+            },
+            "url": {
+              "title": "Url",
+              "type": "string"
+            }
+          },
+          "required": [
+            "url",
+            "kind"
+          ],
+          "title": "Source",
+          "type": "object"
+        },
+        "SourceReference": {
+          "additionalProperties": false,
+          "description": "Artifact identity, deliberately independent of fetch time and local storage paths.",
+          "properties": {
+            "byte_count": {
+              "minimum": 0,
+              "title": "Byte Count",
+              "type": "integer"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "title": "Sha256",
+              "type": "string"
+            },
+            "source": {
+              "$ref": "#/$defs/Source"
+            }
+          },
+          "required": [
+            "source",
+            "sha256",
+            "byte_count"
+          ],
+          "title": "SourceReference",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "filename": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Filename",
+          "type": "string"
+        },
+        "filing_id": {
+          "pattern": "^[a-z_]+:[0-9a-f]{64}$",
+          "title": "Filing Id",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^document:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "parser_version": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Parser Version",
+          "type": "string"
+        },
+        "pipeline_version": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Pipeline Version",
+          "type": "string"
+        },
+        "role": {
+          "enum": [
+            "primary",
+            "exhibit"
+          ],
+          "title": "Role",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "canonical-1",
+          "default": "canonical-1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/$defs/SourceReference"
+        },
+        "text_sha256": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Text Sha256"
+        }
+      },
+      "required": [
+        "filename",
+        "filing_id",
+        "id",
+        "parser_version",
+        "pipeline_version",
+        "role",
+        "schema_version",
+        "source",
+        "text_sha256"
+      ],
+      "title": "DocumentVersion",
+      "type": "object"
+    },
+    "FinancialFact": {
+      "$defs": {
+        "Dimension": {
+          "additionalProperties": false,
+          "properties": {
+            "axis": {
+              "minLength": 1,
+              "pattern": "\\S",
+              "title": "Axis",
+              "type": "string"
+            },
+            "member": {
+              "minLength": 1,
+              "pattern": "\\S",
+              "title": "Member",
+              "type": "string"
+            }
+          },
+          "required": [
+            "axis",
+            "member"
+          ],
+          "title": "Dimension",
+          "type": "object"
+        },
+        "Filing": {
+          "additionalProperties": false,
+          "properties": {
+            "accepted_at": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Accepted At"
+            },
+            "accession": {
+              "title": "Accession",
+              "type": "string"
+            },
+            "cik": {
+              "title": "Cik",
+              "type": "string"
+            },
+            "filing_date": {
+              "format": "date",
+              "title": "Filing Date",
+              "type": "string"
+            },
+            "form": {
+              "enum": [
+                "10-K",
+                "10-Q",
+                "10-K/A",
+                "10-Q/A"
+              ],
+              "title": "Form",
+              "type": "string"
+            },
+            "primary_document": {
+              "pattern": "^[A-Za-z0-9_-][A-Za-z0-9_.-]*\\.(?:htm|html)$",
+              "title": "Primary Document",
+              "type": "string"
+            },
+            "report_date": {
+              "anyOf": [
+                {
+                  "format": "date",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Report Date"
+            },
+            "schema_version": {
+              "const": "1",
+              "default": "1",
+              "title": "Schema Version",
+              "type": "string"
+            }
+          },
+          "required": [
+            "cik",
+            "accession",
+            "form",
+            "filing_date",
+            "primary_document"
+          ],
+          "title": "Filing",
+          "type": "object"
+        },
+        "ReportingPeriod": {
+          "additionalProperties": false,
+          "properties": {
+            "classification_policy": {
+              "anyOf": [
+                {
+                  "minLength": 1,
+                  "pattern": "\\S",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Classification Policy"
+            },
+            "duration_class": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "quarter",
+                    "year_to_date",
+                    "annual",
+                    "other",
+                    "unknown"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Duration Class"
+            },
+            "end": {
+              "format": "date",
+              "title": "End",
+              "type": "string"
+            },
+            "kind": {
+              "enum": [
+                "instant",
+                "duration"
+              ],
+              "title": "Kind",
+              "type": "string"
+            },
+            "start": {
+              "anyOf": [
+                {
+                  "format": "date",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Start"
+            }
+          },
+          "required": [
+            "kind",
+            "end"
+          ],
+          "title": "ReportingPeriod",
+          "type": "object"
+        },
+        "Source": {
+          "additionalProperties": false,
+          "properties": {
+            "cik": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Cik"
+            },
+            "filing": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Filing"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "kind": {
+              "enum": [
+                "submissions",
+                "history",
+                "filing",
+                "company_facts",
+                "companies"
+              ],
+              "title": "Kind",
+              "type": "string"
+            },
+            "schema_version": {
+              "const": "1",
+              "default": "1",
+              "title": "Schema Version",
+              "type": "string"
+            },
+            "url": {
+              "title": "Url",
+              "type": "string"
+            }
+          },
+          "required": [
+            "url",
+            "kind"
+          ],
+          "title": "Source",
+          "type": "object"
+        },
+        "SourceLocator": {
+          "additionalProperties": false,
+          "properties": {
+            "end": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "End"
+            },
+            "kind": {
+              "enum": [
+                "dom",
+                "json_pointer"
+              ],
+              "title": "Kind",
+              "type": "string"
+            },
+            "path": {
+              "minLength": 1,
+              "pattern": "\\S",
+              "title": "Path",
+              "type": "string"
+            },
+            "start": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Start"
+            },
+            "text_sha256": {
+              "anyOf": [
+                {
+                  "pattern": "^[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Text Sha256"
+            }
+          },
+          "required": [
+            "kind",
+            "path"
+          ],
+          "title": "SourceLocator",
+          "type": "object"
+        },
+        "SourceReference": {
+          "additionalProperties": false,
+          "description": "Artifact identity, deliberately independent of fetch time and local storage paths.",
+          "properties": {
+            "byte_count": {
+              "minimum": 0,
+              "title": "Byte Count",
+              "type": "integer"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "title": "Sha256",
+              "type": "string"
+            },
+            "source": {
+              "$ref": "#/$defs/Source"
+            }
+          },
+          "required": [
+            "source",
+            "sha256",
+            "byte_count"
+          ],
+          "title": "SourceReference",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "accepted_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Accepted At"
+        },
+        "accession": {
+          "pattern": "^[0-9]{10}-[0-9]{2}-[0-9]{6}$",
+          "title": "Accession",
+          "type": "string"
+        },
+        "cik": {
+          "pattern": "^[0-9]{10}$",
+          "title": "Cik",
+          "type": "string"
+        },
+        "concept": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Concept",
+          "type": "string"
+        },
+        "context_id": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Context Id"
+        },
+        "context_status": {
+          "enum": [
+            "unknown",
+            "verified"
+          ],
+          "title": "Context Status",
+          "type": "string"
+        },
+        "currency": {
+          "anyOf": [
+            {
+              "pattern": "^[A-Z]{3}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Currency"
+        },
+        "dimensions": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/Dimension"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Dimensions"
+        },
+        "filed": {
+          "format": "date",
+          "title": "Filed",
+          "type": "string"
+        },
+        "form": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Form",
+          "type": "string"
+        },
+        "fp": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Fp"
+        },
+        "frame": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Frame"
+        },
+        "fy": {
+          "anyOf": [
+            {
+              "maximum": 9999,
+              "minimum": 1900,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Fy"
+        },
+        "id": {
+          "pattern": "^fact:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "locator": {
+          "$ref": "#/$defs/SourceLocator"
+        },
+        "normalizer_version": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Normalizer Version",
+          "type": "string"
+        },
+        "period": {
+          "$ref": "#/$defs/ReportingPeriod"
+        },
+        "pipeline_version": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Pipeline Version",
+          "type": "string"
+        },
+        "quality": {
+          "enum": [
+            "passed",
+            "warning",
+            "failed"
+          ],
+          "title": "Quality",
+          "type": "string"
+        },
+        "raw_value": {
+          "pattern": "^-?(?:0|[1-9][0-9]*)(?:\\.[0-9]+)?(?:[eE][+-]?[0-9]+)?$",
+          "title": "Raw Value",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "canonical-1",
+          "default": "canonical-1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/$defs/SourceReference"
+        },
+        "taxonomy": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Taxonomy",
+          "type": "string"
+        },
+        "unit": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Unit",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "accepted_at",
+        "accession",
+        "cik",
+        "concept",
+        "context_id",
+        "context_status",
+        "currency",
+        "dimensions",
+        "filed",
+        "form",
+        "fp",
+        "frame",
+        "fy",
+        "id",
+        "locator",
+        "normalizer_version",
+        "period",
+        "pipeline_version",
+        "quality",
+        "raw_value",
+        "schema_version",
+        "source",
+        "taxonomy",
+        "unit",
+        "value"
+      ],
+      "title": "FinancialFact",
+      "type": "object"
+    },
+    "MetricDefinition": {
+      "$defs": {
+        "ConceptMapping": {
+          "additionalProperties": false,
+          "properties": {
+            "concept": {
+              "minLength": 1,
+              "pattern": "\\S",
+              "title": "Concept",
+              "type": "string"
+            },
+            "priority": {
+              "minimum": 0,
+              "title": "Priority",
+              "type": "integer"
+            },
+            "taxonomy": {
+              "minLength": 1,
+              "pattern": "\\S",
+              "title": "Taxonomy",
+              "type": "string"
+            }
+          },
+          "required": [
+            "taxonomy",
+            "concept",
+            "priority"
+          ],
+          "title": "ConceptMapping",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "concepts": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/ConceptMapping"
+          },
+          "title": "Concepts",
+          "type": "array"
+        },
+        "context_requirement": {
+          "enum": [
+            "verified_consolidated",
+            "verified_dimensions"
+          ],
+          "title": "Context Requirement",
+          "type": "string"
+        },
+        "denominator_policy": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Denominator Policy",
+          "type": "string"
+        },
+        "description": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Description",
+          "type": "string"
+        },
+        "formula_id": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Formula Id"
+        },
+        "formula_version": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Formula Version"
+        },
+        "id": {
+          "pattern": "^metric:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "input_metric_ids": {
+          "default": [],
+          "items": {
+            "pattern": "^[a-z_]+:[0-9a-f]{64}$",
+            "type": "string"
+          },
+          "title": "Input Metric Ids",
+          "type": "array"
+        },
+        "limitations": {
+          "default": [],
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        },
+        "mapping_status": {
+          "enum": [
+            "supported",
+            "unsupported",
+            "ambiguous"
+          ],
+          "title": "Mapping Status",
+          "type": "string"
+        },
+        "metric_name": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Metric Name",
+          "type": "string"
+        },
+        "metric_version": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Metric Version",
+          "type": "string"
+        },
+        "period_kind": {
+          "enum": [
+            "instant",
+            "duration"
+          ],
+          "title": "Period Kind",
+          "type": "string"
+        },
+        "pipeline_version": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Pipeline Version",
+          "type": "string"
+        },
+        "rounding_policy": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Rounding Policy",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "canonical-1",
+          "default": "canonical-1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "selection_policy_version": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Selection Policy Version",
+          "type": "string"
+        },
+        "sign_policy": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Sign Policy",
+          "type": "string"
+        },
+        "unit": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Unit",
+          "type": "string"
+        }
+      },
+      "required": [
+        "concepts",
+        "context_requirement",
+        "denominator_policy",
+        "description",
+        "formula_id",
+        "formula_version",
+        "id",
+        "input_metric_ids",
+        "limitations",
+        "mapping_status",
+        "metric_name",
+        "metric_version",
+        "period_kind",
+        "pipeline_version",
+        "rounding_policy",
+        "schema_version",
+        "selection_policy_version",
+        "sign_policy",
+        "unit"
+      ],
+      "title": "MetricDefinition",
+      "type": "object"
+    },
+    "QualityEvent": {
+      "$defs": {
+        "Filing": {
+          "additionalProperties": false,
+          "properties": {
+            "accepted_at": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Accepted At"
+            },
+            "accession": {
+              "title": "Accession",
+              "type": "string"
+            },
+            "cik": {
+              "title": "Cik",
+              "type": "string"
+            },
+            "filing_date": {
+              "format": "date",
+              "title": "Filing Date",
+              "type": "string"
+            },
+            "form": {
+              "enum": [
+                "10-K",
+                "10-Q",
+                "10-K/A",
+                "10-Q/A"
+              ],
+              "title": "Form",
+              "type": "string"
+            },
+            "primary_document": {
+              "pattern": "^[A-Za-z0-9_-][A-Za-z0-9_.-]*\\.(?:htm|html)$",
+              "title": "Primary Document",
+              "type": "string"
+            },
+            "report_date": {
+              "anyOf": [
+                {
+                  "format": "date",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Report Date"
+            },
+            "schema_version": {
+              "const": "1",
+              "default": "1",
+              "title": "Schema Version",
+              "type": "string"
+            }
+          },
+          "required": [
+            "cik",
+            "accession",
+            "form",
+            "filing_date",
+            "primary_document"
+          ],
+          "title": "Filing",
+          "type": "object"
+        },
+        "Source": {
+          "additionalProperties": false,
+          "properties": {
+            "cik": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Cik"
+            },
+            "filing": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Filing"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "kind": {
+              "enum": [
+                "submissions",
+                "history",
+                "filing",
+                "company_facts",
+                "companies"
+              ],
+              "title": "Kind",
+              "type": "string"
+            },
+            "schema_version": {
+              "const": "1",
+              "default": "1",
+              "title": "Schema Version",
+              "type": "string"
+            },
+            "url": {
+              "title": "Url",
+              "type": "string"
+            }
+          },
+          "required": [
+            "url",
+            "kind"
+          ],
+          "title": "Source",
+          "type": "object"
+        },
+        "SourceReference": {
+          "additionalProperties": false,
+          "description": "Artifact identity, deliberately independent of fetch time and local storage paths.",
+          "properties": {
+            "byte_count": {
+              "minimum": 0,
+              "title": "Byte Count",
+              "type": "integer"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "title": "Sha256",
+              "type": "string"
+            },
+            "source": {
+              "$ref": "#/$defs/Source"
+            }
+          },
+          "required": [
+            "source",
+            "sha256",
+            "byte_count"
+          ],
+          "title": "SourceReference",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "disposition": {
+          "enum": [
+            "accept",
+            "retain_with_warning",
+            "quarantine",
+            "block_publication"
+          ],
+          "title": "Disposition",
+          "type": "string"
+        },
+        "entity_id": {
+          "pattern": "^[a-z_]+:[0-9a-f]{64}$",
+          "title": "Entity Id",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^quality:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "pipeline_version": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Pipeline Version",
+          "type": "string"
+        },
+        "reason_code": {
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "title": "Reason Code",
+          "type": "string"
+        },
+        "rule": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Rule",
+          "type": "string"
+        },
+        "rule_version": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Rule Version",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "canonical-1",
+          "default": "canonical-1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/$defs/SourceReference"
+        },
+        "state": {
+          "enum": [
+            "passed",
+            "warning",
+            "failed"
+          ],
+          "title": "State",
+          "type": "string"
+        }
+      },
+      "required": [
+        "disposition",
+        "entity_id",
+        "id",
+        "pipeline_version",
+        "reason_code",
+        "rule",
+        "rule_version",
+        "schema_version",
+        "source",
+        "state"
+      ],
+      "title": "QualityEvent",
+      "type": "object"
+    },
+    "ResearchChunk": {
+      "$defs": {
+        "Filing": {
+          "additionalProperties": false,
+          "properties": {
+            "accepted_at": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Accepted At"
+            },
+            "accession": {
+              "title": "Accession",
+              "type": "string"
+            },
+            "cik": {
+              "title": "Cik",
+              "type": "string"
+            },
+            "filing_date": {
+              "format": "date",
+              "title": "Filing Date",
+              "type": "string"
+            },
+            "form": {
+              "enum": [
+                "10-K",
+                "10-Q",
+                "10-K/A",
+                "10-Q/A"
+              ],
+              "title": "Form",
+              "type": "string"
+            },
+            "primary_document": {
+              "pattern": "^[A-Za-z0-9_-][A-Za-z0-9_.-]*\\.(?:htm|html)$",
+              "title": "Primary Document",
+              "type": "string"
+            },
+            "report_date": {
+              "anyOf": [
+                {
+                  "format": "date",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Report Date"
+            },
+            "schema_version": {
+              "const": "1",
+              "default": "1",
+              "title": "Schema Version",
+              "type": "string"
+            }
+          },
+          "required": [
+            "cik",
+            "accession",
+            "form",
+            "filing_date",
+            "primary_document"
+          ],
+          "title": "Filing",
+          "type": "object"
+        },
+        "Source": {
+          "additionalProperties": false,
+          "properties": {
+            "cik": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Cik"
+            },
+            "filing": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Filing"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "kind": {
+              "enum": [
+                "submissions",
+                "history",
+                "filing",
+                "company_facts",
+                "companies"
+              ],
+              "title": "Kind",
+              "type": "string"
+            },
+            "schema_version": {
+              "const": "1",
+              "default": "1",
+              "title": "Schema Version",
+              "type": "string"
+            },
+            "url": {
+              "title": "Url",
+              "type": "string"
+            }
+          },
+          "required": [
+            "url",
+            "kind"
+          ],
+          "title": "Source",
+          "type": "object"
+        },
+        "SourceReference": {
+          "additionalProperties": false,
+          "description": "Artifact identity, deliberately independent of fetch time and local storage paths.",
+          "properties": {
+            "byte_count": {
+              "minimum": 0,
+              "title": "Byte Count",
+              "type": "integer"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "title": "Sha256",
+              "type": "string"
+            },
+            "source": {
+              "$ref": "#/$defs/Source"
+            }
+          },
+          "required": [
+            "source",
+            "sha256",
+            "byte_count"
+          ],
+          "title": "SourceReference",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "chunker_version": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Chunker Version",
+          "type": "string"
+        },
+        "document_id": {
+          "pattern": "^[a-z_]+:[0-9a-f]{64}$",
+          "title": "Document Id",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^chunk:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "narrative",
+            "table"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "ordinal": {
+          "minimum": 0,
+          "title": "Ordinal",
+          "type": "integer"
+        },
+        "pipeline_version": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Pipeline Version",
+          "type": "string"
+        },
+        "related_table_ids": {
+          "default": [],
+          "items": {
+            "pattern": "^[a-z_]+:[0-9a-f]{64}$",
+            "type": "string"
+          },
+          "title": "Related Table Ids",
+          "type": "array"
+        },
+        "schema_version": {
+          "const": "canonical-1",
+          "default": "canonical-1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "section_id": {
+          "pattern": "^[a-z_]+:[0-9a-f]{64}$",
+          "title": "Section Id",
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/$defs/SourceReference"
+        },
+        "source_block_ids": {
+          "items": {
+            "pattern": "^[a-z_]+:[0-9a-f]{64}$",
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Source Block Ids",
+          "type": "array"
+        },
+        "text": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Text",
+          "type": "string"
+        },
+        "text_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Text Sha256",
+          "type": "string"
+        },
+        "token_count": {
+          "minimum": 1,
+          "title": "Token Count",
+          "type": "integer"
+        },
+        "tokenizer_version": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Tokenizer Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "chunker_version",
+        "document_id",
+        "id",
+        "kind",
+        "ordinal",
+        "pipeline_version",
+        "related_table_ids",
+        "schema_version",
+        "section_id",
+        "source",
+        "source_block_ids",
+        "text",
+        "text_sha256",
+        "token_count",
+        "tokenizer_version"
+      ],
+      "title": "ResearchChunk",
+      "type": "object"
+    },
+    "Section": {
+      "$defs": {
+        "SourceLocator": {
+          "additionalProperties": false,
+          "properties": {
+            "end": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "End"
+            },
+            "kind": {
+              "enum": [
+                "dom",
+                "json_pointer"
+              ],
+              "title": "Kind",
+              "type": "string"
+            },
+            "path": {
+              "minLength": 1,
+              "pattern": "\\S",
+              "title": "Path",
+              "type": "string"
+            },
+            "start": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Start"
+            },
+            "text_sha256": {
+              "anyOf": [
+                {
+                  "pattern": "^[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Text Sha256"
+            }
+          },
+          "required": [
+            "kind",
+            "path"
+          ],
+          "title": "SourceLocator",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "classification": {
+          "enum": [
+            "classified",
+            "unclassified",
+            "ambiguous"
+          ],
+          "title": "Classification",
+          "type": "string"
+        },
+        "document_id": {
+          "pattern": "^[a-z_]+:[0-9a-f]{64}$",
+          "title": "Document Id",
+          "type": "string"
+        },
+        "first_block_ordinal": {
+          "minimum": 0,
+          "title": "First Block Ordinal",
+          "type": "integer"
+        },
+        "form": {
+          "enum": [
+            "10-K",
+            "10-Q",
+            "10-K/A",
+            "10-Q/A"
+          ],
+          "title": "Form",
+          "type": "string"
+        },
+        "heading": {
+          "title": "Heading",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^section:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "item": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{1,2}[A-C]?$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Item"
+        },
+        "last_block_ordinal": {
+          "minimum": 0,
+          "title": "Last Block Ordinal",
+          "type": "integer"
+        },
+        "locator": {
+          "$ref": "#/$defs/SourceLocator"
+        },
+        "ordinal": {
+          "minimum": 0,
+          "title": "Ordinal",
+          "type": "integer"
+        },
+        "parent_section_id": {
+          "anyOf": [
+            {
+              "pattern": "^[a-z_]+:[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Parent Section Id"
+        },
+        "part": {
+          "anyOf": [
+            {
+              "enum": [
+                "I",
+                "II",
+                "III",
+                "IV"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Part"
+        },
+        "pipeline_version": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Pipeline Version",
+          "type": "string"
+        },
+        "quality": {
+          "enum": [
+            "passed",
+            "warning",
+            "failed"
+          ],
+          "title": "Quality",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "canonical-1",
+          "default": "canonical-1",
+          "title": "Schema Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "classification",
+        "document_id",
+        "first_block_ordinal",
+        "form",
+        "heading",
+        "id",
+        "item",
+        "last_block_ordinal",
+        "locator",
+        "ordinal",
+        "parent_section_id",
+        "part",
+        "pipeline_version",
+        "quality",
+        "schema_version"
+      ],
+      "title": "Section",
+      "type": "object"
+    },
+    "SourceProvenance": {
+      "$defs": {
+        "Filing": {
+          "additionalProperties": false,
+          "properties": {
+            "accepted_at": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Accepted At"
+            },
+            "accession": {
+              "title": "Accession",
+              "type": "string"
+            },
+            "cik": {
+              "title": "Cik",
+              "type": "string"
+            },
+            "filing_date": {
+              "format": "date",
+              "title": "Filing Date",
+              "type": "string"
+            },
+            "form": {
+              "enum": [
+                "10-K",
+                "10-Q",
+                "10-K/A",
+                "10-Q/A"
+              ],
+              "title": "Form",
+              "type": "string"
+            },
+            "primary_document": {
+              "pattern": "^[A-Za-z0-9_-][A-Za-z0-9_.-]*\\.(?:htm|html)$",
+              "title": "Primary Document",
+              "type": "string"
+            },
+            "report_date": {
+              "anyOf": [
+                {
+                  "format": "date",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Report Date"
+            },
+            "schema_version": {
+              "const": "1",
+              "default": "1",
+              "title": "Schema Version",
+              "type": "string"
+            }
+          },
+          "required": [
+            "cik",
+            "accession",
+            "form",
+            "filing_date",
+            "primary_document"
+          ],
+          "title": "Filing",
+          "type": "object"
+        },
+        "Source": {
+          "additionalProperties": false,
+          "properties": {
+            "cik": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Cik"
+            },
+            "filing": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Filing"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null
+            },
+            "kind": {
+              "enum": [
+                "submissions",
+                "history",
+                "filing",
+                "company_facts",
+                "companies"
+              ],
+              "title": "Kind",
+              "type": "string"
+            },
+            "schema_version": {
+              "const": "1",
+              "default": "1",
+              "title": "Schema Version",
+              "type": "string"
+            },
+            "url": {
+              "title": "Url",
+              "type": "string"
+            }
+          },
+          "required": [
+            "url",
+            "kind"
+          ],
+          "title": "Source",
+          "type": "object"
+        },
+        "SourceLocator": {
+          "additionalProperties": false,
+          "properties": {
+            "end": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "End"
+            },
+            "kind": {
+              "enum": [
+                "dom",
+                "json_pointer"
+              ],
+              "title": "Kind",
+              "type": "string"
+            },
+            "path": {
+              "minLength": 1,
+              "pattern": "\\S",
+              "title": "Path",
+              "type": "string"
+            },
+            "start": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Start"
+            },
+            "text_sha256": {
+              "anyOf": [
+                {
+                  "pattern": "^[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Text Sha256"
+            }
+          },
+          "required": [
+            "kind",
+            "path"
+          ],
+          "title": "SourceLocator",
+          "type": "object"
+        },
+        "SourceReference": {
+          "additionalProperties": false,
+          "description": "Artifact identity, deliberately independent of fetch time and local storage paths.",
+          "properties": {
+            "byte_count": {
+              "minimum": 0,
+              "title": "Byte Count",
+              "type": "integer"
+            },
+            "sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "title": "Sha256",
+              "type": "string"
+            },
+            "source": {
+              "$ref": "#/$defs/Source"
+            }
+          },
+          "required": [
+            "source",
+            "sha256",
+            "byte_count"
+          ],
+          "title": "SourceReference",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "entity_id": {
+          "pattern": "^[a-z_]+:[0-9a-f]{64}$",
+          "title": "Entity Id",
+          "type": "string"
+        },
+        "fetch_id": {
+          "format": "uuid",
+          "title": "Fetch Id",
+          "type": "string"
+        },
+        "fetched_at": {
+          "format": "date-time",
+          "title": "Fetched At",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^provenance:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "input_entity_ids": {
+          "default": [],
+          "items": {
+            "pattern": "^[a-z_]+:[0-9a-f]{64}$",
+            "type": "string"
+          },
+          "title": "Input Entity Ids",
+          "type": "array"
+        },
+        "locator": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SourceLocator"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "pipeline_version": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Pipeline Version",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "canonical-1",
+          "default": "canonical-1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/$defs/SourceReference"
+        }
+      },
+      "required": [
+        "entity_id",
+        "fetch_id",
+        "fetched_at",
+        "id",
+        "input_entity_ids",
+        "locator",
+        "pipeline_version",
+        "schema_version",
+        "source"
+      ],
+      "title": "SourceProvenance",
+      "type": "object"
+    },
+    "StructuredTable": {
+      "$defs": {
+        "SourceLocator": {
+          "additionalProperties": false,
+          "properties": {
+            "end": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "End"
+            },
+            "kind": {
+              "enum": [
+                "dom",
+                "json_pointer"
+              ],
+              "title": "Kind",
+              "type": "string"
+            },
+            "path": {
+              "minLength": 1,
+              "pattern": "\\S",
+              "title": "Path",
+              "type": "string"
+            },
+            "start": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Start"
+            },
+            "text_sha256": {
+              "anyOf": [
+                {
+                  "pattern": "^[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Text Sha256"
+            }
+          },
+          "required": [
+            "kind",
+            "path"
+          ],
+          "title": "SourceLocator",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "block_id": {
+          "pattern": "^[a-z_]+:[0-9a-f]{64}$",
+          "title": "Block Id",
+          "type": "string"
+        },
+        "columns": {
+          "minimum": 1,
+          "title": "Columns",
+          "type": "integer"
+        },
+        "document_id": {
+          "pattern": "^[a-z_]+:[0-9a-f]{64}$",
+          "title": "Document Id",
+          "type": "string"
+        },
+        "footnotes": {
+          "default": [],
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "title": "Footnotes",
+          "type": "array"
+        },
+        "id": {
+          "pattern": "^table:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "locator": {
+          "$ref": "#/$defs/SourceLocator"
+        },
+        "pipeline_version": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Pipeline Version",
+          "type": "string"
+        },
+        "quality": {
+          "enum": [
+            "passed",
+            "warning",
+            "failed"
+          ],
+          "title": "Quality",
+          "type": "string"
+        },
+        "retrieval_text": {
+          "title": "Retrieval Text",
+          "type": "string"
+        },
+        "rows": {
+          "minimum": 1,
+          "title": "Rows",
+          "type": "integer"
+        },
+        "scale_hint": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Scale Hint"
+        },
+        "schema_version": {
+          "const": "canonical-1",
+          "default": "canonical-1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "section_id": {
+          "anyOf": [
+            {
+              "pattern": "^[a-z_]+:[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Section Id"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "unit_hints": {
+          "default": [],
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "title": "Unit Hints",
+          "type": "array"
+        }
+      },
+      "required": [
+        "block_id",
+        "columns",
+        "document_id",
+        "footnotes",
+        "id",
+        "locator",
+        "pipeline_version",
+        "quality",
+        "retrieval_text",
+        "rows",
+        "scale_hint",
+        "schema_version",
+        "section_id",
+        "title",
+        "unit_hints"
+      ],
+      "title": "StructuredTable",
+      "type": "object"
+    },
+    "TableCell": {
+      "$defs": {
+        "SourceLocator": {
+          "additionalProperties": false,
+          "properties": {
+            "end": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "End"
+            },
+            "kind": {
+              "enum": [
+                "dom",
+                "json_pointer"
+              ],
+              "title": "Kind",
+              "type": "string"
+            },
+            "path": {
+              "minLength": 1,
+              "pattern": "\\S",
+              "title": "Path",
+              "type": "string"
+            },
+            "start": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Start"
+            },
+            "text_sha256": {
+              "anyOf": [
+                {
+                  "pattern": "^[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Text Sha256"
+            }
+          },
+          "required": [
+            "kind",
+            "path"
+          ],
+          "title": "SourceLocator",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "column": {
+          "minimum": 0,
+          "title": "Column",
+          "type": "integer"
+        },
+        "column_span": {
+          "default": 1,
+          "minimum": 1,
+          "title": "Column Span",
+          "type": "integer"
+        },
+        "display_text": {
+          "title": "Display Text",
+          "type": "string"
+        },
+        "footnote_markers": {
+          "default": [],
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "title": "Footnote Markers",
+          "type": "array"
+        },
+        "header_ids": {
+          "default": [],
+          "items": {
+            "pattern": "^[a-z_]+:[0-9a-f]{64}$",
+            "type": "string"
+          },
+          "title": "Header Ids",
+          "type": "array"
+        },
+        "id": {
+          "pattern": "^cell:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "is_header": {
+          "title": "Is Header",
+          "type": "boolean"
+        },
+        "locator": {
+          "$ref": "#/$defs/SourceLocator"
+        },
+        "numeric_status": {
+          "enum": [
+            "parsed",
+            "not_numeric",
+            "empty",
+            "uncertain"
+          ],
+          "title": "Numeric Status",
+          "type": "string"
+        },
+        "pipeline_version": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Pipeline Version",
+          "type": "string"
+        },
+        "raw_text": {
+          "title": "Raw Text",
+          "type": "string"
+        },
+        "row": {
+          "minimum": 0,
+          "title": "Row",
+          "type": "integer"
+        },
+        "row_span": {
+          "default": 1,
+          "minimum": 1,
+          "title": "Row Span",
+          "type": "integer"
+        },
+        "schema_version": {
+          "const": "canonical-1",
+          "default": "canonical-1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "table_id": {
+          "pattern": "^[a-z_]+:[0-9a-f]{64}$",
+          "title": "Table Id",
+          "type": "string"
+        },
+        "unit_hint": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unit Hint"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        }
+      },
+      "required": [
+        "column",
+        "column_span",
+        "display_text",
+        "footnote_markers",
+        "header_ids",
+        "id",
+        "is_header",
+        "locator",
+        "numeric_status",
+        "pipeline_version",
+        "raw_text",
+        "row",
+        "row_span",
+        "schema_version",
+        "table_id",
+        "unit_hint",
+        "value"
+      ],
+      "title": "TableCell",
+      "type": "object"
+    }
+  }
+}

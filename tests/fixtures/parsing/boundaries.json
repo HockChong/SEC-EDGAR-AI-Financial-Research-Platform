@@ -1,0 +1,256 @@
+{
+  "schema_version": "wp32-boundaries-1",
+  "annotation_method": "Codex manually selected source DOM start/next-section anchors after direct source heading and neighboring-content inspection. Labels are not generated from classifier predictions. This is agent-authored source review, with independent human adjudication outstanding. Ends are immediately before the next source section heading; intervening running headers remain in reading order. Selected items only; no whole-document precision claim.",
+  "human_adjudicated": false,
+  "cases": [
+    {
+      "accession": "0000320193-24-000123",
+      "source_sha256": "87811e303e632b0f1843b9bc161c1b3af9c501ffec0a51a9825cc796dc369dcf",
+      "split": "development",
+      "sections": [
+        {
+          "part": "I",
+          "item": "1",
+          "start_xpath": "/html/body/div[69]",
+          "end_before_xpath": "/html/body/div[152]",
+          "heading": "Item 1. Business",
+          "next_heading": "Item 1A. Risk Factors"
+        },
+        {
+          "part": "I",
+          "item": "1A",
+          "start_xpath": "/html/body/div[152]",
+          "end_before_xpath": "/html/body/div[298]",
+          "heading": "Item 1A. Risk Factors",
+          "next_heading": "Item 1B. Unresolved Staff Comments"
+        },
+        {
+          "part": "II",
+          "item": "7",
+          "start_xpath": "/html/body/div[348]",
+          "end_before_xpath": "/html/body/div[489]",
+          "heading": "Item 7. Management’s Discussion and Analysis of Financial Condition and Results of Operations",
+          "next_heading": "Item 7A. Quantitative and Qualitative Disclosures About Market Risk"
+        },
+        {
+          "part": "II",
+          "item": "8",
+          "start_xpath": "/html/body/div[501]",
+          "end_before_xpath": "/html/body/div[653]",
+          "heading": "Item 8. Financial Statements and Supplementary Data",
+          "next_heading": "Item 9. Changes in and Disagreements with Accountants on Accounting and Financial Disclosure"
+        }
+      ]
+    },
+    {
+      "accession": "0001628280-26-008131",
+      "source_sha256": "428551a3073c9701082ca0fe2212b753f8aa30aa71dbd2d5e542a4e09013be05",
+      "split": "development",
+      "sections": [
+        {
+          "part": "I",
+          "item": "1",
+          "start_xpath": "/html/body/div[43]",
+          "end_before_xpath": "/html/body/div[87]/div[1]/div[1]",
+          "heading": "Item 1. Business.",
+          "next_heading": "Item 1A. Risk Factors."
+        },
+        {
+          "part": "I",
+          "item": "1A",
+          "start_xpath": "/html/body/div[87]/div[1]/div[1]",
+          "end_before_xpath": "/html/body/div[157]/div[1]/div[1]",
+          "heading": "Item 1A. Risk Factors.",
+          "next_heading": "Item 1B. Unresolved Staff Comments."
+        },
+        {
+          "part": "II",
+          "item": "7",
+          "start_xpath": "/html/body/div[169]/div[1]/div[3]",
+          "end_before_xpath": "/html/body/div[169]/div[3]/div[2]",
+          "heading": "Item 7. Management’s Discussion and Analysis of Financial Condition and Results of Operations.",
+          "next_heading": "Item 7A. Quantitative and Qualitative Disclosures About Market Risk."
+        },
+        {
+          "part": "II",
+          "item": "8",
+          "start_xpath": "/html/body/div[173]/div[1]/div[1]",
+          "end_before_xpath": "/html/body/div[173]/div[1]/div[5]",
+          "heading": "Item 8. Financial Statements and Supplementary Data.",
+          "next_heading": "Item 9. Changes in and Disagreements With Accountants on Accounting and Financial Disclosure."
+        }
+      ]
+    },
+    {
+      "accession": "0001193125-26-027207",
+      "source_sha256": "13b6006248fb7d5f3dfebb5425e6645a8ca4f8e1a438fe1c75a0578be13b2773",
+      "split": "development",
+      "sections": [
+        {
+          "part": "I",
+          "item": "1",
+          "start_xpath": "/html/body/div[9]/p[2]",
+          "end_before_xpath": "/html/body/div[90]/p[1]",
+          "heading": "ITEM 1. FINANCIAL STATEMENTS",
+          "next_heading": "ITEM 2. MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS"
+        },
+        {
+          "part": "I",
+          "item": "2",
+          "start_xpath": "/html/body/div[90]/p[1]",
+          "end_before_xpath": "/html/body/div[138]/p[1]",
+          "heading": "ITEM 2. MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS",
+          "next_heading": "ITEM 3. QUANTITATIVE AND QUALITATIVE DISCLOSURES ABOUT MARKET RISK"
+        },
+        {
+          "part": "II",
+          "item": "1A",
+          "start_xpath": "/html/body/div[141]/p[4]",
+          "end_before_xpath": "/html/body/div[186]/p[1]",
+          "heading": "ITEM 1A. RISK FACTORS",
+          "next_heading": "ITEM 2. UNREGISTERED SALES OF EQUITY SECURITIES AND USE OF PROCEEDS"
+        }
+      ]
+    },
+    {
+      "accession": "0001018724-26-000004",
+      "source_sha256": "a2d31fb7be58454479b35622eb8d3379f953f4a8f44a256166217fa5b434af35",
+      "split": "development",
+      "sections": [
+        {
+          "part": "I",
+          "item": "1",
+          "start_xpath": "/html/body/div[61]/table",
+          "end_before_xpath": "/html/body/div[108]/table",
+          "heading": "Item 1.Business",
+          "next_heading": "Item 1A.Risk Factors"
+        },
+        {
+          "part": "I",
+          "item": "1A",
+          "start_xpath": "/html/body/div[108]/table",
+          "end_before_xpath": "/html/body/div[280]/table",
+          "heading": "Item 1A.Risk Factors",
+          "next_heading": "Item 1B.Unresolved Staff Comments"
+        },
+        {
+          "part": "II",
+          "item": "7",
+          "start_xpath": "/html/body/div[324]/table",
+          "end_before_xpath": "/html/body/div[472]/table",
+          "heading": "Item 7.Management’s Discussion and Analysis of Financial Condition and Results of Operations",
+          "next_heading": "Item 7A.Quantitative and Qualitative Disclosures About Market Risk"
+        },
+        {
+          "part": "II",
+          "item": "8",
+          "start_xpath": "/html/body/div[493]/table",
+          "end_before_xpath": "/html/body/div[702]/table",
+          "heading": "Item 8.Financial Statements and Supplementary Data",
+          "next_heading": "Item 9.Changes in and Disagreements with Accountants On Accounting and Financial Disclosure"
+        }
+      ]
+    },
+    {
+      "accession": "0001652044-26-000048",
+      "source_sha256": "0da733204ca3463c96d324c3620ab2794bce9566ee7a6586100b66634a98aca0",
+      "split": "development",
+      "sections": [
+        {
+          "part": "I",
+          "item": "1",
+          "start_xpath": "/html/body/div[55]",
+          "end_before_xpath": "/html/body/div[194]",
+          "heading": "ITEM 1.FINANCIAL STATEMENTS",
+          "next_heading": "ITEM 2.MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS"
+        },
+        {
+          "part": "I",
+          "item": "2",
+          "start_xpath": "/html/body/div[194]",
+          "end_before_xpath": "/html/body/div[488]",
+          "heading": "ITEM 2.MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS",
+          "next_heading": "ITEM 3.QUANTITATIVE AND QUALITATIVE DISCLOSURES ABOUT MARKET RISK"
+        },
+        {
+          "part": "II",
+          "item": "1A",
+          "start_xpath": "/html/body/div[507]",
+          "end_before_xpath": "/html/body/div[524]",
+          "heading": "ITEM 1A.RISK FACTORS",
+          "next_heading": "ITEM 2.UNREGISTERED SALES OF EQUITY SECURITIES AND USE OF PROCEEDS"
+        }
+      ]
+    },
+    {
+      "accession": "0000320193-26-000020",
+      "source_sha256": "d3f1996972f6b3950fbc4fd5a47dbd20a69b360eb6136da9a752c37bbdb96dc1",
+      "split": "held_out",
+      "sections": [
+        {
+          "part": "I",
+          "item": "1",
+          "start_xpath": "/html/body/div[56]",
+          "end_before_xpath": "/html/body/div[140]",
+          "heading": "Item 1. Financial Statements",
+          "next_heading": "Item 2. Management’s Discussion and Analysis of Financial Condition and Results of Operations"
+        },
+        {
+          "part": "I",
+          "item": "2",
+          "start_xpath": "/html/body/div[140]",
+          "end_before_xpath": "/html/body/div[262]",
+          "heading": "Item 2. Management’s Discussion and Analysis of Financial Condition and Results of Operations",
+          "next_heading": "Item 3. Quantitative and Qualitative Disclosures About Market Risk"
+        },
+        {
+          "part": "II",
+          "item": "1A",
+          "start_xpath": "/html/body/div[287]",
+          "end_before_xpath": "/html/body/div[318]",
+          "heading": "Item 1A. Risk Factors",
+          "next_heading": "Item 2. Unregistered Sales of Equity Securities and Use of Proceeds"
+        }
+      ]
+    },
+    {
+      "accession": "0001193125-26-323660",
+      "source_sha256": "7ee403cf6248837b88b69729c38534d60f1171fd1447ba0fa3ac426abf2430cd",
+      "split": "held_out",
+      "sections": [
+        {
+          "part": "I",
+          "item": "1",
+          "start_xpath": "/html/body/div[9]/p[4]",
+          "end_before_xpath": "/html/body/div[42]/p[1]",
+          "heading": "ITEM 1. BUSINESS",
+          "next_heading": "ITEM 1A. RISK FACTORS"
+        },
+        {
+          "part": "I",
+          "item": "1A",
+          "start_xpath": "/html/body/div[42]/p[1]",
+          "end_before_xpath": "/html/body/div[87]/p[1]",
+          "heading": "ITEM 1A. RISK FACTORS",
+          "next_heading": "ITEM 1B. UNRESOLVED STAFF COMMENTS"
+        },
+        {
+          "part": "II",
+          "item": "7",
+          "start_xpath": "/html/body/div[102]/p[1]",
+          "end_before_xpath": "/html/body/div[147]/p[1]",
+          "heading": "ITEM 7. MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS",
+          "next_heading": "ITEM 7A. QUANTITATIVE AND QUALITATIVE DISCLOSURES ABOUT MARKET RISK"
+        },
+        {
+          "part": "II",
+          "item": "8",
+          "start_xpath": "/html/body/div[150]/p[1]",
+          "end_before_xpath": "/html/body/div[267]/p[1]",
+          "heading": "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA",
+          "next_heading": "ITEM 9. CHANGES IN AND DISAGREEMENTS WITH ACCOUNTANTS ON ACCOUNTING AND FINANCIAL DISCLOSURE"
+        }
+      ]
+    }
+  ]
+}

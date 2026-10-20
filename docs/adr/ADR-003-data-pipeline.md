@@ -1,6 +1,14 @@
 # ADR-003 — Immutable sources and reproducible research datasets
 
-Status: Proposed. Architecture: 3.1. Implementation phases: 2–3.
+Status: Bronze acquisition accepted and implemented in Phase 2; bounded live smoke acceptance passed. WP3.2 implements bounded HTML transformation; physical Silver/Gold publication remains proposed. [ADR-010](ADR-010-bronze-coordination.md) specifies implemented Bronze coordination/publication and limitations. Architecture: 3.1. Implementation phases: 2–3.
+
+WP3.1 adds [canonical record and storage-row contracts](../canonical-contracts.md)
+and synthetic fixtures. WP3.2 adds [deterministic HTML parsing](../html-parsing.md)
+using those contracts, with opaque table blocks and source-linked section ranges.
+Financial transformations and physical Parquet publication remain unimplemented.
+This implementation follows the
+existing decision; it does not introduce a competing store or change the
+Spark/Delta deferral.
 
 ## Context
 

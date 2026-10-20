@@ -1,0 +1,7 @@
+# SEC fixture checksums refer to exact bytes, independent of checkout newline settings.
+tests/fixtures/sec/*.json -text
+tests/fixtures/sec/*.htm -text
+tests/fixtures/canonical/*.json -text
+tests/fixtures/canonical/*.htm -text
+tests/fixtures/parsing/*.json -text
+tests/fixtures/parsing/*.htm -text

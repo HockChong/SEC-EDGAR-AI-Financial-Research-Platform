@@ -4,7 +4,7 @@
 
 - Follow architecture version 3.1 in [requirements](docs/requirements.md) and the architecture documents. Inspect existing code, documentation, tests, configuration, and Git status before editing.
 - Implement only the explicitly assigned phase or work package. Do not combine major phases into an uncontrolled change. Stop at the end of every assigned package, report the results, and wait for explicit authorization to continue.
-- Phase 0 is documentation only; Phase 1 foundation is now implemented. Later-phase modules in architecture diagrams remain proposed. Documents that describe proposed modules or commands do not establish that those modules or commands exist.
+- Phase 0 is documentation only; Phase 1 foundation and Phase 2 acquisition are now implemented; a bounded live SEC ingestion/reuse/integrity check is recorded as passed. See docs/phase-2-review.md. Later-phase modules in architecture diagrams remain proposed. Documents that describe proposed modules or commands do not establish that those modules or commands exist.
 - Each Codex cloud task already has an isolated environment. Use the existing checkout; do not create a Git worktree unless the user explicitly requests one. Use a feature branch or PR when available and appropriate; preserve the current branch and user work when changing it would be disruptive. Do not push or publish without authorization.
 
 ## Before implementation

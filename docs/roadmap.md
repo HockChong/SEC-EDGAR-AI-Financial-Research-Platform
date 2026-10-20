@@ -1,6 +1,6 @@
 # Implementation roadmap — architecture 3.1
 
-Status: Phase 0 planning and Phase 1 foundation are implemented; see the [Phase 1 review](phase-1-review.md) for evidence and limits. Phases 2–8 remain planned. Each listed work package is a separate assignment with audit → plan → implementation → verification → review → stop. Explicit authorization is required for the next package, even within one phase. A user may explicitly assign a whole phase; keep its packages bounded and report their individual outcomes within that authorized scope.
+Status: Phases 0–2 and Phase 3 WP3.1 contracts are implemented. WP3.2 HTML parsing and form-aware classification are implemented with measured coverage gaps; see the [WP3.2 review](phase-3-wp3.2-review.md). Later Phase 3 packages and Phases 4–8 remain planned. See the [Phase 1](phase-1-review.md), [Phase 2](phase-2-review.md), and [WP3.1](phase-3-wp3.1-review.md) reviews for prior gates. Each listed work package is a separate assignment with audit → plan → implementation → verification → review → stop. Explicit authorization is required for the next package, even within one phase. A user may explicitly assign a whole phase; keep its packages bounded and report their individual outcomes within that authorized scope.
 
 ## Sequence, estimates, and shared definition of done
 
@@ -61,6 +61,14 @@ Paths below describe implementation destinations; consult the actual checkout an
 **Phase definition of done:** shared criteria plus a recorded corpus manifest, verified source provenance, compliant live evidence where available, repeatability/recovery proof, and no source overwrites. **Next gate:** package 3A.
 
 ## Phase 3 — Document intelligence and AI-ready data
+
+The current user-assigned gate is **WP3.2 deterministic HTML parsing and sections**,
+implemented within the broader 3A–3C outline below. WP3.1 contracts remain compatible.
+See [contracts](canonical-contracts.md), [parsing](html-parsing.md), and the
+[WP3.2 review](phase-3-wp3.2-review.md). All 18 filings parse and replay; two JPMorgan
+10-Qs retain unclassified Part I content. Human adjudication of the selected
+agent-authored labels remains outstanding. Stop for review before **WP3.3 table
+extraction**; no later package has started.
 
 **Objective:** implement ADR-003 from Bronze to versioned, source-resolvable Silver/Gold. **Dependencies:** complete Phase 2 artifacts/manifests and representative reviewed filing fixtures. **Estimate:** 12–18 days.
 
@@ -169,4 +177,6 @@ Paths below describe implementation destinations; consult the actual checkout an
 
 ## Recommended next assignment
 
-Phase 1 packages 1A–1C have been implemented under explicit whole-phase authorization. The next assignment is **2A: SEC transport and contracts**, after Phase 1 review and explicit authorization. No SEC client, download, discovery, or ingestion code is included in the foundation.
+Review the implemented WP3.2 result and its classification/annotation limits.
+The next recommended assignment is separately authorized **WP3.3 structured table
+extraction**, reusing source-linked table placeholders. WP3.3 has not started.

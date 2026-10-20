@@ -1,6 +1,6 @@
 # Foundation development guide
 
-Phase 1 supports isolated local/cloud development. It does not implement SEC ingestion, a research endpoint, model access, authentication, or a frontend. No SEC/model credentials are needed.
+Phase 1 supports isolated local/cloud development. Phase 2 adds SEC acquisition through the [ingestion CLI](ingestion.md); research endpoints, model access, authentication and a frontend remain future work. Foundation checks need no SEC/model credentials. Live ingestion needs a real SEC contact identity.
 
 ## Verified toolchain
 
@@ -14,6 +14,7 @@ Phase 1 supports isolated local/cloud development. It does not implement SEC ing
 | PostgreSQL / pgvector | 17.8 / 0.8.1 in the digest-pinned Compose image |
 | pytest / Ruff / mypy | 9.1.1 / 0.17.1 / 2.4.0 |
 | Starlette test client transport | httpx2 2.14.0 (required by the resolved Starlette 1.9.0) |
+| WP3.2 HTML parser / development typing stubs | lxml 6.1.3 / lxml-stubs 0.5.1; backend versions are included in parser identity |
 | Validated Docker / Compose | 28.4.0 / 2.40.3 |
 
 All direct Python dependencies and the build backend are pinned; `uv.lock` records transitive versions and artifact hashes. Container bases and GitHub Actions use immutable digests/revisions. Updates require lock/image review and the same checks below.
@@ -21,6 +22,8 @@ All direct Python dependencies and the build backend are pinned; `uv.lock` recor
 ## Install and run
 
 Use the existing checkout; cloud tasks are already isolated and do not need a worktree. Commands below run from the repository root. Install Python 3.12.14, uv 0.12.23, and Docker with Compose v2 using your platform's supported installer if absent. An existing Python tooling environment can install uv with `python -m pip install uv==0.12.23`; do not modify a managed system interpreter that forbids it.
+
+On Windows with native Python/uv, run the shell commands in Git Bash. Wheel validation selects the temporary environment's `Scripts/python.exe` on Windows or `bin/python` on Unix.
 
 ```bash
 bash scripts/setup.sh
@@ -49,7 +52,7 @@ The app reads process environment variables only. It does not implicitly load `.
 | `LOG_LEVEL` | `INFO`; also `DEBUG`, `WARNING`, `ERROR`. |
 | `DB_CONNECT_TIMEOUT` | 3 seconds; range 1–30. Pool waits are also bounded; statements have a 5-second server timeout. |
 | `DB_POOL_SIZE` | 5; range 1–20; no pool overflow. |
-| `ARTIFACT_ROOT` | `.runtime/artifacts`; configuration only in Phase 1, no ingestion/storage writes yet. |
+| `ARTIFACT_ROOT` | `.runtime/artifacts`; Phase 2 immutable Bronze root; keep this path stable across ingestion runs. |
 | `DATABASE_PORT` | Shell/Compose setting, default 5432; reflected in the helper scripts' default URL. |
 | `API_PORT` | Shell/Compose setting, default 8000. |
 | `TEST_DATABASE_URL` | Opt-in test connection, with a dedicated database name ending in `_test`. |
@@ -82,7 +85,7 @@ Stopping or taking the stack down preserves the named PostgreSQL volume. `down -
 
 ## Migrations and database tests
 
-The initial revision enables pgvector and records the Alembic version; it introduces no SEC/research tables. Downgrading to `base` removes the revision marker but deliberately retains the extension and any vector data. Extension removal is an administrator action, never `DROP ... CASCADE` in this migration. Reapply restores readiness.
+Revision `0001_foundation` enables pgvector. Revision `0002_ingestion` adds source work, fetch manifests, run/attempt history and aggregate SEC rate coordination. Readiness requires the current head. Downgrading to `base` removes the revision marker but deliberately retains the extension and any vector data. Extension removal is an administrator action, never `DROP ... CASCADE` in this migration. Reapply restores readiness. Phase 2 refuses downgrade when ingestion runs or sources exist; empty-schema rollback remains supported. Back up and plan an explicit data migration before rolling back nonempty provenance.
 
 ```bash
 export DATABASE_URL='postgresql+psycopg://sec_research:sec_research_dev@127.0.0.1:5432/sec_research'
@@ -101,6 +104,12 @@ bash scripts/check.sh
 Skip `createdb` if that database already exists. Tests connect through it to create uniquely named temporary databases, migrate only those databases, and drop them afterward. The configured database is never migrated or erased. The test role needs CREATEDB; a missing server, denied privileges, or bad connection fails rather than silently passing. A missing `TEST_DATABASE_URL` makes direct pytest integration fixtures skip; `scripts/test-integration.sh` instead requires it explicitly. Never use a production account here.
 
 ## Verification commands
+
+WP3.2 offline corpus parsing and source-boundary checks are documented in
+[HTML parsing](html-parsing.md). They reuse the stored Bronze corpus without
+network access or migrations; large diagnostic outputs stay in `.runtime/`.
+On checkouts where the existing pytest cache is protected, set
+`PYTEST_ADDOPTS='-o cache_dir=.runtime/pytest-wp32'` before running checks.
 
 ```bash
 bash scripts/check.sh
@@ -121,4 +130,4 @@ CI has a Python job with a real PostgreSQL/pgvector service and a container job 
 - HTTP 503 `database_unavailable`: check the Compose database, selected URL/port, and role permissions. Error responses intentionally do not echo connection details.
 - Port occupied: stop only the service you own or choose `DATABASE_PORT`/`API_PORT`; keep test URLs aligned.
 - Containers missing after a new cloud task: rerun setup, then start the API and check both health responses. Do not assume process or volume restoration.
-- This is an isolated development foundation. No authentication, deployed cloud service, financial claims, retrieval quality, or ingestion readiness is established.
+- This is an isolated development foundation. No authentication, deployed cloud service, financial claims or retrieval quality is established. Phase 2 ingestion has deterministic verification; a user-executed live one-company smoke check also passed; see the Phase 2 review.

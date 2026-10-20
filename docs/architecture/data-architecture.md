@@ -1,6 +1,6 @@
 # Data architecture
 
-Status: proposed. [ADR-003](../adr/ADR-003-data-pipeline.md) governs the pipeline; [data dictionary](../data-dictionary.md) defines records and invariants.
+Status: Phase 2 Bronze acquisition and WP3.1 contracts are implemented. WP3.2 adds [bounded HTML parsing and source-linked sections](../html-parsing.md), verified against 18 stored filings. Physical Silver/Gold publication and financial normalization remain proposed. See the [ingestion guide](../ingestion.md), [WP3.2 review](../phase-3-wp3.2-review.md), and [coordination ADR](../adr/ADR-010-bronze-coordination.md). [ADR-003](../adr/ADR-003-data-pipeline.md) governs the pipeline; [data dictionary](../data-dictionary.md) defines records and invariants.
 
 ## Official source access
 

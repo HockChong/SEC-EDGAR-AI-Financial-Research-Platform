@@ -1,0 +1,1386 @@
+{
+  "schema_version": "wp32-diagnostics-1",
+  "executed_at_utc": "2026-10-20T14:26:44.507781+00:00",
+  "source_code_sha256": {
+    "contracts/__init__.py": "afd84673f53072b72104ca45ff696e4c4217f506f4657894073d3c99f82b1374",
+    "contracts/bronze.py": "9e8683160e2f8cbb4172de56539133c95f231b89e43b1fb228f530b8de00fa2a",
+    "contracts/canonical.py": "ec4e5e914358b6636c6afdbf642d255598b79ff409f67ce45f64f3bb503bd3d8",
+    "contracts/errors.py": "6d4dbea29339983e1c4dcdd63c6f8c7b36d20ee4e2c4bec20de6198fe8b70cdb",
+    "contracts/health.py": "c902dfb630ef911dac37161345fd8cabd4f20e322d2557abf86faad06c5471df",
+    "contracts/parsing.py": "19eb56679b7cfb5ace756753d9701f1ec3bfb980bb14905013e4b0014ed5b82f",
+    "contracts/schemas.py": "55dd620b09b5e6748437ac50aaf3a35e94108966d8bdb73f3470dc7bf4484607",
+    "contracts/sec.py": "915cd19db73b599993efa403521e5e76060725d4f2cb99711a79e5c529624e68",
+    "processing/__init__.py": "5c3f3efc8353143054e7ca039140cf75da1a9c9689b73ad3cfe871b9d83fb48b",
+    "processing/benchmark.py": "cc0f32b0035ed5377d0e044ade8f98bea9a33710d2754a61f9613950c3b35c56",
+    "processing/blocks.py": "348f6b2054594b6460b7b5a413a9cf43585fec8415364d043e273e19433d7475",
+    "processing/corpus.py": "f9554e26f1f3175c82ae0f47125f755ea249ac3e3675952a50ed9a173ff05f28",
+    "processing/dom.py": "6ebb3625250e2c30d903c3774218f5c1b2a26ec1813937e677c6340a6a43755e",
+    "processing/html.py": "c9b739cd9851a65b6c9c56d93cbb2abb8c9bebd1932e29f75e74c76609266211",
+    "processing/sections.py": "ca74f139ecd3a166c936d41c7bd11a58cd0f80d1a23acb95d3f4025f14560e2a"
+  },
+  "corpus_filings": 18,
+  "bronze_fetches_verified": 28,
+  "bronze_objects_verified": 28,
+  "bronze_orphans": 0,
+  "bronze_unchanged_after_parsing": true,
+  "split_sha256": "70ee567c6ab2800b90dfff912bffea80c4a481fcd3f496bcb8c1a3d4c2df1093",
+  "benchmark_sha256": "12b7fb19bab1a6992bd73295a30281ebb6ed1af5c85b537e6cda119eab5c0fea",
+  "lock_sha256": "a1ed09e39c11c15fb1dcc4fbca289633d80862eb3012f44a62d71160665d9fed",
+  "rows": [
+    {
+      "cik": "0000019617",
+      "form": "10-K",
+      "accession": "0001628280-26-008131",
+      "source_sha256": "428551a3073c9701082ca0fe2212b753f8aa30aa71dbd2d5e542a4e09013be05",
+      "split": "development",
+      "status": "parsed",
+      "encoding": "ascii",
+      "parser_version": "sec-html-1/lxml-(6, 1, 3, 0)/libxml-(2, 11, 9)/sec-sections-1",
+      "document_id": "document:a514e8bfa0c42823090ba32aa168d0e9a4e5c00b7167084673212ddf4620b956",
+      "logical_sha256": "d2bd81ad3a4dfe53b68e54059e190267c5f57d4d2cea9e77e3b6f49b42883ceb",
+      "deterministic_replay": true,
+      "block_count": 4596,
+      "block_kinds": {
+        "heading": 24,
+        "paragraph": 3893,
+        "table": 679
+      },
+      "locators_verified": 4596,
+      "section_count": 25,
+      "classified_sections": [
+        "I:1",
+        "I:1A",
+        "I:1B",
+        "I:1C",
+        "I:2",
+        "I:3",
+        "I:4",
+        "II:5",
+        "II:6",
+        "II:7",
+        "II:7A",
+        "II:8",
+        "II:9",
+        "II:9A",
+        "II:9B",
+        "II:9C",
+        "III:10",
+        "III:11",
+        "III:12",
+        "III:13",
+        "IV:15"
+      ],
+      "unclassified_blocks": 3732,
+      "warnings": {
+        "html_recovered": 1,
+        "toc_content_retained": 1,
+        "unclassified_content": 1,
+        "part_preamble": 2,
+        "non_item_section": 1
+      },
+      "boundary_scores": [
+        {
+          "part": "I",
+          "item": "1",
+          "start_correct": true,
+          "end_correct": true,
+          "both_correct": true
+        },
+        {
+          "part": "I",
+          "item": "1A",
+          "start_correct": true,
+          "end_correct": true,
+          "both_correct": true
+        },
+        {
+          "part": "II",
+          "item": "7",
+          "start_correct": true,
+          "end_correct": true,
+          "both_correct": true
+        },
+        {
+          "part": "II",
+          "item": "8",
+          "start_correct": true,
+          "end_correct": true,
+          "both_correct": true
+        }
+      ],
+      "diagnostic_seconds": 7.893
+    },
+    {
+      "cik": "0000019617",
+      "form": "10-Q",
+      "accession": "0001628280-26-029344",
+      "source_sha256": "19a91282ff8773d37ba9a02e2f717eb0fda99fe0f4e4b4cfbb9d46fc5d7cecbc",
+      "split": "development",
+      "status": "parsed",
+      "encoding": "ascii",
+      "parser_version": "sec-html-1/lxml-(6, 1, 3, 0)/libxml-(2, 11, 9)/sec-sections-1",
+      "document_id": "document:3150c4203a3994c1a0a4b2d65550a0a25942c608f619840f0234683a77756351",
+      "logical_sha256": "43054dd5e3c313a1c6790dc2d7bd556528d23e9320a51f2d54c9c872252d6b88",
+      "deterministic_replay": true,
+      "block_count": 2277,
+      "block_kinds": {
+        "heading": 10,
+        "paragraph": 1997,
+        "table": 270
+      },
+      "locators_verified": 2277,
+      "section_count": 12,
+      "classified_sections": [
+        "II:1",
+        "II:1A",
+        "II:2",
+        "II:3",
+        "II:4",
+        "II:5",
+        "II:6"
+      ],
+      "unclassified_blocks": 2246,
+      "warnings": {
+        "html_recovered": 1,
+        "toc_content_retained": 1,
+        "unclassified_content": 1,
+        "missing_part": 2,
+        "part_preamble": 1,
+        "non_item_section": 1,
+        "missing_priority_i_1": 1,
+        "missing_priority_i_2": 1
+      },
+      "boundary_scores": [],
+      "diagnostic_seconds": 4.492
+    },
+    {
+      "cik": "0000019617",
+      "form": "10-Q",
+      "accession": "0001628280-26-054343",
+      "source_sha256": "7cbc765c34c9a43a09b74db21e75bd0f94e548b4dfb50c53699526a985935a48",
+      "split": "held_out",
+      "status": "parsed",
+      "encoding": "ascii",
+      "parser_version": "sec-html-1/lxml-(6, 1, 3, 0)/libxml-(2, 11, 9)/sec-sections-1",
+      "document_id": "document:c768c0527dfc3d9b11170ed9d378db4aacd6da9c3b62710e6f78ca13432fc8c1",
+      "logical_sha256": "f744a76390d173cc75c12b740a13fed530c2fd7a16b248fb1a284b41cea8a3c2",
+      "deterministic_replay": true,
+      "block_count": 2445,
+      "block_kinds": {
+        "heading": 10,
+        "paragraph": 2156,
+        "table": 279
+      },
+      "locators_verified": 2445,
+      "section_count": 12,
+      "classified_sections": [
+        "II:1",
+        "II:1A",
+        "II:2",
+        "II:3",
+        "II:4",
+        "II:5",
+        "II:6"
+      ],
+      "unclassified_blocks": 2414,
+      "warnings": {
+        "html_recovered": 1,
+        "toc_content_retained": 1,
+        "unclassified_content": 1,
+        "missing_part": 2,
+        "part_preamble": 1,
+        "non_item_section": 1,
+        "missing_priority_i_1": 1,
+        "missing_priority_i_2": 1
+      },
+      "boundary_scores": [],
+      "diagnostic_seconds": 6.1
+    },
+    {
+      "cik": "0000320193",
+      "form": "10-K",
+      "accession": "0000320193-24-000123",
+      "source_sha256": "87811e303e632b0f1843b9bc161c1b3af9c501ffec0a51a9825cc796dc369dcf",
+      "split": "development",
+      "status": "parsed",
+      "encoding": "ascii",
+      "parser_version": "sec-html-1/lxml-(6, 1, 3, 0)/libxml-(2, 11, 9)/sec-sections-1",
+      "document_id": "document:9c890c6cc0d4352c58b9ea63d872692317047aa7e9f10661b3203752969d64b0",
+      "logical_sha256": "382e43ae1a5ce730500251ab3b0ad994d4eeaa7c552494e7186f4a741af7c285",
+      "deterministic_replay": true,
+      "block_count": 717,
+      "block_kinds": {
+        "table": 63,
+        "heading": 38,
+        "paragraph": 616
+      },
+      "locators_verified": 717,
+      "section_count": 29,
+      "classified_sections": [
+        "I:1",
+        "I:1A",
+        "I:1B",
+        "I:1C",
+        "I:2",
+        "I:3",
+        "I:4",
+        "II:5",
+        "II:6",
+        "II:7",
+        "II:7A",
+        "II:8",
+        "II:9",
+        "II:9A",
+        "II:9B",
+        "II:9C",
+        "III:10",
+        "III:11",
+        "III:12",
+        "III:13",
+        "III:14",
+        "IV:15",
+        "IV:16"
+      ],
+      "unclassified_blocks": 66,
+      "warnings": {
+        "html_recovered": 1,
+        "toc_content_retained": 1,
+        "unclassified_content": 1,
+        "part_preamble": 4,
+        "non_item_section": 1
+      },
+      "boundary_scores": [
+        {
+          "part": "I",
+          "item": "1",
+          "start_correct": true,
+          "end_correct": true,
+          "both_correct": true
+        },
+        {
+          "part": "I",
+          "item": "1A",
+          "start_correct": true,
+          "end_correct": true,
+          "both_correct": true
+        },
+        {
+          "part": "II",
+          "item": "7",
+          "start_correct": true,
+          "end_correct": true,
+          "both_correct": true
+        },
+        {
+          "part": "II",
+          "item": "8",
+          "start_correct": true,
+          "end_correct": true,
+          "both_correct": true
+        }
+      ],
+      "diagnostic_seconds": 1.223
+    },
+    {
+      "cik": "0000320193",
+      "form": "10-K",
+      "accession": "0000320193-25-000079",
+      "source_sha256": "f7569b9a9cb9010780bdbf3ea89120dd2d7928caa8fff1305ace90630ca627ce",
+      "split": "held_out",
+      "status": "parsed",
+      "encoding": "ascii",
+      "parser_version": "sec-html-1/lxml-(6, 1, 3, 0)/libxml-(2, 11, 9)/sec-sections-1",
+      "document_id": "document:bd96e41734682d29eb59870e573b488071e1c9cd3dd743a150f2fa01f24aa261",
+      "logical_sha256": "b646491850b1201228d4dccc813a9718f8f6eb23263e97137100b1b1418f2757",
+      "deterministic_replay": true,
+      "block_count": 706,
+      "block_kinds": {
+        "table": 62,
+        "heading": 38,
+        "paragraph": 606
+      },
+      "locators_verified": 706,
+      "section_count": 29,
+      "classified_sections": [
+        "I:1",
+        "I:1A",
+        "I:1B",
+        "I:1C",
+        "I:2",
+        "I:3",
+        "I:4",
+        "II:5",
+        "II:6",
+        "II:7",
+        "II:7A",
+        "II:8",
+        "II:9",
+        "II:9A",
+        "II:9B",
+        "II:9C",
+        "III:10",
+        "III:11",
+        "III:12",
+        "III:13",
+        "III:14",
+        "IV:15",
+        "IV:16"
+      ],
+      "unclassified_blocks": 66,
+      "warnings": {
+        "html_recovered": 1,
+        "toc_content_retained": 1,
+        "unclassified_content": 1,
+        "part_preamble": 4,
+        "non_item_section": 1
+      },
+      "boundary_scores": [],
+      "diagnostic_seconds": 1.635
+    },
+    {
+      "cik": "0000320193",
+      "form": "10-Q",
+      "accession": "0000320193-26-000013",
+      "source_sha256": "7d97585e619f1e6ca9ad23c5068c3b2fe1369a3b01882acd4aeff93b4b638f91",
+      "split": "development",
+      "status": "parsed",
+      "encoding": "ascii",
+      "parser_version": "sec-html-1/lxml-(6, 1, 3, 0)/libxml-(2, 11, 9)/sec-sections-1",
+      "document_id": "document:1a23eae96fc36db7bdb13d5c9d4ba598f41bf8b60bdd03d2e25c8a9620e97b82",
+      "logical_sha256": "2a78b4db9659de87bf63393435256b095878bb3d93cddcae96056915148c4499",
+      "deterministic_replay": true,
+      "block_count": 320,
+      "block_kinds": {
+        "table": 39,
+        "heading": 18,
+        "paragraph": 263
+      },
+      "locators_verified": 320,
+      "section_count": 15,
+      "classified_sections": [
+        "I:1",
+        "I:2",
+        "I:3",
+        "I:4",
+        "II:1",
+        "II:1A",
+        "II:2",
+        "II:3",
+        "II:4",
+        "II:5",
+        "II:6"
+      ],
+      "unclassified_blocks": 47,
+      "warnings": {
+        "html_recovered": 1,
+        "toc_content_retained": 1,
+        "unclassified_content": 1,
+        "part_preamble": 2,
+        "non_item_section": 1
+      },
+      "boundary_scores": [],
+      "diagnostic_seconds": 0.995
+    },
+    {
+      "cik": "0000320193",
+      "form": "10-Q",
+      "accession": "0000320193-26-000020",
+      "source_sha256": "d3f1996972f6b3950fbc4fd5a47dbd20a69b360eb6136da9a752c37bbdb96dc1",
+      "split": "held_out",
+      "status": "parsed",
+      "encoding": "ascii",
+      "parser_version": "sec-html-1/lxml-(6, 1, 3, 0)/libxml-(2, 11, 9)/sec-sections-1",
+      "document_id": "document:ee4bfa74e618853b31a655a76bd5cfd10da82bcce99a2339561f8fc12d2a4de7",
+      "logical_sha256": "972389c7fd273d1009d89056577f6262f0b65e9b97b7d76a4417085077dec144",
+      "deterministic_replay": true,
+      "block_count": 312,
+      "block_kinds": {
+        "table": 40,
+        "heading": 18,
+        "paragraph": 254
+      },
+      "locators_verified": 312,
+      "section_count": 15,
+      "classified_sections": [
+        "I:1",
+        "I:2",
+        "I:3",
+        "I:4",
+        "II:1",
+        "II:1A",
+        "II:2",
+        "II:3",
+        "II:4",
+        "II:5",
+        "II:6"
+      ],
+      "unclassified_blocks": 47,
+      "warnings": {
+        "html_recovered": 1,
+        "toc_content_retained": 1,
+        "unclassified_content": 1,
+        "part_preamble": 2,
+        "non_item_section": 1
+      },
+      "boundary_scores": [
+        {
+          "part": "I",
+          "item": "1",
+          "start_correct": true,
+          "end_correct": true,
+          "both_correct": true
+        },
+        {
+          "part": "I",
+          "item": "2",
+          "start_correct": true,
+          "end_correct": true,
+          "both_correct": true
+        },
+        {
+          "part": "II",
+          "item": "1A",
+          "start_correct": true,
+          "end_correct": true,
+          "both_correct": true
+        }
+      ],
+      "diagnostic_seconds": 0.775
+    },
+    {
+      "cik": "0000789019",
+      "form": "10-K",
+      "accession": "0000950170-25-100235",
+      "source_sha256": "bd4d8df78c2c5d037ce9254a2be04e188576d486ff59386ffbd6f7743b4b3665",
+      "split": "development",
+      "status": "parsed",
+      "encoding": "ascii",
+      "parser_version": "sec-html-1/lxml-(6, 1, 3, 0)/libxml-(2, 11, 9)/sec-sections-1",
+      "document_id": "document:011f513a22ff4c7d01d4d87e034b08787d9a778ad7a5d7cde1c5d0997367794d",
+      "logical_sha256": "b4fbe6a9f03885672cba5a611ba4d0e0de74842951c006f0d6666daaa022e963",
+      "deterministic_replay": true,
+      "block_count": 1401,
+      "block_kinds": {
+        "heading": 46,
+        "paragraph": 1270,
+        "table": 85
+      },
+      "locators_verified": 1401,
+      "section_count": 29,
+      "classified_sections": [
+        "I:1",
+        "I:1A",
+        "I:1B",
+        "I:1C",
+        "I:2",
+        "I:3",
+        "I:4",
+        "II:5",
+        "II:6",
+        "II:7",
+        "II:7A",
+        "II:8",
+        "II:9",
+        "II:9A",
+        "II:9B",
+        "II:9C",
+        "III:10",
+        "III:11",
+        "III:12",
+        "III:13",
+        "III:14",
+        "IV:15",
+        "IV:16"
+      ],
+      "unclassified_blocks": 51,
+      "warnings": {
+        "html_recovered": 1,
+        "toc_content_retained": 1,
+        "unclassified_content": 1,
+        "part_preamble": 4,
+        "non_item_section": 1
+      },
+      "boundary_scores": [],
+      "diagnostic_seconds": 3.662
+    },
+    {
+      "cik": "0000789019",
+      "form": "10-K",
+      "accession": "0001193125-26-323660",
+      "source_sha256": "7ee403cf6248837b88b69729c38534d60f1171fd1447ba0fa3ac426abf2430cd",
+      "split": "held_out",
+      "status": "parsed",
+      "encoding": "ascii",
+      "parser_version": "sec-html-1/lxml-(6, 1, 3, 0)/libxml-(2, 11, 9)/sec-sections-1",
+      "document_id": "document:e1be24bc48e26775e8f9ad3c0dcbe62839b51355fd44ab760d8e243e0879a606",
+      "logical_sha256": "eb20bcc348906bfa9fba88b8c33fa46087646539627a6418d515f99f4f767cb3",
+      "deterministic_replay": true,
+      "block_count": 1401,
+      "block_kinds": {
+        "heading": 47,
+        "paragraph": 1266,
+        "table": 88
+      },
+      "locators_verified": 1401,
+      "section_count": 29,
+      "classified_sections": [
+        "I:1",
+        "I:1A",
+        "I:1B",
+        "I:1C",
+        "I:2",
+        "I:3",
+        "I:4",
+        "II:5",
+        "II:6",
+        "II:7",
+        "II:7A",
+        "II:8",
+        "II:9",
+        "II:9A",
+        "II:9B",
+        "II:9C",
+        "III:10",
+        "III:11",
+        "III:12",
+        "III:13",
+        "III:14",
+        "IV:15",
+        "IV:16"
+      ],
+      "unclassified_blocks": 51,
+      "warnings": {
+        "html_recovered": 1,
+        "toc_content_retained": 1,
+        "unclassified_content": 1,
+        "part_preamble": 4,
+        "non_item_section": 1
+      },
+      "boundary_scores": [
+        {
+          "part": "I",
+          "item": "1",
+          "start_correct": true,
+          "end_correct": true,
+          "both_correct": true
+        },
+        {
+          "part": "I",
+          "item": "1A",
+          "start_correct": true,
+          "end_correct": true,
+          "both_correct": true
+        },
+        {
+          "part": "II",
+          "item": "7",
+          "start_correct": true,
+          "end_correct": true,
+          "both_correct": true
+        },
+        {
+          "part": "II",
+          "item": "8",
+          "start_correct": true,
+          "end_correct": true,
+          "both_correct": true
+        }
+      ],
+      "diagnostic_seconds": 3.53
+    },
+    {
+      "cik": "0000789019",
+      "form": "10-Q",
+      "accession": "0001193125-26-027207",
+      "source_sha256": "13b6006248fb7d5f3dfebb5425e6645a8ca4f8e1a438fe1c75a0578be13b2773",
+      "split": "development",
+      "status": "parsed",
+      "encoding": "ascii",
+      "parser_version": "sec-html-1/lxml-(6, 1, 3, 0)/libxml-(2, 11, 9)/sec-sections-1",
+      "document_id": "document:ea322da70fcd6fd0e69ab7f893f045d092e2c423e108ac64d1d505da38d96ca6",
+      "logical_sha256": "7803c684d46b1b55700e52ec8bed8213408023563d1f42b2c6e8cae21800d43a",
+      "deterministic_replay": true,
+      "block_count": 881,
+      "block_kinds": {
+        "heading": 26,
+        "paragraph": 796,
+        "table": 59
+      },
+      "locators_verified": 881,
+      "section_count": 13,
+      "classified_sections": [
+        "I:1",
+        "I:2",
+        "I:3",
+        "I:4",
+        "II:1",
+        "II:1A",
+        "II:2",
+        "II:5",
+        "II:6"
+      ],
+      "unclassified_blocks": 36,
+      "warnings": {
+        "html_recovered": 1,
+        "toc_content_retained": 1,
+        "unclassified_content": 1,
+        "part_preamble": 2,
+        "non_item_section": 1
+      },
+      "boundary_scores": [
+        {
+          "part": "I",
+          "item": "1",
+          "start_correct": true,
+          "end_correct": true,
+          "both_correct": true
+        },
+        {
+          "part": "I",
+          "item": "2",
+          "start_correct": true,
+          "end_correct": true,
+          "both_correct": true
+        },
+        {
+          "part": "II",
+          "item": "1A",
+          "start_correct": true,
+          "end_correct": true,
+          "both_correct": true
+        }
+      ],
+      "diagnostic_seconds": 3.795
+    },
+    {
+      "cik": "0000789019",
+      "form": "10-Q",
+      "accession": "0001193125-26-191507",
+      "source_sha256": "f67faa481eee34adcbd34f779d92f85ee357ad934ef9a5b9ffa43ce2522027f1",
+      "split": "held_out",
+      "status": "parsed",
+      "encoding": "ascii",
+      "parser_version": "sec-html-1/lxml-(6, 1, 3, 0)/libxml-(2, 11, 9)/sec-sections-1",
+      "document_id": "document:919e86532aa8acd130f979412da824e4590170b8ac3ce2142e44021575166fdb",
+      "logical_sha256": "8cd7a2ae38d80c188aa2d95e94d8bc873855861e58c1df36f2a5576cc6b6c85e",
+      "deterministic_replay": true,
+      "block_count": 894,
+      "block_kinds": {
+        "heading": 26,
+        "paragraph": 809,
+        "table": 59
+      },
+      "locators_verified": 894,
+      "section_count": 13,
+      "classified_sections": [
+        "I:1",
+        "I:2",
+        "I:3",
+        "I:4",
+        "II:1",
+        "II:1A",
+        "II:2",
+        "II:5",
+        "II:6"
+      ],
+      "unclassified_blocks": 36,
+      "warnings": {
+        "html_recovered": 1,
+        "toc_content_retained": 1,
+        "unclassified_content": 1,
+        "part_preamble": 2,
+        "non_item_section": 1
+      },
+      "boundary_scores": [],
+      "diagnostic_seconds": 2.971
+    },
+    {
+      "cik": "0001018724",
+      "form": "10-K",
+      "accession": "0001018724-26-000004",
+      "source_sha256": "a2d31fb7be58454479b35622eb8d3379f953f4a8f44a256166217fa5b434af35",
+      "split": "development",
+      "status": "parsed",
+      "encoding": "ascii",
+      "parser_version": "sec-html-1/lxml-(6, 1, 3, 0)/libxml-(2, 11, 9)/sec-sections-1",
+      "document_id": "document:a938656a32a3ca28b99ce173af41ad362350fd609215aec8b61fc2e8f1d548e8",
+      "logical_sha256": "aed9509cdb608e929b844f308a370cf464d0f7444169ade439e730fce4f7a6a5",
+      "deterministic_replay": true,
+      "block_count": 1017,
+      "block_kinds": {
+        "paragraph": 898,
+        "table": 69,
+        "heading": 50
+      },
+      "locators_verified": 1017,
+      "section_count": 29,
+      "classified_sections": [
+        "I:1",
+        "I:1A",
+        "I:1B",
+        "I:1C",
+        "I:2",
+        "I:3",
+        "I:4",
+        "II:5",
+        "II:6",
+        "II:7",
+        "II:7A",
+        "II:8",
+        "II:9",
+        "II:9A",
+        "II:9B",
+        "II:9C",
+        "III:10",
+        "III:11",
+        "III:12",
+        "III:13",
+        "III:14",
+        "IV:15",
+        "IV:16"
+      ],
+      "unclassified_blocks": 63,
+      "warnings": {
+        "html_recovered": 1,
+        "toc_content_retained": 1,
+        "unclassified_content": 1,
+        "part_preamble": 4,
+        "non_item_section": 1
+      },
+      "boundary_scores": [
+        {
+          "part": "I",
+          "item": "1",
+          "start_correct": true,
+          "end_correct": true,
+          "both_correct": true
+        },
+        {
+          "part": "I",
+          "item": "1A",
+          "start_correct": true,
+          "end_correct": true,
+          "both_correct": true
+        },
+        {
+          "part": "II",
+          "item": "7",
+          "start_correct": true,
+          "end_correct": true,
+          "both_correct": true
+        },
+        {
+          "part": "II",
+          "item": "8",
+          "start_correct": true,
+          "end_correct": true,
+          "both_correct": true
+        }
+      ],
+      "diagnostic_seconds": 1.65
+    },
+    {
+      "cik": "0001018724",
+      "form": "10-Q",
+      "accession": "0001018724-26-000014",
+      "source_sha256": "e6b80e48612abe3a0a8256e5ff3b5637cd4be94c12dc18cd3d7106667294fb8b",
+      "split": "development",
+      "status": "parsed",
+      "encoding": "ascii",
+      "parser_version": "sec-html-1/lxml-(6, 1, 3, 0)/libxml-(2, 11, 9)/sec-sections-1",
+      "document_id": "document:12e4f6041351020db0ab615654221fa03f4c919df5d4a48b732c40d34ad6f56c",
+      "logical_sha256": "b9a935a272c3bbe24984aef5e3118c6784693c3673eb620ed867f1894e35aab8",
+      "deterministic_replay": true,
+      "block_count": 619,
+      "block_kinds": {
+        "paragraph": 545,
+        "table": 43,
+        "heading": 31
+      },
+      "locators_verified": 619,
+      "section_count": 15,
+      "classified_sections": [
+        "I:1",
+        "I:2",
+        "I:3",
+        "I:4",
+        "II:1",
+        "II:1A",
+        "II:2",
+        "II:3",
+        "II:4",
+        "II:5",
+        "II:6"
+      ],
+      "unclassified_blocks": 49,
+      "warnings": {
+        "html_recovered": 1,
+        "toc_content_retained": 1,
+        "unclassified_content": 1,
+        "part_preamble": 2,
+        "non_item_section": 1
+      },
+      "boundary_scores": [],
+      "diagnostic_seconds": 1.089
+    },
+    {
+      "cik": "0001018724",
+      "form": "10-Q",
+      "accession": "0001018724-26-000026",
+      "source_sha256": "71f119d4c8e9f2347b929b794f9139d263d55c765f845a6856162da4126c3416",
+      "split": "held_out",
+      "status": "parsed",
+      "encoding": "ascii",
+      "parser_version": "sec-html-1/lxml-(6, 1, 3, 0)/libxml-(2, 11, 9)/sec-sections-1",
+      "document_id": "document:244d488043fca1871cf92393a93cecaa25b9d8542f45b9b4384dcfc7b5e8b7ab",
+      "logical_sha256": "af60fab708768d51dc5eb34283428784771bece3f8e122a99bf845c897ae7551",
+      "deterministic_replay": true,
+      "block_count": 639,
+      "block_kinds": {
+        "paragraph": 565,
+        "table": 43,
+        "heading": 31
+      },
+      "locators_verified": 639,
+      "section_count": 15,
+      "classified_sections": [
+        "I:1",
+        "I:2",
+        "I:3",
+        "I:4",
+        "II:1",
+        "II:1A",
+        "II:2",
+        "II:3",
+        "II:4",
+        "II:5",
+        "II:6"
+      ],
+      "unclassified_blocks": 49,
+      "warnings": {
+        "html_recovered": 1,
+        "toc_content_retained": 1,
+        "unclassified_content": 1,
+        "part_preamble": 2,
+        "non_item_section": 1
+      },
+      "boundary_scores": [],
+      "diagnostic_seconds": 1.06
+    },
+    {
+      "cik": "0001652044",
+      "form": "10-K",
+      "accession": "0001652044-25-000014",
+      "source_sha256": "7b5b7e74836e0c8a9b807ebb074a992d5a35d6549e5d847f4d8cf77951600a9d",
+      "split": "development",
+      "status": "parsed",
+      "encoding": "ascii",
+      "parser_version": "sec-html-1/lxml-(6, 1, 3, 0)/libxml-(2, 11, 9)/sec-sections-1",
+      "document_id": "document:e049d1df6916c050fea8957e4e2d269743113f4186a6048db0152fba73f615a3",
+      "logical_sha256": "e487a9e081ba8de1abf61550372eda8d7fb27c9ba8b0ec2c0108007b430daf55",
+      "deterministic_replay": true,
+      "block_count": 1380,
+      "block_kinds": {
+        "table": 184,
+        "heading": 48,
+        "paragraph": 1148
+      },
+      "locators_verified": 1380,
+      "section_count": 29,
+      "classified_sections": [
+        "I:1",
+        "I:1A",
+        "I:1B",
+        "I:1C",
+        "I:2",
+        "I:3",
+        "I:4",
+        "II:5",
+        "II:6",
+        "II:7",
+        "II:7A",
+        "II:8",
+        "II:9",
+        "II:9A",
+        "II:9B",
+        "II:9C",
+        "III:10",
+        "III:11",
+        "III:12",
+        "III:13",
+        "III:14",
+        "IV:15",
+        "IV:16"
+      ],
+      "unclassified_blocks": 102,
+      "warnings": {
+        "html_recovered": 1,
+        "toc_content_retained": 1,
+        "unclassified_content": 1,
+        "part_preamble": 4,
+        "non_item_section": 1
+      },
+      "boundary_scores": [],
+      "diagnostic_seconds": 2.369
+    },
+    {
+      "cik": "0001652044",
+      "form": "10-K",
+      "accession": "0001652044-26-000018",
+      "source_sha256": "55433ab65713c9cfebd65dc33c8e2d116e8a1d60c64a955d20cd2171ee8ceecc",
+      "split": "held_out",
+      "status": "parsed",
+      "encoding": "ascii",
+      "parser_version": "sec-html-1/lxml-(6, 1, 3, 0)/libxml-(2, 11, 9)/sec-sections-1",
+      "document_id": "document:25d07feb32ed9f44011b77d43d3af179a67c5db524164ac85e2b86f212f8a86b",
+      "logical_sha256": "04be4c0d11e2173b975d215b12cebd9feeb7ada9c5435141486479def406c95e",
+      "deterministic_replay": true,
+      "block_count": 1334,
+      "block_kinds": {
+        "table": 185,
+        "heading": 48,
+        "paragraph": 1101
+      },
+      "locators_verified": 1334,
+      "section_count": 29,
+      "classified_sections": [
+        "I:1",
+        "I:1A",
+        "I:1B",
+        "I:1C",
+        "I:2",
+        "I:3",
+        "I:4",
+        "II:5",
+        "II:6",
+        "II:7",
+        "II:7A",
+        "II:8",
+        "II:9",
+        "II:9A",
+        "II:9B",
+        "II:9C",
+        "III:10",
+        "III:11",
+        "III:12",
+        "III:13",
+        "III:14",
+        "IV:15",
+        "IV:16"
+      ],
+      "unclassified_blocks": 74,
+      "warnings": {
+        "html_recovered": 1,
+        "toc_content_retained": 1,
+        "unclassified_content": 1,
+        "part_preamble": 4,
+        "non_item_section": 1
+      },
+      "boundary_scores": [],
+      "diagnostic_seconds": 2.02
+    },
+    {
+      "cik": "0001652044",
+      "form": "10-Q",
+      "accession": "0001652044-26-000048",
+      "source_sha256": "0da733204ca3463c96d324c3620ab2794bce9566ee7a6586100b66634a98aca0",
+      "split": "development",
+      "status": "parsed",
+      "encoding": "ascii",
+      "parser_version": "sec-html-1/lxml-(6, 1, 3, 0)/libxml-(2, 11, 9)/sec-sections-1",
+      "document_id": "document:7e4c54f8a342fe573df488ab14a804a0cb3ae65923a0ff4eca7ee0cb3a546719",
+      "logical_sha256": "bcf4f84efdbbce500929a3115a9f9b6d95929fe9db98fe6fcaaa55a5c2cfacaf",
+      "deterministic_replay": true,
+      "block_count": 692,
+      "block_kinds": {
+        "table": 86,
+        "heading": 23,
+        "paragraph": 583
+      },
+      "locators_verified": 692,
+      "section_count": 13,
+      "classified_sections": [
+        "I:1",
+        "I:2",
+        "I:3",
+        "I:4",
+        "II:1",
+        "II:1A",
+        "II:2",
+        "II:5",
+        "II:6"
+      ],
+      "unclassified_blocks": 56,
+      "warnings": {
+        "html_recovered": 1,
+        "toc_content_retained": 1,
+        "unclassified_content": 1,
+        "part_preamble": 2,
+        "non_item_section": 1
+      },
+      "boundary_scores": [
+        {
+          "part": "I",
+          "item": "1",
+          "start_correct": true,
+          "end_correct": true,
+          "both_correct": true
+        },
+        {
+          "part": "I",
+          "item": "2",
+          "start_correct": true,
+          "end_correct": true,
+          "both_correct": true
+        },
+        {
+          "part": "II",
+          "item": "1A",
+          "start_correct": true,
+          "end_correct": true,
+          "both_correct": true
+        }
+      ],
+      "diagnostic_seconds": 0.976
+    },
+    {
+      "cik": "0001652044",
+      "form": "10-Q",
+      "accession": "0001652044-26-000071",
+      "source_sha256": "2066731bde8531eff1054fe178e85c701ec0eba3a18b9f309ee6945442ecad7a",
+      "split": "held_out",
+      "status": "parsed",
+      "encoding": "ascii",
+      "parser_version": "sec-html-1/lxml-(6, 1, 3, 0)/libxml-(2, 11, 9)/sec-sections-1",
+      "document_id": "document:ed984e45281a25c4b2a86f724cbaecfde15ae1b8de5027b499b0143e18f14575",
+      "logical_sha256": "63ef5e6dc39bb1db99fa9bbfae6753103a40aec669e7bc926d55ecc63019d5cc",
+      "deterministic_replay": true,
+      "block_count": 822,
+      "block_kinds": {
+        "table": 94,
+        "heading": 23,
+        "paragraph": 705
+      },
+      "locators_verified": 822,
+      "section_count": 13,
+      "classified_sections": [
+        "I:1",
+        "I:2",
+        "I:3",
+        "I:4",
+        "II:1",
+        "II:1A",
+        "II:2",
+        "II:5",
+        "II:6"
+      ],
+      "unclassified_blocks": 56,
+      "warnings": {
+        "html_recovered": 1,
+        "toc_content_retained": 1,
+        "unclassified_content": 1,
+        "part_preamble": 2,
+        "non_item_section": 1
+      },
+      "boundary_scores": [],
+      "diagnostic_seconds": 1.462
+    }
+  ],
+  "metrics": {
+    "all": {
+      "parsed": 18,
+      "failed": 0,
+      "labeled_boundaries": 25,
+      "exact_boundaries": 25,
+      "correct_starts": 25,
+      "correct_ends": 25,
+      "filings": 18,
+      "warning_events": 128,
+      "warning:html_recovered": 18,
+      "warning:toc_content_retained": 18,
+      "warning:unclassified_content": 18,
+      "warning:part_preamble": 48,
+      "warning:non_item_section": 18,
+      "warning:missing_part": 4,
+      "warning:missing_priority_i_1": 2,
+      "warning:missing_priority_i_2": 2
+    },
+    "company:0000019617": {
+      "parsed": 3,
+      "failed": 0,
+      "labeled_boundaries": 4,
+      "exact_boundaries": 4,
+      "correct_starts": 4,
+      "correct_ends": 4,
+      "filings": 3,
+      "warning_events": 24,
+      "warning:html_recovered": 3,
+      "warning:toc_content_retained": 3,
+      "warning:unclassified_content": 3,
+      "warning:part_preamble": 4,
+      "warning:non_item_section": 3,
+      "warning:missing_part": 4,
+      "warning:missing_priority_i_1": 2,
+      "warning:missing_priority_i_2": 2
+    },
+    "company:0000320193": {
+      "parsed": 4,
+      "failed": 0,
+      "labeled_boundaries": 7,
+      "exact_boundaries": 7,
+      "correct_starts": 7,
+      "correct_ends": 7,
+      "filings": 4,
+      "warning_events": 28,
+      "warning:html_recovered": 4,
+      "warning:toc_content_retained": 4,
+      "warning:unclassified_content": 4,
+      "warning:part_preamble": 12,
+      "warning:non_item_section": 4
+    },
+    "company:0000789019": {
+      "parsed": 4,
+      "failed": 0,
+      "labeled_boundaries": 7,
+      "exact_boundaries": 7,
+      "correct_starts": 7,
+      "correct_ends": 7,
+      "filings": 4,
+      "warning_events": 28,
+      "warning:html_recovered": 4,
+      "warning:toc_content_retained": 4,
+      "warning:unclassified_content": 4,
+      "warning:part_preamble": 12,
+      "warning:non_item_section": 4
+    },
+    "company:0001018724": {
+      "parsed": 3,
+      "failed": 0,
+      "labeled_boundaries": 4,
+      "exact_boundaries": 4,
+      "correct_starts": 4,
+      "correct_ends": 4,
+      "filings": 3,
+      "warning_events": 20,
+      "warning:html_recovered": 3,
+      "warning:toc_content_retained": 3,
+      "warning:unclassified_content": 3,
+      "warning:part_preamble": 8,
+      "warning:non_item_section": 3
+    },
+    "company:0001652044": {
+      "parsed": 4,
+      "failed": 0,
+      "labeled_boundaries": 3,
+      "exact_boundaries": 3,
+      "correct_starts": 3,
+      "correct_ends": 3,
+      "filings": 4,
+      "warning_events": 28,
+      "warning:html_recovered": 4,
+      "warning:toc_content_retained": 4,
+      "warning:unclassified_content": 4,
+      "warning:part_preamble": 12,
+      "warning:non_item_section": 4
+    },
+    "form:10-K": {
+      "parsed": 8,
+      "failed": 0,
+      "labeled_boundaries": 16,
+      "exact_boundaries": 16,
+      "correct_starts": 16,
+      "correct_ends": 16,
+      "filings": 8,
+      "warning_events": 62,
+      "warning:html_recovered": 8,
+      "warning:toc_content_retained": 8,
+      "warning:unclassified_content": 8,
+      "warning:part_preamble": 30,
+      "warning:non_item_section": 8
+    },
+    "form:10-Q": {
+      "parsed": 10,
+      "failed": 0,
+      "labeled_boundaries": 9,
+      "exact_boundaries": 9,
+      "correct_starts": 9,
+      "correct_ends": 9,
+      "filings": 10,
+      "warning_events": 66,
+      "warning:html_recovered": 10,
+      "warning:toc_content_retained": 10,
+      "warning:unclassified_content": 10,
+      "warning:missing_part": 4,
+      "warning:part_preamble": 18,
+      "warning:non_item_section": 10,
+      "warning:missing_priority_i_1": 2,
+      "warning:missing_priority_i_2": 2
+    },
+    "section:10-K:I:1": {
+      "labeled_boundaries": 4,
+      "exact_boundaries": 4
+    },
+    "section:10-K:I:1A": {
+      "labeled_boundaries": 4,
+      "exact_boundaries": 4
+    },
+    "section:10-K:II:7": {
+      "labeled_boundaries": 4,
+      "exact_boundaries": 4
+    },
+    "section:10-K:II:8": {
+      "labeled_boundaries": 4,
+      "exact_boundaries": 4
+    },
+    "section:10-Q:I:1": {
+      "labeled_boundaries": 3,
+      "exact_boundaries": 3
+    },
+    "section:10-Q:I:2": {
+      "labeled_boundaries": 3,
+      "exact_boundaries": 3
+    },
+    "section:10-Q:II:1A": {
+      "labeled_boundaries": 3,
+      "exact_boundaries": 3
+    },
+    "split:development": {
+      "parsed": 10,
+      "failed": 0,
+      "labeled_boundaries": 18,
+      "exact_boundaries": 18,
+      "correct_starts": 18,
+      "correct_ends": 18,
+      "filings": 10,
+      "warning_events": 71,
+      "warning:html_recovered": 10,
+      "warning:toc_content_retained": 10,
+      "warning:unclassified_content": 10,
+      "warning:part_preamble": 27,
+      "warning:non_item_section": 10,
+      "warning:missing_part": 2,
+      "warning:missing_priority_i_1": 1,
+      "warning:missing_priority_i_2": 1
+    },
+    "split:held_out": {
+      "parsed": 8,
+      "failed": 0,
+      "labeled_boundaries": 7,
+      "exact_boundaries": 7,
+      "correct_starts": 7,
+      "correct_ends": 7,
+      "filings": 8,
+      "warning_events": 57,
+      "warning:html_recovered": 8,
+      "warning:toc_content_retained": 8,
+      "warning:unclassified_content": 8,
+      "warning:missing_part": 2,
+      "warning:part_preamble": 21,
+      "warning:non_item_section": 8,
+      "warning:missing_priority_i_1": 1,
+      "warning:missing_priority_i_2": 1
+    },
+    "structural_section:10-K:I:1": {
+      "detected_occurrences": 8
+    },
+    "structural_section:10-K:I:1A": {
+      "detected_occurrences": 8
+    },
+    "structural_section:10-K:I:1B": {
+      "detected_occurrences": 8
+    },
+    "structural_section:10-K:I:1C": {
+      "detected_occurrences": 8
+    },
+    "structural_section:10-K:I:2": {
+      "detected_occurrences": 8
+    },
+    "structural_section:10-K:I:3": {
+      "detected_occurrences": 8
+    },
+    "structural_section:10-K:I:4": {
+      "detected_occurrences": 8
+    },
+    "structural_section:10-K:II:5": {
+      "detected_occurrences": 8
+    },
+    "structural_section:10-K:II:6": {
+      "detected_occurrences": 8
+    },
+    "structural_section:10-K:II:7": {
+      "detected_occurrences": 8
+    },
+    "structural_section:10-K:II:7A": {
+      "detected_occurrences": 8
+    },
+    "structural_section:10-K:II:8": {
+      "detected_occurrences": 8
+    },
+    "structural_section:10-K:II:9": {
+      "detected_occurrences": 8
+    },
+    "structural_section:10-K:II:9A": {
+      "detected_occurrences": 8
+    },
+    "structural_section:10-K:II:9B": {
+      "detected_occurrences": 8
+    },
+    "structural_section:10-K:II:9C": {
+      "detected_occurrences": 8
+    },
+    "structural_section:10-K:III:10": {
+      "detected_occurrences": 8
+    },
+    "structural_section:10-K:III:11": {
+      "detected_occurrences": 8
+    },
+    "structural_section:10-K:III:12": {
+      "detected_occurrences": 8
+    },
+    "structural_section:10-K:III:13": {
+      "detected_occurrences": 8
+    },
+    "structural_section:10-K:III:14": {
+      "detected_occurrences": 7
+    },
+    "structural_section:10-K:IV:15": {
+      "detected_occurrences": 8
+    },
+    "structural_section:10-K:IV:16": {
+      "detected_occurrences": 7
+    },
+    "structural_section:10-Q:I:1": {
+      "detected_occurrences": 8
+    },
+    "structural_section:10-Q:I:2": {
+      "detected_occurrences": 8
+    },
+    "structural_section:10-Q:I:3": {
+      "detected_occurrences": 8
+    },
+    "structural_section:10-Q:I:4": {
+      "detected_occurrences": 8
+    },
+    "structural_section:10-Q:II:1": {
+      "detected_occurrences": 10
+    },
+    "structural_section:10-Q:II:1A": {
+      "detected_occurrences": 10
+    },
+    "structural_section:10-Q:II:2": {
+      "detected_occurrences": 10
+    },
+    "structural_section:10-Q:II:3": {
+      "detected_occurrences": 6
+    },
+    "structural_section:10-Q:II:4": {
+      "detected_occurrences": 6
+    },
+    "structural_section:10-Q:II:5": {
+      "detected_occurrences": 10
+    },
+    "structural_section:10-Q:II:6": {
+      "detected_occurrences": 10
+    }
+  }
+}

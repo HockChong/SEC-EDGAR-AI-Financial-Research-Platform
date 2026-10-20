@@ -1,6 +1,12 @@
 # Data dictionary and contract invariants
 
-Status: proposed logical contracts, not implemented SQL tables or Pydantic classes. Physical schemas, indexes, migrations, and exact field constraints are assigned to their delivery packages. All external contracts carry a `schema_version`.
+Status: Phase 2 company/filing/source/fetch contracts and ingestion SQL records are implemented; see [ingestion](ingestion.md). Silver/Gold, financial and research records below remain proposed logical contracts. Physical schemas, indexes, migrations, and exact field constraints are assigned to their delivery packages. All external contracts carry a `schema_version`.
+
+WP3.1 implements the canonical record subset and portable storage-row schemas
+specified in [canonical contracts](canonical-contracts.md). That document
+distinguishes validated fields from future cross-row checks and physical adapters.
+The broader projections, selection/calculation services and research records below
+remain proposed; no Silver/Gold dataset has been produced by WP3.1.
 
 ## Shared conventions
 

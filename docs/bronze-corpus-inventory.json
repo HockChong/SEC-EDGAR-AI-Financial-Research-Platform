@@ -1,0 +1,991 @@
+{
+  "schema_version": "1",
+  "validated_on": "2026-10-20",
+  "reconciliation": {
+    "fetches": 28,
+    "objects": 28,
+    "orphans": 0
+  },
+  "filings": 18,
+  "companies": 5,
+  "forms": {
+    "10-Q": 10,
+    "10-K": 8
+  },
+  "artifact_types": {
+    "filing": 18,
+    "submissions": 5,
+    "company_facts": 5
+  },
+  "object_bytes": 114345283,
+  "manifest_bytes": 26013,
+  "total_bronze_bytes": 114371296,
+  "original_three_fetches_preserved": true,
+  "repeat_immutable_snapshot_verified": true,
+  "missing_artifacts": [],
+  "failed_artifacts": [],
+  "document_identity_checks": [
+    {
+      "accession": "0000320193-26-000013",
+      "cik": "0000320193",
+      "form": "10-Q",
+      "raw_document_period_end": "March\u00a028, 2026",
+      "identity_verified": true
+    },
+    {
+      "accession": "0001018724-26-000004",
+      "cik": "0001018724",
+      "form": "10-K",
+      "raw_document_period_end": "December\u00a031, 2025",
+      "identity_verified": true
+    },
+    {
+      "accession": "0000950170-25-100235",
+      "cik": "0000789019",
+      "form": "10-K",
+      "raw_document_period_end": "June 30, 2025",
+      "identity_verified": true
+    },
+    {
+      "accession": "0001652044-25-000014",
+      "cik": "0001652044",
+      "form": "10-K",
+      "raw_document_period_end": "December\u00a031, 2024",
+      "identity_verified": true
+    },
+    {
+      "accession": "0001652044-26-000071",
+      "cik": "0001652044",
+      "form": "10-Q",
+      "raw_document_period_end": "June\u00a030, 2026",
+      "identity_verified": true
+    },
+    {
+      "accession": "0001193125-26-191507",
+      "cik": "0000789019",
+      "form": "10-Q",
+      "raw_document_period_end": "March 31, 2026",
+      "identity_verified": true
+    },
+    {
+      "accession": "0001018724-26-000026",
+      "cik": "0001018724",
+      "form": "10-Q",
+      "raw_document_period_end": "June\u00a030, 2026",
+      "identity_verified": true
+    },
+    {
+      "accession": "0001652044-26-000018",
+      "cik": "0001652044",
+      "form": "10-K",
+      "raw_document_period_end": "December\u00a031, 2025",
+      "identity_verified": true
+    },
+    {
+      "accession": "0001628280-26-008131",
+      "cik": "0000019617",
+      "form": "10-K",
+      "raw_document_period_end": "December 31, 2025",
+      "identity_verified": true
+    },
+    {
+      "accession": "0001628280-26-029344",
+      "cik": "0000019617",
+      "form": "10-Q",
+      "raw_document_period_end": "March 31, 2026",
+      "identity_verified": true
+    },
+    {
+      "accession": "0001018724-26-000014",
+      "cik": "0001018724",
+      "form": "10-Q",
+      "raw_document_period_end": "March\u00a031, 2026",
+      "identity_verified": true
+    },
+    {
+      "accession": "0001193125-26-323660",
+      "cik": "0000789019",
+      "form": "10-K",
+      "raw_document_period_end": "June 30, 2026",
+      "identity_verified": true
+    },
+    {
+      "accession": "0001193125-26-027207",
+      "cik": "0000789019",
+      "form": "10-Q",
+      "raw_document_period_end": "December 31, 2025",
+      "identity_verified": true
+    },
+    {
+      "accession": "0001652044-26-000048",
+      "cik": "0001652044",
+      "form": "10-Q",
+      "raw_document_period_end": "March\u00a031, 2026",
+      "identity_verified": true
+    },
+    {
+      "accession": "0000320193-25-000079",
+      "cik": "0000320193",
+      "form": "10-K",
+      "raw_document_period_end": "September\u00a027, 2025",
+      "identity_verified": true
+    },
+    {
+      "accession": "0001628280-26-054343",
+      "cik": "0000019617",
+      "form": "10-Q",
+      "raw_document_period_end": "June 30, 2026",
+      "identity_verified": true
+    },
+    {
+      "accession": "0000320193-26-000020",
+      "cik": "0000320193",
+      "form": "10-Q",
+      "raw_document_period_end": "June\u00a027, 2026",
+      "identity_verified": true
+    },
+    {
+      "accession": "0000320193-24-000123",
+      "cik": "0000320193",
+      "form": "10-K",
+      "raw_document_period_end": "September\u00a028, 2024",
+      "identity_verified": true
+    }
+  ],
+  "fetches": [
+    {
+      "schema_version": "1",
+      "id": "03d9cf59-11d2-4904-8ca4-d1a626fe2034",
+      "run_id": "f7658fc6-0053-4f87-a2cb-e22382956045",
+      "source": {
+        "schema_version": "1",
+        "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/aapl-20260328.htm",
+        "kind": "filing",
+        "cik": "0000320193",
+        "filing": {
+          "schema_version": "1",
+          "cik": "0000320193",
+          "accession": "0000320193-26-000013",
+          "form": "10-Q",
+          "filing_date": "2026-05-01",
+          "report_date": "2026-03-28",
+          "accepted_at": "2026-05-01T14:01:00Z",
+          "primary_document": "aapl-20260328.htm"
+        }
+      },
+      "sha256": "7d97585e619f1e6ca9ad23c5068c3b2fe1369a3b01882acd4aeff93b4b638f91",
+      "storage_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/sha256/7d/7d97585e619f1e6ca9ad23c5068c3b2fe1369a3b01882acd4aeff93b4b638f91",
+      "manifest_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/manifests/03d9cf5911d249048ca4d1a626fe2034.json",
+      "fetched_at": "2026-10-20T13:58:43.091828Z",
+      "byte_count": 999916,
+      "http_status": 200,
+      "media_type": "text/html",
+      "etag": null,
+      "last_modified": "Fri, 01 May 2026 13:25:16 GMT",
+      "attempts": 1,
+      "processing_status": "unprocessed",
+      "pipeline_version": "bronze-1"
+    },
+    {
+      "schema_version": "1",
+      "id": "05f7a6bf-d034-4f54-b00d-7364dc9fa4d2",
+      "run_id": "76c8afeb-f27e-4bce-b75e-5d71e3bcc78f",
+      "source": {
+        "schema_version": "1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+        "kind": "filing",
+        "cik": "0001018724",
+        "filing": {
+          "schema_version": "1",
+          "cik": "0001018724",
+          "accession": "0001018724-26-000004",
+          "form": "10-K",
+          "filing_date": "2026-02-06",
+          "report_date": "2025-12-31",
+          "accepted_at": "2026-02-06T04:44:31Z",
+          "primary_document": "amzn-20251231.htm"
+        }
+      },
+      "sha256": "a2d31fb7be58454479b35622eb8d3379f953f4a8f44a256166217fa5b434af35",
+      "storage_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/sha256/a2/a2d31fb7be58454479b35622eb8d3379f953f4a8f44a256166217fa5b434af35",
+      "manifest_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/manifests/05f7a6bfd0344f54b00d7364dc9fa4d2.json",
+      "fetched_at": "2026-10-20T13:58:59.308341Z",
+      "byte_count": 1968448,
+      "http_status": 200,
+      "media_type": "text/html",
+      "etag": null,
+      "last_modified": "Fri, 06 Feb 2026 11:01:58 GMT",
+      "attempts": 1,
+      "processing_status": "unprocessed",
+      "pipeline_version": "bronze-1"
+    },
+    {
+      "schema_version": "1",
+      "id": "15292a04-83fe-4dee-a86c-38f5ad9b0781",
+      "run_id": "9b132e66-1764-4fe8-aeab-84c22f1758eb",
+      "source": {
+        "schema_version": "1",
+        "url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm",
+        "kind": "filing",
+        "cik": "0000789019",
+        "filing": {
+          "schema_version": "1",
+          "cik": "0000789019",
+          "accession": "0000950170-25-100235",
+          "form": "10-K",
+          "filing_date": "2025-07-30",
+          "report_date": "2025-06-30",
+          "accepted_at": "2025-07-31T00:11:40Z",
+          "primary_document": "msft-20250630.htm"
+        }
+      },
+      "sha256": "bd4d8df78c2c5d037ce9254a2be04e188576d486ff59386ffbd6f7743b4b3665",
+      "storage_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/sha256/bd/bd4d8df78c2c5d037ce9254a2be04e188576d486ff59386ffbd6f7743b4b3665",
+      "manifest_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/manifests/15292a0483fe4deea86c38f5ad9b0781.json",
+      "fetched_at": "2026-10-20T13:58:48.013893Z",
+      "byte_count": 8158173,
+      "http_status": 200,
+      "media_type": "text/html",
+      "etag": null,
+      "last_modified": "Wed, 30 Jul 2025 20:12:17 GMT",
+      "attempts": 1,
+      "processing_status": "unprocessed",
+      "pipeline_version": "bronze-1"
+    },
+    {
+      "schema_version": "1",
+      "id": "19e21647-91f3-43af-9938-3fa2e01c801e",
+      "run_id": "2314a2b2-f3e9-4297-85a6-e6ced3d90a54",
+      "source": {
+        "schema_version": "1",
+        "url": "https://data.sec.gov/submissions/CIK0001652044.json",
+        "kind": "submissions",
+        "cik": "0001652044",
+        "filing": null
+      },
+      "sha256": "648cea84d824309b518807fd7e7fdb72d6855e12e8afa221d2caa047d5c9f2ca",
+      "storage_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/sha256/64/648cea84d824309b518807fd7e7fdb72d6855e12e8afa221d2caa047d5c9f2ca",
+      "manifest_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/manifests/19e2164791f343af99383fa2e01c801e.json",
+      "fetched_at": "2026-10-20T13:57:46.704915Z",
+      "byte_count": 152401,
+      "http_status": 200,
+      "media_type": "application/json",
+      "etag": null,
+      "last_modified": null,
+      "attempts": 1,
+      "processing_status": "unprocessed",
+      "pipeline_version": "bronze-1"
+    },
+    {
+      "schema_version": "1",
+      "id": "2aab40c2-f92e-4ba3-b554-207fe85d7292",
+      "run_id": "fad7b01d-6132-49f8-8769-cb26af0f8d3a",
+      "source": {
+        "schema_version": "1",
+        "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json",
+        "kind": "company_facts",
+        "cik": "0000789019",
+        "filing": null
+      },
+      "sha256": "f8aae2965b20ad0df44bdf7ccbedf797d275b6b8dc030154a7a311361bb7246f",
+      "storage_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/sha256/f8/f8aae2965b20ad0df44bdf7ccbedf797d275b6b8dc030154a7a311361bb7246f",
+      "manifest_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/manifests/2aab40c2f92e4ba3b554207fe85d7292.json",
+      "fetched_at": "2026-10-20T13:58:46.264925Z",
+      "byte_count": 4881196,
+      "http_status": 200,
+      "media_type": "application/json",
+      "etag": null,
+      "last_modified": null,
+      "attempts": 1,
+      "processing_status": "unprocessed",
+      "pipeline_version": "bronze-1"
+    },
+    {
+      "schema_version": "1",
+      "id": "2e0f892f-49ea-47ee-9e4c-2c403ed965ac",
+      "run_id": "9a46eca5-9903-4e41-a78f-bc12bd95adf6",
+      "source": {
+        "schema_version": "1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm",
+        "kind": "filing",
+        "cik": "0001652044",
+        "filing": {
+          "schema_version": "1",
+          "cik": "0001652044",
+          "accession": "0001652044-25-000014",
+          "form": "10-K",
+          "filing_date": "2025-02-05",
+          "report_date": "2024-12-31",
+          "accepted_at": "2025-02-05T06:41:40Z",
+          "primary_document": "goog-20241231.htm"
+        }
+      },
+      "sha256": "7b5b7e74836e0c8a9b807ebb074a992d5a35d6549e5d847f4d8cf77951600a9d",
+      "storage_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/sha256/7b/7b5b7e74836e0c8a9b807ebb074a992d5a35d6549e5d847f4d8cf77951600a9d",
+      "manifest_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/manifests/2e0f892f49ea47ee9e4c2c403ed965ac.json",
+      "fetched_at": "2026-10-20T13:58:55.849602Z",
+      "byte_count": 2528450,
+      "http_status": 200,
+      "media_type": "text/html",
+      "etag": null,
+      "last_modified": "Wed, 05 Feb 2025 11:01:46 GMT",
+      "attempts": 1,
+      "processing_status": "unprocessed",
+      "pipeline_version": "bronze-1"
+    },
+    {
+      "schema_version": "1",
+      "id": "446dc628-1152-4883-a096-afce12369210",
+      "run_id": "84e3d908-2760-444c-9128-12cbe79515ed",
+      "source": {
+        "schema_version": "1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm",
+        "kind": "filing",
+        "cik": "0001652044",
+        "filing": {
+          "schema_version": "1",
+          "cik": "0001652044",
+          "accession": "0001652044-26-000071",
+          "form": "10-Q",
+          "filing_date": "2026-07-23",
+          "report_date": "2026-06-30",
+          "accepted_at": "2026-07-23T05:15:54Z",
+          "primary_document": "goog-20260630.htm"
+        }
+      },
+      "sha256": "2066731bde8531eff1054fe178e85c701ec0eba3a18b9f309ee6945442ecad7a",
+      "storage_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/sha256/20/2066731bde8531eff1054fe178e85c701ec0eba3a18b9f309ee6945442ecad7a",
+      "manifest_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/manifests/446dc62811524883a096afce12369210.json",
+      "fetched_at": "2026-10-20T13:58:57.045502Z",
+      "byte_count": 2464239,
+      "http_status": 200,
+      "media_type": "text/html",
+      "etag": null,
+      "last_modified": "Thu, 23 Jul 2026 10:04:02 GMT",
+      "attempts": 1,
+      "processing_status": "unprocessed",
+      "pipeline_version": "bronze-1"
+    },
+    {
+      "schema_version": "1",
+      "id": "49f07a99-64df-493e-9881-519aff2ad6fc",
+      "run_id": "bbd7fc45-e603-4af3-88b0-32ac5a21863d",
+      "source": {
+        "schema_version": "1",
+        "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526191507/msft-20260331.htm",
+        "kind": "filing",
+        "cik": "0000789019",
+        "filing": {
+          "schema_version": "1",
+          "cik": "0000789019",
+          "accession": "0001193125-26-191507",
+          "form": "10-Q",
+          "filing_date": "2026-04-29",
+          "report_date": "2026-03-31",
+          "accepted_at": "2026-04-30T00:06:24Z",
+          "primary_document": "msft-20260331.htm"
+        }
+      },
+      "sha256": "f67faa481eee34adcbd34f779d92f85ee357ad934ef9a5b9ffa43ce2522027f1",
+      "storage_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/sha256/f6/f67faa481eee34adcbd34f779d92f85ee357ad934ef9a5b9ffa43ce2522027f1",
+      "manifest_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/manifests/49f07a9964df493e9881519aff2ad6fc.json",
+      "fetched_at": "2026-10-20T13:58:49.799656Z",
+      "byte_count": 7732054,
+      "http_status": 200,
+      "media_type": "text/html",
+      "etag": null,
+      "last_modified": "Wed, 29 Apr 2026 20:07:57 GMT",
+      "attempts": 1,
+      "processing_status": "unprocessed",
+      "pipeline_version": "bronze-1"
+    },
+    {
+      "schema_version": "1",
+      "id": "4ae881c1-63a8-4fb5-b1ae-9521e61d2b73",
+      "run_id": "4a25b3be-18bf-47eb-8696-d66dd123a396",
+      "source": {
+        "schema_version": "1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+        "kind": "filing",
+        "cik": "0001018724",
+        "filing": {
+          "schema_version": "1",
+          "cik": "0001018724",
+          "accession": "0001018724-26-000026",
+          "form": "10-Q",
+          "filing_date": "2026-07-31",
+          "report_date": "2026-06-30",
+          "accepted_at": "2026-07-31T02:11:13Z",
+          "primary_document": "amzn-20260630.htm"
+        }
+      },
+      "sha256": "71f119d4c8e9f2347b929b794f9139d263d55c765f845a6856162da4126c3416",
+      "storage_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/sha256/71/71f119d4c8e9f2347b929b794f9139d263d55c765f845a6856162da4126c3416",
+      "manifest_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/manifests/4ae881c163a84fb5b1ae9521e61d2b73.json",
+      "fetched_at": "2026-10-20T13:59:02.527484Z",
+      "byte_count": 1591528,
+      "http_status": 200,
+      "media_type": "text/html",
+      "etag": null,
+      "last_modified": "Fri, 31 Jul 2026 10:01:51 GMT",
+      "attempts": 1,
+      "processing_status": "unprocessed",
+      "pipeline_version": "bronze-1"
+    },
+    {
+      "schema_version": "1",
+      "id": "710a3223-db86-4f44-bcec-7e18042c6821",
+      "run_id": "16f43e8f-eb03-4a6c-af4b-54e9f5ca095b",
+      "source": {
+        "schema_version": "1",
+        "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001652044.json",
+        "kind": "company_facts",
+        "cik": "0001652044",
+        "filing": null
+      },
+      "sha256": "a017f26ee88cb4a639d1c1ddb06d53b4afe22f0ac89cabec7cd67c88919fe1c5",
+      "storage_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/sha256/a0/a017f26ee88cb4a639d1c1ddb06d53b4afe22f0ac89cabec7cd67c88919fe1c5",
+      "manifest_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/manifests/710a3223db864f44bcec7e18042c6821.json",
+      "fetched_at": "2026-10-20T13:58:54.465208Z",
+      "byte_count": 3164517,
+      "http_status": 200,
+      "media_type": "application/json",
+      "etag": null,
+      "last_modified": null,
+      "attempts": 1,
+      "processing_status": "unprocessed",
+      "pipeline_version": "bronze-1"
+    },
+    {
+      "schema_version": "1",
+      "id": "764ce16a-6ab7-4030-b6c3-01fc6530cbde",
+      "run_id": "16f43e8f-eb03-4a6c-af4b-54e9f5ca095b",
+      "source": {
+        "schema_version": "1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+        "kind": "filing",
+        "cik": "0001652044",
+        "filing": {
+          "schema_version": "1",
+          "cik": "0001652044",
+          "accession": "0001652044-26-000018",
+          "form": "10-K",
+          "filing_date": "2026-02-05",
+          "report_date": "2025-12-31",
+          "accepted_at": "2026-02-05T07:56:03Z",
+          "primary_document": "goog-20251231.htm"
+        }
+      },
+      "sha256": "55433ab65713c9cfebd65dc33c8e2d116e8a1d60c64a955d20cd2171ee8ceecc",
+      "storage_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/sha256/55/55433ab65713c9cfebd65dc33c8e2d116e8a1d60c64a955d20cd2171ee8ceecc",
+      "manifest_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/manifests/764ce16a6ab74030b6c301fc6530cbde.json",
+      "fetched_at": "2026-10-20T13:58:52.800920Z",
+      "byte_count": 2616605,
+      "http_status": 200,
+      "media_type": "text/html",
+      "etag": null,
+      "last_modified": "Thu, 05 Feb 2026 11:04:47 GMT",
+      "attempts": 1,
+      "processing_status": "unprocessed",
+      "pipeline_version": "bronze-1"
+    },
+    {
+      "schema_version": "1",
+      "id": "79aa1c4d-831a-4239-a224-6e82e7fa6a5e",
+      "run_id": "dcd16b49-846f-4dd0-913e-923d32d8ad32",
+      "source": {
+        "schema_version": "1",
+        "url": "https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm",
+        "kind": "filing",
+        "cik": "0000019617",
+        "filing": {
+          "schema_version": "1",
+          "cik": "0000019617",
+          "accession": "0001628280-26-008131",
+          "form": "10-K",
+          "filing_date": "2026-02-13",
+          "report_date": "2025-12-31",
+          "accepted_at": "2026-02-14T02:20:00Z",
+          "primary_document": "jpm-20251231.htm"
+        }
+      },
+      "sha256": "428551a3073c9701082ca0fe2212b753f8aa30aa71dbd2d5e542a4e09013be05",
+      "storage_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/sha256/42/428551a3073c9701082ca0fe2212b753f8aa30aa71dbd2d5e542a4e09013be05",
+      "manifest_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/manifests/79aa1c4d831a4239a2246e82e7fa6a5e.json",
+      "fetched_at": "2026-10-20T13:59:06.709803Z",
+      "byte_count": 12927431,
+      "http_status": 200,
+      "media_type": "text/html",
+      "etag": null,
+      "last_modified": "Fri, 13 Feb 2026 21:21:01 GMT",
+      "attempts": 1,
+      "processing_status": "unprocessed",
+      "pipeline_version": "bronze-1"
+    },
+    {
+      "schema_version": "1",
+      "id": "82b3ab7c-4be8-4913-8d7c-8a4473d67406",
+      "run_id": "adb30937-10b2-44b7-b9e7-da003b424626",
+      "source": {
+        "schema_version": "1",
+        "url": "https://www.sec.gov/Archives/edgar/data/19617/000162828026029344/jpm-20260331.htm",
+        "kind": "filing",
+        "cik": "0000019617",
+        "filing": {
+          "schema_version": "1",
+          "cik": "0000019617",
+          "accession": "0001628280-26-029344",
+          "form": "10-Q",
+          "filing_date": "2026-05-01",
+          "report_date": "2026-03-31",
+          "accepted_at": "2026-05-02T00:18:43Z",
+          "primary_document": "jpm-20260331.htm"
+        }
+      },
+      "sha256": "19a91282ff8773d37ba9a02e2f717eb0fda99fe0f4e4b4cfbb9d46fc5d7cecbc",
+      "storage_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/sha256/19/19a91282ff8773d37ba9a02e2f717eb0fda99fe0f4e4b4cfbb9d46fc5d7cecbc",
+      "manifest_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/manifests/82b3ab7c4be849138d7c8a4473d67406.json",
+      "fetched_at": "2026-10-20T13:59:12.118019Z",
+      "byte_count": 9164716,
+      "http_status": 200,
+      "media_type": "text/html",
+      "etag": null,
+      "last_modified": "Fri, 01 May 2026 20:19:47 GMT",
+      "attempts": 1,
+      "processing_status": "unprocessed",
+      "pipeline_version": "bronze-1"
+    },
+    {
+      "schema_version": "1",
+      "id": "83ea59bd-9c6f-4340-b4af-e44c8e2b9c83",
+      "run_id": "056408f0-4bbc-45b1-9cc3-1726071065ee",
+      "source": {
+        "schema_version": "1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000014/amzn-20260331.htm",
+        "kind": "filing",
+        "cik": "0001018724",
+        "filing": {
+          "schema_version": "1",
+          "cik": "0001018724",
+          "accession": "0001018724-26-000014",
+          "form": "10-Q",
+          "filing_date": "2026-04-30",
+          "report_date": "2026-03-31",
+          "accepted_at": "2026-04-30T02:48:09Z",
+          "primary_document": "amzn-20260331.htm"
+        }
+      },
+      "sha256": "e6b80e48612abe3a0a8256e5ff3b5637cd4be94c12dc18cd3d7106667294fb8b",
+      "storage_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/sha256/e6/e6b80e48612abe3a0a8256e5ff3b5637cd4be94c12dc18cd3d7106667294fb8b",
+      "manifest_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/manifests/83ea59bd9c6f4340b4afe44c8e2b9c83.json",
+      "fetched_at": "2026-10-20T13:59:04.575938Z",
+      "byte_count": 1241350,
+      "http_status": 200,
+      "media_type": "text/html",
+      "etag": null,
+      "last_modified": "Thu, 30 Apr 2026 10:07:00 GMT",
+      "attempts": 1,
+      "processing_status": "unprocessed",
+      "pipeline_version": "bronze-1"
+    },
+    {
+      "schema_version": "1",
+      "id": "9a460a31-0a09-4e7c-9b23-38485a395f61",
+      "run_id": "2314a2b2-f3e9-4297-85a6-e6ced3d90a54",
+      "source": {
+        "schema_version": "1",
+        "url": "https://data.sec.gov/submissions/CIK0000789019.json",
+        "kind": "submissions",
+        "cik": "0000789019",
+        "filing": null
+      },
+      "sha256": "a5848ba348a3d3ae08c3c40bf4599379014be077911e6550ed3a8182a34a6a7b",
+      "storage_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/sha256/a5/a5848ba348a3d3ae08c3c40bf4599379014be077911e6550ed3a8182a34a6a7b",
+      "manifest_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/manifests/9a460a310a094e7c9b2338485a395f61.json",
+      "fetched_at": "2026-10-20T13:57:45.829741Z",
+      "byte_count": 185024,
+      "http_status": 200,
+      "media_type": "application/json",
+      "etag": null,
+      "last_modified": null,
+      "attempts": 1,
+      "processing_status": "unprocessed",
+      "pipeline_version": "bronze-1"
+    },
+    {
+      "schema_version": "1",
+      "id": "9efcda25-240f-41d9-8d46-249e07bad61a",
+      "run_id": "2314a2b2-f3e9-4297-85a6-e6ced3d90a54",
+      "source": {
+        "schema_version": "1",
+        "url": "https://data.sec.gov/submissions/CIK0000019617.json",
+        "kind": "submissions",
+        "cik": "0000019617",
+        "filing": null
+      },
+      "sha256": "4d92b5535864cf2e957c64f5d01318758a820e77a264bdd572a20c86f72cdaf7",
+      "storage_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/sha256/4d/4d92b5535864cf2e957c64f5d01318758a820e77a264bdd572a20c86f72cdaf7",
+      "manifest_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/manifests/9efcda25240f41d98d46249e07bad61a.json",
+      "fetched_at": "2026-10-20T13:57:49.405304Z",
+      "byte_count": 4648947,
+      "http_status": 200,
+      "media_type": "application/json",
+      "etag": null,
+      "last_modified": null,
+      "attempts": 1,
+      "processing_status": "unprocessed",
+      "pipeline_version": "bronze-1"
+    },
+    {
+      "schema_version": "1",
+      "id": "a873e582-8326-45cf-b48a-e785ae760ccf",
+      "run_id": "fad7b01d-6132-49f8-8769-cb26af0f8d3a",
+      "source": {
+        "schema_version": "1",
+        "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+        "kind": "filing",
+        "cik": "0000789019",
+        "filing": {
+          "schema_version": "1",
+          "cik": "0000789019",
+          "accession": "0001193125-26-323660",
+          "form": "10-K",
+          "filing_date": "2026-07-29",
+          "report_date": "2026-06-30",
+          "accepted_at": "2026-07-30T00:08:01Z",
+          "primary_document": "msft-20260630.htm"
+        }
+      },
+      "sha256": "7ee403cf6248837b88b69729c38534d60f1171fd1447ba0fa3ac426abf2430cd",
+      "storage_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/sha256/7e/7ee403cf6248837b88b69729c38534d60f1171fd1447ba0fa3ac426abf2430cd",
+      "manifest_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/manifests/a873e582832645cfb48ae785ae760ccf.json",
+      "fetched_at": "2026-10-20T13:58:44.916241Z",
+      "byte_count": 8585607,
+      "http_status": 200,
+      "media_type": "text/html",
+      "etag": null,
+      "last_modified": "Wed, 29 Jul 2026 20:08:56 GMT",
+      "attempts": 1,
+      "processing_status": "unprocessed",
+      "pipeline_version": "bronze-1"
+    },
+    {
+      "schema_version": "1",
+      "id": "ad933e1f-7e53-4243-a574-65e092d1f680",
+      "run_id": "1e9db180-a190-4ff5-8ea4-bc4f2c4da47a",
+      "source": {
+        "schema_version": "1",
+        "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526027207/msft-20251231.htm",
+        "kind": "filing",
+        "cik": "0000789019",
+        "filing": {
+          "schema_version": "1",
+          "cik": "0000789019",
+          "accession": "0001193125-26-027207",
+          "form": "10-Q",
+          "filing_date": "2026-01-28",
+          "report_date": "2025-12-31",
+          "accepted_at": "2026-01-29T02:07:34Z",
+          "primary_document": "msft-20251231.htm"
+        }
+      },
+      "sha256": "13b6006248fb7d5f3dfebb5425e6645a8ca4f8e1a438fe1c75a0578be13b2773",
+      "storage_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/sha256/13/13b6006248fb7d5f3dfebb5425e6645a8ca4f8e1a438fe1c75a0578be13b2773",
+      "manifest_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/manifests/ad933e1f7e534243a57465e092d1f680.json",
+      "fetched_at": "2026-10-20T13:58:51.654880Z",
+      "byte_count": 7483384,
+      "http_status": 200,
+      "media_type": "text/html",
+      "etag": null,
+      "last_modified": "Wed, 28 Jan 2026 21:08:18 GMT",
+      "attempts": 1,
+      "processing_status": "unprocessed",
+      "pipeline_version": "bronze-1"
+    },
+    {
+      "schema_version": "1",
+      "id": "afc466cf-22ea-4111-878b-27fa6d08b09d",
+      "run_id": "76c8afeb-f27e-4bce-b75e-5d71e3bcc78f",
+      "source": {
+        "schema_version": "1",
+        "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001018724.json",
+        "kind": "company_facts",
+        "cik": "0001018724",
+        "filing": null
+      },
+      "sha256": "7549fb68446eee40e1f50a166fa06b2d2ee6349e07c8553a4828757e032d3cd4",
+      "storage_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/sha256/75/7549fb68446eee40e1f50a166fa06b2d2ee6349e07c8553a4828757e032d3cd4",
+      "manifest_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/manifests/afc466cf22ea4111878b27fa6d08b09d.json",
+      "fetched_at": "2026-10-20T13:59:01.127081Z",
+      "byte_count": 4478611,
+      "http_status": 200,
+      "media_type": "application/json",
+      "etag": null,
+      "last_modified": null,
+      "attempts": 1,
+      "processing_status": "unprocessed",
+      "pipeline_version": "bronze-1"
+    },
+    {
+      "schema_version": "1",
+      "id": "b828f773-19bd-4686-9157-1ad855f4724d",
+      "run_id": "24977f94-cda1-4e76-a510-57cf8c2272c8",
+      "source": {
+        "schema_version": "1",
+        "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/goog-20260331.htm",
+        "kind": "filing",
+        "cik": "0001652044",
+        "filing": {
+          "schema_version": "1",
+          "cik": "0001652044",
+          "accession": "0001652044-26-000048",
+          "form": "10-Q",
+          "filing_date": "2026-04-30",
+          "report_date": "2026-03-31",
+          "accepted_at": "2026-04-30T05:02:11Z",
+          "primary_document": "goog-20260331.htm"
+        }
+      },
+      "sha256": "0da733204ca3463c96d324c3620ab2794bce9566ee7a6586100b66634a98aca0",
+      "storage_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/sha256/0d/0da733204ca3463c96d324c3620ab2794bce9566ee7a6586100b66634a98aca0",
+      "manifest_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/manifests/b828f77319bd468691571ad855f4724d.json",
+      "fetched_at": "2026-10-20T13:58:58.183164Z",
+      "byte_count": 1714819,
+      "http_status": 200,
+      "media_type": "text/html",
+      "etag": null,
+      "last_modified": "Thu, 30 Apr 2026 10:12:46 GMT",
+      "attempts": 1,
+      "processing_status": "unprocessed",
+      "pipeline_version": "bronze-1"
+    },
+    {
+      "schema_version": "1",
+      "id": "bc5e256d-8da3-4d9a-83e5-2d3203392b6e",
+      "run_id": "2314a2b2-f3e9-4297-85a6-e6ced3d90a54",
+      "source": {
+        "schema_version": "1",
+        "url": "https://data.sec.gov/submissions/CIK0001018724.json",
+        "kind": "submissions",
+        "cik": "0001018724",
+        "filing": null
+      },
+      "sha256": "1f5bb6be4033e2378bfa0d14e0d9276a08d8dfb070b263f59ca0e77d68ced058",
+      "storage_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/sha256/1f/1f5bb6be4033e2378bfa0d14e0d9276a08d8dfb070b263f59ca0e77d68ced058",
+      "manifest_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/manifests/bc5e256d8da34d9a83e52d3203392b6e.json",
+      "fetched_at": "2026-10-20T13:57:47.833148Z",
+      "byte_count": 159904,
+      "http_status": 200,
+      "media_type": "application/json",
+      "etag": null,
+      "last_modified": null,
+      "attempts": 1,
+      "processing_status": "unprocessed",
+      "pipeline_version": "bronze-1"
+    },
+    {
+      "schema_version": "1",
+      "id": "c26008c5-f79a-4339-9f06-a3d6bbc4eb9a",
+      "run_id": "87891b7d-7ed2-4939-be05-fe0c41d7288c",
+      "source": {
+        "schema_version": "1",
+        "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+        "kind": "filing",
+        "cik": "0000320193",
+        "filing": {
+          "schema_version": "1",
+          "cik": "0000320193",
+          "accession": "0000320193-25-000079",
+          "form": "10-K",
+          "filing_date": "2025-10-31",
+          "report_date": "2025-09-27",
+          "accepted_at": "2025-10-31T14:01:26Z",
+          "primary_document": "aapl-20250927.htm"
+        }
+      },
+      "sha256": "f7569b9a9cb9010780bdbf3ea89120dd2d7928caa8fff1305ace90630ca627ce",
+      "storage_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/sha256/f7/f7569b9a9cb9010780bdbf3ea89120dd2d7928caa8fff1305ace90630ca627ce",
+      "manifest_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/manifests/c26008c5f79a43399f06a3d6bbc4eb9a.json",
+      "fetched_at": "2026-10-20T13:58:38.984952Z",
+      "byte_count": 1520314,
+      "http_status": 200,
+      "media_type": "text/html",
+      "etag": null,
+      "last_modified": "Fri, 31 Oct 2025 10:07:08 GMT",
+      "attempts": 1,
+      "processing_status": "unprocessed",
+      "pipeline_version": "bronze-1"
+    },
+    {
+      "schema_version": "1",
+      "id": "c794e602-4e52-422f-a898-e76d5381b810",
+      "run_id": "3430fe5e-19f3-4ff3-91b1-b29067f6a41f",
+      "source": {
+        "schema_version": "1",
+        "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+        "kind": "company_facts",
+        "cik": "0000320193",
+        "filing": null
+      },
+      "sha256": "73a86c6aedc31f77cac2ea4df5f80f0b3bd7e6eb58bb4e01444fbedf3afb9c43",
+      "storage_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/sha256/73/73a86c6aedc31f77cac2ea4df5f80f0b3bd7e6eb58bb4e01444fbedf3afb9c43",
+      "manifest_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/manifests/c794e6024e52422fa898e76d5381b810.json",
+      "fetched_at": "2026-10-20T13:11:01.472668Z",
+      "byte_count": 3789099,
+      "http_status": 200,
+      "media_type": "application/json",
+      "etag": null,
+      "last_modified": null,
+      "attempts": 1,
+      "processing_status": "unprocessed",
+      "pipeline_version": "bronze-1"
+    },
+    {
+      "schema_version": "1",
+      "id": "d5670e07-37b2-4cf7-976b-7af19af0cfc9",
+      "run_id": "1a404686-19e5-4a60-80c6-0b1230e26c14",
+      "source": {
+        "schema_version": "1",
+        "url": "https://www.sec.gov/Archives/edgar/data/19617/000162828026054343/jpm-20260630.htm",
+        "kind": "filing",
+        "cik": "0000019617",
+        "filing": {
+          "schema_version": "1",
+          "cik": "0000019617",
+          "accession": "0001628280-26-054343",
+          "form": "10-Q",
+          "filing_date": "2026-08-06",
+          "report_date": "2026-06-30",
+          "accepted_at": "2026-08-07T00:19:03Z",
+          "primary_document": "jpm-20260630.htm"
+        }
+      },
+      "sha256": "7cbc765c34c9a43a09b74db21e75bd0f94e548b4dfb50c53699526a985935a48",
+      "storage_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/sha256/7c/7cbc765c34c9a43a09b74db21e75bd0f94e548b4dfb50c53699526a985935a48",
+      "manifest_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/manifests/d5670e0737b24cf7976b7af19af0cfc9.json",
+      "fetched_at": "2026-10-20T13:59:09.727391Z",
+      "byte_count": 11513980,
+      "http_status": 200,
+      "media_type": "text/html",
+      "etag": null,
+      "last_modified": "Thu, 06 Aug 2026 20:20:06 GMT",
+      "attempts": 1,
+      "processing_status": "unprocessed",
+      "pipeline_version": "bronze-1"
+    },
+    {
+      "schema_version": "1",
+      "id": "e61fae4c-af61-4c09-8c64-3c17ed185390",
+      "run_id": "3430fe5e-19f3-4ff3-91b1-b29067f6a41f",
+      "source": {
+        "schema_version": "1",
+        "url": "https://data.sec.gov/submissions/CIK0000320193.json",
+        "kind": "submissions",
+        "cik": "0000320193",
+        "filing": null
+      },
+      "sha256": "c24afa8dfdd359593f193c737a5af2d49f172f81fe83b7019d7d7e2e3fc2cb5f",
+      "storage_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/sha256/c2/c24afa8dfdd359593f193c737a5af2d49f172f81fe83b7019d7d7e2e3fc2cb5f",
+      "manifest_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/manifests/e61fae4caf614c098c643c17ed185390.json",
+      "fetched_at": "2026-10-20T13:11:00.241853Z",
+      "byte_count": 163778,
+      "http_status": 200,
+      "media_type": "application/json",
+      "etag": null,
+      "last_modified": null,
+      "attempts": 1,
+      "processing_status": "unprocessed",
+      "pipeline_version": "bronze-1"
+    },
+    {
+      "schema_version": "1",
+      "id": "e754759d-5f43-442a-9995-16ab09315a61",
+      "run_id": "3430fe5e-19f3-4ff3-91b1-b29067f6a41f",
+      "source": {
+        "schema_version": "1",
+        "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+        "kind": "filing",
+        "cik": "0000320193",
+        "filing": {
+          "schema_version": "1",
+          "cik": "0000320193",
+          "accession": "0000320193-26-000020",
+          "form": "10-Q",
+          "filing_date": "2026-07-31",
+          "report_date": "2026-06-27",
+          "accepted_at": "2026-07-31T14:01:02Z",
+          "primary_document": "aapl-20260627.htm"
+        }
+      },
+      "sha256": "d3f1996972f6b3950fbc4fd5a47dbd20a69b360eb6136da9a752c37bbdb96dc1",
+      "storage_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/sha256/d3/d3f1996972f6b3950fbc4fd5a47dbd20a69b360eb6136da9a752c37bbdb96dc1",
+      "manifest_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/manifests/e754759d5f43442a999516ab09315a61.json",
+      "fetched_at": "2026-10-20T13:11:00.527681Z",
+      "byte_count": 1018316,
+      "http_status": 200,
+      "media_type": "text/html",
+      "etag": null,
+      "last_modified": "Fri, 31 Jul 2026 10:07:05 GMT",
+      "attempts": 1,
+      "processing_status": "unprocessed",
+      "pipeline_version": "bronze-1"
+    },
+    {
+      "schema_version": "1",
+      "id": "e9ad532f-3305-4db2-b737-90b10bc5466d",
+      "run_id": "fdce93f8-dab9-4b04-8db3-2e0c9ba8abcd",
+      "source": {
+        "schema_version": "1",
+        "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+        "kind": "filing",
+        "cik": "0000320193",
+        "filing": {
+          "schema_version": "1",
+          "cik": "0000320193",
+          "accession": "0000320193-24-000123",
+          "form": "10-K",
+          "filing_date": "2024-11-01",
+          "report_date": "2024-09-28",
+          "accepted_at": "2024-11-01T14:01:36Z",
+          "primary_document": "aapl-20240928.htm"
+        }
+      },
+      "sha256": "87811e303e632b0f1843b9bc161c1b3af9c501ffec0a51a9825cc796dc369dcf",
+      "storage_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/sha256/87/87811e303e632b0f1843b9bc161c1b3af9c501ffec0a51a9825cc796dc369dcf",
+      "manifest_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/manifests/e9ad532f33054db2b73790b10bc5466d.json",
+      "fetched_at": "2026-10-20T13:58:40.588502Z",
+      "byte_count": 1503886,
+      "http_status": 200,
+      "media_type": "text/html",
+      "etag": null,
+      "last_modified": "Fri, 01 Nov 2024 10:05:09 GMT",
+      "attempts": 1,
+      "processing_status": "unprocessed",
+      "pipeline_version": "bronze-1"
+    },
+    {
+      "schema_version": "1",
+      "id": "fdcdfc9b-19ab-4365-a044-acf60c5157b7",
+      "run_id": "dcd16b49-846f-4dd0-913e-923d32d8ad32",
+      "source": {
+        "schema_version": "1",
+        "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000019617.json",
+        "kind": "company_facts",
+        "cik": "0000019617",
+        "filing": null
+      },
+      "sha256": "a3b61caba754cb5beb47d15588fc59da0829a442e048fae5805c3d9b7145abba",
+      "storage_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/sha256/a3/a3b61caba754cb5beb47d15588fc59da0829a442e048fae5805c3d9b7145abba",
+      "manifest_uri": "file:///C:/Users/skych/OneDrive/Desktop/SEC-EDGAR-AI-Financial-Research-Platform/.runtime/artifacts/bronze/manifests/fdcdfc9b19ab4365a044acf60c5157b7.json",
+      "fetched_at": "2026-10-20T13:59:07.974577Z",
+      "byte_count": 7988590,
+      "http_status": 200,
+      "media_type": "application/json",
+      "etag": null,
+      "last_modified": null,
+      "attempts": 1,
+      "processing_status": "unprocessed",
+      "pipeline_version": "bronze-1"
+    }
+  ]
+}

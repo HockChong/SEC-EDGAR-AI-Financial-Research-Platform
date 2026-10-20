@@ -1,0 +1,84 @@
+{
+  "schema_version": "wp32-excerpts-1",
+  "provenance": "Exact DOM element serializations from development SEC primary documents with synthetic separators and wrapper. These excerpt bytes are not original Bronze documents. SEC public filing source material; company disclosure copyright, if any, remains with its owner.",
+  "fixtures": [
+    {
+      "path": "amazon-layout.htm",
+      "sha256": "09f63a240cd41af91e5643dcebf7582ed7b50d0c5a780f57ad685024401a9631",
+      "original_accession": "0001018724-26-000004",
+      "original_source_sha256": "a2d31fb7be58454479b35622eb8d3379f953f4a8f44a256166217fa5b434af35",
+      "original_dom_paths": [
+        "/html/body/div[59]",
+        "/html/body/div[61]/table",
+        "/html/body/div[108]/table"
+      ],
+      "synthetic_assembly": true,
+      "expected_classified": [
+        [
+          "I",
+          "1"
+        ],
+        [
+          "I",
+          "1A"
+        ]
+      ]
+    },
+    {
+      "path": "microsoft-running.htm",
+      "sha256": "e9f638df2fff560f8ea1cd8742d9bd57418a0cc8332a97ae73d4fc5cff2da4ee",
+      "original_accession": "0001193125-26-027207",
+      "original_source_sha256": "13b6006248fb7d5f3dfebb5425e6645a8ca4f8e1a438fe1c75a0578be13b2773",
+      "original_dom_paths": [
+        "/html/body/div[8]/p[1]",
+        "/html/body/div[8]/p[2]",
+        "/html/body/div[9]/p[1]",
+        "/html/body/div[9]/p[2]",
+        "/html/body/div[11]/p[1]",
+        "/html/body/div[11]/p[2]",
+        "/html/body/div[141]/p[1]",
+        "/html/body/div[141]/p[2]",
+        "/html/body/div[141]/p[4]"
+      ],
+      "synthetic_assembly": true,
+      "expected_classified": [
+        [
+          "I",
+          "1"
+        ],
+        [
+          "II",
+          "1"
+        ],
+        [
+          "II",
+          "1A"
+        ]
+      ]
+    },
+    {
+      "path": "jpmorgan-ambiguous.htm",
+      "sha256": "8358185c5fce1935494c09ef6fcd7f9f6ca92a08c07e91a37f86decb1a9f86c0",
+      "original_accession": "0001628280-26-029344",
+      "original_source_sha256": "19a91282ff8773d37ba9a02e2f717eb0fda99fe0f4e4b4cfbb9d46fc5d7cecbc",
+      "original_dom_paths": [
+        "/html/body/div[884]/div[1]/div[1]",
+        "/html/body/div[884]/div[1]/div[4]",
+        "/html/body/div[884]/div[1]/div[8]",
+        "/html/body/div[884]/div[1]/div[10]",
+        "/html/body/div[884]/div[1]/div[13]"
+      ],
+      "synthetic_assembly": true,
+      "expected_classified": [
+        [
+          "II",
+          "1"
+        ],
+        [
+          "II",
+          "1A"
+        ]
+      ]
+    }
+  ]
+}

@@ -8,7 +8,7 @@ from sqlalchemy.exc import DBAPIError, SQLAlchemyError
 from sec_research.contracts.errors import ErrorCode
 from sec_research.settings import Settings
 
-SCHEMA_HEAD = "0001_foundation"
+SCHEMA_HEAD = "0002_ingestion"
 VECTOR_VERSION = "0.8.1"
 
 
