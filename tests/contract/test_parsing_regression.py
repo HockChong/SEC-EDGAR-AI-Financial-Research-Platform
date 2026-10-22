@@ -2,6 +2,7 @@
 
 import hashlib
 import json
+import tomllib
 from pathlib import Path
 
 import pytest
@@ -49,4 +50,19 @@ def test_heuristics_remain_frozen_after_held_out_annotation() -> None:
     root = Path(__file__).parents[2]
     for name, expected in frozen["files"].items():
         body = (root / name).read_bytes().replace(b"\r\n", b"\n")
+        if name == "uv.lock":
+            # ADR-003/WP3.5 adds only Arrow. Reconstruct the exact historical lock;
+            # every prior package, artifact hash, and dependency must remain frozen.
+            packages = body.split(b"[[package]]\n")
+            arrow = [p for p in packages if p.startswith(b'name = "pyarrow"\n')]
+            assert len(arrow) == 1
+            added = tomllib.loads(arrow[0].decode())
+            assert added["version"] == "24.0.0" and "dependencies" not in added
+            body = b"[[package]]\n".join(p for p in packages if p not in arrow)
+            for addition in (
+                b'    { name = "pyarrow" },\n',
+                b'    { name = "pyarrow", specifier = "==24.0.0" },\n',
+            ):
+                assert body.count(addition) == 1
+                body = body.replace(addition, b"")
         assert hashlib.sha256(body).hexdigest() == expected

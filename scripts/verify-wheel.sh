@@ -14,6 +14,7 @@ else
 fi
 bash scripts/uv.sh pip install --python "$wheel_python" --require-hashes -r "$scratch_dir/requirements.txt"
 bash scripts/uv.sh pip install --python "$wheel_python" --no-deps dist/sec_research-0.1.0-py3-none-any.whl
+cp uv.lock "$scratch_dir/uv.lock"
 cd "$scratch_dir"
 "$wheel_python" - <<'PY'
 import sys
@@ -104,5 +105,22 @@ selection = select_facts([fact], SelectionRequest.model_validate({
 assert selection.status == "selected"
 subprocess.run([sys.executable, "-m", "sec_research.processing.xbrl_corpus", "--help"],
                check=True, capture_output=True, text=True)
-print("Installed wheel validated outside the checkout; contracts, parser, API and CLIs succeed.")
+from sec_research.adapters.storage.local import LocalBronze
+from sec_research.adapters.storage.parquet import LocalDatasets
+from sec_research.processing.datasets import build_snapshot, make_spec, load_snapshot
+
+bronze = LocalBronze(Path("bronze-root"))
+derived = LocalDatasets(Path("derived"))
+checksum, uri = bronze.put(xbrl_body)
+xbrl_fetch = xbrl_fetch.model_copy(update={"storage_uri": uri})
+bronze.put_manifest(xbrl_fetch.id.hex,
+                    xbrl_fetch.model_dump_json(exclude={"manifest_uri"}).encode())
+spec = make_spec("wheel-validation", Path("uv.lock"), datetime(2026, 10, 22, tzinfo=UTC),
+                 [selection.request])
+snapshot = build_snapshot(bronze, derived, [xbrl_fetch], spec)
+assert snapshot.id is not None and load_snapshot(derived, snapshot.id) == snapshot
+assert build_snapshot(bronze, derived, [xbrl_fetch], spec) == snapshot
+subprocess.run([sys.executable, "-m", "sec_research.processing.dataset_cli", "--help"],
+               check=True, capture_output=True, text=True)
+print("Installed wheel validated outside checkout, including deterministic Silver/Gold Parquet replay.")
 PY

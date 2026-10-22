@@ -141,3 +141,11 @@ CI has a Python job with a real PostgreSQL/pgvector service and a container job 
 - Port occupied: stop only the service you own or choose `DATABASE_PORT`/`API_PORT`; keep test URLs aligned.
 - Containers missing after a new cloud task: rerun setup, then start the API and check both health responses. Do not assume process or volume restoration.
 - This is an isolated development foundation. No authentication, deployed cloud service, financial claims or retrieval quality is established. Phase 2 ingestion has deterministic verification; a user-executed live one-company smoke check also passed; see the Phase 2 review.
+
+## WP3.5 datasets
+
+See [dataset publication](dataset-publication.md) for pinned build specifications,
+offline Silver/Gold builds, verification, explicit activation and rollback.
+PyArrow 24.0.0 is the only new dependency. Migration `0003_datasets` adds the
+transactional catalog and rebuildable Gold serving projections; Bronze is unchanged.
+Research APIs and chunking remain future packages.

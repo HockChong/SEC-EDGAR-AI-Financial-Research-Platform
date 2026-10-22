@@ -74,7 +74,9 @@ agent-authored labels remains outstanding. WP3.3 retains those unknown sections
 and extracts their tables. The owner explicitly authorized **WP3.4 Company Facts
 normalization** and deferred independent WP3.3 financial adjudication. See the
 [WP3.4 review](phase-3-wp3.4-review.md) and [normalization guide](xbrl-normalization.md).
-No WP3.3 limitation is thereby accepted or repaired. WP3.5 is not authorized.
+No WP3.3 limitation is thereby accepted or repaired. The owner subsequently
+authorized WP3.5; [dataset publication](dataset-publication.md) implements this
+bounded package. WP3.6 chunking requires a separate authorization.
 
 **Objective:** implement ADR-003 from Bronze to versioned, source-resolvable Silver/Gold. **Dependencies:** complete Phase 2 artifacts/manifests and representative reviewed filing fixtures. **Estimate:** 12–18 days.
 
@@ -183,7 +185,7 @@ No WP3.3 limitation is thereby accepted or repaired. WP3.5 is not authorized.
 
 ## Recommended next assignment
 
-Review the WP3.4 completion evidence and its narrow metric/context policies.
-Independent WP3.3 and WP3.4 financial adjudication remains outstanding. The next
-recommended implementation package is WP3.5 physical dataset publication only
-after explicit authorization; do not start it automatically.
+Review [WP3.5 completion evidence](phase-3-wp3.5-review.md). Independent WP3.3
+and WP3.4 financial adjudication remains outstanding. The next recommended
+implementation package is WP3.6 chunking over Gold evidence, only after explicit
+authorization; do not start it automatically.

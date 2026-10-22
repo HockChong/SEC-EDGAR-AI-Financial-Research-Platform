@@ -1,0 +1,527 @@
+[
+  {
+    "cik": "0000019617",
+    "metric": "revenue",
+    "period": {
+      "kind": "duration",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "duration_class": "unknown",
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  },
+  {
+    "cik": "0000019617",
+    "metric": "net_income",
+    "period": {
+      "kind": "duration",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "duration_class": "unknown",
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  },
+  {
+    "cik": "0000019617",
+    "metric": "operating_income",
+    "period": {
+      "kind": "duration",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "duration_class": "unknown",
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  },
+  {
+    "cik": "0000019617",
+    "metric": "total_assets",
+    "period": {
+      "kind": "instant",
+      "start": null,
+      "end": "2025-12-31",
+      "duration_class": null,
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  },
+  {
+    "cik": "0000019617",
+    "metric": "total_liabilities",
+    "period": {
+      "kind": "instant",
+      "start": null,
+      "end": "2025-12-31",
+      "duration_class": null,
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  },
+  {
+    "cik": "0000019617",
+    "metric": "stockholders_equity",
+    "period": {
+      "kind": "instant",
+      "start": null,
+      "end": "2025-12-31",
+      "duration_class": null,
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  },
+  {
+    "cik": "0000019617",
+    "metric": "operating_cash_flow",
+    "period": {
+      "kind": "duration",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "duration_class": "unknown",
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  },
+  {
+    "cik": "0000320193",
+    "metric": "revenue",
+    "period": {
+      "kind": "duration",
+      "start": "2024-09-29",
+      "end": "2025-09-27",
+      "duration_class": "unknown",
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  },
+  {
+    "cik": "0000320193",
+    "metric": "net_income",
+    "period": {
+      "kind": "duration",
+      "start": "2024-09-29",
+      "end": "2025-09-27",
+      "duration_class": "unknown",
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  },
+  {
+    "cik": "0000320193",
+    "metric": "operating_income",
+    "period": {
+      "kind": "duration",
+      "start": "2024-09-29",
+      "end": "2025-09-27",
+      "duration_class": "unknown",
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  },
+  {
+    "cik": "0000320193",
+    "metric": "total_assets",
+    "period": {
+      "kind": "instant",
+      "start": null,
+      "end": "2025-09-27",
+      "duration_class": null,
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  },
+  {
+    "cik": "0000320193",
+    "metric": "total_liabilities",
+    "period": {
+      "kind": "instant",
+      "start": null,
+      "end": "2025-09-27",
+      "duration_class": null,
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  },
+  {
+    "cik": "0000320193",
+    "metric": "stockholders_equity",
+    "period": {
+      "kind": "instant",
+      "start": null,
+      "end": "2025-09-27",
+      "duration_class": null,
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  },
+  {
+    "cik": "0000320193",
+    "metric": "operating_cash_flow",
+    "period": {
+      "kind": "duration",
+      "start": "2024-09-29",
+      "end": "2025-09-27",
+      "duration_class": "unknown",
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  },
+  {
+    "cik": "0000789019",
+    "metric": "revenue",
+    "period": {
+      "kind": "duration",
+      "start": "2025-07-01",
+      "end": "2026-06-30",
+      "duration_class": "unknown",
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  },
+  {
+    "cik": "0000789019",
+    "metric": "net_income",
+    "period": {
+      "kind": "duration",
+      "start": "2025-07-01",
+      "end": "2026-06-30",
+      "duration_class": "unknown",
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  },
+  {
+    "cik": "0000789019",
+    "metric": "operating_income",
+    "period": {
+      "kind": "duration",
+      "start": "2025-07-01",
+      "end": "2026-06-30",
+      "duration_class": "unknown",
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  },
+  {
+    "cik": "0000789019",
+    "metric": "total_assets",
+    "period": {
+      "kind": "instant",
+      "start": null,
+      "end": "2026-06-30",
+      "duration_class": null,
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  },
+  {
+    "cik": "0000789019",
+    "metric": "total_liabilities",
+    "period": {
+      "kind": "instant",
+      "start": null,
+      "end": "2026-06-30",
+      "duration_class": null,
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  },
+  {
+    "cik": "0000789019",
+    "metric": "stockholders_equity",
+    "period": {
+      "kind": "instant",
+      "start": null,
+      "end": "2026-06-30",
+      "duration_class": null,
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  },
+  {
+    "cik": "0000789019",
+    "metric": "operating_cash_flow",
+    "period": {
+      "kind": "duration",
+      "start": "2025-07-01",
+      "end": "2026-06-30",
+      "duration_class": "unknown",
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  },
+  {
+    "cik": "0001018724",
+    "metric": "revenue",
+    "period": {
+      "kind": "duration",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "duration_class": "unknown",
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  },
+  {
+    "cik": "0001018724",
+    "metric": "net_income",
+    "period": {
+      "kind": "duration",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "duration_class": "unknown",
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  },
+  {
+    "cik": "0001018724",
+    "metric": "operating_income",
+    "period": {
+      "kind": "duration",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "duration_class": "unknown",
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  },
+  {
+    "cik": "0001018724",
+    "metric": "total_assets",
+    "period": {
+      "kind": "instant",
+      "start": null,
+      "end": "2025-12-31",
+      "duration_class": null,
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  },
+  {
+    "cik": "0001018724",
+    "metric": "total_liabilities",
+    "period": {
+      "kind": "instant",
+      "start": null,
+      "end": "2025-12-31",
+      "duration_class": null,
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  },
+  {
+    "cik": "0001018724",
+    "metric": "stockholders_equity",
+    "period": {
+      "kind": "instant",
+      "start": null,
+      "end": "2025-12-31",
+      "duration_class": null,
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  },
+  {
+    "cik": "0001018724",
+    "metric": "operating_cash_flow",
+    "period": {
+      "kind": "duration",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "duration_class": "unknown",
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  },
+  {
+    "cik": "0001652044",
+    "metric": "revenue",
+    "period": {
+      "kind": "duration",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "duration_class": "unknown",
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  },
+  {
+    "cik": "0001652044",
+    "metric": "net_income",
+    "period": {
+      "kind": "duration",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "duration_class": "unknown",
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  },
+  {
+    "cik": "0001652044",
+    "metric": "operating_income",
+    "period": {
+      "kind": "duration",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "duration_class": "unknown",
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  },
+  {
+    "cik": "0001652044",
+    "metric": "total_assets",
+    "period": {
+      "kind": "instant",
+      "start": null,
+      "end": "2025-12-31",
+      "duration_class": null,
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  },
+  {
+    "cik": "0001652044",
+    "metric": "total_liabilities",
+    "period": {
+      "kind": "instant",
+      "start": null,
+      "end": "2025-12-31",
+      "duration_class": null,
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  },
+  {
+    "cik": "0001652044",
+    "metric": "stockholders_equity",
+    "period": {
+      "kind": "instant",
+      "start": null,
+      "end": "2025-12-31",
+      "duration_class": null,
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  },
+  {
+    "cik": "0001652044",
+    "metric": "operating_cash_flow",
+    "period": {
+      "kind": "duration",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "duration_class": "unknown",
+      "classification_policy": null
+    },
+    "as_of": "2026-10-21",
+    "form": null,
+    "mode": "latest_as_of",
+    "context_policy": "company_facts_entity"
+  }
+]

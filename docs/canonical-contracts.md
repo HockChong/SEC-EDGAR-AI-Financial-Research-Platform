@@ -8,7 +8,7 @@ belong to WP3.2–3.7.
 WP3.2 consumes these unchanged canonical rows through the validated
 `html-result-1` envelope. See [HTML parsing](html-parsing.md) for source graph,
 normalized-offset, parser-version and failure contracts. Physical dataset
-publication remains unimplemented.
+publication is now implemented in [WP3.5](dataset-publication.md).
 
 WP3.3 also reuses these rows in the [table-result-2 envelope](table-extraction.md),
 with separate header/period context, raw cells and retrieval text. Numeric
@@ -16,6 +16,13 @@ normalization is integrated without altering canonical-1. Financial context and
 independent financial evaluation remain separate requirements.
 
 ## Authority and compatibility
+
+WP3.5 binds these existing storage rows to explicit Arrow/Parquet schemas and
+adds supplementary dataset/evidence contracts in `contracts/datasets.py`.
+References below to future physical storage describe the historical WP3.1 gate;
+see [dataset publication](dataset-publication.md) for the implemented adapter,
+validation, atomic activation and remaining limits. No canonical ID or financial
+semantics are changed by physical publication.
 
 WP3.4 now implements [Company Facts normalization and reported-fact selection](xbrl-normalization.md).
 Its `xbrl-result-1` envelope reuses the unchanged canonical financial observations
