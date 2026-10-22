@@ -447,7 +447,9 @@ class MetricDefinition(Record):
     concepts: tuple[ConceptMapping, ...] = ()
     period_kind: Literal["instant", "duration"]
     unit: Text
-    context_requirement: Literal["verified_consolidated", "verified_dimensions"]
+    context_requirement: Literal[
+        "verified_consolidated", "verified_dimensions", "company_facts_entity"
+    ]
     selection_policy_version: Text
     formula_id: Text | None = None
     formula_version: Text | None = None

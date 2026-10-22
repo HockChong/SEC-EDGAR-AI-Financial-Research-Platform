@@ -1665,7 +1665,8 @@
         "context_requirement": {
           "enum": [
             "verified_consolidated",
-            "verified_dimensions"
+            "verified_dimensions",
+            "company_facts_entity"
           ],
           "title": "Context Requirement",
           "type": "string"

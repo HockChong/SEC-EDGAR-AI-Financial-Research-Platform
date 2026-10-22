@@ -105,11 +105,21 @@ Skip `createdb` if that database already exists. Tests connect through it to cre
 
 ## Verification commands
 
+WP3.4 adds the offline [Company Facts audit](xbrl-normalization.md), including
+all-five-company replay, source resolution and reported-metric selection examples.
+Its outputs remain diagnostic JSON outside Bronze; physical publication is deferred.
+
 WP3.2 offline corpus parsing and source-boundary checks are documented in
 [HTML parsing](html-parsing.md). They reuse the stored Bronze corpus without
 network access or migrations; large diagnostic outputs stay in `.runtime/`.
 On checkouts where the existing pytest cache is protected, set
 `PYTEST_ADDOPTS='-o cache_dir=.runtime/pytest-wp32'` before running checks.
+
+WP3.3 adds the offline [table diagnostics command](table-extraction.md) and
+[preserved exercises](../exercises/wp33/README.md). Hands-on assignments are paused;
+Codex maintains the integrated normalizer and multi-period tests. Optional practice
+cases run with `pytest exercises/wp33`; production regressions are in `tests/`.
+Use `PYTEST_ADDOPTS='-p no:cacheprovider'` if the existing cache is protected.
 
 ```bash
 bash scripts/check.sh

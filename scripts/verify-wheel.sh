@@ -29,6 +29,8 @@ from sec_research.contracts.schemas import schema_bundle
 from sec_research.settings import Settings
 from sec_research.ingestion.ports import Fetch
 from sec_research.processing.html import parse_html
+from sec_research.processing.tables import extract_tables
+from sec_research.contracts.tables import TableExtraction
 from sec_research.contracts.sec import Source
 from datetime import datetime, UTC
 from uuid import UUID
@@ -65,7 +67,42 @@ parsed = parse_html(fetch, body)
 assert parsed.sections[0].item == "1"
 assert parsed.logical_bytes() == parse_html(fetch, body).logical_bytes()
 assert "lxml-" in parsed.document.parser_version
+table_body = b"<table><tr><th>2025</th></tr><tr><td>42</td></tr></table>"
+table_fetch = fetch.model_copy(update={
+    "sha256": hashlib.sha256(table_body).hexdigest(), "byte_count": len(table_body),
+})
+tables = extract_tables(table_fetch, table_body)
+assert TableExtraction.model_validate_json(tables.model_dump_json()) == tables
+assert len(tables.tables[0].cells) == 2
+assert tables.normalization_complete
+assert tables.tables[0].contexts[1].normalization.status == "parsed"
+assert tables.tables[0].cells[1].value == 42
 subprocess.run([sys.executable, "-m", "sec_research.processing.corpus", "--help"],
+               check=True, capture_output=True, text=True)
+from sec_research.processing.xbrl import normalize_company_facts
+from sec_research.domain.financial_selection import select_facts
+from sec_research.contracts.xbrl import SelectionRequest
+import json
+
+xbrl_body = json.dumps({"cik": 1, "entityName": "Wheel Synthetic", "facts": {"us-gaap": {
+    "Assets": {"units": {"USD": [{"end": "2024-12-31", "val": 42,
+        "accn": "0000000001-25-000001", "filed": "2025-02-01", "form": "10-K"}]}}
+}}}).encode()
+xbrl_fetch = fetch.model_copy(update={
+    "source": Source(kind="company_facts", cik="0000000001",
+        url="https://data.sec.gov/api/xbrl/companyfacts/CIK0000000001.json"),
+    "sha256": hashlib.sha256(xbrl_body).hexdigest(), "byte_count": len(xbrl_body),
+    "media_type": "application/json",
+})
+normalized = normalize_company_facts(xbrl_fetch, xbrl_body)
+fact = normalized.observations[0].fact
+assert fact is not None and fact.value == 42
+selection = select_facts([fact], SelectionRequest.model_validate({
+    "cik": "0000000001", "metric": "total_assets", "period": fact.period,
+    "as_of": "2025-02-01",
+}))
+assert selection.status == "selected"
+subprocess.run([sys.executable, "-m", "sec_research.processing.xbrl_corpus", "--help"],
                check=True, capture_output=True, text=True)
 print("Installed wheel validated outside the checkout; contracts, parser, API and CLIs succeed.")
 PY

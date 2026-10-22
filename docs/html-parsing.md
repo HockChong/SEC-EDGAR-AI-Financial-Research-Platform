@@ -1,8 +1,10 @@
 # Deterministic HTML parsing — WP3.2
 
-Architecture 3.1. This implements the bounded HTML portion of ADR-003. It consumes
-preserved primary-document bytes; physical Silver publication, table cells, XBRL
-normalization and retrieval remain later packages.
+Architecture 3.1. WP3.2 implements bounded HTML parsing under ADR-003 using
+preserved primary-document bytes. Physical Silver publication, XBRL
+normalization and retrieval remain later packages. WP3.3 consumes these
+unchanged blocks through [structured table extraction](table-extraction.md),
+including unclassified/ambiguous sections; numeric normalization is still pending.
 
 ## Entry points and contracts
 
@@ -21,9 +23,9 @@ Revalidate this envelope when reading its JSON. It is a diagnostic interchange
 format, not a dataset publication or a replacement for canonical storage schemas.
 
 `parse_batch` yields either a validated document or a `ParseFailure` with fetch ID,
-source checksum, safe reason code and quarantine disposition. A rejected document
-does not erase its neighbors. Integrity errors have no invented document/section
-records. Unexpected programming/contract errors fail loudly.
+source checksum, safe reason code and quarantine disposition. Rejection affects
+only that input. Integrity errors produce no document/section records.
+Unexpected programming/contract errors propagate.
 
 ## Decoding, recovery and content ownership
 
@@ -61,7 +63,7 @@ Unsupported tables remain available in Bronze for WP3.3.
 
 Hard limits are 32 MiB input, 750,000 recovered nodes, depth 240 and 100,000 blocks;
 libxml2's own safety limits also remain enabled. Resource violations reject the
-document rather than knowingly serving a truncated result. There is no independent
+document instead of returning a truncated result. There is no independent
 process watchdog or measured worst-case memory/CPU guarantee. HTML recovery can
 lose severely malformed content; a recovery warning is not proof of completeness.
 libxml2 error logs can be capped, so the warning records presence rather than an
@@ -90,8 +92,7 @@ Every section and block resolves through `document_id` to the document's immutab
 source reference, containing normalized CIK, accession, filename, source URL,
 original SHA-256 and byte count. The document carries parser/pipeline versions;
 its provenance row preserves fetch ID/time and the canonical filing relationship.
-The envelope validates these links rather than duplicating potentially divergent
-source fields on every row.
+The envelope validates these links without duplicating source fields on every row.
 
 DOM paths use numeric element positions, such as `/*[1]/*[2]/*[17]`, to avoid
 arbitrary inline-XBRL namespace bindings. They address the recovered, **unmodified**

@@ -18,7 +18,7 @@ from sec_research.processing.html import parse_html
 
 
 def audit_bronze(store: LocalBronze, inventory: Path) -> list[Fetch]:
-    """Compare stored immutable manifests/objects with the separately recorded inventory."""
+    """Verify immutable manifests and objects against the independent inventory."""
     data = json.loads(inventory.read_bytes())
     fetches = [Fetch.model_validate(f) for f in data["fetches"]]
     if len({f.id for f in fetches}) != len(fetches):
@@ -52,7 +52,7 @@ def diagnose(
         resolve(dom.root, block.locator.path)
         if normalized[block.locator.start : block.locator.end] != block.text:
             raise ValueError("invalid normalized reading-order offsets")
-    # Revalidate deserialization, including canonical identities and complete graph ownership.
+    # Check canonical identities and graph ownership after JSON round-trip.
     ParsedDocument.model_validate_json(result.model_dump_json())
     labeled = next((c for c in benchmark.cases if c.accession == case.accession), None)
     if labeled is not None and labeled.split != case.split:
@@ -85,7 +85,7 @@ def diagnose(
 
 
 def aggregate(rows: list[dict[str, object]]) -> dict[str, object]:
-    """Explicit denominators; structural coverage never masquerades as accuracy."""
+    """Report explicit denominators; structural coverage does not measure accuracy."""
     slices: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
     for row in rows:
         for key in ("all", f"form:{row['form']}", f"company:{row['cik']}", f"split:{row['split']}"):

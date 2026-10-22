@@ -62,13 +62,19 @@ Paths below describe implementation destinations; consult the actual checkout an
 
 ## Phase 3 — Document intelligence and AI-ready data
 
-The current user-assigned gate is **WP3.2 deterministic HTML parsing and sections**,
-implemented within the broader 3A–3C outline below. WP3.1 contracts remain compatible.
+The completed prior gate is **WP3.3 financial table extraction**, with
+structural extraction, numeric normalization, header tests and diagnostics described
+in the [WP3.3 review](phase-3-wp3.3-acceptance-review.md). Implementation is Codex-led;
+hands-on assignments are paused. Review and human adjudication remain required.
+WP3.1 contracts and the frozen WP3.2 parser remain compatible.
 See [contracts](canonical-contracts.md), [parsing](html-parsing.md), and the
 [WP3.2 review](phase-3-wp3.2-review.md). All 18 filings parse and replay; two JPMorgan
 10-Qs retain unclassified Part I content. Human adjudication of the selected
-agent-authored labels remains outstanding. Stop for review before **WP3.3 table
-extraction**; no later package has started.
+agent-authored labels remains outstanding. WP3.3 retains those unknown sections
+and extracts their tables. The owner explicitly authorized **WP3.4 Company Facts
+normalization** and deferred independent WP3.3 financial adjudication. See the
+[WP3.4 review](phase-3-wp3.4-review.md) and [normalization guide](xbrl-normalization.md).
+No WP3.3 limitation is thereby accepted or repaired. WP3.5 is not authorized.
 
 **Objective:** implement ADR-003 from Bronze to versioned, source-resolvable Silver/Gold. **Dependencies:** complete Phase 2 artifacts/manifests and representative reviewed filing fixtures. **Estimate:** 12–18 days.
 
@@ -177,6 +183,7 @@ extraction**; no later package has started.
 
 ## Recommended next assignment
 
-Review the implemented WP3.2 result and its classification/annotation limits.
-The next recommended assignment is separately authorized **WP3.3 structured table
-extraction**, reusing source-linked table placeholders. WP3.3 has not started.
+Review the WP3.4 completion evidence and its narrow metric/context policies.
+Independent WP3.3 and WP3.4 financial adjudication remains outstanding. The next
+recommended implementation package is WP3.5 physical dataset publication only
+after explicit authorization; do not start it automatically.

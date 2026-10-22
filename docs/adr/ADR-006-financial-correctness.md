@@ -1,6 +1,28 @@
 # ADR-006 — Deterministic selection and financial calculations
 
-Status: Proposed. Architecture: 3.1. Implementation phases: 3 and 5.
+Status: WP3.4 reported-fact selection implemented; calculations remain proposed.
+Architecture: 3.1. Implementation phases: 3 and 5.
+
+## WP3.4 context-policy refinement
+
+The owner authorized Company Facts normalization while deferring WP3.3 financial
+adjudication. The [implemented policy](../xbrl-normalization.md) exposes seven
+narrow reported metrics using the SEC API's entity-wide scope. This is an explicit
+alternative to requiring reconstructed XBRL contexts: `company_facts_entity`
+permits a reported observation with a warning, while `verified_consolidated`
+still abstains on unknown dimensions. No context ID or empty dimension set is
+invented, and verified dimensional observations are ineligible. The existing
+metric contract gains that additive context option; financial fact rows do not
+change. A universal verified-context requirement would make Company Facts-only
+selection unavailable even within the source's documented entity scope.
+
+Exact dates and USD units are mandatory. `original`, `latest_as_of`, and
+`compare_versions` preserve accession-level alternatives; conflicts within an
+eligible accession or incompatible equal-day reportings abstain. Equivalent ties
+use accession then record ID. No revenue alias crosses materially different
+concept scopes. This does not establish financial accuracy, historical API
+completeness, formulas, or cross-company comparability. See the
+[WP3.4 review](../phase-3-wp3.4-review.md) for evidence and unresolved limits.
 
 ## Context
 

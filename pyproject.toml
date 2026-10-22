@@ -23,7 +23,7 @@ dependencies = [
 packages = ["src/sec_research"]
 
 [tool.hatch.build.targets.sdist]
-include = ["/src", "/tests", "/migrations", "/scripts", "/docs", "/README.md", "/AGENTS.md", "/pyproject.toml", "/uv.lock", "/alembic.ini", "/compose.yaml", "/Dockerfile", "/.python-version", "/.env.example", "/.dockerignore"]
+include = ["/src", "/tests", "/exercises", "/migrations", "/scripts", "/docs", "/README.md", "/AGENTS.md", "/pyproject.toml", "/uv.lock", "/alembic.ini", "/compose.yaml", "/Dockerfile", "/.python-version", "/.env.example", "/.dockerignore"]
 
 [tool.uv]
 required-version = "==0.12.23"

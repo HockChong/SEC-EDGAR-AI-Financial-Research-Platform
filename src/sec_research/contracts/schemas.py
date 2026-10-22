@@ -6,10 +6,10 @@ from sec_research.contracts.canonical import CANONICAL_MODELS, Record, canonical
 
 
 def schema_bundle() -> dict[str, object]:
-    """Serialization schemas describe Decimal strings, nested structs and arrays.
+    """Describe Decimal strings, nested structs and arrays for storage.
 
     Physical Arrow allocation and Parquet writing belong to WP3.5. Do not infer
-    fixed Decimal precision/scale or nullable fields from a sample of financial data.
+    fixed Decimal precision/scale or nullability from sample data.
     """
     schemas: dict[str, object] = {}
     for model in CANONICAL_MODELS:
@@ -31,7 +31,7 @@ def schema_bundle() -> dict[str, object]:
 
 
 def storage_row(record: Record) -> bytes:
-    """Revalidate even model_copy/model_construct objects before storage."""
+    """Revalidate before storage, including model_copy/model_construct objects."""
     checked = type(record).model_validate(record.model_dump(mode="json"))
     return canonical_bytes(checked.model_dump(mode="json"))
 
