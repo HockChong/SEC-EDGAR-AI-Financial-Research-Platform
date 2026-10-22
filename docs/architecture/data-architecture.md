@@ -1,8 +1,17 @@
 # Data architecture
 
-Status: proposed. [ADR-003](../adr/ADR-003-data-pipeline.md) governs the pipeline; [data dictionary](../data-dictionary.md) defines records and invariants.
+Status: Phase 2 Bronze acquisition and WP3.1 contracts are implemented. WP3.2 adds [bounded HTML parsing and source-linked sections](../html-parsing.md), verified against 18 stored filings. WP3.4 implements Company Facts normalization and reported-fact selection; physical Silver/Gold publication remains proposed. See the [ingestion guide](../ingestion.md), [WP3.2 review](../phase-3-wp3.2-review.md), and [coordination ADR](../adr/ADR-010-bronze-coordination.md). [ADR-003](../adr/ADR-003-data-pipeline.md) governs the pipeline; [data dictionary](../data-dictionary.md) defines records and invariants.
+
+WP3.3 adds [structured table extraction](../table-extraction.md) using the existing
+canonical rows and a versioned diagnostic envelope. Displayed-number normalization
+is integrated; financial context remains unverified. This does not activate Silver/Gold publication.
 
 ## Official source access
+
+WP3.4 now implements [Company Facts normalization and reported selection](../xbrl-normalization.md).
+The earlier proposed Company Facts transformation is therefore implemented;
+physical Silver/Gold publication remains proposed. Unknown dimensions, alternative
+reportings, rejected raw occurrences, and HTML quality limitations remain explicit.
 
 Use SEC Company Submissions and Company Facts under `data.sec.gov`, filing archives under `www.sec.gov/Archives/`, and official company metadata. Resolve older submissions through the additional files referenced by the submissions response; recent submissions alone are not a complete filing history. Preserve amendments as distinct accessions and explicitly choose whether the research includes them.
 

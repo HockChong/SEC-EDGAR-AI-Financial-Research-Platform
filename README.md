@@ -2,7 +2,13 @@
 
 An AI-first research platform designed to answer questions about public companies using SEC filings, structured XBRL facts, deterministic calculations, and verifiable citations.
 
-**Status: Phase 1 engineering foundation implemented.** Architecture version: **3.1**. The repository provides a typed Python package, safe configuration/logging, a health-only FastAPI service, PostgreSQL/pgvector development infrastructure, migrations, tests, and CI. SEC ingestion, research, model integrations, financial calculations, and the frontend remain future work.
+**Status: Phase 2 ingestion and Phase 3 WP3.1–WP3.4 implemented.** Architecture version: **3.1**. The repository provides a typed Python package, safe configuration/logging, a health-only FastAPI service, PostgreSQL/pgvector development infrastructure, migrations, tests, and CI. SEC acquisition adds immutable Bronze storage, persistent manifests, discovery and a resumable CLI. Deterministic HTML parsing now produces source-linked sections and content blocks with opaque tables. Research, model integrations, financial calculations, dataset publication, and the frontend remain future work. See the [ingestion guide](docs/ingestion.md) and [WP3.2 review](docs/phase-3-wp3.2-review.md).
+
+WP3.3 adds [structured table extraction](docs/table-extraction.md), separate
+retrieval text, deterministic displayed-number normalization and multi-period
+header tests. Codex leads development; hands-on assignments are paused.
+Implementation is ready for package review; independent financial adjudication
+remains required. See the [WP3.3 review](docs/phase-3-wp3.3-acceptance-review.md).
 
 ## Run the foundation
 
@@ -64,6 +70,6 @@ See the [system overview](docs/architecture/system-overview.md) for component bo
 
 Phase 1 implements packages 1A–1C. Dependencies are pinned in `pyproject.toml` and `uv.lock`; container images and CI actions are pinned to immutable digests/revisions. The CI workflow builds distributions and validates containers; cloud deployment automation remains in Phase 7.
 
-Recommended next assignment: **Phase 2, package 2A — SEC transport and contracts**. It requires explicit authorization and a real SEC contact identity before live access. Phase 2 has not started. See the [Phase 1 review](docs/phase-1-review.md), [execution rules](AGENTS.md), and [roadmap](docs/roadmap.md).
+Phase 2 implements SEC transport, company/filing discovery, immutable Bronze, Company Facts and recovery. The expanded corpus has 18 filings across five companies and 28 verified Bronze objects; see the [corpus review](docs/bronze-corpus-review.md). WP3.1 supplies canonical contracts. WP3.2 parses all 18 filings deterministically; 25 selected source-inspected boundaries match, with human adjudication still outstanding and quarterly JPMorgan Part I coverage gaps retained as warnings. See [HTML parsing](docs/html-parsing.md) and the [package review](docs/phase-3-wp3.2-review.md). WP3.3 table extraction and displayed-number normalization are implemented; see the [table guide](docs/table-extraction.md) and [WP3.3 review](docs/phase-3-wp3.3-acceptance-review.md). Independent financial adjudication and package acceptance remain open. WP3.4 now adds [Company Facts normalization and deterministic reported-fact selection](docs/xbrl-normalization.md); see the [WP3.4 review](docs/phase-3-wp3.4-review.md). WP3.3 financial adjudication was owner-deferred, not passed. Review WP3.4 before explicitly authorizing WP3.5.
 
 This is a portfolio project under development. Production readiness, financial accuracy, security, performance, and deployment are goals to demonstrate through evidence, not current guarantees.

@@ -1,0 +1,14 @@
+{
+  "schema_version": "wp32-freeze-1",
+  "frozen_at_utc": "2026-10-20T14:24:12.684891+00:00",
+  "purpose": "Frozen before inspection of held-out annotation sources or evaluation. Held-out labels must not tune this implementation.",
+  "files": {
+    "src/sec_research/processing/blocks.py": "348f6b2054594b6460b7b5a413a9cf43585fec8415364d043e273e19433d7475",
+    "src/sec_research/processing/dom.py": "6ebb3625250e2c30d903c3774218f5c1b2a26ec1813937e677c6340a6a43755e",
+    "src/sec_research/processing/html.py": "c9b739cd9851a65b6c9c56d93cbb2abb8c9bebd1932e29f75e74c76609266211",
+    "src/sec_research/processing/sections.py": "ca74f139ecd3a166c936d41c7bd11a58cd0f80d1a23acb95d3f4025f14560e2a",
+    "src/sec_research/contracts/parsing.py": "19eb56679b7cfb5ace756753d9701f1ec3bfb980bb14905013e4b0014ed5b82f",
+    "uv.lock": "a1ed09e39c11c15fb1dcc4fbca289633d80862eb3012f44a62d71160665d9fed"
+  },
+  "hash_convention": "File bytes with CRLF normalized to LF"
+}

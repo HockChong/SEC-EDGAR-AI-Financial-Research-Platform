@@ -1,0 +1,82 @@
+{
+  "schema_version": "1",
+  "synthetic": true,
+  "provenance": "Hand-authored; never fetched from SEC",
+  "fixtures": [
+    {
+      "path": "annual.htm",
+      "sha256": "1e99216992322ca25268190de3c40b9c677ad71d21641df0142b97383faab833",
+      "byte_count": 1396,
+      "source": {
+        "schema_version": "1",
+        "kind": "filing",
+        "cik": "0000000001",
+        "filing": {
+          "schema_version": "1",
+          "cik": "0000000001",
+          "accession": "0000000001-25-000001",
+          "form": "10-K",
+          "filing_date": "2025-02-01",
+          "report_date": "2024-12-28",
+          "accepted_at": null,
+          "primary_document": "annual.htm"
+        },
+        "url": "https://www.sec.gov/Archives/edgar/data/1/000000000125000001/annual.htm"
+      }
+    },
+    {
+      "path": "quarter.htm",
+      "sha256": "aa8a60db0bc8f3eb75cf3a3dac769a1aec272914b52206129aa47ccc95c06063",
+      "byte_count": 911,
+      "source": {
+        "schema_version": "1",
+        "kind": "filing",
+        "cik": "0000000001",
+        "filing": {
+          "schema_version": "1",
+          "cik": "0000000001",
+          "accession": "0000000001-24-000002",
+          "form": "10-Q",
+          "filing_date": "2024-08-01",
+          "report_date": "2024-06-29",
+          "accepted_at": null,
+          "primary_document": "quarter.htm"
+        },
+        "url": "https://www.sec.gov/Archives/edgar/data/1/000000000124000002/quarter.htm"
+      }
+    },
+    {
+      "path": "malformed.htm",
+      "sha256": "75cc02f0830709b9c9f09170e4cab3a5a67c876d8577a245363e19170b6c42b7",
+      "byte_count": 419,
+      "source": {
+        "schema_version": "1",
+        "kind": "filing",
+        "cik": "0000000001",
+        "filing": {
+          "schema_version": "1",
+          "cik": "0000000001",
+          "accession": "0000000001-25-000003",
+          "form": "10-K/A",
+          "filing_date": "2025-03-01",
+          "report_date": "2024-12-28",
+          "accepted_at": null,
+          "primary_document": "malformed.htm"
+        },
+        "url": "https://www.sec.gov/Archives/edgar/data/1/000000000125000003/malformed.htm"
+      }
+    },
+    {
+      "path": "company_facts.json",
+      "sha256": "7c53b2c1aab740f51de74874412c1ee7efd9bf07e10371c0906f555ec6987962",
+      "byte_count": 2285,
+      "source": {
+        "schema_version": "1",
+        "kind": "company_facts",
+        "cik": "0000000001",
+        "filing": null,
+        "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000000001.json"
+      }
+    }
+  ]
+}

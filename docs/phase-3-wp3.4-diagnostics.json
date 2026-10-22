@@ -1,0 +1,2968 @@
+{
+  "schema_version": "wp34-diagnostics-1",
+  "as_of": "2026-10-21",
+  "normalizer_version": "company-facts-1",
+  "catalog_version": "reported-metrics-1",
+  "selection_policy": "fact-selection-1",
+  "period_policy": "period-boundaries-1",
+  "bronze_fetches_verified": 28,
+  "bronze_unchanged": true,
+  "integrity_quality": "passed",
+  "regression_examples_verified": 15,
+  "source_code_sha256": {
+    "src/sec_research/contracts/canonical.py": "b66c9bc972f7aea548fc3948ce84093ae9156b4a0236789da9cd981b4d2488ec",
+    "src/sec_research/contracts/xbrl.py": "187b825b56cea8dd536408a390c2e205a6056071ef0ed11a3008bbb0471e2a99",
+    "src/sec_research/domain/__init__.py": "7d4b5ed4eddd714283e0815a3bad4b4970ab182b890b32dca4c0388d73ae8013",
+    "src/sec_research/domain/financial_selection.py": "27c549f114d778772b08821c8b6055c6350699d9ff8425991dba705fe35d7ae2",
+    "src/sec_research/domain/metrics.py": "eb846edaf458cd69f89e1c3e3b926ac6232bc74438adef3561b4f69d16e67ef2",
+    "src/sec_research/domain/periods.py": "b90105a0cd94ffb6fc9b3a5a8a1015fb7636bc89a3866d96160fe907b79e0d0a",
+    "src/sec_research/processing/xbrl.py": "5ecc6f98ebcc9853c0a21edcb17a8685381dfd4f1391d7bff8f28d668bf744de",
+    "src/sec_research/processing/xbrl_corpus.py": "b96554f1ac6fbf8ed619c843dcbe67d5fae0e56fb3684c7b8ce84d59a58a685a"
+  },
+  "lock_sha256": "a1ed09e39c11c15fb1dcc4fbca289633d80862eb3012f44a62d71160665d9fed",
+  "dataset_input_sha256": "66243d6cf0c255524554f6f6b809476f6cd9d31ae7045d30800f6687add9b082",
+  "independent_financial_adjudication": "not_performed",
+  "wp33_financial_adjudication": "owner_deferred_unresolved_findings_preserved",
+  "rows": [
+    {
+      "cik": "0000019617",
+      "company": "JPMORGAN CHASE & CO",
+      "source_sha256": "a3b61caba754cb5beb47d15588fc59da0829a442e048fae5805c3d9b7145abba",
+      "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000019617.json",
+      "logical_sha256": "83c3e3b4d2aa98e83b0647d8fc902c585a427b6c002cf5dd8e9157d7661ea902",
+      "output_sha256": "88c4b2cc5c0e5ce598d3a2cc2d052d7889e4eb723f4dc1a1aa64d6ca9dbb994f",
+      "observations": 54102,
+      "concepts": 936,
+      "taxonomy_counts": {
+        "dei": 101,
+        "ecd": 35,
+        "ffd": 4033,
+        "invest": 70,
+        "srt": 18,
+        "us-gaap": 49845
+      },
+      "quality_counts": {
+        "warning": 54098,
+        "failed": 4
+      },
+      "reason_counts": {
+        "company_facts_context_unknown": 54098,
+        "unsupported_metric_concept": 53150,
+        "unsupported_filing_form": 6020,
+        "missing_fiscal_metadata": 4069,
+        "invalid_dates": 4,
+        "unsupported_unit": 55
+      },
+      "period_shapes": {
+        "instant": 25274,
+        "annual_length": 8854,
+        "other": 7,
+        "nine_month_length": 4306,
+        "quarter_length": 10841,
+        "half_year_length": 4816
+      },
+      "source_pointers_verified": 54102,
+      "deterministic_replay": true,
+      "selection_status_counts": {
+        "unsupported": 2,
+        "selected": 5
+      },
+      "selection_examples": [
+        {
+          "request": {
+            "cik": "0000019617",
+            "metric": "revenue",
+            "period": {
+              "kind": "duration",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "duration_class": "unknown",
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "unsupported",
+          "quality": "warning",
+          "metric_id": "metric:48a2b9cdb62b59bf0e9e8d121a1174b489bb04ed78c00b619440233d3f9bca8b",
+          "reasons": [
+            "no_supported_company_concept"
+          ],
+          "candidate_decisions": {},
+          "eligible_occurrences": 0,
+          "selected": []
+        },
+        {
+          "request": {
+            "cik": "0000019617",
+            "metric": "net_income",
+            "period": {
+              "kind": "duration",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "duration_class": "unknown",
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "selected",
+          "quality": "warning",
+          "metric_id": "metric:0866031b79735b200d1d7341805b22c0fd3ff8311e7487aa5eaec8a2196860e2",
+          "reasons": [
+            "date_cutoff_end_of_day_utc",
+            "historical_api_coverage_not_reconstructed",
+            "later_reporting_does_not_prove_restatement",
+            "exact_period_and_unit_match",
+            "equivalent_ties_accession_then_fact_id",
+            "company_facts_entity_scope_context_unverified"
+          ],
+          "candidate_decisions": {
+            "period_boundaries_mismatch": 239,
+            "form_mismatch": 14,
+            "eligible_exact_reported_fact": 1
+          },
+          "eligible_occurrences": 1,
+          "selected": [
+            {
+              "schema_version": "canonical-1",
+              "pipeline_version": "xbrl-1",
+              "id": "fact:290c421964795aa9d532cec98ebaad1049ab1bcc9af9444683e883ef7b68a1d3",
+              "cik": "0000019617",
+              "taxonomy": "us-gaap",
+              "concept": "NetIncomeLoss",
+              "raw_value": "57048000000",
+              "value": "57048000000",
+              "unit": "USD",
+              "currency": "USD",
+              "period": {
+                "kind": "duration",
+                "start": "2025-01-01",
+                "end": "2025-12-31",
+                "duration_class": "unknown",
+                "classification_policy": null
+              },
+              "accession": "0001628280-26-008131",
+              "form": "10-K",
+              "filed": "2026-02-13",
+              "accepted_at": null,
+              "fy": 2025,
+              "fp": "FY",
+              "frame": null,
+              "context_id": null,
+              "context_status": "unknown",
+              "dimensions": null,
+              "source": {
+                "source": {
+                  "schema_version": "1",
+                  "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000019617.json",
+                  "kind": "company_facts",
+                  "cik": "0000019617",
+                  "filing": null
+                },
+                "sha256": "a3b61caba754cb5beb47d15588fc59da0829a442e048fae5805c3d9b7145abba",
+                "byte_count": 7988590
+              },
+              "locator": {
+                "kind": "json_pointer",
+                "path": "/facts/us-gaap/NetIncomeLoss/units/USD/236",
+                "text_sha256": null,
+                "start": null,
+                "end": null
+              },
+              "normalizer_version": "company-facts-1",
+              "quality": "warning"
+            }
+          ]
+        },
+        {
+          "request": {
+            "cik": "0000019617",
+            "metric": "operating_income",
+            "period": {
+              "kind": "duration",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "duration_class": "unknown",
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "unsupported",
+          "quality": "warning",
+          "metric_id": "metric:26cbadc4180e95303dcd4e9821e58fdef89582930c26d037a4b3e83d4ea00e17",
+          "reasons": [
+            "no_supported_company_concept"
+          ],
+          "candidate_decisions": {},
+          "eligible_occurrences": 0,
+          "selected": []
+        },
+        {
+          "request": {
+            "cik": "0000019617",
+            "metric": "total_assets",
+            "period": {
+              "kind": "instant",
+              "start": null,
+              "end": "2025-12-31",
+              "duration_class": null,
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "selected",
+          "quality": "warning",
+          "metric_id": "metric:b3d09c4add0acdc88b2ae2b50f44ec963f0f5ec9f52731a98c1c073fc6a2d6b3",
+          "reasons": [
+            "date_cutoff_end_of_day_utc",
+            "historical_api_coverage_not_reconstructed",
+            "later_reporting_does_not_prove_restatement",
+            "exact_period_and_unit_match",
+            "equivalent_ties_accession_then_fact_id",
+            "company_facts_entity_scope_context_unverified"
+          ],
+          "candidate_decisions": {
+            "period_boundaries_mismatch": 203,
+            "form_mismatch": 6,
+            "eligible_exact_reported_fact": 3
+          },
+          "eligible_occurrences": 3,
+          "selected": [
+            {
+              "schema_version": "canonical-1",
+              "pipeline_version": "xbrl-1",
+              "id": "fact:caab624d58f77d81b2467c4faa070d7467b2ea63ca8605c7eb0db5ca9726ad2d",
+              "cik": "0000019617",
+              "taxonomy": "us-gaap",
+              "concept": "Assets",
+              "raw_value": "4424900000000",
+              "value": "4424900000000",
+              "unit": "USD",
+              "currency": "USD",
+              "period": {
+                "kind": "instant",
+                "start": null,
+                "end": "2025-12-31",
+                "duration_class": null,
+                "classification_policy": null
+              },
+              "accession": "0001628280-26-054343",
+              "form": "10-Q",
+              "filed": "2026-08-06",
+              "accepted_at": null,
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2025Q4I",
+              "context_id": null,
+              "context_status": "unknown",
+              "dimensions": null,
+              "source": {
+                "source": {
+                  "schema_version": "1",
+                  "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000019617.json",
+                  "kind": "company_facts",
+                  "cik": "0000019617",
+                  "filing": null
+                },
+                "sha256": "a3b61caba754cb5beb47d15588fc59da0829a442e048fae5805c3d9b7145abba",
+                "byte_count": 7988590
+              },
+              "locator": {
+                "kind": "json_pointer",
+                "path": "/facts/us-gaap/Assets/units/USD/203",
+                "text_sha256": null,
+                "start": null,
+                "end": null
+              },
+              "normalizer_version": "company-facts-1",
+              "quality": "warning"
+            }
+          ]
+        },
+        {
+          "request": {
+            "cik": "0000019617",
+            "metric": "total_liabilities",
+            "period": {
+              "kind": "instant",
+              "start": null,
+              "end": "2025-12-31",
+              "duration_class": null,
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "selected",
+          "quality": "warning",
+          "metric_id": "metric:2a91bdc6a89a33a53994aeb02e3aec7a7dd3e75d678e66db13e862e9bc6f5272",
+          "reasons": [
+            "date_cutoff_end_of_day_utc",
+            "historical_api_coverage_not_reconstructed",
+            "later_reporting_does_not_prove_restatement",
+            "exact_period_and_unit_match",
+            "equivalent_ties_accession_then_fact_id",
+            "company_facts_entity_scope_context_unverified"
+          ],
+          "candidate_decisions": {
+            "period_boundaries_mismatch": 144,
+            "form_mismatch": 6,
+            "eligible_exact_reported_fact": 3
+          },
+          "eligible_occurrences": 3,
+          "selected": [
+            {
+              "schema_version": "canonical-1",
+              "pipeline_version": "xbrl-1",
+              "id": "fact:ca61aeea0e3f34c28ec89b46612a9bd511389ea1f8feb6779141932dec0e331c",
+              "cik": "0000019617",
+              "taxonomy": "us-gaap",
+              "concept": "Liabilities",
+              "raw_value": "4062462000000",
+              "value": "4062462000000",
+              "unit": "USD",
+              "currency": "USD",
+              "period": {
+                "kind": "instant",
+                "start": null,
+                "end": "2025-12-31",
+                "duration_class": null,
+                "classification_policy": null
+              },
+              "accession": "0001628280-26-054343",
+              "form": "10-Q",
+              "filed": "2026-08-06",
+              "accepted_at": null,
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2025Q4I",
+              "context_id": null,
+              "context_status": "unknown",
+              "dimensions": null,
+              "source": {
+                "source": {
+                  "schema_version": "1",
+                  "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000019617.json",
+                  "kind": "company_facts",
+                  "cik": "0000019617",
+                  "filing": null
+                },
+                "sha256": "a3b61caba754cb5beb47d15588fc59da0829a442e048fae5805c3d9b7145abba",
+                "byte_count": 7988590
+              },
+              "locator": {
+                "kind": "json_pointer",
+                "path": "/facts/us-gaap/Liabilities/units/USD/144",
+                "text_sha256": null,
+                "start": null,
+                "end": null
+              },
+              "normalizer_version": "company-facts-1",
+              "quality": "warning"
+            }
+          ]
+        },
+        {
+          "request": {
+            "cik": "0000019617",
+            "metric": "stockholders_equity",
+            "period": {
+              "kind": "instant",
+              "start": null,
+              "end": "2025-12-31",
+              "duration_class": null,
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "selected",
+          "quality": "warning",
+          "metric_id": "metric:a58dbf00683dfee799e9be0a002df9f1df5c82706f2ff1252ce8d32b5761b3da",
+          "reasons": [
+            "date_cutoff_end_of_day_utc",
+            "historical_api_coverage_not_reconstructed",
+            "later_reporting_does_not_prove_restatement",
+            "exact_period_and_unit_match",
+            "equivalent_ties_accession_then_fact_id",
+            "company_facts_entity_scope_context_unverified"
+          ],
+          "candidate_decisions": {
+            "period_boundaries_mismatch": 187,
+            "form_mismatch": 6,
+            "eligible_exact_reported_fact": 3
+          },
+          "eligible_occurrences": 3,
+          "selected": [
+            {
+              "schema_version": "canonical-1",
+              "pipeline_version": "xbrl-1",
+              "id": "fact:fd0d4ef95a08f92a60c018a4e65c093138c066bc6253568dbae5704219cc15bf",
+              "cik": "0000019617",
+              "taxonomy": "us-gaap",
+              "concept": "StockholdersEquity",
+              "raw_value": "362438000000",
+              "value": "362438000000",
+              "unit": "USD",
+              "currency": "USD",
+              "period": {
+                "kind": "instant",
+                "start": null,
+                "end": "2025-12-31",
+                "duration_class": null,
+                "classification_policy": null
+              },
+              "accession": "0001628280-26-054343",
+              "form": "10-Q",
+              "filed": "2026-08-06",
+              "accepted_at": null,
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2025Q4I",
+              "context_id": null,
+              "context_status": "unknown",
+              "dimensions": null,
+              "source": {
+                "source": {
+                  "schema_version": "1",
+                  "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000019617.json",
+                  "kind": "company_facts",
+                  "cik": "0000019617",
+                  "filing": null
+                },
+                "sha256": "a3b61caba754cb5beb47d15588fc59da0829a442e048fae5805c3d9b7145abba",
+                "byte_count": 7988590
+              },
+              "locator": {
+                "kind": "json_pointer",
+                "path": "/facts/us-gaap/StockholdersEquity/units/USD/187",
+                "text_sha256": null,
+                "start": null,
+                "end": null
+              },
+              "normalizer_version": "company-facts-1",
+              "quality": "warning"
+            }
+          ]
+        },
+        {
+          "request": {
+            "cik": "0000019617",
+            "metric": "operating_cash_flow",
+            "period": {
+              "kind": "duration",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "duration_class": "unknown",
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "selected",
+          "quality": "warning",
+          "metric_id": "metric:ab21cafecd5e5976be9c96d3c288542e90243f8b159072201192694adc4c2379",
+          "reasons": [
+            "date_cutoff_end_of_day_utc",
+            "historical_api_coverage_not_reconstructed",
+            "later_reporting_does_not_prove_restatement",
+            "exact_period_and_unit_match",
+            "equivalent_ties_accession_then_fact_id",
+            "company_facts_entity_scope_context_unverified"
+          ],
+          "candidate_decisions": {
+            "period_boundaries_mismatch": 163,
+            "form_mismatch": 7,
+            "eligible_exact_reported_fact": 1
+          },
+          "eligible_occurrences": 1,
+          "selected": [
+            {
+              "schema_version": "canonical-1",
+              "pipeline_version": "xbrl-1",
+              "id": "fact:90bb84e00f22aaf9787b569f732ef6d183b69c486336601d043c565ffb365b0c",
+              "cik": "0000019617",
+              "taxonomy": "us-gaap",
+              "concept": "NetCashProvidedByUsedInOperatingActivities",
+              "raw_value": "-147782000000",
+              "value": "-147782000000",
+              "unit": "USD",
+              "currency": "USD",
+              "period": {
+                "kind": "duration",
+                "start": "2025-01-01",
+                "end": "2025-12-31",
+                "duration_class": "unknown",
+                "classification_policy": null
+              },
+              "accession": "0001628280-26-008131",
+              "form": "10-K",
+              "filed": "2026-02-13",
+              "accepted_at": null,
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2025",
+              "context_id": null,
+              "context_status": "unknown",
+              "dimensions": null,
+              "source": {
+                "source": {
+                  "schema_version": "1",
+                  "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000019617.json",
+                  "kind": "company_facts",
+                  "cik": "0000019617",
+                  "filing": null
+                },
+                "sha256": "a3b61caba754cb5beb47d15588fc59da0829a442e048fae5805c3d9b7145abba",
+                "byte_count": 7988590
+              },
+              "locator": {
+                "kind": "json_pointer",
+                "path": "/facts/us-gaap/NetCashProvidedByUsedInOperatingActivities/units/USD/161",
+                "text_sha256": null,
+                "start": null,
+                "end": null
+              },
+              "normalizer_version": "company-facts-1",
+              "quality": "warning"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cik": "0000320193",
+      "company": "Apple Inc.",
+      "source_sha256": "73a86c6aedc31f77cac2ea4df5f80f0b3bd7e6eb58bb4e01444fbedf3afb9c43",
+      "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+      "logical_sha256": "ac8d015dcdaa59b545e21956c25a236f091b79c72aa4b0265da176010beb3cde",
+      "output_sha256": "77bb92552a35b27c3fb39a9cd7142af014f97c942b2130d2cf30ddf9a1faddb4",
+      "observations": 25135,
+      "concepts": 505,
+      "taxonomy_counts": {
+        "dei": 89,
+        "us-gaap": 25046
+      },
+      "quality_counts": {
+        "warning": 25135
+      },
+      "reason_counts": {
+        "company_facts_context_unknown": 25135,
+        "unsupported_metric_concept": 23758,
+        "unsupported_filing_form": 1118,
+        "missing_fiscal_metadata": 569,
+        "unsupported_unit": 19
+      },
+      "period_shapes": {
+        "instant": 9368,
+        "annual_length": 5853,
+        "nine_month_length": 2382,
+        "quarter_length": 5308,
+        "half_year_length": 2224
+      },
+      "source_pointers_verified": 25135,
+      "deterministic_replay": true,
+      "selection_status_counts": {
+        "selected": 7
+      },
+      "selection_examples": [
+        {
+          "request": {
+            "cik": "0000320193",
+            "metric": "revenue",
+            "period": {
+              "kind": "duration",
+              "start": "2024-09-29",
+              "end": "2025-09-27",
+              "duration_class": "unknown",
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "selected",
+          "quality": "warning",
+          "metric_id": "metric:48a2b9cdb62b59bf0e9e8d121a1174b489bb04ed78c00b619440233d3f9bca8b",
+          "reasons": [
+            "date_cutoff_end_of_day_utc",
+            "historical_api_coverage_not_reconstructed",
+            "later_reporting_does_not_prove_restatement",
+            "exact_period_and_unit_match",
+            "equivalent_ties_accession_then_fact_id",
+            "company_facts_entity_scope_context_unverified"
+          ],
+          "candidate_decisions": {
+            "period_boundaries_mismatch": 116,
+            "eligible_exact_reported_fact": 1
+          },
+          "eligible_occurrences": 1,
+          "selected": [
+            {
+              "schema_version": "canonical-1",
+              "pipeline_version": "xbrl-1",
+              "id": "fact:48c04012ebf7a3535c8bce4f88d73bd8e872343195e032fcb23b9822c8baa8b3",
+              "cik": "0000320193",
+              "taxonomy": "us-gaap",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "raw_value": "416161000000",
+              "value": "416161000000",
+              "unit": "USD",
+              "currency": "USD",
+              "period": {
+                "kind": "duration",
+                "start": "2024-09-29",
+                "end": "2025-09-27",
+                "duration_class": "unknown",
+                "classification_policy": null
+              },
+              "accession": "0000320193-25-000079",
+              "form": "10-K",
+              "filed": "2025-10-31",
+              "accepted_at": null,
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2025",
+              "context_id": null,
+              "context_status": "unknown",
+              "dimensions": null,
+              "source": {
+                "source": {
+                  "schema_version": "1",
+                  "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+                  "kind": "company_facts",
+                  "cik": "0000320193",
+                  "filing": null
+                },
+                "sha256": "73a86c6aedc31f77cac2ea4df5f80f0b3bd7e6eb58bb4e01444fbedf3afb9c43",
+                "byte_count": 3789099
+              },
+              "locator": {
+                "kind": "json_pointer",
+                "path": "/facts/us-gaap/RevenueFromContractWithCustomerExcludingAssessedTax/units/USD/111",
+                "text_sha256": null,
+                "start": null,
+                "end": null
+              },
+              "normalizer_version": "company-facts-1",
+              "quality": "warning"
+            }
+          ]
+        },
+        {
+          "request": {
+            "cik": "0000320193",
+            "metric": "net_income",
+            "period": {
+              "kind": "duration",
+              "start": "2024-09-29",
+              "end": "2025-09-27",
+              "duration_class": "unknown",
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "selected",
+          "quality": "warning",
+          "metric_id": "metric:0866031b79735b200d1d7341805b22c0fd3ff8311e7487aa5eaec8a2196860e2",
+          "reasons": [
+            "date_cutoff_end_of_day_utc",
+            "historical_api_coverage_not_reconstructed",
+            "later_reporting_does_not_prove_restatement",
+            "exact_period_and_unit_match",
+            "equivalent_ties_accession_then_fact_id",
+            "company_facts_entity_scope_context_unverified"
+          ],
+          "candidate_decisions": {
+            "period_boundaries_mismatch": 337,
+            "form_mismatch": 22,
+            "eligible_exact_reported_fact": 1
+          },
+          "eligible_occurrences": 1,
+          "selected": [
+            {
+              "schema_version": "canonical-1",
+              "pipeline_version": "xbrl-1",
+              "id": "fact:78498538b25c00019211c90379673813471363f57ce8d1802face37890bbd571",
+              "cik": "0000320193",
+              "taxonomy": "us-gaap",
+              "concept": "NetIncomeLoss",
+              "raw_value": "112010000000",
+              "value": "112010000000",
+              "unit": "USD",
+              "currency": "USD",
+              "period": {
+                "kind": "duration",
+                "start": "2024-09-29",
+                "end": "2025-09-27",
+                "duration_class": "unknown",
+                "classification_policy": null
+              },
+              "accession": "0000320193-25-000079",
+              "form": "10-K",
+              "filed": "2025-10-31",
+              "accepted_at": null,
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2025",
+              "context_id": null,
+              "context_status": "unknown",
+              "dimensions": null,
+              "source": {
+                "source": {
+                  "schema_version": "1",
+                  "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+                  "kind": "company_facts",
+                  "cik": "0000320193",
+                  "filing": null
+                },
+                "sha256": "73a86c6aedc31f77cac2ea4df5f80f0b3bd7e6eb58bb4e01444fbedf3afb9c43",
+                "byte_count": 3789099
+              },
+              "locator": {
+                "kind": "json_pointer",
+                "path": "/facts/us-gaap/NetIncomeLoss/units/USD/332",
+                "text_sha256": null,
+                "start": null,
+                "end": null
+              },
+              "normalizer_version": "company-facts-1",
+              "quality": "warning"
+            }
+          ]
+        },
+        {
+          "request": {
+            "cik": "0000320193",
+            "metric": "operating_income",
+            "period": {
+              "kind": "duration",
+              "start": "2024-09-29",
+              "end": "2025-09-27",
+              "duration_class": "unknown",
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "selected",
+          "quality": "warning",
+          "metric_id": "metric:26cbadc4180e95303dcd4e9821e58fdef89582930c26d037a4b3e83d4ea00e17",
+          "reasons": [
+            "date_cutoff_end_of_day_utc",
+            "historical_api_coverage_not_reconstructed",
+            "later_reporting_does_not_prove_restatement",
+            "exact_period_and_unit_match",
+            "equivalent_ties_accession_then_fact_id",
+            "company_facts_entity_scope_context_unverified"
+          ],
+          "candidate_decisions": {
+            "period_boundaries_mismatch": 233,
+            "form_mismatch": 6,
+            "eligible_exact_reported_fact": 1
+          },
+          "eligible_occurrences": 1,
+          "selected": [
+            {
+              "schema_version": "canonical-1",
+              "pipeline_version": "xbrl-1",
+              "id": "fact:108009277df84a31daae84bdfdd24701c97272db7b32b8e0112836d5a2c51913",
+              "cik": "0000320193",
+              "taxonomy": "us-gaap",
+              "concept": "OperatingIncomeLoss",
+              "raw_value": "133050000000",
+              "value": "133050000000",
+              "unit": "USD",
+              "currency": "USD",
+              "period": {
+                "kind": "duration",
+                "start": "2024-09-29",
+                "end": "2025-09-27",
+                "duration_class": "unknown",
+                "classification_policy": null
+              },
+              "accession": "0000320193-25-000079",
+              "form": "10-K",
+              "filed": "2025-10-31",
+              "accepted_at": null,
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2025",
+              "context_id": null,
+              "context_status": "unknown",
+              "dimensions": null,
+              "source": {
+                "source": {
+                  "schema_version": "1",
+                  "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+                  "kind": "company_facts",
+                  "cik": "0000320193",
+                  "filing": null
+                },
+                "sha256": "73a86c6aedc31f77cac2ea4df5f80f0b3bd7e6eb58bb4e01444fbedf3afb9c43",
+                "byte_count": 3789099
+              },
+              "locator": {
+                "kind": "json_pointer",
+                "path": "/facts/us-gaap/OperatingIncomeLoss/units/USD/228",
+                "text_sha256": null,
+                "start": null,
+                "end": null
+              },
+              "normalizer_version": "company-facts-1",
+              "quality": "warning"
+            }
+          ]
+        },
+        {
+          "request": {
+            "cik": "0000320193",
+            "metric": "total_assets",
+            "period": {
+              "kind": "instant",
+              "start": null,
+              "end": "2025-09-27",
+              "duration_class": null,
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "selected",
+          "quality": "warning",
+          "metric_id": "metric:b3d09c4add0acdc88b2ae2b50f44ec963f0f5ec9f52731a98c1c073fc6a2d6b3",
+          "reasons": [
+            "date_cutoff_end_of_day_utc",
+            "historical_api_coverage_not_reconstructed",
+            "later_reporting_does_not_prove_restatement",
+            "exact_period_and_unit_match",
+            "equivalent_ties_accession_then_fact_id",
+            "company_facts_entity_scope_context_unverified"
+          ],
+          "candidate_decisions": {
+            "period_boundaries_mismatch": 142,
+            "form_mismatch": 4,
+            "eligible_exact_reported_fact": 4
+          },
+          "eligible_occurrences": 4,
+          "selected": [
+            {
+              "schema_version": "canonical-1",
+              "pipeline_version": "xbrl-1",
+              "id": "fact:c17adacfdba7fb65e9036c81b718c6ddccf09feff5b1108078a8820fad48b538",
+              "cik": "0000320193",
+              "taxonomy": "us-gaap",
+              "concept": "Assets",
+              "raw_value": "359241000000",
+              "value": "359241000000",
+              "unit": "USD",
+              "currency": "USD",
+              "period": {
+                "kind": "instant",
+                "start": null,
+                "end": "2025-09-27",
+                "duration_class": null,
+                "classification_policy": null
+              },
+              "accession": "0000320193-26-000020",
+              "form": "10-Q",
+              "filed": "2026-07-31",
+              "accepted_at": null,
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": "CY2025Q3I",
+              "context_id": null,
+              "context_status": "unknown",
+              "dimensions": null,
+              "source": {
+                "source": {
+                  "schema_version": "1",
+                  "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+                  "kind": "company_facts",
+                  "cik": "0000320193",
+                  "filing": null
+                },
+                "sha256": "73a86c6aedc31f77cac2ea4df5f80f0b3bd7e6eb58bb4e01444fbedf3afb9c43",
+                "byte_count": 3789099
+              },
+              "locator": {
+                "kind": "json_pointer",
+                "path": "/facts/us-gaap/Assets/units/USD/142",
+                "text_sha256": null,
+                "start": null,
+                "end": null
+              },
+              "normalizer_version": "company-facts-1",
+              "quality": "warning"
+            }
+          ]
+        },
+        {
+          "request": {
+            "cik": "0000320193",
+            "metric": "total_liabilities",
+            "period": {
+              "kind": "instant",
+              "start": null,
+              "end": "2025-09-27",
+              "duration_class": null,
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "selected",
+          "quality": "warning",
+          "metric_id": "metric:2a91bdc6a89a33a53994aeb02e3aec7a7dd3e75d678e66db13e862e9bc6f5272",
+          "reasons": [
+            "date_cutoff_end_of_day_utc",
+            "historical_api_coverage_not_reconstructed",
+            "later_reporting_does_not_prove_restatement",
+            "exact_period_and_unit_match",
+            "equivalent_ties_accession_then_fact_id",
+            "company_facts_entity_scope_context_unverified"
+          ],
+          "candidate_decisions": {
+            "period_boundaries_mismatch": 140,
+            "eligible_exact_reported_fact": 4,
+            "form_mismatch": 4
+          },
+          "eligible_occurrences": 4,
+          "selected": [
+            {
+              "schema_version": "canonical-1",
+              "pipeline_version": "xbrl-1",
+              "id": "fact:d03a59f6542ffa94d7b75e14f8a175daa8cf5cde9836e115a5d61ecc1fbecc9a",
+              "cik": "0000320193",
+              "taxonomy": "us-gaap",
+              "concept": "Liabilities",
+              "raw_value": "285508000000",
+              "value": "285508000000",
+              "unit": "USD",
+              "currency": "USD",
+              "period": {
+                "kind": "instant",
+                "start": null,
+                "end": "2025-09-27",
+                "duration_class": null,
+                "classification_policy": null
+              },
+              "accession": "0000320193-26-000020",
+              "form": "10-Q",
+              "filed": "2026-07-31",
+              "accepted_at": null,
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": "CY2025Q3I",
+              "context_id": null,
+              "context_status": "unknown",
+              "dimensions": null,
+              "source": {
+                "source": {
+                  "schema_version": "1",
+                  "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+                  "kind": "company_facts",
+                  "cik": "0000320193",
+                  "filing": null
+                },
+                "sha256": "73a86c6aedc31f77cac2ea4df5f80f0b3bd7e6eb58bb4e01444fbedf3afb9c43",
+                "byte_count": 3789099
+              },
+              "locator": {
+                "kind": "json_pointer",
+                "path": "/facts/us-gaap/Liabilities/units/USD/140",
+                "text_sha256": null,
+                "start": null,
+                "end": null
+              },
+              "normalizer_version": "company-facts-1",
+              "quality": "warning"
+            }
+          ]
+        },
+        {
+          "request": {
+            "cik": "0000320193",
+            "metric": "stockholders_equity",
+            "period": {
+              "kind": "instant",
+              "start": null,
+              "end": "2025-09-27",
+              "duration_class": null,
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "selected",
+          "quality": "warning",
+          "metric_id": "metric:a58dbf00683dfee799e9be0a002df9f1df5c82706f2ff1252ce8d32b5761b3da",
+          "reasons": [
+            "date_cutoff_end_of_day_utc",
+            "historical_api_coverage_not_reconstructed",
+            "later_reporting_does_not_prove_restatement",
+            "exact_period_and_unit_match",
+            "equivalent_ties_accession_then_fact_id",
+            "company_facts_entity_scope_context_unverified"
+          ],
+          "candidate_decisions": {
+            "period_boundaries_mismatch": 260,
+            "form_mismatch": 8,
+            "eligible_exact_reported_fact": 4
+          },
+          "eligible_occurrences": 4,
+          "selected": [
+            {
+              "schema_version": "canonical-1",
+              "pipeline_version": "xbrl-1",
+              "id": "fact:0f19e07f236316d59301690fadb813f1c6af6c34dbadfd5843e86fdc7ab9091f",
+              "cik": "0000320193",
+              "taxonomy": "us-gaap",
+              "concept": "StockholdersEquity",
+              "raw_value": "73733000000",
+              "value": "73733000000",
+              "unit": "USD",
+              "currency": "USD",
+              "period": {
+                "kind": "instant",
+                "start": null,
+                "end": "2025-09-27",
+                "duration_class": null,
+                "classification_policy": null
+              },
+              "accession": "0000320193-26-000020",
+              "form": "10-Q",
+              "filed": "2026-07-31",
+              "accepted_at": null,
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": "CY2025Q3I",
+              "context_id": null,
+              "context_status": "unknown",
+              "dimensions": null,
+              "source": {
+                "source": {
+                  "schema_version": "1",
+                  "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+                  "kind": "company_facts",
+                  "cik": "0000320193",
+                  "filing": null
+                },
+                "sha256": "73a86c6aedc31f77cac2ea4df5f80f0b3bd7e6eb58bb4e01444fbedf3afb9c43",
+                "byte_count": 3789099
+              },
+              "locator": {
+                "kind": "json_pointer",
+                "path": "/facts/us-gaap/StockholdersEquity/units/USD/258",
+                "text_sha256": null,
+                "start": null,
+                "end": null
+              },
+              "normalizer_version": "company-facts-1",
+              "quality": "warning"
+            }
+          ]
+        },
+        {
+          "request": {
+            "cik": "0000320193",
+            "metric": "operating_cash_flow",
+            "period": {
+              "kind": "duration",
+              "start": "2024-09-29",
+              "end": "2025-09-27",
+              "duration_class": "unknown",
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "selected",
+          "quality": "warning",
+          "metric_id": "metric:ab21cafecd5e5976be9c96d3c288542e90243f8b159072201192694adc4c2379",
+          "reasons": [
+            "date_cutoff_end_of_day_utc",
+            "historical_api_coverage_not_reconstructed",
+            "later_reporting_does_not_prove_restatement",
+            "exact_period_and_unit_match",
+            "equivalent_ties_accession_then_fact_id",
+            "company_facts_entity_scope_context_unverified"
+          ],
+          "candidate_decisions": {
+            "period_boundaries_mismatch": 133,
+            "eligible_exact_reported_fact": 1,
+            "form_mismatch": 3
+          },
+          "eligible_occurrences": 1,
+          "selected": [
+            {
+              "schema_version": "canonical-1",
+              "pipeline_version": "xbrl-1",
+              "id": "fact:38ce1b91e6d27c4d0f530b9e58fc04d880e6fc421580177c552c232b7e14e96d",
+              "cik": "0000320193",
+              "taxonomy": "us-gaap",
+              "concept": "NetCashProvidedByUsedInOperatingActivities",
+              "raw_value": "111482000000",
+              "value": "111482000000",
+              "unit": "USD",
+              "currency": "USD",
+              "period": {
+                "kind": "duration",
+                "start": "2024-09-29",
+                "end": "2025-09-27",
+                "duration_class": "unknown",
+                "classification_policy": null
+              },
+              "accession": "0000320193-25-000079",
+              "form": "10-K",
+              "filed": "2025-10-31",
+              "accepted_at": null,
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2025",
+              "context_id": null,
+              "context_status": "unknown",
+              "dimensions": null,
+              "source": {
+                "source": {
+                  "schema_version": "1",
+                  "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+                  "kind": "company_facts",
+                  "cik": "0000320193",
+                  "filing": null
+                },
+                "sha256": "73a86c6aedc31f77cac2ea4df5f80f0b3bd7e6eb58bb4e01444fbedf3afb9c43",
+                "byte_count": 3789099
+              },
+              "locator": {
+                "kind": "json_pointer",
+                "path": "/facts/us-gaap/NetCashProvidedByUsedInOperatingActivities/units/USD/130",
+                "text_sha256": null,
+                "start": null,
+                "end": null
+              },
+              "normalizer_version": "company-facts-1",
+              "quality": "warning"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cik": "0000789019",
+      "company": "MICROSOFT CORPORATION",
+      "source_sha256": "f8aae2965b20ad0df44bdf7ccbedf797d275b6b8dc030154a7a311361bb7246f",
+      "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json",
+      "logical_sha256": "f5fe74f5259a8fe71c14671ce3dec0df647c860b6ae6044a5a4725648ec805f2",
+      "output_sha256": "13e8c0a8f2f62aed33f6fd2089fe00a1378dcb2f8bcc9fc9a6d759dfb6a26aa0",
+      "observations": 32671,
+      "concepts": 565,
+      "taxonomy_counts": {
+        "dei": 135,
+        "us-gaap": 32536
+      },
+      "quality_counts": {
+        "warning": 32671
+      },
+      "reason_counts": {
+        "company_facts_context_unknown": 32671,
+        "unsupported_metric_concept": 31260,
+        "unsupported_filing_form": 1770,
+        "missing_fiscal_metadata": 1173,
+        "unsupported_unit": 42
+      },
+      "period_shapes": {
+        "instant": 13122,
+        "nine_month_length": 2374,
+        "annual_length": 6492,
+        "quarter_length": 8274,
+        "half_year_length": 2369,
+        "other": 40
+      },
+      "source_pointers_verified": 32671,
+      "deterministic_replay": true,
+      "selection_status_counts": {
+        "selected": 7
+      },
+      "selection_examples": [
+        {
+          "request": {
+            "cik": "0000789019",
+            "metric": "revenue",
+            "period": {
+              "kind": "duration",
+              "start": "2025-07-01",
+              "end": "2026-06-30",
+              "duration_class": "unknown",
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "selected",
+          "quality": "warning",
+          "metric_id": "metric:48a2b9cdb62b59bf0e9e8d121a1174b489bb04ed78c00b619440233d3f9bca8b",
+          "reasons": [
+            "date_cutoff_end_of_day_utc",
+            "historical_api_coverage_not_reconstructed",
+            "later_reporting_does_not_prove_restatement",
+            "exact_period_and_unit_match",
+            "equivalent_ties_accession_then_fact_id",
+            "company_facts_entity_scope_context_unverified"
+          ],
+          "candidate_decisions": {
+            "period_boundaries_mismatch": 133,
+            "eligible_exact_reported_fact": 1,
+            "form_mismatch": 3
+          },
+          "eligible_occurrences": 1,
+          "selected": [
+            {
+              "schema_version": "canonical-1",
+              "pipeline_version": "xbrl-1",
+              "id": "fact:0ab0b31b46222529d4ed40789c28f5238401c9523037b8dab1867d07ccd5877b",
+              "cik": "0000789019",
+              "taxonomy": "us-gaap",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "raw_value": "331839000000",
+              "value": "331839000000",
+              "unit": "USD",
+              "currency": "USD",
+              "period": {
+                "kind": "duration",
+                "start": "2025-07-01",
+                "end": "2026-06-30",
+                "duration_class": "unknown",
+                "classification_policy": null
+              },
+              "accession": "0001193125-26-323660",
+              "form": "10-K",
+              "filed": "2026-07-29",
+              "accepted_at": null,
+              "fy": 2026,
+              "fp": "FY",
+              "frame": "CY2026",
+              "context_id": null,
+              "context_status": "unknown",
+              "dimensions": null,
+              "source": {
+                "source": {
+                  "schema_version": "1",
+                  "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json",
+                  "kind": "company_facts",
+                  "cik": "0000789019",
+                  "filing": null
+                },
+                "sha256": "f8aae2965b20ad0df44bdf7ccbedf797d275b6b8dc030154a7a311361bb7246f",
+                "byte_count": 4881196
+              },
+              "locator": {
+                "kind": "json_pointer",
+                "path": "/facts/us-gaap/RevenueFromContractWithCustomerExcludingAssessedTax/units/USD/133",
+                "text_sha256": null,
+                "start": null,
+                "end": null
+              },
+              "normalizer_version": "company-facts-1",
+              "quality": "warning"
+            }
+          ]
+        },
+        {
+          "request": {
+            "cik": "0000789019",
+            "metric": "net_income",
+            "period": {
+              "kind": "duration",
+              "start": "2025-07-01",
+              "end": "2026-06-30",
+              "duration_class": "unknown",
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "selected",
+          "quality": "warning",
+          "metric_id": "metric:0866031b79735b200d1d7341805b22c0fd3ff8311e7487aa5eaec8a2196860e2",
+          "reasons": [
+            "date_cutoff_end_of_day_utc",
+            "historical_api_coverage_not_reconstructed",
+            "later_reporting_does_not_prove_restatement",
+            "exact_period_and_unit_match",
+            "equivalent_ties_accession_then_fact_id",
+            "company_facts_entity_scope_context_unverified"
+          ],
+          "candidate_decisions": {
+            "period_boundaries_mismatch": 339,
+            "form_mismatch": 25,
+            "eligible_exact_reported_fact": 1
+          },
+          "eligible_occurrences": 1,
+          "selected": [
+            {
+              "schema_version": "canonical-1",
+              "pipeline_version": "xbrl-1",
+              "id": "fact:753e154616c9173c54f5c2cb8dadf559de3adaaf4d5020e474f70e90753a6915",
+              "cik": "0000789019",
+              "taxonomy": "us-gaap",
+              "concept": "NetIncomeLoss",
+              "raw_value": "133749000000",
+              "value": "133749000000",
+              "unit": "USD",
+              "currency": "USD",
+              "period": {
+                "kind": "duration",
+                "start": "2025-07-01",
+                "end": "2026-06-30",
+                "duration_class": "unknown",
+                "classification_policy": null
+              },
+              "accession": "0001193125-26-323660",
+              "form": "10-K",
+              "filed": "2026-07-29",
+              "accepted_at": null,
+              "fy": 2026,
+              "fp": "FY",
+              "frame": "CY2026",
+              "context_id": null,
+              "context_status": "unknown",
+              "dimensions": null,
+              "source": {
+                "source": {
+                  "schema_version": "1",
+                  "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json",
+                  "kind": "company_facts",
+                  "cik": "0000789019",
+                  "filing": null
+                },
+                "sha256": "f8aae2965b20ad0df44bdf7ccbedf797d275b6b8dc030154a7a311361bb7246f",
+                "byte_count": 4881196
+              },
+              "locator": {
+                "kind": "json_pointer",
+                "path": "/facts/us-gaap/NetIncomeLoss/units/USD/339",
+                "text_sha256": null,
+                "start": null,
+                "end": null
+              },
+              "normalizer_version": "company-facts-1",
+              "quality": "warning"
+            }
+          ]
+        },
+        {
+          "request": {
+            "cik": "0000789019",
+            "metric": "operating_income",
+            "period": {
+              "kind": "duration",
+              "start": "2025-07-01",
+              "end": "2026-06-30",
+              "duration_class": "unknown",
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "selected",
+          "quality": "warning",
+          "metric_id": "metric:26cbadc4180e95303dcd4e9821e58fdef89582930c26d037a4b3e83d4ea00e17",
+          "reasons": [
+            "date_cutoff_end_of_day_utc",
+            "historical_api_coverage_not_reconstructed",
+            "later_reporting_does_not_prove_restatement",
+            "exact_period_and_unit_match",
+            "equivalent_ties_accession_then_fact_id",
+            "company_facts_entity_scope_context_unverified"
+          ],
+          "candidate_decisions": {
+            "period_boundaries_mismatch": 277,
+            "form_mismatch": 17,
+            "eligible_exact_reported_fact": 1
+          },
+          "eligible_occurrences": 1,
+          "selected": [
+            {
+              "schema_version": "canonical-1",
+              "pipeline_version": "xbrl-1",
+              "id": "fact:4f816c45269cb4a909bb8945c5370dffc71cd76d2ba9cba5b753ec76ace9d075",
+              "cik": "0000789019",
+              "taxonomy": "us-gaap",
+              "concept": "OperatingIncomeLoss",
+              "raw_value": "155237000000",
+              "value": "155237000000",
+              "unit": "USD",
+              "currency": "USD",
+              "period": {
+                "kind": "duration",
+                "start": "2025-07-01",
+                "end": "2026-06-30",
+                "duration_class": "unknown",
+                "classification_policy": null
+              },
+              "accession": "0001193125-26-323660",
+              "form": "10-K",
+              "filed": "2026-07-29",
+              "accepted_at": null,
+              "fy": 2026,
+              "fp": "FY",
+              "frame": "CY2026",
+              "context_id": null,
+              "context_status": "unknown",
+              "dimensions": null,
+              "source": {
+                "source": {
+                  "schema_version": "1",
+                  "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json",
+                  "kind": "company_facts",
+                  "cik": "0000789019",
+                  "filing": null
+                },
+                "sha256": "f8aae2965b20ad0df44bdf7ccbedf797d275b6b8dc030154a7a311361bb7246f",
+                "byte_count": 4881196
+              },
+              "locator": {
+                "kind": "json_pointer",
+                "path": "/facts/us-gaap/OperatingIncomeLoss/units/USD/277",
+                "text_sha256": null,
+                "start": null,
+                "end": null
+              },
+              "normalizer_version": "company-facts-1",
+              "quality": "warning"
+            }
+          ]
+        },
+        {
+          "request": {
+            "cik": "0000789019",
+            "metric": "total_assets",
+            "period": {
+              "kind": "instant",
+              "start": null,
+              "end": "2026-06-30",
+              "duration_class": null,
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "selected",
+          "quality": "warning",
+          "metric_id": "metric:b3d09c4add0acdc88b2ae2b50f44ec963f0f5ec9f52731a98c1c073fc6a2d6b3",
+          "reasons": [
+            "date_cutoff_end_of_day_utc",
+            "historical_api_coverage_not_reconstructed",
+            "later_reporting_does_not_prove_restatement",
+            "exact_period_and_unit_match",
+            "equivalent_ties_accession_then_fact_id",
+            "company_facts_entity_scope_context_unverified"
+          ],
+          "candidate_decisions": {
+            "period_boundaries_mismatch": 141,
+            "form_mismatch": 6,
+            "eligible_exact_reported_fact": 1
+          },
+          "eligible_occurrences": 1,
+          "selected": [
+            {
+              "schema_version": "canonical-1",
+              "pipeline_version": "xbrl-1",
+              "id": "fact:cb10b14eb0099c0ac7b5b1105fbb7489bd5eefde1ff28abd6607086854099bed",
+              "cik": "0000789019",
+              "taxonomy": "us-gaap",
+              "concept": "Assets",
+              "raw_value": "758376000000",
+              "value": "758376000000",
+              "unit": "USD",
+              "currency": "USD",
+              "period": {
+                "kind": "instant",
+                "start": null,
+                "end": "2026-06-30",
+                "duration_class": null,
+                "classification_policy": null
+              },
+              "accession": "0001193125-26-323660",
+              "form": "10-K",
+              "filed": "2026-07-29",
+              "accepted_at": null,
+              "fy": 2026,
+              "fp": "FY",
+              "frame": "CY2026Q2I",
+              "context_id": null,
+              "context_status": "unknown",
+              "dimensions": null,
+              "source": {
+                "source": {
+                  "schema_version": "1",
+                  "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json",
+                  "kind": "company_facts",
+                  "cik": "0000789019",
+                  "filing": null
+                },
+                "sha256": "f8aae2965b20ad0df44bdf7ccbedf797d275b6b8dc030154a7a311361bb7246f",
+                "byte_count": 4881196
+              },
+              "locator": {
+                "kind": "json_pointer",
+                "path": "/facts/us-gaap/Assets/units/USD/141",
+                "text_sha256": null,
+                "start": null,
+                "end": null
+              },
+              "normalizer_version": "company-facts-1",
+              "quality": "warning"
+            }
+          ]
+        },
+        {
+          "request": {
+            "cik": "0000789019",
+            "metric": "total_liabilities",
+            "period": {
+              "kind": "instant",
+              "start": null,
+              "end": "2026-06-30",
+              "duration_class": null,
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "selected",
+          "quality": "warning",
+          "metric_id": "metric:2a91bdc6a89a33a53994aeb02e3aec7a7dd3e75d678e66db13e862e9bc6f5272",
+          "reasons": [
+            "date_cutoff_end_of_day_utc",
+            "historical_api_coverage_not_reconstructed",
+            "later_reporting_does_not_prove_restatement",
+            "exact_period_and_unit_match",
+            "equivalent_ties_accession_then_fact_id",
+            "company_facts_entity_scope_context_unverified"
+          ],
+          "candidate_decisions": {
+            "period_boundaries_mismatch": 133,
+            "eligible_exact_reported_fact": 1,
+            "form_mismatch": 6
+          },
+          "eligible_occurrences": 1,
+          "selected": [
+            {
+              "schema_version": "canonical-1",
+              "pipeline_version": "xbrl-1",
+              "id": "fact:37d07aa1c6aa6ec93fce99e6bdffafe7e19769747c2bdb385443218ed3348cff",
+              "cik": "0000789019",
+              "taxonomy": "us-gaap",
+              "concept": "Liabilities",
+              "raw_value": "315989000000",
+              "value": "315989000000",
+              "unit": "USD",
+              "currency": "USD",
+              "period": {
+                "kind": "instant",
+                "start": null,
+                "end": "2026-06-30",
+                "duration_class": null,
+                "classification_policy": null
+              },
+              "accession": "0001193125-26-323660",
+              "form": "10-K",
+              "filed": "2026-07-29",
+              "accepted_at": null,
+              "fy": 2026,
+              "fp": "FY",
+              "frame": "CY2026Q2I",
+              "context_id": null,
+              "context_status": "unknown",
+              "dimensions": null,
+              "source": {
+                "source": {
+                  "schema_version": "1",
+                  "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json",
+                  "kind": "company_facts",
+                  "cik": "0000789019",
+                  "filing": null
+                },
+                "sha256": "f8aae2965b20ad0df44bdf7ccbedf797d275b6b8dc030154a7a311361bb7246f",
+                "byte_count": 4881196
+              },
+              "locator": {
+                "kind": "json_pointer",
+                "path": "/facts/us-gaap/Liabilities/units/USD/133",
+                "text_sha256": null,
+                "start": null,
+                "end": null
+              },
+              "normalizer_version": "company-facts-1",
+              "quality": "warning"
+            }
+          ]
+        },
+        {
+          "request": {
+            "cik": "0000789019",
+            "metric": "stockholders_equity",
+            "period": {
+              "kind": "instant",
+              "start": null,
+              "end": "2026-06-30",
+              "duration_class": null,
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "selected",
+          "quality": "warning",
+          "metric_id": "metric:a58dbf00683dfee799e9be0a002df9f1df5c82706f2ff1252ce8d32b5761b3da",
+          "reasons": [
+            "date_cutoff_end_of_day_utc",
+            "historical_api_coverage_not_reconstructed",
+            "later_reporting_does_not_prove_restatement",
+            "exact_period_and_unit_match",
+            "equivalent_ties_accession_then_fact_id",
+            "company_facts_entity_scope_context_unverified"
+          ],
+          "candidate_decisions": {
+            "period_boundaries_mismatch": 212,
+            "form_mismatch": 9,
+            "eligible_exact_reported_fact": 1
+          },
+          "eligible_occurrences": 1,
+          "selected": [
+            {
+              "schema_version": "canonical-1",
+              "pipeline_version": "xbrl-1",
+              "id": "fact:e47a2334b3e60e3f2606657a80f75d753d8eb280d252dd01323582a793c3af8c",
+              "cik": "0000789019",
+              "taxonomy": "us-gaap",
+              "concept": "StockholdersEquity",
+              "raw_value": "442387000000",
+              "value": "442387000000",
+              "unit": "USD",
+              "currency": "USD",
+              "period": {
+                "kind": "instant",
+                "start": null,
+                "end": "2026-06-30",
+                "duration_class": null,
+                "classification_policy": null
+              },
+              "accession": "0001193125-26-323660",
+              "form": "10-K",
+              "filed": "2026-07-29",
+              "accepted_at": null,
+              "fy": 2026,
+              "fp": "FY",
+              "frame": "CY2026Q2I",
+              "context_id": null,
+              "context_status": "unknown",
+              "dimensions": null,
+              "source": {
+                "source": {
+                  "schema_version": "1",
+                  "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json",
+                  "kind": "company_facts",
+                  "cik": "0000789019",
+                  "filing": null
+                },
+                "sha256": "f8aae2965b20ad0df44bdf7ccbedf797d275b6b8dc030154a7a311361bb7246f",
+                "byte_count": 4881196
+              },
+              "locator": {
+                "kind": "json_pointer",
+                "path": "/facts/us-gaap/StockholdersEquity/units/USD/212",
+                "text_sha256": null,
+                "start": null,
+                "end": null
+              },
+              "normalizer_version": "company-facts-1",
+              "quality": "warning"
+            }
+          ]
+        },
+        {
+          "request": {
+            "cik": "0000789019",
+            "metric": "operating_cash_flow",
+            "period": {
+              "kind": "duration",
+              "start": "2025-07-01",
+              "end": "2026-06-30",
+              "duration_class": "unknown",
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "selected",
+          "quality": "warning",
+          "metric_id": "metric:ab21cafecd5e5976be9c96d3c288542e90243f8b159072201192694adc4c2379",
+          "reasons": [
+            "date_cutoff_end_of_day_utc",
+            "historical_api_coverage_not_reconstructed",
+            "later_reporting_does_not_prove_restatement",
+            "exact_period_and_unit_match",
+            "equivalent_ties_accession_then_fact_id",
+            "company_facts_entity_scope_context_unverified"
+          ],
+          "candidate_decisions": {
+            "period_boundaries_mismatch": 169,
+            "form_mismatch": 3,
+            "eligible_exact_reported_fact": 1
+          },
+          "eligible_occurrences": 1,
+          "selected": [
+            {
+              "schema_version": "canonical-1",
+              "pipeline_version": "xbrl-1",
+              "id": "fact:ad4be275db70937f6457849f484c4af7ecb0d19fe48272f58dce787dd03dd0b2",
+              "cik": "0000789019",
+              "taxonomy": "us-gaap",
+              "concept": "NetCashProvidedByUsedInOperatingActivities",
+              "raw_value": "182935000000",
+              "value": "182935000000",
+              "unit": "USD",
+              "currency": "USD",
+              "period": {
+                "kind": "duration",
+                "start": "2025-07-01",
+                "end": "2026-06-30",
+                "duration_class": "unknown",
+                "classification_policy": null
+              },
+              "accession": "0001193125-26-323660",
+              "form": "10-K",
+              "filed": "2026-07-29",
+              "accepted_at": null,
+              "fy": 2026,
+              "fp": "FY",
+              "frame": "CY2026",
+              "context_id": null,
+              "context_status": "unknown",
+              "dimensions": null,
+              "source": {
+                "source": {
+                  "schema_version": "1",
+                  "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json",
+                  "kind": "company_facts",
+                  "cik": "0000789019",
+                  "filing": null
+                },
+                "sha256": "f8aae2965b20ad0df44bdf7ccbedf797d275b6b8dc030154a7a311361bb7246f",
+                "byte_count": 4881196
+              },
+              "locator": {
+                "kind": "json_pointer",
+                "path": "/facts/us-gaap/NetCashProvidedByUsedInOperatingActivities/units/USD/169",
+                "text_sha256": null,
+                "start": null,
+                "end": null
+              },
+              "normalizer_version": "company-facts-1",
+              "quality": "warning"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cik": "0001018724",
+      "company": "AMAZON COM INC",
+      "source_sha256": "7549fb68446eee40e1f50a166fa06b2d2ee6349e07c8553a4828757e032d3cd4",
+      "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001018724.json",
+      "logical_sha256": "6b6174ae8fc46a40fc74a9f23da6de8aa03bfb9d85253d8163e098741e495f78",
+      "output_sha256": "2719e370c603de0b24a7e68dbbfc1ca8f0a10ba61fb5116f02b78e7909f3f3b3",
+      "observations": 29761,
+      "concepts": 556,
+      "taxonomy_counts": {
+        "dei": 87,
+        "ecd": 15,
+        "ffd": 23,
+        "us-gaap": 29636
+      },
+      "quality_counts": {
+        "warning": 29761
+      },
+      "reason_counts": {
+        "company_facts_context_unknown": 29761,
+        "unsupported_metric_concept": 28196,
+        "missing_fiscal_metadata": 43,
+        "unsupported_filing_form": 43,
+        "unsupported_unit": 72
+      },
+      "period_shapes": {
+        "instant": 10244,
+        "annual_length": 7951,
+        "nine_month_length": 2143,
+        "quarter_length": 7146,
+        "half_year_length": 2263,
+        "other": 14
+      },
+      "source_pointers_verified": 29761,
+      "deterministic_replay": true,
+      "selection_status_counts": {
+        "selected": 6,
+        "unsupported": 1
+      },
+      "selection_examples": [
+        {
+          "request": {
+            "cik": "0001018724",
+            "metric": "revenue",
+            "period": {
+              "kind": "duration",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "duration_class": "unknown",
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "selected",
+          "quality": "warning",
+          "metric_id": "metric:48a2b9cdb62b59bf0e9e8d121a1174b489bb04ed78c00b619440233d3f9bca8b",
+          "reasons": [
+            "date_cutoff_end_of_day_utc",
+            "historical_api_coverage_not_reconstructed",
+            "later_reporting_does_not_prove_restatement",
+            "exact_period_and_unit_match",
+            "equivalent_ties_accession_then_fact_id",
+            "company_facts_entity_scope_context_unverified"
+          ],
+          "candidate_decisions": {
+            "period_boundaries_mismatch": 127,
+            "eligible_exact_reported_fact": 1
+          },
+          "eligible_occurrences": 1,
+          "selected": [
+            {
+              "schema_version": "canonical-1",
+              "pipeline_version": "xbrl-1",
+              "id": "fact:ad0eccdf85fd48e1b9381261b0a27a9293b5ef40e40afbfee193b697b4079e6b",
+              "cik": "0001018724",
+              "taxonomy": "us-gaap",
+              "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+              "raw_value": "716924000000",
+              "value": "716924000000",
+              "unit": "USD",
+              "currency": "USD",
+              "period": {
+                "kind": "duration",
+                "start": "2025-01-01",
+                "end": "2025-12-31",
+                "duration_class": "unknown",
+                "classification_policy": null
+              },
+              "accession": "0001018724-26-000004",
+              "form": "10-K",
+              "filed": "2026-02-06",
+              "accepted_at": null,
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2025",
+              "context_id": null,
+              "context_status": "unknown",
+              "dimensions": null,
+              "source": {
+                "source": {
+                  "schema_version": "1",
+                  "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001018724.json",
+                  "kind": "company_facts",
+                  "cik": "0001018724",
+                  "filing": null
+                },
+                "sha256": "7549fb68446eee40e1f50a166fa06b2d2ee6349e07c8553a4828757e032d3cd4",
+                "byte_count": 4478611
+              },
+              "locator": {
+                "kind": "json_pointer",
+                "path": "/facts/us-gaap/RevenueFromContractWithCustomerExcludingAssessedTax/units/USD/124",
+                "text_sha256": null,
+                "start": null,
+                "end": null
+              },
+              "normalizer_version": "company-facts-1",
+              "quality": "warning"
+            }
+          ]
+        },
+        {
+          "request": {
+            "cik": "0001018724",
+            "metric": "net_income",
+            "period": {
+              "kind": "duration",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "duration_class": "unknown",
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "selected",
+          "quality": "warning",
+          "metric_id": "metric:0866031b79735b200d1d7341805b22c0fd3ff8311e7487aa5eaec8a2196860e2",
+          "reasons": [
+            "date_cutoff_end_of_day_utc",
+            "historical_api_coverage_not_reconstructed",
+            "later_reporting_does_not_prove_restatement",
+            "exact_period_and_unit_match",
+            "equivalent_ties_accession_then_fact_id",
+            "company_facts_entity_scope_context_unverified"
+          ],
+          "candidate_decisions": {
+            "period_boundaries_mismatch": 420,
+            "form_mismatch": 5,
+            "eligible_exact_reported_fact": 1
+          },
+          "eligible_occurrences": 1,
+          "selected": [
+            {
+              "schema_version": "canonical-1",
+              "pipeline_version": "xbrl-1",
+              "id": "fact:4614f0ac7746c2eb0bb69ccb72c50668487a91660d79748a27dd0069bb7c272a",
+              "cik": "0001018724",
+              "taxonomy": "us-gaap",
+              "concept": "NetIncomeLoss",
+              "raw_value": "77670000000",
+              "value": "77670000000",
+              "unit": "USD",
+              "currency": "USD",
+              "period": {
+                "kind": "duration",
+                "start": "2025-01-01",
+                "end": "2025-12-31",
+                "duration_class": "unknown",
+                "classification_policy": null
+              },
+              "accession": "0001018724-26-000004",
+              "form": "10-K",
+              "filed": "2026-02-06",
+              "accepted_at": null,
+              "fy": 2025,
+              "fp": "FY",
+              "frame": null,
+              "context_id": null,
+              "context_status": "unknown",
+              "dimensions": null,
+              "source": {
+                "source": {
+                  "schema_version": "1",
+                  "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001018724.json",
+                  "kind": "company_facts",
+                  "cik": "0001018724",
+                  "filing": null
+                },
+                "sha256": "7549fb68446eee40e1f50a166fa06b2d2ee6349e07c8553a4828757e032d3cd4",
+                "byte_count": 4478611
+              },
+              "locator": {
+                "kind": "json_pointer",
+                "path": "/facts/us-gaap/NetIncomeLoss/units/USD/415",
+                "text_sha256": null,
+                "start": null,
+                "end": null
+              },
+              "normalizer_version": "company-facts-1",
+              "quality": "warning"
+            }
+          ]
+        },
+        {
+          "request": {
+            "cik": "0001018724",
+            "metric": "operating_income",
+            "period": {
+              "kind": "duration",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "duration_class": "unknown",
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "selected",
+          "quality": "warning",
+          "metric_id": "metric:26cbadc4180e95303dcd4e9821e58fdef89582930c26d037a4b3e83d4ea00e17",
+          "reasons": [
+            "date_cutoff_end_of_day_utc",
+            "historical_api_coverage_not_reconstructed",
+            "later_reporting_does_not_prove_restatement",
+            "exact_period_and_unit_match",
+            "equivalent_ties_accession_then_fact_id",
+            "company_facts_entity_scope_context_unverified"
+          ],
+          "candidate_decisions": {
+            "period_boundaries_mismatch": 288,
+            "eligible_exact_reported_fact": 1
+          },
+          "eligible_occurrences": 1,
+          "selected": [
+            {
+              "schema_version": "canonical-1",
+              "pipeline_version": "xbrl-1",
+              "id": "fact:0f547b109847d177f2d835e8407ad39bfaa35d7716a2bda43c03c28394ad7de4",
+              "cik": "0001018724",
+              "taxonomy": "us-gaap",
+              "concept": "OperatingIncomeLoss",
+              "raw_value": "79975000000",
+              "value": "79975000000",
+              "unit": "USD",
+              "currency": "USD",
+              "period": {
+                "kind": "duration",
+                "start": "2025-01-01",
+                "end": "2025-12-31",
+                "duration_class": "unknown",
+                "classification_policy": null
+              },
+              "accession": "0001018724-26-000004",
+              "form": "10-K",
+              "filed": "2026-02-06",
+              "accepted_at": null,
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2025",
+              "context_id": null,
+              "context_status": "unknown",
+              "dimensions": null,
+              "source": {
+                "source": {
+                  "schema_version": "1",
+                  "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001018724.json",
+                  "kind": "company_facts",
+                  "cik": "0001018724",
+                  "filing": null
+                },
+                "sha256": "7549fb68446eee40e1f50a166fa06b2d2ee6349e07c8553a4828757e032d3cd4",
+                "byte_count": 4478611
+              },
+              "locator": {
+                "kind": "json_pointer",
+                "path": "/facts/us-gaap/OperatingIncomeLoss/units/USD/285",
+                "text_sha256": null,
+                "start": null,
+                "end": null
+              },
+              "normalizer_version": "company-facts-1",
+              "quality": "warning"
+            }
+          ]
+        },
+        {
+          "request": {
+            "cik": "0001018724",
+            "metric": "total_assets",
+            "period": {
+              "kind": "instant",
+              "start": null,
+              "end": "2025-12-31",
+              "duration_class": null,
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "selected",
+          "quality": "warning",
+          "metric_id": "metric:b3d09c4add0acdc88b2ae2b50f44ec963f0f5ec9f52731a98c1c073fc6a2d6b3",
+          "reasons": [
+            "date_cutoff_end_of_day_utc",
+            "historical_api_coverage_not_reconstructed",
+            "later_reporting_does_not_prove_restatement",
+            "exact_period_and_unit_match",
+            "equivalent_ties_accession_then_fact_id",
+            "company_facts_entity_scope_context_unverified"
+          ],
+          "candidate_decisions": {
+            "period_boundaries_mismatch": 146,
+            "eligible_exact_reported_fact": 3
+          },
+          "eligible_occurrences": 3,
+          "selected": [
+            {
+              "schema_version": "canonical-1",
+              "pipeline_version": "xbrl-1",
+              "id": "fact:dd566e4a235efe2ae1a0f6c787af104ed2575777fcda199c2f5931a3ea12fab1",
+              "cik": "0001018724",
+              "taxonomy": "us-gaap",
+              "concept": "Assets",
+              "raw_value": "818042000000",
+              "value": "818042000000",
+              "unit": "USD",
+              "currency": "USD",
+              "period": {
+                "kind": "instant",
+                "start": null,
+                "end": "2025-12-31",
+                "duration_class": null,
+                "classification_policy": null
+              },
+              "accession": "0001018724-26-000026",
+              "form": "10-Q",
+              "filed": "2026-07-31",
+              "accepted_at": null,
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2025Q4I",
+              "context_id": null,
+              "context_status": "unknown",
+              "dimensions": null,
+              "source": {
+                "source": {
+                  "schema_version": "1",
+                  "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001018724.json",
+                  "kind": "company_facts",
+                  "cik": "0001018724",
+                  "filing": null
+                },
+                "sha256": "7549fb68446eee40e1f50a166fa06b2d2ee6349e07c8553a4828757e032d3cd4",
+                "byte_count": 4478611
+              },
+              "locator": {
+                "kind": "json_pointer",
+                "path": "/facts/us-gaap/Assets/units/USD/146",
+                "text_sha256": null,
+                "start": null,
+                "end": null
+              },
+              "normalizer_version": "company-facts-1",
+              "quality": "warning"
+            }
+          ]
+        },
+        {
+          "request": {
+            "cik": "0001018724",
+            "metric": "total_liabilities",
+            "period": {
+              "kind": "instant",
+              "start": null,
+              "end": "2025-12-31",
+              "duration_class": null,
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "unsupported",
+          "quality": "warning",
+          "metric_id": "metric:2a91bdc6a89a33a53994aeb02e3aec7a7dd3e75d678e66db13e862e9bc6f5272",
+          "reasons": [
+            "no_supported_company_concept"
+          ],
+          "candidate_decisions": {},
+          "eligible_occurrences": 0,
+          "selected": []
+        },
+        {
+          "request": {
+            "cik": "0001018724",
+            "metric": "stockholders_equity",
+            "period": {
+              "kind": "instant",
+              "start": null,
+              "end": "2025-12-31",
+              "duration_class": null,
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "selected",
+          "quality": "warning",
+          "metric_id": "metric:a58dbf00683dfee799e9be0a002df9f1df5c82706f2ff1252ce8d32b5761b3da",
+          "reasons": [
+            "date_cutoff_end_of_day_utc",
+            "historical_api_coverage_not_reconstructed",
+            "later_reporting_does_not_prove_restatement",
+            "exact_period_and_unit_match",
+            "equivalent_ties_accession_then_fact_id",
+            "company_facts_entity_scope_context_unverified"
+          ],
+          "candidate_decisions": {
+            "period_boundaries_mismatch": 245,
+            "eligible_exact_reported_fact": 3
+          },
+          "eligible_occurrences": 3,
+          "selected": [
+            {
+              "schema_version": "canonical-1",
+              "pipeline_version": "xbrl-1",
+              "id": "fact:97a0a298e7a3693c6802225e08f76816cce5671de1cfe71c34c9f8d8246da46d",
+              "cik": "0001018724",
+              "taxonomy": "us-gaap",
+              "concept": "StockholdersEquity",
+              "raw_value": "411065000000",
+              "value": "411065000000",
+              "unit": "USD",
+              "currency": "USD",
+              "period": {
+                "kind": "instant",
+                "start": null,
+                "end": "2025-12-31",
+                "duration_class": null,
+                "classification_policy": null
+              },
+              "accession": "0001018724-26-000026",
+              "form": "10-Q",
+              "filed": "2026-07-31",
+              "accepted_at": null,
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2025Q4I",
+              "context_id": null,
+              "context_status": "unknown",
+              "dimensions": null,
+              "source": {
+                "source": {
+                  "schema_version": "1",
+                  "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001018724.json",
+                  "kind": "company_facts",
+                  "cik": "0001018724",
+                  "filing": null
+                },
+                "sha256": "7549fb68446eee40e1f50a166fa06b2d2ee6349e07c8553a4828757e032d3cd4",
+                "byte_count": 4478611
+              },
+              "locator": {
+                "kind": "json_pointer",
+                "path": "/facts/us-gaap/StockholdersEquity/units/USD/244",
+                "text_sha256": null,
+                "start": null,
+                "end": null
+              },
+              "normalizer_version": "company-facts-1",
+              "quality": "warning"
+            }
+          ]
+        },
+        {
+          "request": {
+            "cik": "0001018724",
+            "metric": "operating_cash_flow",
+            "period": {
+              "kind": "duration",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "duration_class": "unknown",
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "selected",
+          "quality": "warning",
+          "metric_id": "metric:ab21cafecd5e5976be9c96d3c288542e90243f8b159072201192694adc4c2379",
+          "reasons": [
+            "date_cutoff_end_of_day_utc",
+            "historical_api_coverage_not_reconstructed",
+            "later_reporting_does_not_prove_restatement",
+            "exact_period_and_unit_match",
+            "equivalent_ties_accession_then_fact_id",
+            "company_facts_entity_scope_context_unverified"
+          ],
+          "candidate_decisions": {
+            "period_boundaries_mismatch": 328,
+            "eligible_exact_reported_fact": 1
+          },
+          "eligible_occurrences": 1,
+          "selected": [
+            {
+              "schema_version": "canonical-1",
+              "pipeline_version": "xbrl-1",
+              "id": "fact:c2d632e42c79b78351ac8fb8c0297b19d9622e74052e1508efceef120e7d78b1",
+              "cik": "0001018724",
+              "taxonomy": "us-gaap",
+              "concept": "NetCashProvidedByUsedInOperatingActivities",
+              "raw_value": "139514000000",
+              "value": "139514000000",
+              "unit": "USD",
+              "currency": "USD",
+              "period": {
+                "kind": "duration",
+                "start": "2025-01-01",
+                "end": "2025-12-31",
+                "duration_class": "unknown",
+                "classification_policy": null
+              },
+              "accession": "0001018724-26-000004",
+              "form": "10-K",
+              "filed": "2026-02-06",
+              "accepted_at": null,
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2025",
+              "context_id": null,
+              "context_status": "unknown",
+              "dimensions": null,
+              "source": {
+                "source": {
+                  "schema_version": "1",
+                  "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001018724.json",
+                  "kind": "company_facts",
+                  "cik": "0001018724",
+                  "filing": null
+                },
+                "sha256": "7549fb68446eee40e1f50a166fa06b2d2ee6349e07c8553a4828757e032d3cd4",
+                "byte_count": 4478611
+              },
+              "locator": {
+                "kind": "json_pointer",
+                "path": "/facts/us-gaap/NetCashProvidedByUsedInOperatingActivities/units/USD/323",
+                "text_sha256": null,
+                "start": null,
+                "end": null
+              },
+              "normalizer_version": "company-facts-1",
+              "quality": "warning"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cik": "0001652044",
+      "company": "Alphabet Inc.",
+      "source_sha256": "a017f26ee88cb4a639d1c1ddb06d53b4afe22f0ac89cabec7cd67c88919fe1c5",
+      "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001652044.json",
+      "logical_sha256": "31a805e76143a6bd2ad34acec8d042e568fb3ba1f017b650be3a3267ad31e3ae",
+      "output_sha256": "6ecedff04fd3c3f55d607ced9b401f0c8b647b308d524b6e3a0d8ad65df2a379",
+      "observations": 20907,
+      "concepts": 557,
+      "taxonomy_counts": {
+        "dei": 12,
+        "ecd": 35,
+        "ffd": 52,
+        "us-gaap": 20808
+      },
+      "quality_counts": {
+        "warning": 20907
+      },
+      "reason_counts": {
+        "company_facts_context_unknown": 20907,
+        "unsupported_metric_concept": 20056,
+        "unsupported_filing_form": 729,
+        "missing_fiscal_metadata": 92
+      },
+      "period_shapes": {
+        "instant": 9840,
+        "annual_length": 3919,
+        "quarter_length": 3748,
+        "half_year_length": 1723,
+        "nine_month_length": 1664,
+        "other": 13
+      },
+      "source_pointers_verified": 20907,
+      "deterministic_replay": true,
+      "selection_status_counts": {
+        "unavailable": 1,
+        "selected": 6
+      },
+      "selection_examples": [
+        {
+          "request": {
+            "cik": "0001652044",
+            "metric": "revenue",
+            "period": {
+              "kind": "duration",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "duration_class": "unknown",
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "unavailable",
+          "quality": "warning",
+          "metric_id": "metric:48a2b9cdb62b59bf0e9e8d121a1174b489bb04ed78c00b619440233d3f9bca8b",
+          "reasons": [
+            "no_eligible_observations"
+          ],
+          "candidate_decisions": {
+            "period_boundaries_mismatch": 87
+          },
+          "eligible_occurrences": 0,
+          "selected": []
+        },
+        {
+          "request": {
+            "cik": "0001652044",
+            "metric": "net_income",
+            "period": {
+              "kind": "duration",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "duration_class": "unknown",
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "selected",
+          "quality": "warning",
+          "metric_id": "metric:0866031b79735b200d1d7341805b22c0fd3ff8311e7487aa5eaec8a2196860e2",
+          "reasons": [
+            "date_cutoff_end_of_day_utc",
+            "historical_api_coverage_not_reconstructed",
+            "later_reporting_does_not_prove_restatement",
+            "exact_period_and_unit_match",
+            "equivalent_ties_accession_then_fact_id",
+            "company_facts_entity_scope_context_unverified"
+          ],
+          "candidate_decisions": {
+            "period_boundaries_mismatch": 150,
+            "eligible_exact_reported_fact": 1,
+            "form_mismatch": 8
+          },
+          "eligible_occurrences": 1,
+          "selected": [
+            {
+              "schema_version": "canonical-1",
+              "pipeline_version": "xbrl-1",
+              "id": "fact:082447f35c67e3cd730228fac71bd40bf9d571549c0509a1d2d63e890c850e38",
+              "cik": "0001652044",
+              "taxonomy": "us-gaap",
+              "concept": "NetIncomeLoss",
+              "raw_value": "132170000000",
+              "value": "132170000000",
+              "unit": "USD",
+              "currency": "USD",
+              "period": {
+                "kind": "duration",
+                "start": "2025-01-01",
+                "end": "2025-12-31",
+                "duration_class": "unknown",
+                "classification_policy": null
+              },
+              "accession": "0001652044-26-000018",
+              "form": "10-K",
+              "filed": "2026-02-05",
+              "accepted_at": null,
+              "fy": 2025,
+              "fp": "FY",
+              "frame": null,
+              "context_id": null,
+              "context_status": "unknown",
+              "dimensions": null,
+              "source": {
+                "source": {
+                  "schema_version": "1",
+                  "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001652044.json",
+                  "kind": "company_facts",
+                  "cik": "0001652044",
+                  "filing": null
+                },
+                "sha256": "a017f26ee88cb4a639d1c1ddb06d53b4afe22f0ac89cabec7cd67c88919fe1c5",
+                "byte_count": 3164517
+              },
+              "locator": {
+                "kind": "json_pointer",
+                "path": "/facts/us-gaap/NetIncomeLoss/units/USD/147",
+                "text_sha256": null,
+                "start": null,
+                "end": null
+              },
+              "normalizer_version": "company-facts-1",
+              "quality": "warning"
+            }
+          ]
+        },
+        {
+          "request": {
+            "cik": "0001652044",
+            "metric": "operating_income",
+            "period": {
+              "kind": "duration",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "duration_class": "unknown",
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "selected",
+          "quality": "warning",
+          "metric_id": "metric:26cbadc4180e95303dcd4e9821e58fdef89582930c26d037a4b3e83d4ea00e17",
+          "reasons": [
+            "date_cutoff_end_of_day_utc",
+            "historical_api_coverage_not_reconstructed",
+            "later_reporting_does_not_prove_restatement",
+            "exact_period_and_unit_match",
+            "equivalent_ties_accession_then_fact_id",
+            "company_facts_entity_scope_context_unverified"
+          ],
+          "candidate_decisions": {
+            "period_boundaries_mismatch": 145,
+            "eligible_exact_reported_fact": 1,
+            "form_mismatch": 3
+          },
+          "eligible_occurrences": 1,
+          "selected": [
+            {
+              "schema_version": "canonical-1",
+              "pipeline_version": "xbrl-1",
+              "id": "fact:2347c9983dd1a06a81ebd65cbf461022dd273b24094ea2d19a365be8db578060",
+              "cik": "0001652044",
+              "taxonomy": "us-gaap",
+              "concept": "OperatingIncomeLoss",
+              "raw_value": "129039000000",
+              "value": "129039000000",
+              "unit": "USD",
+              "currency": "USD",
+              "period": {
+                "kind": "duration",
+                "start": "2025-01-01",
+                "end": "2025-12-31",
+                "duration_class": "unknown",
+                "classification_policy": null
+              },
+              "accession": "0001652044-26-000018",
+              "form": "10-K",
+              "filed": "2026-02-05",
+              "accepted_at": null,
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2025",
+              "context_id": null,
+              "context_status": "unknown",
+              "dimensions": null,
+              "source": {
+                "source": {
+                  "schema_version": "1",
+                  "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001652044.json",
+                  "kind": "company_facts",
+                  "cik": "0001652044",
+                  "filing": null
+                },
+                "sha256": "a017f26ee88cb4a639d1c1ddb06d53b4afe22f0ac89cabec7cd67c88919fe1c5",
+                "byte_count": 3164517
+              },
+              "locator": {
+                "kind": "json_pointer",
+                "path": "/facts/us-gaap/OperatingIncomeLoss/units/USD/142",
+                "text_sha256": null,
+                "start": null,
+                "end": null
+              },
+              "normalizer_version": "company-facts-1",
+              "quality": "warning"
+            }
+          ]
+        },
+        {
+          "request": {
+            "cik": "0001652044",
+            "metric": "total_assets",
+            "period": {
+              "kind": "instant",
+              "start": null,
+              "end": "2025-12-31",
+              "duration_class": null,
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "selected",
+          "quality": "warning",
+          "metric_id": "metric:b3d09c4add0acdc88b2ae2b50f44ec963f0f5ec9f52731a98c1c073fc6a2d6b3",
+          "reasons": [
+            "date_cutoff_end_of_day_utc",
+            "historical_api_coverage_not_reconstructed",
+            "later_reporting_does_not_prove_restatement",
+            "exact_period_and_unit_match",
+            "equivalent_ties_accession_then_fact_id",
+            "company_facts_entity_scope_context_unverified"
+          ],
+          "candidate_decisions": {
+            "period_boundaries_mismatch": 87,
+            "eligible_exact_reported_fact": 3,
+            "form_mismatch": 2
+          },
+          "eligible_occurrences": 3,
+          "selected": [
+            {
+              "schema_version": "canonical-1",
+              "pipeline_version": "xbrl-1",
+              "id": "fact:8b4d34c161afa10c0ad3771451a6af32073b0b4bd3c4cd74675264d975501967",
+              "cik": "0001652044",
+              "taxonomy": "us-gaap",
+              "concept": "Assets",
+              "raw_value": "595281000000",
+              "value": "595281000000",
+              "unit": "USD",
+              "currency": "USD",
+              "period": {
+                "kind": "instant",
+                "start": null,
+                "end": "2025-12-31",
+                "duration_class": null,
+                "classification_policy": null
+              },
+              "accession": "0001652044-26-000071",
+              "form": "10-Q",
+              "filed": "2026-07-23",
+              "accepted_at": null,
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2025Q4I",
+              "context_id": null,
+              "context_status": "unknown",
+              "dimensions": null,
+              "source": {
+                "source": {
+                  "schema_version": "1",
+                  "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001652044.json",
+                  "kind": "company_facts",
+                  "cik": "0001652044",
+                  "filing": null
+                },
+                "sha256": "a017f26ee88cb4a639d1c1ddb06d53b4afe22f0ac89cabec7cd67c88919fe1c5",
+                "byte_count": 3164517
+              },
+              "locator": {
+                "kind": "json_pointer",
+                "path": "/facts/us-gaap/Assets/units/USD/87",
+                "text_sha256": null,
+                "start": null,
+                "end": null
+              },
+              "normalizer_version": "company-facts-1",
+              "quality": "warning"
+            }
+          ]
+        },
+        {
+          "request": {
+            "cik": "0001652044",
+            "metric": "total_liabilities",
+            "period": {
+              "kind": "instant",
+              "start": null,
+              "end": "2025-12-31",
+              "duration_class": null,
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "selected",
+          "quality": "warning",
+          "metric_id": "metric:2a91bdc6a89a33a53994aeb02e3aec7a7dd3e75d678e66db13e862e9bc6f5272",
+          "reasons": [
+            "date_cutoff_end_of_day_utc",
+            "historical_api_coverage_not_reconstructed",
+            "later_reporting_does_not_prove_restatement",
+            "exact_period_and_unit_match",
+            "equivalent_ties_accession_then_fact_id",
+            "company_facts_entity_scope_context_unverified"
+          ],
+          "candidate_decisions": {
+            "period_boundaries_mismatch": 81,
+            "eligible_exact_reported_fact": 3
+          },
+          "eligible_occurrences": 3,
+          "selected": [
+            {
+              "schema_version": "canonical-1",
+              "pipeline_version": "xbrl-1",
+              "id": "fact:8bc71cf40e16a7ba5c1ad4c8c9f77423d7985cd19d9c6b0872852c7b6aae9b68",
+              "cik": "0001652044",
+              "taxonomy": "us-gaap",
+              "concept": "Liabilities",
+              "raw_value": "180016000000",
+              "value": "180016000000",
+              "unit": "USD",
+              "currency": "USD",
+              "period": {
+                "kind": "instant",
+                "start": null,
+                "end": "2025-12-31",
+                "duration_class": null,
+                "classification_policy": null
+              },
+              "accession": "0001652044-26-000071",
+              "form": "10-Q",
+              "filed": "2026-07-23",
+              "accepted_at": null,
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2025Q4I",
+              "context_id": null,
+              "context_status": "unknown",
+              "dimensions": null,
+              "source": {
+                "source": {
+                  "schema_version": "1",
+                  "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001652044.json",
+                  "kind": "company_facts",
+                  "cik": "0001652044",
+                  "filing": null
+                },
+                "sha256": "a017f26ee88cb4a639d1c1ddb06d53b4afe22f0ac89cabec7cd67c88919fe1c5",
+                "byte_count": 3164517
+              },
+              "locator": {
+                "kind": "json_pointer",
+                "path": "/facts/us-gaap/Liabilities/units/USD/81",
+                "text_sha256": null,
+                "start": null,
+                "end": null
+              },
+              "normalizer_version": "company-facts-1",
+              "quality": "warning"
+            }
+          ]
+        },
+        {
+          "request": {
+            "cik": "0001652044",
+            "metric": "stockholders_equity",
+            "period": {
+              "kind": "instant",
+              "start": null,
+              "end": "2025-12-31",
+              "duration_class": null,
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "selected",
+          "quality": "warning",
+          "metric_id": "metric:a58dbf00683dfee799e9be0a002df9f1df5c82706f2ff1252ce8d32b5761b3da",
+          "reasons": [
+            "date_cutoff_end_of_day_utc",
+            "historical_api_coverage_not_reconstructed",
+            "later_reporting_does_not_prove_restatement",
+            "exact_period_and_unit_match",
+            "equivalent_ties_accession_then_fact_id",
+            "company_facts_entity_scope_context_unverified"
+          ],
+          "candidate_decisions": {
+            "period_boundaries_mismatch": 187,
+            "form_mismatch": 4,
+            "eligible_exact_reported_fact": 3
+          },
+          "eligible_occurrences": 3,
+          "selected": [
+            {
+              "schema_version": "canonical-1",
+              "pipeline_version": "xbrl-1",
+              "id": "fact:694fb72be7934abb9f29882d93d2f0628b3f7944e0e90231766385f9ae3a2386",
+              "cik": "0001652044",
+              "taxonomy": "us-gaap",
+              "concept": "StockholdersEquity",
+              "raw_value": "415265000000",
+              "value": "415265000000",
+              "unit": "USD",
+              "currency": "USD",
+              "period": {
+                "kind": "instant",
+                "start": null,
+                "end": "2025-12-31",
+                "duration_class": null,
+                "classification_policy": null
+              },
+              "accession": "0001652044-26-000071",
+              "form": "10-Q",
+              "filed": "2026-07-23",
+              "accepted_at": null,
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2025Q4I",
+              "context_id": null,
+              "context_status": "unknown",
+              "dimensions": null,
+              "source": {
+                "source": {
+                  "schema_version": "1",
+                  "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001652044.json",
+                  "kind": "company_facts",
+                  "cik": "0001652044",
+                  "filing": null
+                },
+                "sha256": "a017f26ee88cb4a639d1c1ddb06d53b4afe22f0ac89cabec7cd67c88919fe1c5",
+                "byte_count": 3164517
+              },
+              "locator": {
+                "kind": "json_pointer",
+                "path": "/facts/us-gaap/StockholdersEquity/units/USD/186",
+                "text_sha256": null,
+                "start": null,
+                "end": null
+              },
+              "normalizer_version": "company-facts-1",
+              "quality": "warning"
+            }
+          ]
+        },
+        {
+          "request": {
+            "cik": "0001652044",
+            "metric": "operating_cash_flow",
+            "period": {
+              "kind": "duration",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "duration_class": "unknown",
+              "classification_policy": null
+            },
+            "as_of": "2026-10-21",
+            "form": null,
+            "mode": "latest_as_of",
+            "context_policy": "company_facts_entity"
+          },
+          "status": "selected",
+          "quality": "warning",
+          "metric_id": "metric:ab21cafecd5e5976be9c96d3c288542e90243f8b159072201192694adc4c2379",
+          "reasons": [
+            "date_cutoff_end_of_day_utc",
+            "historical_api_coverage_not_reconstructed",
+            "later_reporting_does_not_prove_restatement",
+            "exact_period_and_unit_match",
+            "equivalent_ties_accession_then_fact_id",
+            "company_facts_entity_scope_context_unverified"
+          ],
+          "candidate_decisions": {
+            "period_boundaries_mismatch": 101,
+            "form_mismatch": 3,
+            "eligible_exact_reported_fact": 1
+          },
+          "eligible_occurrences": 1,
+          "selected": [
+            {
+              "schema_version": "canonical-1",
+              "pipeline_version": "xbrl-1",
+              "id": "fact:74f9bf28788cae69ba521a22c5d982102c3d3251533c171afaee790f2eebe0eb",
+              "cik": "0001652044",
+              "taxonomy": "us-gaap",
+              "concept": "NetCashProvidedByUsedInOperatingActivities",
+              "raw_value": "164713000000",
+              "value": "164713000000",
+              "unit": "USD",
+              "currency": "USD",
+              "period": {
+                "kind": "duration",
+                "start": "2025-01-01",
+                "end": "2025-12-31",
+                "duration_class": "unknown",
+                "classification_policy": null
+              },
+              "accession": "0001652044-26-000018",
+              "form": "10-K",
+              "filed": "2026-02-05",
+              "accepted_at": null,
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2025",
+              "context_id": null,
+              "context_status": "unknown",
+              "dimensions": null,
+              "source": {
+                "source": {
+                  "schema_version": "1",
+                  "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001652044.json",
+                  "kind": "company_facts",
+                  "cik": "0001652044",
+                  "filing": null
+                },
+                "sha256": "a017f26ee88cb4a639d1c1ddb06d53b4afe22f0ac89cabec7cd67c88919fe1c5",
+                "byte_count": 3164517
+              },
+              "locator": {
+                "kind": "json_pointer",
+                "path": "/facts/us-gaap/NetCashProvidedByUsedInOperatingActivities/units/USD/99",
+                "text_sha256": null,
+                "start": null,
+                "end": null
+              },
+              "normalizer_version": "company-facts-1",
+              "quality": "warning"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

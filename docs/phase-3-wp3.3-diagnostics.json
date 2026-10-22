@@ -1,0 +1,716 @@
+{
+  "schema_version": "wp33-diagnostics-1",
+  "extractor_version": "sec-tables-1",
+  "executed_at_utc": "2026-10-21T02:59:05.976034+00:00",
+  "filings": 18,
+  "bronze_fetches_verified": 28,
+  "bronze_objects_verified": 28,
+  "bronze_unchanged_after_extraction": true,
+  "normalization_complete": false,
+  "human_adjudicated": false,
+  "counts": {
+    "detected": 2472,
+    "reconstructed": 2472,
+    "quarantined": 0,
+    "nested": 0,
+    "raw_cells_verified": 300260,
+    "grid_cells": 300260,
+    "header_cells": 22630,
+    "cells_with_column_headers": 152358,
+    "cells_with_period_labels": 125171,
+    "merged_cells": 123913,
+    "unknown_section_tables": 1346,
+    "layout": 548,
+    "narrative": 470,
+    "table_of_contents": 243,
+    "financial_statement": 89,
+    "financial_disclosure": 1122
+  },
+  "rows": [
+    {
+      "cik": "0000320193",
+      "accession": "0000320193-26-000013",
+      "form": "10-Q",
+      "source_sha256": "7d97585e619f1e6ca9ad23c5068c3b2fe1369a3b01882acd4aeff93b4b638f91",
+      "document_id": "document:1a23eae96fc36db7bdb13d5c9d4ba598f41bf8b60bdd03d2e25c8a9620e97b82",
+      "logical_sha256": "3938a3de6502af96c51d925104a0cfbe00f71d63d7d6715eb8ca0dc03fb7cb7b",
+      "deterministic_replay": true,
+      "counts": {
+        "detected": 39,
+        "reconstructed": 39,
+        "quarantined": 0,
+        "nested": 0,
+        "raw_cells_verified": 4702,
+        "grid_cells": 4702,
+        "header_cells": 407,
+        "cells_with_column_headers": 3000,
+        "cells_with_period_labels": 2948,
+        "merged_cells": 2598,
+        "unknown_section_tables": 13
+      },
+      "kinds": {
+        "layout": 8,
+        "narrative": 11,
+        "table_of_contents": 1,
+        "financial_statement": 5,
+        "financial_disclosure": 14
+      },
+      "warnings": {
+        "classification_heuristic": 39,
+        "learner_normalizer_pending": 39,
+        "html_recovered": 39,
+        "column_headers_unresolved": 16,
+        "numeric_period_unresolved": 7,
+        "ragged_rows": 3
+      }
+    },
+    {
+      "cik": "0001018724",
+      "accession": "0001018724-26-000004",
+      "form": "10-K",
+      "source_sha256": "a2d31fb7be58454479b35622eb8d3379f953f4a8f44a256166217fa5b434af35",
+      "document_id": "document:a938656a32a3ca28b99ce173af41ad362350fd609215aec8b61fc2e8f1d548e8",
+      "logical_sha256": "ccb7a12dba33133f4735bdf1a7b25b81ba3cff9956c0c5b9d2eee93aefe6f520",
+      "deterministic_replay": true,
+      "counts": {
+        "detected": 92,
+        "reconstructed": 92,
+        "quarantined": 0,
+        "nested": 0,
+        "raw_cells_verified": 7139,
+        "grid_cells": 7139,
+        "header_cells": 681,
+        "cells_with_column_headers": 3688,
+        "cells_with_period_labels": 3561,
+        "merged_cells": 3941,
+        "unknown_section_tables": 11
+      },
+      "kinds": {
+        "layout": 27,
+        "narrative": 25,
+        "financial_disclosure": 32,
+        "table_of_contents": 1,
+        "financial_statement": 7
+      },
+      "warnings": {
+        "classification_heuristic": 92,
+        "learner_normalizer_pending": 92,
+        "html_recovered": 92,
+        "column_headers_unresolved": 47,
+        "numeric_period_unresolved": 20,
+        "ragged_rows": 13
+      }
+    },
+    {
+      "cik": "0000789019",
+      "accession": "0000950170-25-100235",
+      "form": "10-K",
+      "source_sha256": "bd4d8df78c2c5d037ce9254a2be04e188576d486ff59386ffbd6f7743b4b3665",
+      "document_id": "document:011f513a22ff4c7d01d4d87e034b08787d9a778ad7a5d7cde1c5d0997367794d",
+      "logical_sha256": "f64640f7784815b3cee5b3c9535a0efa7c4bc7135870c7203ec2ab4d93c19a1e",
+      "deterministic_replay": true,
+      "counts": {
+        "detected": 85,
+        "reconstructed": 85,
+        "quarantined": 0,
+        "nested": 0,
+        "raw_cells_verified": 19065,
+        "grid_cells": 19065,
+        "header_cells": 877,
+        "cells_with_column_headers": 4644,
+        "cells_with_period_labels": 4061,
+        "merged_cells": 1136,
+        "unknown_section_tables": 8
+      },
+      "kinds": {
+        "layout": 1,
+        "narrative": 34,
+        "table_of_contents": 1,
+        "financial_disclosure": 46,
+        "financial_statement": 3
+      },
+      "warnings": {
+        "classification_heuristic": 85,
+        "learner_normalizer_pending": 85,
+        "html_recovered": 85,
+        "column_headers_unresolved": 25,
+        "numeric_period_unresolved": 38
+      }
+    },
+    {
+      "cik": "0001652044",
+      "accession": "0001652044-25-000014",
+      "form": "10-K",
+      "source_sha256": "7b5b7e74836e0c8a9b807ebb074a992d5a35d6549e5d847f4d8cf77951600a9d",
+      "document_id": "document:e049d1df6916c050fea8957e4e2d269743113f4186a6048db0152fba73f615a3",
+      "logical_sha256": "503a4392d5dca4efec40da7a172f0e1664fbd2940b956878175c22173128fb07",
+      "deterministic_replay": true,
+      "counts": {
+        "detected": 184,
+        "reconstructed": 184,
+        "quarantined": 0,
+        "nested": 0,
+        "raw_cells_verified": 9934,
+        "grid_cells": 9934,
+        "header_cells": 796,
+        "cells_with_column_headers": 4917,
+        "cells_with_period_labels": 4771,
+        "merged_cells": 5274,
+        "unknown_section_tables": 17
+      },
+      "kinds": {
+        "layout": 8,
+        "narrative": 27,
+        "table_of_contents": 98,
+        "financial_disclosure": 45,
+        "financial_statement": 6
+      },
+      "warnings": {
+        "classification_heuristic": 184,
+        "learner_normalizer_pending": 184,
+        "html_recovered": 184,
+        "column_headers_unresolved": 127,
+        "numeric_period_unresolved": 19,
+        "ragged_rows": 12
+      }
+    },
+    {
+      "cik": "0001652044",
+      "accession": "0001652044-26-000071",
+      "form": "10-Q",
+      "source_sha256": "2066731bde8531eff1054fe178e85c701ec0eba3a18b9f309ee6945442ecad7a",
+      "document_id": "document:ed984e45281a25c4b2a86f724cbaecfde15ae1b8de5027b499b0143e18f14575",
+      "logical_sha256": "a6a01a59c16374f776c47142f1f548f66ef32e2677429e1e06a5427307d00d1a",
+      "deterministic_replay": true,
+      "counts": {
+        "detected": 94,
+        "reconstructed": 94,
+        "quarantined": 0,
+        "nested": 0,
+        "raw_cells_verified": 10317,
+        "grid_cells": 10317,
+        "header_cells": 838,
+        "cells_with_column_headers": 6110,
+        "cells_with_period_labels": 6000,
+        "merged_cells": 5546,
+        "unknown_section_tables": 13
+      },
+      "kinds": {
+        "layout": 4,
+        "narrative": 19,
+        "table_of_contents": 18,
+        "financial_statement": 5,
+        "financial_disclosure": 48
+      },
+      "warnings": {
+        "classification_heuristic": 94,
+        "learner_normalizer_pending": 94,
+        "html_recovered": 94,
+        "column_headers_unresolved": 37,
+        "numeric_period_unresolved": 16,
+        "ragged_rows": 11
+      }
+    },
+    {
+      "cik": "0000789019",
+      "accession": "0001193125-26-191507",
+      "form": "10-Q",
+      "source_sha256": "f67faa481eee34adcbd34f779d92f85ee357ad934ef9a5b9ffa43ce2522027f1",
+      "document_id": "document:919e86532aa8acd130f979412da824e4590170b8ac3ce2142e44021575166fdb",
+      "logical_sha256": "775b9410a8c6f1666138db3fb20a83545fdea7df28c9634134f94b6034a571f2",
+      "deterministic_replay": true,
+      "counts": {
+        "detected": 59,
+        "reconstructed": 59,
+        "quarantined": 0,
+        "nested": 0,
+        "raw_cells_verified": 18630,
+        "grid_cells": 18630,
+        "header_cells": 689,
+        "cells_with_column_headers": 5603,
+        "cells_with_period_labels": 4707,
+        "merged_cells": 469,
+        "unknown_section_tables": 7
+      },
+      "kinds": {
+        "narrative": 24,
+        "table_of_contents": 1,
+        "financial_statement": 3,
+        "financial_disclosure": 31
+      },
+      "warnings": {
+        "classification_heuristic": 59,
+        "learner_normalizer_pending": 59,
+        "html_recovered": 59,
+        "column_headers_unresolved": 11,
+        "numeric_period_unresolved": 25
+      }
+    },
+    {
+      "cik": "0001018724",
+      "accession": "0001018724-26-000026",
+      "form": "10-Q",
+      "source_sha256": "71f119d4c8e9f2347b929b794f9139d263d55c765f845a6856162da4126c3416",
+      "document_id": "document:244d488043fca1871cf92393a93cecaa25b9d8542f45b9b4384dcfc7b5e8b7ab",
+      "logical_sha256": "c6c63a828bf4e56dc22f74a7a078a4f22802164fdfe0423cfa7a4fa26539f3d5",
+      "deterministic_replay": true,
+      "counts": {
+        "detected": 54,
+        "reconstructed": 54,
+        "quarantined": 0,
+        "nested": 0,
+        "raw_cells_verified": 5943,
+        "grid_cells": 5943,
+        "header_cells": 526,
+        "cells_with_column_headers": 3574,
+        "cells_with_period_labels": 3486,
+        "merged_cells": 3290,
+        "unknown_section_tables": 9
+      },
+      "kinds": {
+        "layout": 15,
+        "narrative": 12,
+        "table_of_contents": 1,
+        "financial_statement": 5,
+        "financial_disclosure": 21
+      },
+      "warnings": {
+        "classification_heuristic": 54,
+        "learner_normalizer_pending": 54,
+        "html_recovered": 54,
+        "column_headers_unresolved": 23,
+        "numeric_period_unresolved": 8,
+        "ragged_rows": 8
+      }
+    },
+    {
+      "cik": "0001652044",
+      "accession": "0001652044-26-000018",
+      "form": "10-K",
+      "source_sha256": "55433ab65713c9cfebd65dc33c8e2d116e8a1d60c64a955d20cd2171ee8ceecc",
+      "document_id": "document:25d07feb32ed9f44011b77d43d3af179a67c5db524164ac85e2b86f212f8a86b",
+      "logical_sha256": "ab763bf53e95269d27cea8ce7947f13de1071e47f7673ec583bad0cfa1349033",
+      "deterministic_replay": true,
+      "counts": {
+        "detected": 185,
+        "reconstructed": 185,
+        "quarantined": 0,
+        "nested": 0,
+        "raw_cells_verified": 10015,
+        "grid_cells": 10015,
+        "header_cells": 830,
+        "cells_with_column_headers": 4888,
+        "cells_with_period_labels": 4741,
+        "merged_cells": 5375,
+        "unknown_section_tables": 16
+      },
+      "kinds": {
+        "layout": 8,
+        "narrative": 25,
+        "table_of_contents": 98,
+        "financial_disclosure": 48,
+        "financial_statement": 6
+      },
+      "warnings": {
+        "classification_heuristic": 185,
+        "learner_normalizer_pending": 185,
+        "html_recovered": 185,
+        "column_headers_unresolved": 127,
+        "numeric_period_unresolved": 19,
+        "ragged_rows": 12
+      }
+    },
+    {
+      "cik": "0000019617",
+      "accession": "0001628280-26-008131",
+      "form": "10-K",
+      "source_sha256": "428551a3073c9701082ca0fe2212b753f8aa30aa71dbd2d5e542a4e09013be05",
+      "document_id": "document:a514e8bfa0c42823090ba32aa168d0e9a4e5c00b7167084673212ddf4620b956",
+      "logical_sha256": "56d4577502fd35255de76a807d3f2e10619b2f28ef78d3377fe4bd4ee2d7871c",
+      "deterministic_replay": true,
+      "counts": {
+        "detected": 679,
+        "reconstructed": 679,
+        "quarantined": 0,
+        "nested": 0,
+        "raw_cells_verified": 56769,
+        "grid_cells": 56769,
+        "header_cells": 4831,
+        "cells_with_column_headers": 31635,
+        "cells_with_period_labels": 23297,
+        "merged_cells": 29499,
+        "unknown_section_tables": 631
+      },
+      "kinds": {
+        "narrative": 72,
+        "table_of_contents": 1,
+        "layout": 367,
+        "financial_disclosure": 233,
+        "financial_statement": 6
+      },
+      "warnings": {
+        "classification_heuristic": 679,
+        "learner_normalizer_pending": 679,
+        "html_recovered": 679,
+        "numeric_period_unresolved": 430,
+        "column_headers_unresolved": 395,
+        "ragged_rows": 70
+      }
+    },
+    {
+      "cik": "0000019617",
+      "accession": "0001628280-26-029344",
+      "form": "10-Q",
+      "source_sha256": "19a91282ff8773d37ba9a02e2f717eb0fda99fe0f4e4b4cfbb9d46fc5d7cecbc",
+      "document_id": "document:3150c4203a3994c1a0a4b2d65550a0a25942c608f619840f0234683a77756351",
+      "logical_sha256": "fad3d15ffd79d078f324ec90285428511dbb381250652dd8110b5c7101aaaf08",
+      "deterministic_replay": true,
+      "counts": {
+        "detected": 270,
+        "reconstructed": 270,
+        "quarantined": 0,
+        "nested": 0,
+        "raw_cells_verified": 39082,
+        "grid_cells": 39082,
+        "header_cells": 3629,
+        "cells_with_column_headers": 24102,
+        "cells_with_period_labels": 17576,
+        "merged_cells": 20740,
+        "unknown_section_tables": 267
+      },
+      "kinds": {
+        "narrative": 45,
+        "layout": 32,
+        "financial_disclosure": 186,
+        "table_of_contents": 1,
+        "financial_statement": 6
+      },
+      "warnings": {
+        "classification_heuristic": 270,
+        "learner_normalizer_pending": 270,
+        "html_recovered": 270,
+        "column_headers_unresolved": 52,
+        "numeric_period_unresolved": 78,
+        "ragged_rows": 57
+      }
+    },
+    {
+      "cik": "0001018724",
+      "accession": "0001018724-26-000014",
+      "form": "10-Q",
+      "source_sha256": "e6b80e48612abe3a0a8256e5ff3b5637cd4be94c12dc18cd3d7106667294fb8b",
+      "document_id": "document:12e4f6041351020db0ab615654221fa03f4c919df5d4a48b732c40d34ad6f56c",
+      "logical_sha256": "cd181ae655faa2d971ed8cf712e85522ccc47e9d5ff171e54ed791059b355f35",
+      "deterministic_replay": true,
+      "counts": {
+        "detected": 54,
+        "reconstructed": 54,
+        "quarantined": 0,
+        "nested": 0,
+        "raw_cells_verified": 4072,
+        "grid_cells": 4072,
+        "header_cells": 464,
+        "cells_with_column_headers": 2273,
+        "cells_with_period_labels": 2191,
+        "merged_cells": 2260,
+        "unknown_section_tables": 9
+      },
+      "kinds": {
+        "layout": 15,
+        "narrative": 12,
+        "table_of_contents": 1,
+        "financial_statement": 5,
+        "financial_disclosure": 21
+      },
+      "warnings": {
+        "classification_heuristic": 54,
+        "learner_normalizer_pending": 54,
+        "html_recovered": 54,
+        "column_headers_unresolved": 23,
+        "numeric_period_unresolved": 8,
+        "ragged_rows": 8
+      }
+    },
+    {
+      "cik": "0000789019",
+      "accession": "0001193125-26-323660",
+      "form": "10-K",
+      "source_sha256": "7ee403cf6248837b88b69729c38534d60f1171fd1447ba0fa3ac426abf2430cd",
+      "document_id": "document:e1be24bc48e26775e8f9ad3c0dcbe62839b51355fd44ab760d8e243e0879a606",
+      "logical_sha256": "729442dc93bd567ddadbe6cf8062ac3678069272c0b780a79cb06b75f7a714e6",
+      "deterministic_replay": true,
+      "counts": {
+        "detected": 88,
+        "reconstructed": 88,
+        "quarantined": 0,
+        "nested": 0,
+        "raw_cells_verified": 19803,
+        "grid_cells": 19803,
+        "header_cells": 909,
+        "cells_with_column_headers": 4930,
+        "cells_with_period_labels": 4344,
+        "merged_cells": 1161,
+        "unknown_section_tables": 8
+      },
+      "kinds": {
+        "layout": 1,
+        "narrative": 34,
+        "table_of_contents": 1,
+        "financial_disclosure": 49,
+        "financial_statement": 3
+      },
+      "warnings": {
+        "classification_heuristic": 88,
+        "learner_normalizer_pending": 88,
+        "html_recovered": 88,
+        "column_headers_unresolved": 26,
+        "numeric_period_unresolved": 38
+      }
+    },
+    {
+      "cik": "0000789019",
+      "accession": "0001193125-26-027207",
+      "form": "10-Q",
+      "source_sha256": "13b6006248fb7d5f3dfebb5425e6645a8ca4f8e1a438fe1c75a0578be13b2773",
+      "document_id": "document:ea322da70fcd6fd0e69ab7f893f045d092e2c423e108ac64d1d505da38d96ca6",
+      "logical_sha256": "15d1b61538c7b80fe3e9d9b005332c2ac7fa135245a5fd4de4607bf11fe087a1",
+      "deterministic_replay": true,
+      "counts": {
+        "detected": 59,
+        "reconstructed": 59,
+        "quarantined": 0,
+        "nested": 0,
+        "raw_cells_verified": 17942,
+        "grid_cells": 17942,
+        "header_cells": 679,
+        "cells_with_column_headers": 5654,
+        "cells_with_period_labels": 4789,
+        "merged_cells": 481,
+        "unknown_section_tables": 7
+      },
+      "kinds": {
+        "narrative": 24,
+        "table_of_contents": 1,
+        "financial_statement": 3,
+        "financial_disclosure": 31
+      },
+      "warnings": {
+        "classification_heuristic": 59,
+        "learner_normalizer_pending": 59,
+        "html_recovered": 59,
+        "column_headers_unresolved": 12,
+        "numeric_period_unresolved": 25
+      }
+    },
+    {
+      "cik": "0001652044",
+      "accession": "0001652044-26-000048",
+      "form": "10-Q",
+      "source_sha256": "0da733204ca3463c96d324c3620ab2794bce9566ee7a6586100b66634a98aca0",
+      "document_id": "document:7e4c54f8a342fe573df488ab14a804a0cb3ae65923a0ff4eca7ee0cb3a546719",
+      "logical_sha256": "7b9246c3ba1669d0b90cb165b2d10d14ed4498dabfd6031f91496125a0498317",
+      "deterministic_replay": true,
+      "counts": {
+        "detected": 86,
+        "reconstructed": 86,
+        "quarantined": 0,
+        "nested": 0,
+        "raw_cells_verified": 6759,
+        "grid_cells": 6759,
+        "header_cells": 656,
+        "cells_with_column_headers": 3643,
+        "cells_with_period_labels": 3541,
+        "merged_cells": 3565,
+        "unknown_section_tables": 13
+      },
+      "kinds": {
+        "layout": 4,
+        "narrative": 19,
+        "table_of_contents": 15,
+        "financial_statement": 5,
+        "financial_disclosure": 43
+      },
+      "warnings": {
+        "classification_heuristic": 86,
+        "learner_normalizer_pending": 86,
+        "html_recovered": 86,
+        "column_headers_unresolved": 34,
+        "numeric_period_unresolved": 16,
+        "ragged_rows": 11
+      }
+    },
+    {
+      "cik": "0000320193",
+      "accession": "0000320193-25-000079",
+      "form": "10-K",
+      "source_sha256": "f7569b9a9cb9010780bdbf3ea89120dd2d7928caa8fff1305ace90630ca627ce",
+      "document_id": "document:bd96e41734682d29eb59870e573b488071e1c9cd3dd743a150f2fa01f24aa261",
+      "logical_sha256": "c5700fc46158e8bad6ef66fd5d1f7869c268e7b8e42efb4aef621a508570e2e3",
+      "deterministic_replay": true,
+      "counts": {
+        "detected": 62,
+        "reconstructed": 62,
+        "quarantined": 0,
+        "nested": 0,
+        "raw_cells_verified": 6411,
+        "grid_cells": 6411,
+        "header_cells": 617,
+        "cells_with_column_headers": 3217,
+        "cells_with_period_labels": 3041,
+        "merged_cells": 3705,
+        "unknown_section_tables": 14
+      },
+      "kinds": {
+        "layout": 9,
+        "narrative": 15,
+        "table_of_contents": 1,
+        "financial_disclosure": 32,
+        "financial_statement": 5
+      },
+      "warnings": {
+        "classification_heuristic": 62,
+        "learner_normalizer_pending": 62,
+        "html_recovered": 62,
+        "column_headers_unresolved": 25,
+        "numeric_period_unresolved": 16,
+        "ragged_rows": 1
+      }
+    },
+    {
+      "cik": "0000019617",
+      "accession": "0001628280-26-054343",
+      "form": "10-Q",
+      "source_sha256": "7cbc765c34c9a43a09b74db21e75bd0f94e548b4dfb50c53699526a985935a48",
+      "document_id": "document:c768c0527dfc3d9b11170ed9d378db4aacd6da9c3b62710e6f78ca13432fc8c1",
+      "logical_sha256": "1fca9ca70fafdb99bda85480326c31260d48be25af10427bd2a0fd4d35f150a3",
+      "deterministic_replay": true,
+      "counts": {
+        "detected": 279,
+        "reconstructed": 279,
+        "quarantined": 0,
+        "nested": 0,
+        "raw_cells_verified": 52678,
+        "grid_cells": 52678,
+        "header_cells": 4169,
+        "cells_with_column_headers": 34518,
+        "cells_with_period_labels": 26386,
+        "merged_cells": 28610,
+        "unknown_section_tables": 276
+      },
+      "kinds": {
+        "narrative": 45,
+        "layout": 32,
+        "financial_disclosure": 195,
+        "table_of_contents": 1,
+        "financial_statement": 6
+      },
+      "warnings": {
+        "classification_heuristic": 279,
+        "learner_normalizer_pending": 279,
+        "html_recovered": 279,
+        "column_headers_unresolved": 52,
+        "numeric_period_unresolved": 76,
+        "ragged_rows": 51
+      }
+    },
+    {
+      "cik": "0000320193",
+      "accession": "0000320193-26-000020",
+      "form": "10-Q",
+      "source_sha256": "d3f1996972f6b3950fbc4fd5a47dbd20a69b360eb6136da9a752c37bbdb96dc1",
+      "document_id": "document:ee4bfa74e618853b31a655a76bd5cfd10da82bcce99a2339561f8fc12d2a4de7",
+      "logical_sha256": "4d50a24de6b0a460ecea21601103994f079a311409f30bec893220ecb78ed50d",
+      "deterministic_replay": true,
+      "counts": {
+        "detected": 40,
+        "reconstructed": 40,
+        "quarantined": 0,
+        "nested": 0,
+        "raw_cells_verified": 4730,
+        "grid_cells": 4730,
+        "header_cells": 414,
+        "cells_with_column_headers": 3012,
+        "cells_with_period_labels": 2955,
+        "merged_cells": 2599,
+        "unknown_section_tables": 13
+      },
+      "kinds": {
+        "layout": 8,
+        "narrative": 12,
+        "table_of_contents": 1,
+        "financial_statement": 5,
+        "financial_disclosure": 14
+      },
+      "warnings": {
+        "classification_heuristic": 40,
+        "learner_normalizer_pending": 40,
+        "html_recovered": 40,
+        "column_headers_unresolved": 16,
+        "numeric_period_unresolved": 6,
+        "ragged_rows": 2
+      }
+    },
+    {
+      "cik": "0000320193",
+      "accession": "0000320193-24-000123",
+      "form": "10-K",
+      "source_sha256": "87811e303e632b0f1843b9bc161c1b3af9c501ffec0a51a9825cc796dc369dcf",
+      "document_id": "document:9c890c6cc0d4352c58b9ea63d872692317047aa7e9f10661b3203752969d64b0",
+      "logical_sha256": "ecc5d67bb1f8242231f07ee4862e7b07bdc7912af93369c6728dfd3d16694507",
+      "deterministic_replay": true,
+      "counts": {
+        "detected": 63,
+        "reconstructed": 63,
+        "quarantined": 0,
+        "nested": 0,
+        "raw_cells_verified": 6269,
+        "grid_cells": 6269,
+        "header_cells": 618,
+        "cells_with_column_headers": 2950,
+        "cells_with_period_labels": 2776,
+        "merged_cells": 3664,
+        "unknown_section_tables": 14
+      },
+      "kinds": {
+        "layout": 9,
+        "narrative": 15,
+        "table_of_contents": 1,
+        "financial_disclosure": 33,
+        "financial_statement": 5
+      },
+      "warnings": {
+        "classification_heuristic": 63,
+        "learner_normalizer_pending": 63,
+        "html_recovered": 63,
+        "column_headers_unresolved": 25,
+        "numeric_period_unresolved": 16,
+        "ragged_rows": 2
+      }
+    }
+  ],
+  "inventory_sha256": "63871bf66fc1dc5baeb4d7e8628fdb608d67b8deecb612910d08a7feab684ec6",
+  "lock_sha256": "a1ed09e39c11c15fb1dcc4fbca289633d80862eb3012f44a62d71160665d9fed",
+  "code_sha256": {
+    "src/sec_research/contracts/__init__.py": "bdbaab04ebdabe9da6edc6baf289ea407159b44b82c20177e7feb0399c8afb8f",
+    "src/sec_research/contracts/bronze.py": "9e8683160e2f8cbb4172de56539133c95f231b89e43b1fb228f530b8de00fa2a",
+    "src/sec_research/contracts/canonical.py": "ec4e5e914358b6636c6afdbf642d255598b79ff409f67ce45f64f3bb503bd3d8",
+    "src/sec_research/contracts/errors.py": "2f41efadd94a257e0cac75218f325e0611a67b81359481f2b3e661697c546bc6",
+    "src/sec_research/contracts/health.py": "5c26fa909785d1f223fb68973865a2f3b1dee19557da75d127b721e3f8fd49f3",
+    "src/sec_research/contracts/parsing.py": "19eb56679b7cfb5ace756753d9701f1ec3bfb980bb14905013e4b0014ed5b82f",
+    "src/sec_research/contracts/schemas.py": "55dd620b09b5e6748437ac50aaf3a35e94108966d8bdb73f3470dc7bf4484607",
+    "src/sec_research/contracts/sec.py": "915cd19db73b599993efa403521e5e76060725d4f2cb99711a79e5c529624e68",
+    "src/sec_research/contracts/table_normalization.py": "7857a00199d22222a516ccb84249cf6c8541f02bf1a411b1b6d9a6225d0e4c7e",
+    "src/sec_research/contracts/tables.py": "fc33926a82b8a08b6519904dcc8c975b8e8b1f012956407ca3639c023ec9a27e",
+    "src/sec_research/processing/__init__.py": "5c3f3efc8353143054e7ca039140cf75da1a9c9689b73ad3cfe871b9d83fb48b",
+    "src/sec_research/processing/benchmark.py": "cc0f32b0035ed5377d0e044ade8f98bea9a33710d2754a61f9613950c3b35c56",
+    "src/sec_research/processing/blocks.py": "348f6b2054594b6460b7b5a413a9cf43585fec8415364d043e273e19433d7475",
+    "src/sec_research/processing/corpus.py": "f9554e26f1f3175c82ae0f47125f755ea249ac3e3675952a50ed9a173ff05f28",
+    "src/sec_research/processing/dom.py": "6ebb3625250e2c30d903c3774218f5c1b2a26ec1813937e677c6340a6a43755e",
+    "src/sec_research/processing/html.py": "c9b739cd9851a65b6c9c56d93cbb2abb8c9bebd1932e29f75e74c76609266211",
+    "src/sec_research/processing/sections.py": "ca74f139ecd3a166c936d41c7bd11a58cd0f80d1a23acb95d3f4025f14560e2a",
+    "src/sec_research/processing/table_corpus.py": "a4149604166d03dff000a8b89ce01586d2e1c4f4d0459101df0a01c69d363ce9",
+    "src/sec_research/processing/table_grid.py": "8348fc0623590273ce22a0a67385a9da574406ceb081c2180b304f483e2f7a42",
+    "src/sec_research/processing/table_numbers.py": "02e671ad5230dc592c8f1d56289db86599a0dedb684c1d82dd6c6219a6e0b487",
+    "src/sec_research/processing/tables.py": "72443bfa94161392c417e9432311f53d24955019c55c531cea45599ed840865f"
+  }
+}

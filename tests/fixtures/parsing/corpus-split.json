@@ -1,0 +1,133 @@
+{
+  "schema_version": "wp32-split-1",
+  "frozen_before_heuristic_development": true,
+  "policy": "Earliest filing of each company/form for development; remaining newer filings held out. No held-out labels used for tuning.",
+  "filings": [
+    {
+      "cik": "0000019617",
+      "form": "10-K",
+      "accession": "0001628280-26-008131",
+      "source_sha256": "428551a3073c9701082ca0fe2212b753f8aa30aa71dbd2d5e542a4e09013be05",
+      "split": "development"
+    },
+    {
+      "cik": "0000019617",
+      "form": "10-Q",
+      "accession": "0001628280-26-029344",
+      "source_sha256": "19a91282ff8773d37ba9a02e2f717eb0fda99fe0f4e4b4cfbb9d46fc5d7cecbc",
+      "split": "development"
+    },
+    {
+      "cik": "0000019617",
+      "form": "10-Q",
+      "accession": "0001628280-26-054343",
+      "source_sha256": "7cbc765c34c9a43a09b74db21e75bd0f94e548b4dfb50c53699526a985935a48",
+      "split": "held_out"
+    },
+    {
+      "cik": "0000320193",
+      "form": "10-K",
+      "accession": "0000320193-24-000123",
+      "source_sha256": "87811e303e632b0f1843b9bc161c1b3af9c501ffec0a51a9825cc796dc369dcf",
+      "split": "development"
+    },
+    {
+      "cik": "0000320193",
+      "form": "10-K",
+      "accession": "0000320193-25-000079",
+      "source_sha256": "f7569b9a9cb9010780bdbf3ea89120dd2d7928caa8fff1305ace90630ca627ce",
+      "split": "held_out"
+    },
+    {
+      "cik": "0000320193",
+      "form": "10-Q",
+      "accession": "0000320193-26-000013",
+      "source_sha256": "7d97585e619f1e6ca9ad23c5068c3b2fe1369a3b01882acd4aeff93b4b638f91",
+      "split": "development"
+    },
+    {
+      "cik": "0000320193",
+      "form": "10-Q",
+      "accession": "0000320193-26-000020",
+      "source_sha256": "d3f1996972f6b3950fbc4fd5a47dbd20a69b360eb6136da9a752c37bbdb96dc1",
+      "split": "held_out"
+    },
+    {
+      "cik": "0000789019",
+      "form": "10-K",
+      "accession": "0000950170-25-100235",
+      "source_sha256": "bd4d8df78c2c5d037ce9254a2be04e188576d486ff59386ffbd6f7743b4b3665",
+      "split": "development"
+    },
+    {
+      "cik": "0000789019",
+      "form": "10-K",
+      "accession": "0001193125-26-323660",
+      "source_sha256": "7ee403cf6248837b88b69729c38534d60f1171fd1447ba0fa3ac426abf2430cd",
+      "split": "held_out"
+    },
+    {
+      "cik": "0000789019",
+      "form": "10-Q",
+      "accession": "0001193125-26-027207",
+      "source_sha256": "13b6006248fb7d5f3dfebb5425e6645a8ca4f8e1a438fe1c75a0578be13b2773",
+      "split": "development"
+    },
+    {
+      "cik": "0000789019",
+      "form": "10-Q",
+      "accession": "0001193125-26-191507",
+      "source_sha256": "f67faa481eee34adcbd34f779d92f85ee357ad934ef9a5b9ffa43ce2522027f1",
+      "split": "held_out"
+    },
+    {
+      "cik": "0001018724",
+      "form": "10-K",
+      "accession": "0001018724-26-000004",
+      "source_sha256": "a2d31fb7be58454479b35622eb8d3379f953f4a8f44a256166217fa5b434af35",
+      "split": "development"
+    },
+    {
+      "cik": "0001018724",
+      "form": "10-Q",
+      "accession": "0001018724-26-000014",
+      "source_sha256": "e6b80e48612abe3a0a8256e5ff3b5637cd4be94c12dc18cd3d7106667294fb8b",
+      "split": "development"
+    },
+    {
+      "cik": "0001018724",
+      "form": "10-Q",
+      "accession": "0001018724-26-000026",
+      "source_sha256": "71f119d4c8e9f2347b929b794f9139d263d55c765f845a6856162da4126c3416",
+      "split": "held_out"
+    },
+    {
+      "cik": "0001652044",
+      "form": "10-K",
+      "accession": "0001652044-25-000014",
+      "source_sha256": "7b5b7e74836e0c8a9b807ebb074a992d5a35d6549e5d847f4d8cf77951600a9d",
+      "split": "development"
+    },
+    {
+      "cik": "0001652044",
+      "form": "10-K",
+      "accession": "0001652044-26-000018",
+      "source_sha256": "55433ab65713c9cfebd65dc33c8e2d116e8a1d60c64a955d20cd2171ee8ceecc",
+      "split": "held_out"
+    },
+    {
+      "cik": "0001652044",
+      "form": "10-Q",
+      "accession": "0001652044-26-000048",
+      "source_sha256": "0da733204ca3463c96d324c3620ab2794bce9566ee7a6586100b66634a98aca0",
+      "split": "development"
+    },
+    {
+      "cik": "0001652044",
+      "form": "10-Q",
+      "accession": "0001652044-26-000071",
+      "source_sha256": "2066731bde8531eff1054fe178e85c701ec0eba3a18b9f309ee6945442ecad7a",
+      "split": "held_out"
+    }
+  ]
+}

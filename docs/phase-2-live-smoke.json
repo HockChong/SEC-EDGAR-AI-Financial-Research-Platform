@@ -1,0 +1,54 @@
+{
+  "schema_version": "1",
+  "synthetic": false,
+  "verification_date": "2026-10-20",
+  "evidence": "user-provided live CLI output; agent independently verified local Bronze bytes",
+  "initial_run_id": "3430fe5e-19f3-4ff3-91b1-b29067f6a41f",
+  "repeat_run_id": "e86ef8fb-d64f-4459-a8d4-84208dc57d92",
+  "reconciliation_before_and_after": {
+    "fetches": 3,
+    "objects": 3,
+    "orphans": 0
+  },
+  "sources": [
+    {
+      "fetch_id": "c794e602-4e52-422f-a898-e76d5381b810",
+      "source_kind": "company_facts",
+      "cik": "0000320193",
+      "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+      "filing": null,
+      "sha256": "73a86c6aedc31f77cac2ea4df5f80f0b3bd7e6eb58bb4e01444fbedf3afb9c43",
+      "byte_count": 3789099,
+      "fetched_at": "2026-10-20T13:11:01.472668Z"
+    },
+    {
+      "fetch_id": "e61fae4c-af61-4c09-8c64-3c17ed185390",
+      "source_kind": "submissions",
+      "cik": "0000320193",
+      "source_url": "https://data.sec.gov/submissions/CIK0000320193.json",
+      "filing": null,
+      "sha256": "c24afa8dfdd359593f193c737a5af2d49f172f81fe83b7019d7d7e2e3fc2cb5f",
+      "byte_count": 163778,
+      "fetched_at": "2026-10-20T13:11:00.241853Z"
+    },
+    {
+      "fetch_id": "e754759d-5f43-442a-9995-16ab09315a61",
+      "source_kind": "filing",
+      "cik": "0000320193",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+      "filing": {
+        "schema_version": "1",
+        "cik": "0000320193",
+        "accession": "0000320193-26-000020",
+        "form": "10-Q",
+        "filing_date": "2026-07-31",
+        "report_date": "2026-06-27",
+        "accepted_at": "2026-07-31T14:01:02Z",
+        "primary_document": "aapl-20260627.htm"
+      },
+      "sha256": "d3f1996972f6b3950fbc4fd5a47dbd20a69b360eb6136da9a752c37bbdb96dc1",
+      "byte_count": 1018316,
+      "fetched_at": "2026-10-20T13:11:00.527681Z"
+    }
+  ]
+}

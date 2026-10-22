@@ -1,0 +1,7 @@
+{
+  "cik": 1, "entityName": "Synthetic Test Company",
+  "facts": {"us-gaap": {"Revenues": {"label": "Synthetic revenues", "units": {"USD": [
+    {"start": "2025-01-01", "end": "2025-12-31", "val": 123456789.123456789,
+     "accn": "0000000001-26-000001", "filed": "2026-02-01", "fy": 2026, "fp": "FY"}
+  ]}}}}
+}

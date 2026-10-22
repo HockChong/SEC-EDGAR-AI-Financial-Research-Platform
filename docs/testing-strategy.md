@@ -1,8 +1,15 @@
 # Testing strategy
 
-Status: Phase 1 unit, contract, and real PostgreSQL integration tests are implemented. Later-phase scenarios remain requirements. Current commands and results are in [development](development.md) and the [Phase 1 review](phase-1-review.md).
+Status: Phase 1 foundation and Phase 2 mocked-SEC acquisition tests are implemented, including real PostgreSQL persistence, rate coordination and CLI integration. A user-executed one-company live smoke check passed separately from deterministic CI; its scope is recorded in the Phase 2 review. See the [Phase 2 review](phase-2-review.md). Later-phase scenarios remain requirements. Current commands and results are in [development](development.md) and the [Phase 1 review](phase-1-review.md).
 
 ## Test layers
+
+WP3.2 adds offline unit/contract tests, attributed source-layout regressions and
+real LocalBronze/parser/CLI integration (no database needed for those cases).
+The complete suite and separate 18-filing replay results are recorded in the
+[WP3.2 review](phase-3-wp3.2-review.md). The frozen split, manual source-anchor
+protocol and distinction between structural coverage and selected boundary checks
+are in [HTML parsing](html-parsing.md). Human adjudication remains outstanding.
 
 | Layer | Scope | Examples and dependencies |
 | --- | --- | --- |

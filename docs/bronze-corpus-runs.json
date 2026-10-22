@@ -1,0 +1,1122 @@
+{
+  "first": [
+    {
+      "accession": "0000320193-25-000079",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0000320193",
+        "--from-date",
+        "2025-10-31",
+        "--to-date",
+        "2025-10-31",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "87891b7d-7ed2-4939-be05-fe0c41d7288c"
+      },
+      "sec_response_events": 1,
+      "stderr": "{\"timestamp\": \"2026-10-20T13:58:38.963396+00:00\", \"severity\": \"INFO\", \"event\": \"sec_response\", \"status_code\": 200}\n{\"timestamp\": \"2026-10-20T13:58:39.010210+00:00\", \"severity\": \"INFO\", \"event\": \"ingestion_succeeded\"}\n"
+    },
+    {
+      "accession": "0000320193-24-000123",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0000320193",
+        "--from-date",
+        "2024-11-01",
+        "--to-date",
+        "2024-11-01",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "fdce93f8-dab9-4b04-8db3-2e0c9ba8abcd"
+      },
+      "sec_response_events": 1,
+      "stderr": "{\"timestamp\": \"2026-10-20T13:58:40.572386+00:00\", \"severity\": \"INFO\", \"event\": \"sec_response\", \"status_code\": 200}\n{\"timestamp\": \"2026-10-20T13:58:40.714611+00:00\", \"severity\": \"INFO\", \"event\": \"ingestion_succeeded\"}\n"
+    },
+    {
+      "accession": "0000320193-26-000020",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0000320193",
+        "--from-date",
+        "2026-07-31",
+        "--to-date",
+        "2026-07-31",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "25c9e387-9014-4a68-a9e9-e2c517ec98b3"
+      },
+      "sec_response_events": 0,
+      "stderr": ""
+    },
+    {
+      "accession": "0000320193-26-000013",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0000320193",
+        "--from-date",
+        "2026-05-01",
+        "--to-date",
+        "2026-05-01",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "f7658fc6-0053-4f87-a2cb-e22382956045"
+      },
+      "sec_response_events": 1,
+      "stderr": "{\"timestamp\": \"2026-10-20T13:58:43.072436+00:00\", \"severity\": \"INFO\", \"event\": \"sec_response\", \"status_code\": 200}\n{\"timestamp\": \"2026-10-20T13:58:43.114575+00:00\", \"severity\": \"INFO\", \"event\": \"ingestion_succeeded\"}\n"
+    },
+    {
+      "accession": "0001193125-26-323660",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0000789019",
+        "--from-date",
+        "2026-07-29",
+        "--to-date",
+        "2026-07-29",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "fad7b01d-6132-49f8-8769-cb26af0f8d3a"
+      },
+      "sec_response_events": 2,
+      "stderr": "{\"timestamp\": \"2026-10-20T13:58:44.884105+00:00\", \"severity\": \"INFO\", \"event\": \"sec_response\", \"status_code\": 200}\n{\"timestamp\": \"2026-10-20T13:58:44.937440+00:00\", \"severity\": \"INFO\", \"event\": \"ingestion_succeeded\"}\n{\"timestamp\": \"2026-10-20T13:58:46.153972+00:00\", \"severity\": \"INFO\", \"event\": \"sec_response\", \"status_code\": 200}\n{\"timestamp\": \"2026-10-20T13:58:46.279833+00:00\", \"severity\": \"INFO\", \"event\": \"ingestion_succeeded\"}\n"
+    },
+    {
+      "accession": "0000950170-25-100235",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0000789019",
+        "--from-date",
+        "2025-07-30",
+        "--to-date",
+        "2025-07-30",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "9b132e66-1764-4fe8-aeab-84c22f1758eb"
+      },
+      "sec_response_events": 1,
+      "stderr": "{\"timestamp\": \"2026-10-20T13:58:47.988118+00:00\", \"severity\": \"INFO\", \"event\": \"sec_response\", \"status_code\": 200}\n{\"timestamp\": \"2026-10-20T13:58:48.033566+00:00\", \"severity\": \"INFO\", \"event\": \"ingestion_succeeded\"}\n"
+    },
+    {
+      "accession": "0001193125-26-191507",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0000789019",
+        "--from-date",
+        "2026-04-29",
+        "--to-date",
+        "2026-04-29",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "bbd7fc45-e603-4af3-88b0-32ac5a21863d"
+      },
+      "sec_response_events": 1,
+      "stderr": "{\"timestamp\": \"2026-10-20T13:58:49.773771+00:00\", \"severity\": \"INFO\", \"event\": \"sec_response\", \"status_code\": 200}\n{\"timestamp\": \"2026-10-20T13:58:49.822860+00:00\", \"severity\": \"INFO\", \"event\": \"ingestion_succeeded\"}\n"
+    },
+    {
+      "accession": "0001193125-26-027207",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0000789019",
+        "--from-date",
+        "2026-01-28",
+        "--to-date",
+        "2026-01-28",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "1e9db180-a190-4ff5-8ea4-bc4f2c4da47a"
+      },
+      "sec_response_events": 1,
+      "stderr": "{\"timestamp\": \"2026-10-20T13:58:51.618865+00:00\", \"severity\": \"INFO\", \"event\": \"sec_response\", \"status_code\": 200}\n{\"timestamp\": \"2026-10-20T13:58:51.675851+00:00\", \"severity\": \"INFO\", \"event\": \"ingestion_succeeded\"}\n"
+    },
+    {
+      "accession": "0001652044-26-000018",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0001652044",
+        "--from-date",
+        "2026-02-05",
+        "--to-date",
+        "2026-02-05",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "16f43e8f-eb03-4a6c-af4b-54e9f5ca095b"
+      },
+      "sec_response_events": 2,
+      "stderr": "{\"timestamp\": \"2026-10-20T13:58:52.784058+00:00\", \"severity\": \"INFO\", \"event\": \"sec_response\", \"status_code\": 200}\n{\"timestamp\": \"2026-10-20T13:58:52.935139+00:00\", \"severity\": \"INFO\", \"event\": \"ingestion_succeeded\"}\n{\"timestamp\": \"2026-10-20T13:58:54.406883+00:00\", \"severity\": \"INFO\", \"event\": \"sec_response\", \"status_code\": 200}\n{\"timestamp\": \"2026-10-20T13:58:54.485703+00:00\", \"severity\": \"INFO\", \"event\": \"ingestion_succeeded\"}\n"
+    },
+    {
+      "accession": "0001652044-25-000014",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0001652044",
+        "--from-date",
+        "2025-02-05",
+        "--to-date",
+        "2025-02-05",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "9a46eca5-9903-4e41-a78f-bc12bd95adf6"
+      },
+      "sec_response_events": 1,
+      "stderr": "{\"timestamp\": \"2026-10-20T13:58:55.839231+00:00\", \"severity\": \"INFO\", \"event\": \"sec_response\", \"status_code\": 200}\n{\"timestamp\": \"2026-10-20T13:58:55.866691+00:00\", \"severity\": \"INFO\", \"event\": \"ingestion_succeeded\"}\n"
+    },
+    {
+      "accession": "0001652044-26-000071",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0001652044",
+        "--from-date",
+        "2026-07-23",
+        "--to-date",
+        "2026-07-23",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "84e3d908-2760-444c-9128-12cbe79515ed"
+      },
+      "sec_response_events": 1,
+      "stderr": "{\"timestamp\": \"2026-10-20T13:58:57.028035+00:00\", \"severity\": \"INFO\", \"event\": \"sec_response\", \"status_code\": 200}\n{\"timestamp\": \"2026-10-20T13:58:57.063339+00:00\", \"severity\": \"INFO\", \"event\": \"ingestion_succeeded\"}\n"
+    },
+    {
+      "accession": "0001652044-26-000048",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0001652044",
+        "--from-date",
+        "2026-04-30",
+        "--to-date",
+        "2026-04-30",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "24977f94-cda1-4e76-a510-57cf8c2272c8"
+      },
+      "sec_response_events": 1,
+      "stderr": "{\"timestamp\": \"2026-10-20T13:58:58.167197+00:00\", \"severity\": \"INFO\", \"event\": \"sec_response\", \"status_code\": 200}\n{\"timestamp\": \"2026-10-20T13:58:58.206726+00:00\", \"severity\": \"INFO\", \"event\": \"ingestion_succeeded\"}\n"
+    },
+    {
+      "accession": "0001018724-26-000004",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0001018724",
+        "--from-date",
+        "2026-02-06",
+        "--to-date",
+        "2026-02-06",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "76c8afeb-f27e-4bce-b75e-5d71e3bcc78f"
+      },
+      "sec_response_events": 2,
+      "stderr": "{\"timestamp\": \"2026-10-20T13:58:59.287081+00:00\", \"severity\": \"INFO\", \"event\": \"sec_response\", \"status_code\": 200}\n{\"timestamp\": \"2026-10-20T13:58:59.330820+00:00\", \"severity\": \"INFO\", \"event\": \"ingestion_succeeded\"}\n{\"timestamp\": \"2026-10-20T13:59:01.014290+00:00\", \"severity\": \"INFO\", \"event\": \"sec_response\", \"status_code\": 200}\n{\"timestamp\": \"2026-10-20T13:59:01.145411+00:00\", \"severity\": \"INFO\", \"event\": \"ingestion_succeeded\"}\n"
+    },
+    {
+      "accession": "0001018724-26-000026",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0001018724",
+        "--from-date",
+        "2026-07-31",
+        "--to-date",
+        "2026-07-31",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "4a25b3be-18bf-47eb-8696-d66dd123a396"
+      },
+      "sec_response_events": 1,
+      "stderr": "{\"timestamp\": \"2026-10-20T13:59:02.494966+00:00\", \"severity\": \"INFO\", \"event\": \"sec_response\", \"status_code\": 200}\n{\"timestamp\": \"2026-10-20T13:59:02.555166+00:00\", \"severity\": \"INFO\", \"event\": \"ingestion_succeeded\"}\n"
+    },
+    {
+      "accession": "0001018724-26-000014",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0001018724",
+        "--from-date",
+        "2026-04-30",
+        "--to-date",
+        "2026-04-30",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "056408f0-4bbc-45b1-9cc3-1726071065ee"
+      },
+      "sec_response_events": 1,
+      "stderr": "{\"timestamp\": \"2026-10-20T13:59:04.564713+00:00\", \"severity\": \"INFO\", \"event\": \"sec_response\", \"status_code\": 200}\n{\"timestamp\": \"2026-10-20T13:59:04.595560+00:00\", \"severity\": \"INFO\", \"event\": \"ingestion_succeeded\"}\n"
+    },
+    {
+      "accession": "0001628280-26-008131",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0000019617",
+        "--from-date",
+        "2026-02-13",
+        "--to-date",
+        "2026-02-13",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "dcd16b49-846f-4dd0-913e-923d32d8ad32"
+      },
+      "sec_response_events": 2,
+      "stderr": "{\"timestamp\": \"2026-10-20T13:59:06.670084+00:00\", \"severity\": \"INFO\", \"event\": \"sec_response\", \"status_code\": 200}\n{\"timestamp\": \"2026-10-20T13:59:06.735690+00:00\", \"severity\": \"INFO\", \"event\": \"ingestion_succeeded\"}\n{\"timestamp\": \"2026-10-20T13:59:07.835280+00:00\", \"severity\": \"INFO\", \"event\": \"sec_response\", \"status_code\": 200}\n{\"timestamp\": \"2026-10-20T13:59:07.993829+00:00\", \"severity\": \"INFO\", \"event\": \"ingestion_succeeded\"}\n"
+    },
+    {
+      "accession": "0001628280-26-054343",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0000019617",
+        "--from-date",
+        "2026-08-06",
+        "--to-date",
+        "2026-08-06",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "1a404686-19e5-4a60-80c6-0b1230e26c14"
+      },
+      "sec_response_events": 1,
+      "stderr": "{\"timestamp\": \"2026-10-20T13:59:09.695242+00:00\", \"severity\": \"INFO\", \"event\": \"sec_response\", \"status_code\": 200}\n{\"timestamp\": \"2026-10-20T13:59:09.748583+00:00\", \"severity\": \"INFO\", \"event\": \"ingestion_succeeded\"}\n"
+    },
+    {
+      "accession": "0001628280-26-029344",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0000019617",
+        "--from-date",
+        "2026-05-01",
+        "--to-date",
+        "2026-05-01",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "adb30937-10b2-44b7-b9e7-da003b424626"
+      },
+      "sec_response_events": 1,
+      "stderr": "{\"timestamp\": \"2026-10-20T13:59:12.087053+00:00\", \"severity\": \"INFO\", \"event\": \"sec_response\", \"status_code\": 200}\n{\"timestamp\": \"2026-10-20T13:59:12.137593+00:00\", \"severity\": \"INFO\", \"event\": \"ingestion_succeeded\"}\n"
+    }
+  ],
+  "repeat": [
+    {
+      "accession": "0000320193-25-000079",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0000320193",
+        "--from-date",
+        "2025-10-31",
+        "--to-date",
+        "2025-10-31",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "0b39352c-6adb-45bd-984b-c7d01d66230f"
+      },
+      "sec_response_events": 0,
+      "stderr": ""
+    },
+    {
+      "accession": "0000320193-24-000123",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0000320193",
+        "--from-date",
+        "2024-11-01",
+        "--to-date",
+        "2024-11-01",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "b74d292a-9091-4d07-b956-631ce377cdc1"
+      },
+      "sec_response_events": 0,
+      "stderr": ""
+    },
+    {
+      "accession": "0000320193-26-000020",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0000320193",
+        "--from-date",
+        "2026-07-31",
+        "--to-date",
+        "2026-07-31",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "43910a35-4399-49e5-bf2b-fc893a93cdb4"
+      },
+      "sec_response_events": 0,
+      "stderr": ""
+    },
+    {
+      "accession": "0000320193-26-000013",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0000320193",
+        "--from-date",
+        "2026-05-01",
+        "--to-date",
+        "2026-05-01",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "eeee84f1-7a8f-4755-8710-861fc8b565fa"
+      },
+      "sec_response_events": 0,
+      "stderr": ""
+    },
+    {
+      "accession": "0001193125-26-323660",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0000789019",
+        "--from-date",
+        "2026-07-29",
+        "--to-date",
+        "2026-07-29",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "512f721a-3b20-41d0-859e-b2625acea96a"
+      },
+      "sec_response_events": 0,
+      "stderr": ""
+    },
+    {
+      "accession": "0000950170-25-100235",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0000789019",
+        "--from-date",
+        "2025-07-30",
+        "--to-date",
+        "2025-07-30",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "f65a5f87-8787-405b-b748-ccf4e0fad9b4"
+      },
+      "sec_response_events": 0,
+      "stderr": ""
+    },
+    {
+      "accession": "0001193125-26-191507",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0000789019",
+        "--from-date",
+        "2026-04-29",
+        "--to-date",
+        "2026-04-29",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "a5e99d4f-16ba-4b92-83d9-1572a3b341b1"
+      },
+      "sec_response_events": 0,
+      "stderr": ""
+    },
+    {
+      "accession": "0001193125-26-027207",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0000789019",
+        "--from-date",
+        "2026-01-28",
+        "--to-date",
+        "2026-01-28",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "290b6cb5-e737-43f0-a7aa-2ae07932b3d6"
+      },
+      "sec_response_events": 0,
+      "stderr": ""
+    },
+    {
+      "accession": "0001652044-26-000018",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0001652044",
+        "--from-date",
+        "2026-02-05",
+        "--to-date",
+        "2026-02-05",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "3d1b1fae-52cc-4519-be12-747876ff43a0"
+      },
+      "sec_response_events": 0,
+      "stderr": ""
+    },
+    {
+      "accession": "0001652044-25-000014",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0001652044",
+        "--from-date",
+        "2025-02-05",
+        "--to-date",
+        "2025-02-05",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "d9ab1a70-bacc-4bac-a69d-1f5955069900"
+      },
+      "sec_response_events": 0,
+      "stderr": ""
+    },
+    {
+      "accession": "0001652044-26-000071",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0001652044",
+        "--from-date",
+        "2026-07-23",
+        "--to-date",
+        "2026-07-23",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "d8c0c04a-ecd8-4ee9-843f-fb3c5ba75911"
+      },
+      "sec_response_events": 0,
+      "stderr": ""
+    },
+    {
+      "accession": "0001652044-26-000048",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0001652044",
+        "--from-date",
+        "2026-04-30",
+        "--to-date",
+        "2026-04-30",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "f896b85d-6215-4d98-a88f-2cfee392a1f6"
+      },
+      "sec_response_events": 0,
+      "stderr": ""
+    },
+    {
+      "accession": "0001018724-26-000004",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0001018724",
+        "--from-date",
+        "2026-02-06",
+        "--to-date",
+        "2026-02-06",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "cac173c7-e863-472e-8765-8756d58b15b3"
+      },
+      "sec_response_events": 0,
+      "stderr": ""
+    },
+    {
+      "accession": "0001018724-26-000026",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0001018724",
+        "--from-date",
+        "2026-07-31",
+        "--to-date",
+        "2026-07-31",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "e24c6050-3f4d-4fad-b643-e750f9d48b28"
+      },
+      "sec_response_events": 0,
+      "stderr": ""
+    },
+    {
+      "accession": "0001018724-26-000014",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0001018724",
+        "--from-date",
+        "2026-04-30",
+        "--to-date",
+        "2026-04-30",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "7334c83d-f9df-4eb1-86c4-91a028ba5fae"
+      },
+      "sec_response_events": 0,
+      "stderr": ""
+    },
+    {
+      "accession": "0001628280-26-008131",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0000019617",
+        "--from-date",
+        "2026-02-13",
+        "--to-date",
+        "2026-02-13",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "ba0bb144-dec1-48d4-b6a2-de3fc367f9da"
+      },
+      "sec_response_events": 0,
+      "stderr": ""
+    },
+    {
+      "accession": "0001628280-26-054343",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0000019617",
+        "--from-date",
+        "2026-08-06",
+        "--to-date",
+        "2026-08-06",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "aeea22bb-96c4-460b-93ac-90339c308ac3"
+      },
+      "sec_response_events": 0,
+      "stderr": ""
+    },
+    {
+      "accession": "0001628280-26-029344",
+      "command": [
+        "python",
+        "-m",
+        "sec_research.ingestion.cli",
+        "ingest",
+        "--company",
+        "0000019617",
+        "--from-date",
+        "2026-05-01",
+        "--to-date",
+        "2026-05-01",
+        "--max-companies",
+        "1",
+        "--max-filings",
+        "1",
+        "--max-history-files",
+        "10"
+      ],
+      "exit_code": 0,
+      "summary": {
+        "companies": 1,
+        "company_facts": 1,
+        "errors": [],
+        "filings": 1,
+        "run_id": "ef44303f-e2aa-417d-88fb-892d6c1c75e1"
+      },
+      "sec_response_events": 0,
+      "stderr": ""
+    }
+  ]
+}

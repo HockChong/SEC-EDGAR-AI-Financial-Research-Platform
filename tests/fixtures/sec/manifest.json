@@ -1,0 +1,48 @@
+{
+  "schema_version": "1",
+  "synthetic": true,
+  "source": "hand-authored; never fetched from SEC",
+  "fixtures": [
+    {
+      "path": "submissions.json",
+      "synthetic_source_urls": [
+        "https://data.sec.gov/submissions/CIK0000000001.json"
+      ],
+      "sha256": "d0ae903a338c73a2f7ae6bac87e96671e290f92b3bd4b6e1da857668aaacae6d",
+      "byte_count": 455
+    },
+    {
+      "path": "history.json",
+      "synthetic_source_urls": [
+        "https://data.sec.gov/submissions/CIK0000000001-submissions-001.json"
+      ],
+      "sha256": "58221039e4712aa9a81901d634845cf1ad313cda5f7033bfc41c009c380656a5",
+      "byte_count": 209
+    },
+    {
+      "path": "company_facts.json",
+      "synthetic_source_urls": [
+        "https://data.sec.gov/api/xbrl/companyfacts/CIK0000000001.json"
+      ],
+      "sha256": "a08065d5b7ba3aed7444afdbbf5e80caa1532cbf15488d549cc90f038a7fdd05",
+      "byte_count": 312
+    },
+    {
+      "path": "companies.json",
+      "synthetic_source_urls": [
+        "https://www.sec.gov/files/company_tickers.json"
+      ],
+      "sha256": "1115bc3f3ac7f5eadd99c38ef74e80ae1c1fcbe6695ad8d53d0e84517feadb9b",
+      "byte_count": 76
+    },
+    {
+      "path": "filing.htm",
+      "synthetic_source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1/000000000126000001/annual.htm",
+        "https://www.sec.gov/Archives/edgar/data/1/000000000125000001/quarter.htm"
+      ],
+      "sha256": "7e4948ea3a86fa0ab45cd7e532f0d733bb155c0bc8070c9cf3b43820cc07923e",
+      "byte_count": 175
+    }
+  ]
+}

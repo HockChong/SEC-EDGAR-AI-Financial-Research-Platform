@@ -12,5 +12,11 @@ def isolated_settings(monkeypatch: pytest.MonkeyPatch) -> None:
         "LOG_LEVEL",
         "DB_CONNECT_TIMEOUT",
         "DB_POOL_SIZE",
+        "SEC_USER_AGENT",
+        "SEC_REQUESTS_PER_SECOND",
+        "SEC_TIMEOUT_SECONDS",
+        "SEC_DEADLINE_SECONDS",
+        "SEC_MAX_ATTEMPTS",
+        "SEC_MAX_BYTES",
     ):
         monkeypatch.delenv(name, raising=False)

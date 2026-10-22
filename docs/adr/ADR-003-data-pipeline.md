@@ -1,8 +1,33 @@
 # ADR-003 — Immutable sources and reproducible research datasets
 
-Status: Proposed. Architecture: 3.1. Implementation phases: 2–3.
+Status: Bronze acquisition accepted and implemented in Phase 2; bounded live smoke acceptance passed. WP3.2 implements bounded HTML transformation; physical Silver/Gold publication remains proposed. [ADR-010](ADR-010-bronze-coordination.md) specifies implemented Bronze coordination/publication and limitations. Architecture: 3.1. Implementation phases: 2–3.
+
+WP3.1 adds [canonical record and storage-row contracts](../canonical-contracts.md)
+and synthetic fixtures. WP3.2 adds [deterministic HTML parsing](../html-parsing.md)
+using those contracts, with opaque table blocks and source-linked section ranges.
+WP3.3 adds [structured table extraction](../table-extraction.md) in a separate
+validated envelope while retaining canonical-1 rows and separate retrieval text.
+Its displayed-number normalization is integrated under `table-numeric-1`;
+physical Parquet publication remains unimplemented. Unsafe grids retain raw cells with
+quarantine warnings instead of invented coordinates. This is an incremental
+implementation of the existing table/provenance decision; it adds no store and
+preserves the Spark/Delta deferral.
+
+WP3.3 completion uses `sec-tables-2`, `table-result-2`, and `table-text-2` to
+distinguish normalized output from the earlier pending scaffold. Canonical-1
+storage rows remain unchanged. Missing nonblank dashes retain canonical
+`uncertain` status and explicit `missing` context. Currency, units, scale, and
+measurement intervals are not inferred from ambiguous labels. Numeric footnotes
+abstain. This implements the existing architecture; it does not establish
+independently evaluated financial accuracy or authorize WP3.4.
 
 ## Context
+
+WP3.4 implements [Company Facts normalization](../xbrl-normalization.md), preserving
+canonical facts, rejected raw occurrences, source pointers and processing versions.
+The offline audit emits diagnostic JSON only; versioned Parquet publication remains
+WP3.5. ADR-006 records the explicit entity-scope selection policy and its warnings.
+WP3.3 adjudication remains owner-deferred, not passed.
 
 SEC source responses and financial reportings change. Parsing and chunking also evolve. Research must be traceable to the exact data used, and retrieval indexes must not become the only surviving record of a filing or fact.
 

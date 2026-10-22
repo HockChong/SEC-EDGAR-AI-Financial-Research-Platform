@@ -1,0 +1,753 @@
+{
+  "schema_version": "wp33-review-candidates-2",
+  "extractor_version": "sec-tables-2",
+  "human_adjudicated": false,
+  "diagnostics_sha256": "c3620eadf95aba23d5e4bd780d12e2b5ab624712615ceaf937250f172bc6755a",
+  "cases": [
+    {
+      "cik": "0000019617",
+      "accession": "0001628280-26-008131",
+      "form": "10-K",
+      "source_sha256": "428551a3073c9701082ca0fe2212b753f8aa30aa71dbd2d5e542a4e09013be05",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm",
+      "document_id": "document:a514e8bfa0c42823090ba32aa168d0e9a4e5c00b7167084673212ddf4620b956",
+      "table_id": "table:b88999f114400d9cbcdcc23ca1e38b7fb3cb752be7ab0bba62139c891c767bea",
+      "path": "/*[1]/*[2]/*[1111]/*[1]",
+      "title": "Consolidated statements of income",
+      "predicted_kind": "financial_statement",
+      "candidate_family": "income",
+      "section_classification": "unclassified",
+      "merged": true,
+      "multi_period": true,
+      "shape": [
+        38,
+        18
+      ],
+      "warnings": [
+        "classification_heuristic",
+        "financial_context_unverified",
+        "html_recovered"
+      ],
+      "human_adjudication": "pending",
+      "expected_structure": null,
+      "expected_financial_interpretation": null,
+      "extraction_file": ".runtime/wp33/completion-documents/0001628280-26-008131.json"
+    },
+    {
+      "cik": "0000019617",
+      "accession": "0001628280-26-008131",
+      "form": "10-K",
+      "source_sha256": "428551a3073c9701082ca0fe2212b753f8aa30aa71dbd2d5e542a4e09013be05",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm",
+      "document_id": "document:a514e8bfa0c42823090ba32aa168d0e9a4e5c00b7167084673212ddf4620b956",
+      "table_id": "table:27706204014dc90a3800787850b9873358000aae8c8c95ddfa7390bb6d61bdc2",
+      "path": "/*[1]/*[2]/*[356]/*[1]",
+      "title": "Consolidated balance sheets analysis",
+      "predicted_kind": "financial_statement",
+      "candidate_family": "balance_sheet",
+      "section_classification": "unclassified",
+      "merged": true,
+      "multi_period": true,
+      "shape": [
+        20,
+        15
+      ],
+      "warnings": [
+        "classification_heuristic",
+        "financial_context_unverified",
+        "html_recovered",
+        "numeric_period_unresolved"
+      ],
+      "human_adjudication": "pending",
+      "expected_structure": null,
+      "expected_financial_interpretation": null,
+      "extraction_file": ".runtime/wp33/completion-documents/0001628280-26-008131.json"
+    },
+    {
+      "cik": "0000019617",
+      "accession": "0001628280-26-008131",
+      "form": "10-K",
+      "source_sha256": "428551a3073c9701082ca0fe2212b753f8aa30aa71dbd2d5e542a4e09013be05",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm",
+      "document_id": "document:a514e8bfa0c42823090ba32aa168d0e9a4e5c00b7167084673212ddf4620b956",
+      "table_id": "table:f093360b59fdfa9198c3827cfe3d9b601cc27eaded5f95011cde8d78eac985f3",
+      "path": "/*[1]/*[2]/*[1138]/*[1]",
+      "title": "Consolidated statements of cash flows",
+      "predicted_kind": "financial_statement",
+      "candidate_family": "cash_flow",
+      "section_classification": "unclassified",
+      "merged": true,
+      "multi_period": true,
+      "shape": [
+        57,
+        18
+      ],
+      "warnings": [
+        "classification_heuristic",
+        "financial_context_unverified",
+        "html_recovered"
+      ],
+      "human_adjudication": "pending",
+      "expected_structure": null,
+      "expected_financial_interpretation": null,
+      "extraction_file": ".runtime/wp33/completion-documents/0001628280-26-008131.json"
+    },
+    {
+      "cik": "0000019617",
+      "accession": "0001628280-26-029344",
+      "form": "10-Q",
+      "source_sha256": "19a91282ff8773d37ba9a02e2f717eb0fda99fe0f4e4b4cfbb9d46fc5d7cecbc",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/19617/000162828026029344/jpm-20260331.htm",
+      "document_id": "document:3150c4203a3994c1a0a4b2d65550a0a25942c608f619840f0234683a77756351",
+      "table_id": "table:f657af3e070e0c01d72515087c36787e6be317ad9fa8e1bb93306e95688bd98a",
+      "path": "/*[1]/*[2]/*[95]/*[1]",
+      "title": "Consolidated balance sheets analysis",
+      "predicted_kind": "financial_statement",
+      "candidate_family": "balance_sheet",
+      "section_classification": "unclassified",
+      "merged": true,
+      "multi_period": true,
+      "shape": [
+        34,
+        15
+      ],
+      "warnings": [
+        "ragged_rows",
+        "classification_heuristic",
+        "financial_context_unverified",
+        "html_recovered",
+        "numeric_period_unresolved"
+      ],
+      "human_adjudication": "pending",
+      "expected_structure": null,
+      "expected_financial_interpretation": null,
+      "extraction_file": ".runtime/wp33/completion-documents/0001628280-26-029344.json"
+    },
+    {
+      "cik": "0000019617",
+      "accession": "0001628280-26-054343",
+      "form": "10-Q",
+      "source_sha256": "7cbc765c34c9a43a09b74db21e75bd0f94e548b4dfb50c53699526a985935a48",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/19617/000162828026054343/jpm-20260630.htm",
+      "document_id": "document:c768c0527dfc3d9b11170ed9d378db4aacd6da9c3b62710e6f78ca13432fc8c1",
+      "table_id": "table:e277c418d611747116a2599a59086c0c7aaa9604f801be87e1a6e04299eb5e00",
+      "path": "/*[1]/*[2]/*[123]/*[1]",
+      "title": "Consolidated balance sheets analysis",
+      "predicted_kind": "financial_statement",
+      "candidate_family": "balance_sheet",
+      "section_classification": "unclassified",
+      "merged": true,
+      "multi_period": true,
+      "shape": [
+        34,
+        15
+      ],
+      "warnings": [
+        "ragged_rows",
+        "classification_heuristic",
+        "financial_context_unverified",
+        "html_recovered",
+        "numeric_period_unresolved"
+      ],
+      "human_adjudication": "pending",
+      "expected_structure": null,
+      "expected_financial_interpretation": null,
+      "extraction_file": ".runtime/wp33/completion-documents/0001628280-26-054343.json"
+    },
+    {
+      "cik": "0000320193",
+      "accession": "0000320193-26-000013",
+      "form": "10-Q",
+      "source_sha256": "7d97585e619f1e6ca9ad23c5068c3b2fe1369a3b01882acd4aeff93b4b638f91",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/aapl-20260328.htm",
+      "document_id": "document:1a23eae96fc36db7bdb13d5c9d4ba598f41bf8b60bdd03d2e25c8a9620e97b82",
+      "table_id": "table:97d9b6d67fd25824c9695d12a27e66092cb058f304428b9014b0de0847283466",
+      "path": "/*[1]/*[2]/*[64]/*[1]",
+      "title": "CONDENSED CONSOLIDATED STATEMENTS OF OPERATIONS (Unaudited)",
+      "predicted_kind": "financial_statement",
+      "candidate_family": "income",
+      "section_classification": "classified",
+      "merged": true,
+      "multi_period": true,
+      "shape": [
+        32,
+        24
+      ],
+      "warnings": [
+        "classification_heuristic",
+        "financial_context_unverified",
+        "html_recovered"
+      ],
+      "human_adjudication": "pending",
+      "expected_structure": null,
+      "expected_financial_interpretation": null,
+      "extraction_file": ".runtime/wp33/completion-documents/0000320193-26-000013.json"
+    },
+    {
+      "cik": "0000320193",
+      "accession": "0000320193-26-000013",
+      "form": "10-Q",
+      "source_sha256": "7d97585e619f1e6ca9ad23c5068c3b2fe1369a3b01882acd4aeff93b4b638f91",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/aapl-20260328.htm",
+      "document_id": "document:1a23eae96fc36db7bdb13d5c9d4ba598f41bf8b60bdd03d2e25c8a9620e97b82",
+      "table_id": "table:e5fcd2b551e50a80b21aaa1de8416a9797a75e311e78fd8529b683b0e9ea3f13",
+      "path": "/*[1]/*[2]/*[84]/*[1]",
+      "title": "CONDENSED CONSOLIDATED BALANCE SHEETS (Unaudited)",
+      "predicted_kind": "financial_statement",
+      "candidate_family": "balance_sheet",
+      "section_classification": "classified",
+      "merged": true,
+      "multi_period": true,
+      "shape": [
+        43,
+        12
+      ],
+      "warnings": [
+        "classification_heuristic",
+        "financial_context_unverified",
+        "html_recovered"
+      ],
+      "human_adjudication": "pending",
+      "expected_structure": null,
+      "expected_financial_interpretation": null,
+      "extraction_file": ".runtime/wp33/completion-documents/0000320193-26-000013.json"
+    },
+    {
+      "cik": "0000320193",
+      "accession": "0000320193-26-000013",
+      "form": "10-Q",
+      "source_sha256": "7d97585e619f1e6ca9ad23c5068c3b2fe1369a3b01882acd4aeff93b4b638f91",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/aapl-20260328.htm",
+      "document_id": "document:1a23eae96fc36db7bdb13d5c9d4ba598f41bf8b60bdd03d2e25c8a9620e97b82",
+      "table_id": "table:f3a4265e3b45d2dd423b33474794f94313d9f48560f010b75730d80b5eb85890",
+      "path": "/*[1]/*[2]/*[104]/*[1]",
+      "title": "CONDENSED CONSOLIDATED STATEMENTS OF CASH FLOWS (Unaudited)",
+      "predicted_kind": "financial_statement",
+      "candidate_family": "cash_flow",
+      "section_classification": "classified",
+      "merged": true,
+      "multi_period": true,
+      "shape": [
+        44,
+        12
+      ],
+      "warnings": [
+        "ragged_rows",
+        "classification_heuristic",
+        "financial_context_unverified",
+        "html_recovered"
+      ],
+      "human_adjudication": "pending",
+      "expected_structure": null,
+      "expected_financial_interpretation": null,
+      "extraction_file": ".runtime/wp33/completion-documents/0000320193-26-000013.json"
+    },
+    {
+      "cik": "0000320193",
+      "accession": "0000320193-26-000013",
+      "form": "10-Q",
+      "source_sha256": "7d97585e619f1e6ca9ad23c5068c3b2fe1369a3b01882acd4aeff93b4b638f91",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/aapl-20260328.htm",
+      "document_id": "document:1a23eae96fc36db7bdb13d5c9d4ba598f41bf8b60bdd03d2e25c8a9620e97b82",
+      "table_id": "table:942934b96eb596f72366bf9abbe20395919adbde38d8d9e38aa92f40f93c5f93",
+      "path": "/*[1]/*[2]/*[74]/*[1]",
+      "title": "CONDENSED CONSOLIDATED STATEMENTS OF COMPREHENSIVE INCOME (Unaudited)",
+      "predicted_kind": "financial_statement",
+      "candidate_family": "income",
+      "section_classification": "classified",
+      "merged": true,
+      "multi_period": true,
+      "shape": [
+        19,
+        24
+      ],
+      "warnings": [
+        "classification_heuristic",
+        "financial_context_unverified",
+        "html_recovered"
+      ],
+      "human_adjudication": "pending",
+      "expected_structure": null,
+      "expected_financial_interpretation": null,
+      "extraction_file": ".runtime/wp33/completion-documents/0000320193-26-000013.json"
+    },
+    {
+      "cik": "0000320193",
+      "accession": "0000320193-26-000013",
+      "form": "10-Q",
+      "source_sha256": "7d97585e619f1e6ca9ad23c5068c3b2fe1369a3b01882acd4aeff93b4b638f91",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/aapl-20260328.htm",
+      "document_id": "document:1a23eae96fc36db7bdb13d5c9d4ba598f41bf8b60bdd03d2e25c8a9620e97b82",
+      "table_id": "table:a0f8b957b8da8a39164833973f57574fe1bc69afa3f00e0a1a246fbdd1265e1e",
+      "path": "/*[1]/*[2]/*[94]/*[1]",
+      "title": "CONDENSED CONSOLIDATED STATEMENTS OF SHAREHOLDERS’ EQUITY (Unaudited)",
+      "predicted_kind": "financial_statement",
+      "candidate_family": "disclosure",
+      "section_classification": "classified",
+      "merged": true,
+      "multi_period": true,
+      "shape": [
+        28,
+        24
+      ],
+      "warnings": [
+        "classification_heuristic",
+        "financial_context_unverified",
+        "html_recovered"
+      ],
+      "human_adjudication": "pending",
+      "expected_structure": null,
+      "expected_financial_interpretation": null,
+      "extraction_file": ".runtime/wp33/completion-documents/0000320193-26-000013.json"
+    },
+    {
+      "cik": "0000789019",
+      "accession": "0000950170-25-100235",
+      "form": "10-K",
+      "source_sha256": "bd4d8df78c2c5d037ce9254a2be04e188576d486ff59386ffbd6f7743b4b3665",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm",
+      "document_id": "document:011f513a22ff4c7d01d4d87e034b08787d9a778ad7a5d7cde1c5d0997367794d",
+      "table_id": "table:9c94032b4c078f61443b37e0329f309d40bde32d41e2a50442188f4e650ccc41",
+      "path": "/*[1]/*[2]/*[199]/*[4]",
+      "title": "INCOME STATEMENTS",
+      "predicted_kind": "financial_statement",
+      "candidate_family": "income",
+      "section_classification": "classified",
+      "merged": true,
+      "multi_period": true,
+      "shape": [
+        46,
+        13
+      ],
+      "warnings": [
+        "classification_heuristic",
+        "financial_context_unverified",
+        "html_recovered"
+      ],
+      "human_adjudication": "pending",
+      "expected_structure": null,
+      "expected_financial_interpretation": null,
+      "extraction_file": ".runtime/wp33/completion-documents/0000950170-25-100235.json"
+    },
+    {
+      "cik": "0000789019",
+      "accession": "0000950170-25-100235",
+      "form": "10-K",
+      "source_sha256": "bd4d8df78c2c5d037ce9254a2be04e188576d486ff59386ffbd6f7743b4b3665",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm",
+      "document_id": "document:011f513a22ff4c7d01d4d87e034b08787d9a778ad7a5d7cde1c5d0997367794d",
+      "table_id": "table:3cba0f2324b05ac1e0e1a45a0c2ff505c3dda63f18903549105f2604b210b486",
+      "path": "/*[1]/*[2]/*[207]/*[3]",
+      "title": "BALANCE SHEETS",
+      "predicted_kind": "financial_statement",
+      "candidate_family": "balance_sheet",
+      "section_classification": "classified",
+      "merged": true,
+      "multi_period": true,
+      "shape": [
+        65,
+        9
+      ],
+      "warnings": [
+        "classification_heuristic",
+        "financial_context_unverified",
+        "html_recovered"
+      ],
+      "human_adjudication": "pending",
+      "expected_structure": null,
+      "expected_financial_interpretation": null,
+      "extraction_file": ".runtime/wp33/completion-documents/0000950170-25-100235.json"
+    },
+    {
+      "cik": "0000789019",
+      "accession": "0000950170-25-100235",
+      "form": "10-K",
+      "source_sha256": "bd4d8df78c2c5d037ce9254a2be04e188576d486ff59386ffbd6f7743b4b3665",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm",
+      "document_id": "document:011f513a22ff4c7d01d4d87e034b08787d9a778ad7a5d7cde1c5d0997367794d",
+      "table_id": "table:b9613cf1a697f732bbebf8fd04691b5e2fee27d6487d9cd7fd64a0bf92489d3e",
+      "path": "/*[1]/*[2]/*[211]/*[3]",
+      "title": "CASH FLOWS STATEMENTS",
+      "predicted_kind": "financial_statement",
+      "candidate_family": "cash_flow",
+      "section_classification": "classified",
+      "merged": true,
+      "multi_period": true,
+      "shape": [
+        62,
+        13
+      ],
+      "warnings": [
+        "classification_heuristic",
+        "financial_context_unverified",
+        "html_recovered"
+      ],
+      "human_adjudication": "pending",
+      "expected_structure": null,
+      "expected_financial_interpretation": null,
+      "extraction_file": ".runtime/wp33/completion-documents/0000950170-25-100235.json"
+    },
+    {
+      "cik": "0000789019",
+      "accession": "0000950170-25-100235",
+      "form": "10-K",
+      "source_sha256": "bd4d8df78c2c5d037ce9254a2be04e188576d486ff59386ffbd6f7743b4b3665",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm",
+      "document_id": "document:011f513a22ff4c7d01d4d87e034b08787d9a778ad7a5d7cde1c5d0997367794d",
+      "table_id": "table:1ca3a3c3e9c7746b644830595fa8fb94f6223ac4264849939e4854d08d1872ae",
+      "path": "/*[1]/*[2]/*[151]/*[7]",
+      "title": "",
+      "predicted_kind": "financial_disclosure",
+      "candidate_family": "disclosure",
+      "section_classification": "classified",
+      "merged": true,
+      "multi_period": true,
+      "shape": [
+        11,
+        13
+      ],
+      "warnings": [
+        "classification_heuristic",
+        "financial_context_unverified",
+        "html_recovered",
+        "numeric_period_unresolved"
+      ],
+      "human_adjudication": "pending",
+      "expected_structure": null,
+      "expected_financial_interpretation": null,
+      "extraction_file": ".runtime/wp33/completion-documents/0000950170-25-100235.json"
+    },
+    {
+      "cik": "0000789019",
+      "accession": "0000950170-25-100235",
+      "form": "10-K",
+      "source_sha256": "bd4d8df78c2c5d037ce9254a2be04e188576d486ff59386ffbd6f7743b4b3665",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm",
+      "document_id": "document:011f513a22ff4c7d01d4d87e034b08787d9a778ad7a5d7cde1c5d0997367794d",
+      "table_id": "table:a4d9f6667d6daf2701e3c7a475fce5273688868ee065f78247b42f5c83bda64e",
+      "path": "/*[1]/*[2]/*[131]/*[8]",
+      "title": "",
+      "predicted_kind": "financial_disclosure",
+      "candidate_family": "disclosure",
+      "section_classification": "classified",
+      "merged": true,
+      "multi_period": false,
+      "shape": [
+        13,
+        18
+      ],
+      "warnings": [
+        "classification_heuristic",
+        "financial_context_unverified",
+        "html_recovered",
+        "column_headers_unresolved",
+        "numeric_period_unresolved"
+      ],
+      "human_adjudication": "pending",
+      "expected_structure": null,
+      "expected_financial_interpretation": null,
+      "extraction_file": ".runtime/wp33/completion-documents/0000950170-25-100235.json"
+    },
+    {
+      "cik": "0001018724",
+      "accession": "0001018724-26-000004",
+      "form": "10-K",
+      "source_sha256": "a2d31fb7be58454479b35622eb8d3379f953f4a8f44a256166217fa5b434af35",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+      "document_id": "document:a938656a32a3ca28b99ce173af41ad362350fd609215aec8b61fc2e8f1d548e8",
+      "table_id": "table:f347b13a7745ebf917d261714842341750c4cec5a6f898d5580b3b16df58dd12",
+      "path": "/*[1]/*[2]/*[574]/*[1]",
+      "title": "CONSOLIDATED STATEMENTS OF OPERATIONS",
+      "predicted_kind": "financial_statement",
+      "candidate_family": "income",
+      "section_classification": "classified",
+      "merged": true,
+      "multi_period": true,
+      "shape": [
+        28,
+        18
+      ],
+      "warnings": [
+        "classification_heuristic",
+        "financial_context_unverified",
+        "html_recovered"
+      ],
+      "human_adjudication": "pending",
+      "expected_structure": null,
+      "expected_financial_interpretation": null,
+      "extraction_file": ".runtime/wp33/completion-documents/0001018724-26-000004.json"
+    },
+    {
+      "cik": "0001018724",
+      "accession": "0001018724-26-000004",
+      "form": "10-K",
+      "source_sha256": "a2d31fb7be58454479b35622eb8d3379f953f4a8f44a256166217fa5b434af35",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+      "document_id": "document:a938656a32a3ca28b99ce173af41ad362350fd609215aec8b61fc2e8f1d548e8",
+      "table_id": "table:a7ff1894837d6e505e694857edcb1f4f06d8eb992f5f15c64f75073210643512",
+      "path": "/*[1]/*[2]/*[592]/*[1]",
+      "title": "CONSOLIDATED BALANCE SHEETS",
+      "predicted_kind": "financial_statement",
+      "candidate_family": "balance_sheet",
+      "section_classification": "classified",
+      "merged": true,
+      "multi_period": true,
+      "shape": [
+        34,
+        12
+      ],
+      "warnings": [
+        "classification_heuristic",
+        "financial_context_unverified",
+        "html_recovered"
+      ],
+      "human_adjudication": "pending",
+      "expected_structure": null,
+      "expected_financial_interpretation": null,
+      "extraction_file": ".runtime/wp33/completion-documents/0001018724-26-000004.json"
+    },
+    {
+      "cik": "0001018724",
+      "accession": "0001018724-26-000004",
+      "form": "10-K",
+      "source_sha256": "a2d31fb7be58454479b35622eb8d3379f953f4a8f44a256166217fa5b434af35",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+      "document_id": "document:a938656a32a3ca28b99ce173af41ad362350fd609215aec8b61fc2e8f1d548e8",
+      "table_id": "table:7e6ec92b868b472417e5d5d4be7ddf1591bf76b95d2f9a75c781dc0b521b0358",
+      "path": "/*[1]/*[2]/*[531]/*[1]",
+      "title": "Consolidated Statements of Cash Flows",
+      "predicted_kind": "financial_statement",
+      "candidate_family": "cash_flow",
+      "section_classification": "classified",
+      "merged": true,
+      "multi_period": false,
+      "shape": [
+        9,
+        6
+      ],
+      "warnings": [
+        "classification_heuristic",
+        "financial_context_unverified",
+        "html_recovered",
+        "column_headers_unresolved",
+        "numeric_period_unresolved"
+      ],
+      "human_adjudication": "pending",
+      "expected_structure": null,
+      "expected_financial_interpretation": null,
+      "extraction_file": ".runtime/wp33/completion-documents/0001018724-26-000004.json"
+    },
+    {
+      "cik": "0001018724",
+      "accession": "0001018724-26-000004",
+      "form": "10-K",
+      "source_sha256": "a2d31fb7be58454479b35622eb8d3379f953f4a8f44a256166217fa5b434af35",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+      "document_id": "document:a938656a32a3ca28b99ce173af41ad362350fd609215aec8b61fc2e8f1d548e8",
+      "table_id": "table:7e1f329166a334e507995c55a1f51f491b0c96fe1b016a896efaeffd805a09f2",
+      "path": "/*[1]/*[2]/*[383]/*[1]",
+      "title": "",
+      "predicted_kind": "financial_disclosure",
+      "candidate_family": "disclosure",
+      "section_classification": "classified",
+      "merged": true,
+      "multi_period": true,
+      "shape": [
+        9,
+        12
+      ],
+      "warnings": [
+        "ragged_rows",
+        "classification_heuristic",
+        "financial_context_unverified",
+        "html_recovered"
+      ],
+      "human_adjudication": "pending",
+      "expected_structure": null,
+      "expected_financial_interpretation": null,
+      "extraction_file": ".runtime/wp33/completion-documents/0001018724-26-000004.json"
+    },
+    {
+      "cik": "0001018724",
+      "accession": "0001018724-26-000004",
+      "form": "10-K",
+      "source_sha256": "a2d31fb7be58454479b35622eb8d3379f953f4a8f44a256166217fa5b434af35",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+      "document_id": "document:a938656a32a3ca28b99ce173af41ad362350fd609215aec8b61fc2e8f1d548e8",
+      "table_id": "table:c4e885c181e04c2084ad188b37f029957f178b24f7ab868a2e0155729f9461cf",
+      "path": "/*[1]/*[2]/*[42]/*[1]",
+      "title": "",
+      "predicted_kind": "financial_disclosure",
+      "candidate_family": "disclosure",
+      "section_classification": "unclassified",
+      "merged": true,
+      "multi_period": false,
+      "shape": [
+        3,
+        6
+      ],
+      "warnings": [
+        "classification_heuristic",
+        "financial_context_unverified",
+        "html_recovered",
+        "column_headers_unresolved",
+        "numeric_period_unresolved"
+      ],
+      "human_adjudication": "pending",
+      "expected_structure": null,
+      "expected_financial_interpretation": null,
+      "extraction_file": ".runtime/wp33/completion-documents/0001018724-26-000004.json"
+    },
+    {
+      "cik": "0001652044",
+      "accession": "0001652044-25-000014",
+      "form": "10-K",
+      "source_sha256": "7b5b7e74836e0c8a9b807ebb074a992d5a35d6549e5d847f4d8cf77951600a9d",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm",
+      "document_id": "document:e049d1df6916c050fea8957e4e2d269743113f4186a6048db0152fba73f615a3",
+      "table_id": "table:76277b05b4ae3646338e002bf092207548eb7d88adb9c2b0ebd6303cac9660c3",
+      "path": "/*[1]/*[2]/*[931]/*[2]",
+      "title": "CONSOLIDATED STATEMENTS OF INCOME",
+      "predicted_kind": "financial_statement",
+      "candidate_family": "income",
+      "section_classification": "classified",
+      "merged": true,
+      "multi_period": true,
+      "shape": [
+        39,
+        18
+      ],
+      "warnings": [
+        "ragged_rows",
+        "classification_heuristic",
+        "financial_context_unverified",
+        "html_recovered"
+      ],
+      "human_adjudication": "pending",
+      "expected_structure": null,
+      "expected_financial_interpretation": null,
+      "extraction_file": ".runtime/wp33/completion-documents/0001652044-25-000014.json"
+    },
+    {
+      "cik": "0001652044",
+      "accession": "0001652044-25-000014",
+      "form": "10-K",
+      "source_sha256": "7b5b7e74836e0c8a9b807ebb074a992d5a35d6549e5d847f4d8cf77951600a9d",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm",
+      "document_id": "document:e049d1df6916c050fea8957e4e2d269743113f4186a6048db0152fba73f615a3",
+      "table_id": "table:78e2d653ee701d3ebe4a3565bc9538c60366a5d61772af730eda4c0048e8da3a",
+      "path": "/*[1]/*[2]/*[923]/*[2]",
+      "title": "CONSOLIDATED BALANCE SHEETS",
+      "predicted_kind": "financial_statement",
+      "candidate_family": "balance_sheet",
+      "section_classification": "classified",
+      "merged": true,
+      "multi_period": true,
+      "shape": [
+        40,
+        12
+      ],
+      "warnings": [
+        "ragged_rows",
+        "classification_heuristic",
+        "financial_context_unverified",
+        "html_recovered"
+      ],
+      "human_adjudication": "pending",
+      "expected_structure": null,
+      "expected_financial_interpretation": null,
+      "extraction_file": ".runtime/wp33/completion-documents/0001652044-25-000014.json"
+    },
+    {
+      "cik": "0001652044",
+      "accession": "0001652044-25-000014",
+      "form": "10-K",
+      "source_sha256": "7b5b7e74836e0c8a9b807ebb074a992d5a35d6549e5d847f4d8cf77951600a9d",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm",
+      "document_id": "document:e049d1df6916c050fea8957e4e2d269743113f4186a6048db0152fba73f615a3",
+      "table_id": "table:ae66855597b9d41d9e6df557a1f5fdea2a422846477c909c6a0eef306ac80fcd",
+      "path": "/*[1]/*[2]/*[955]/*[2]",
+      "title": "CONSOLIDATED STATEMENTS OF CASH FLOWS",
+      "predicted_kind": "financial_statement",
+      "candidate_family": "cash_flow",
+      "section_classification": "classified",
+      "merged": true,
+      "multi_period": true,
+      "shape": [
+        47,
+        18
+      ],
+      "warnings": [
+        "ragged_rows",
+        "classification_heuristic",
+        "financial_context_unverified",
+        "html_recovered"
+      ],
+      "human_adjudication": "pending",
+      "expected_structure": null,
+      "expected_financial_interpretation": null,
+      "extraction_file": ".runtime/wp33/completion-documents/0001652044-25-000014.json"
+    },
+    {
+      "cik": "0001652044",
+      "accession": "0001652044-25-000014",
+      "form": "10-K",
+      "source_sha256": "7b5b7e74836e0c8a9b807ebb074a992d5a35d6549e5d847f4d8cf77951600a9d",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm",
+      "document_id": "document:e049d1df6916c050fea8957e4e2d269743113f4186a6048db0152fba73f615a3",
+      "table_id": "table:b05174237145e0d4b3d13ca0d8b0aa498dd484f7e27f00c7faaf5bf9ea355489",
+      "path": "/*[1]/*[2]/*[623]/*[1]",
+      "title": "",
+      "predicted_kind": "financial_disclosure",
+      "candidate_family": "disclosure",
+      "section_classification": "classified",
+      "merged": true,
+      "multi_period": true,
+      "shape": [
+        18,
+        24
+      ],
+      "warnings": [
+        "ragged_rows",
+        "classification_heuristic",
+        "financial_context_unverified",
+        "html_recovered",
+        "numeric_period_unresolved"
+      ],
+      "human_adjudication": "pending",
+      "expected_structure": null,
+      "expected_financial_interpretation": null,
+      "extraction_file": ".runtime/wp33/completion-documents/0001652044-25-000014.json"
+    },
+    {
+      "cik": "0001652044",
+      "accession": "0001652044-25-000014",
+      "form": "10-K",
+      "source_sha256": "7b5b7e74836e0c8a9b807ebb074a992d5a35d6549e5d847f4d8cf77951600a9d",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm",
+      "document_id": "document:e049d1df6916c050fea8957e4e2d269743113f4186a6048db0152fba73f615a3",
+      "table_id": "table:78ce397222354bf13a9979b6097425d64cfa8e7f78bce27593cf5c4fe8df9e66",
+      "path": "/*[1]/*[2]/*[463]/*[1]",
+      "title": "",
+      "predicted_kind": "financial_disclosure",
+      "candidate_family": "disclosure",
+      "section_classification": "classified",
+      "merged": true,
+      "multi_period": false,
+      "shape": [
+        6,
+        39
+      ],
+      "warnings": [
+        "classification_heuristic",
+        "financial_context_unverified",
+        "html_recovered",
+        "numeric_period_unresolved"
+      ],
+      "human_adjudication": "pending",
+      "expected_structure": null,
+      "expected_financial_interpretation": null,
+      "extraction_file": ".runtime/wp33/completion-documents/0001652044-25-000014.json"
+    }
+  ]
+}

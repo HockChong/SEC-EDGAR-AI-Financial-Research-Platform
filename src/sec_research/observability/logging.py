@@ -10,6 +10,10 @@ from sec_research.contracts.errors import ErrorCode
 
 
 class Event(StrEnum):
+    SEC_RESPONSE = "sec_response"
+    SEC_RETRY = "sec_retry"
+    INGESTION_SUCCEEDED = "ingestion_succeeded"
+    INGESTION_FAILED = "ingestion_failed"
     REQUEST_COMPLETED = "request_completed"
     REQUEST_FAILED = "request_failed"
 

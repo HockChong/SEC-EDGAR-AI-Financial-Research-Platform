@@ -1,6 +1,6 @@
 # Architecture decision records
 
-All records began as **Proposed** in Phase 0. Phase 1 accepts ADR-001/002 and the local-development portion of ADR-008 with validation evidence. Other records remain proposed implementation directions. Preserve superseded records with a link to their replacement; accepted direction does not imply later-phase functionality exists.
+All records began as **Proposed** in Phase 0. Phase 1 accepts ADR-001/002 and the local-development portion of ADR-008 with validation evidence. Phase 2 implements the Bronze portion of ADR-003 and accepts ADR-010; a bounded user-executed live smoke check passed. Other records remain proposed implementation directions. Preserve superseded records with a link to their replacement; accepted direction does not imply later-phase functionality exists.
 
 | ADR | Decision | Primary delivery |
 | --- | --- | --- |
@@ -13,5 +13,7 @@ All records began as **Proposed** in Phase 0. Phase 1 accepts ADR-001/002 and th
 | [ADR-007](ADR-007-model-adapters.md) | LangChain-backed provider abstraction | 4–6 |
 | [ADR-008](ADR-008-deployment-security.md) | Local Compose, managed deployment, application security | 1, 7 |
 | [ADR-009](ADR-009-evaluation.md) | Versioned benchmarks and explicit quality gates | 3–6 |
+
+[ADR-010](ADR-010-bronze-coordination.md) records Phase 2 shared rate coordination, immutable publication and provenance-preserving rollback.
 
 Each record states context, decision, alternatives, consequences, validation, and triggers for reconsideration. Significant departures require an updated or superseding ADR before implementation expands.

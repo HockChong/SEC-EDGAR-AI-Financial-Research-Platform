@@ -4,10 +4,14 @@
 
 - Follow architecture version 3.1 in [requirements](docs/requirements.md) and the architecture documents. Inspect existing code, documentation, tests, configuration, and Git status before editing.
 - Implement only the explicitly assigned phase or work package. Do not combine major phases into an uncontrolled change. Stop at the end of every assigned package, report the results, and wait for explicit authorization to continue.
-- Phase 0 is documentation only; Phase 1 foundation is now implemented. Later-phase modules in architecture diagrams remain proposed. Documents that describe proposed modules or commands do not establish that those modules or commands exist.
+- Phase 0 is documentation only; Phase 1 foundation and Phase 2 acquisition are now implemented; a bounded live SEC ingestion/reuse/integrity check is recorded as passed. See docs/phase-2-review.md. Later-phase modules in architecture diagrams remain proposed. Documents that describe proposed modules or commands do not establish that those modules or commands exist.
+- Phase 3 WP3.1 contracts, WP3.2 HTML parsing, WP3.3 table extraction, and WP3.4 Company Facts normalization/selection are implemented. The owner authorized WP3.4 while deferring independent WP3.3 financial adjudication. See [WP3.3 acceptance review](docs/phase-3-wp3.3-acceptance-review.md) and [WP3.4 review](docs/phase-3-wp3.4-review.md). Preserve the unresolved table findings, JPMorgan section-classification limitations, and independent evaluation requirements. Stop for WP3.4 review; do not start WP3.5 without explicit authorization.
 - Each Codex cloud task already has an isolated environment. Use the existing checkout; do not create a Git worktree unless the user explicitly requests one. Use a feature branch or PR when available and appropriate; preserve the current branch and user work when changing it would be disruptive. Do not push or publish without authorization.
 
 ## Before implementation
+
+- Codex leads implementation, tests, debugging, integration, and documentation. Hands-on learning assignments are paused; no code or test is reserved for the owner to write. Preserve useful exercises and tests as regression material.
+- Keep documentation and code comments concise. Complete only the authorized package, report its acceptance evidence, and wait for review before the next package. Do not commit, push, or delete unrelated files without approval.
 
 1. Review the assigned package, its prerequisites, acceptance criteria, affected ADRs, and existing implementation.
 2. Explain the plan: components, files, dependencies, contracts, tradeoffs, and checks. Ask only about decisions that block useful progress and cannot be inferred.
