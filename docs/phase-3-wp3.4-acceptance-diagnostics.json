@@ -1,0 +1,792 @@
+{
+  "commit": "20a03bd6a0d76b77e3bc53fd3fcb2b3215c48139",
+  "code_hashes_match_completion_report": true,
+  "bronze_fetches_verified": 28,
+  "rows": [
+    {
+      "cik": "0000019617",
+      "company": "JPMORGAN CHASE & CO",
+      "raw_observations": 54102,
+      "canonical_facts": 54098,
+      "rejected": [
+        {
+          "pointer": "/facts/ffd/NrrtvMaxAggtOfferingPric/units/USD/2053",
+          "raw": {
+            "end": "2026-06-13",
+            "val": 2000000,
+            "accn": "0001213900-26-068092",
+            "fy": null,
+            "fp": null,
+            "form": "424B2",
+            "filed": "2026-06-12"
+          },
+          "reasons": [
+            "invalid_dates"
+          ]
+        },
+        {
+          "pointer": "/facts/ffd/NrrtvMaxAggtOfferingPric/units/USD/2054",
+          "raw": {
+            "end": "2026-06-13",
+            "val": 5050000,
+            "accn": "0001213900-26-068158",
+            "fy": null,
+            "fp": null,
+            "form": "424B2",
+            "filed": "2026-06-12"
+          },
+          "reasons": [
+            "invalid_dates"
+          ]
+        },
+        {
+          "pointer": "/facts/ffd/NrrtvMaxAggtOfferingPric/units/USD/2055",
+          "raw": {
+            "end": "2026-06-13",
+            "val": 3000000,
+            "accn": "0001213900-26-068360",
+            "fy": null,
+            "fp": null,
+            "form": "424B2",
+            "filed": "2026-06-12"
+          },
+          "reasons": [
+            "invalid_dates"
+          ]
+        },
+        {
+          "pointer": "/facts/ffd/NrrtvMaxAggtOfferingPric/units/USD/2056",
+          "raw": {
+            "end": "2026-06-13",
+            "val": 13704000,
+            "accn": "0001213900-26-068361",
+            "fy": null,
+            "fp": null,
+            "form": "424B2",
+            "filed": "2026-06-12"
+          },
+          "reasons": [
+            "invalid_dates"
+          ]
+        }
+      ],
+      "logical_sha256": "83c3e3b4d2aa98e83b0647d8fc902c585a427b6c002cf5dd8e9157d7661ea902",
+      "deterministic_replay": true,
+      "all_observation_pointers_verified": 54102,
+      "source_definitions": {
+        "revenue": null,
+        "net_income": {
+          "label": "Net Income (Loss) Attributable to Parent",
+          "description": "The portion of profit or loss for the period, net of income taxes, which is attributable to the parent."
+        },
+        "operating_income": null,
+        "total_assets": {
+          "label": "Assets",
+          "description": "Sum of the carrying amounts as of the balance sheet date of all assets that are recognized. Assets are probable future economic benefits obtained or controlled by an entity as a result of past transactions or events."
+        },
+        "total_liabilities": {
+          "label": "Liabilities",
+          "description": "Sum of the carrying amounts as of the balance sheet date of all liabilities that are recognized. Liabilities are probable future sacrifices of economic benefits arising from present obligations of an entity to transfer assets or provide services to other entities in the future."
+        },
+        "stockholders_equity": {
+          "label": "Stockholders' Equity Attributable to Parent",
+          "description": "Total of all stockholders' equity (deficit) items, net of receivables from officers, directors, owners, and affiliates of the entity which are attributable to the parent. The amount of the economic entity's stockholders' equity attributable to the parent excludes the amount of stockholders' equity which is allocable to that ownership interest in subsidiary equity which is not attributable to the parent (noncontrolling interest, minority interest). This excludes temporary equity and is sometimes called permanent equity."
+        },
+        "operating_cash_flow": {
+          "label": "Net Cash Provided by (Used in) Operating Activities",
+          "description": "Amount of cash inflow (outflow) from operating activities, including discontinued operations. Operating activity cash flows include transactions, adjustments, and changes in value not defined as investing or financing activities."
+        }
+      },
+      "metric_status_counts": {
+        "unsupported": 2,
+        "selected": 5
+      },
+      "real_quarter": {
+        "value": "21155000000",
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "filed": "2026-08-06",
+        "accession": "0001628280-26-054343",
+        "pointer": "/facts/us-gaap/NetIncomeLoss/units/USD/240",
+        "source_sha256": "a3b61caba754cb5beb47d15588fc59da0829a442e048fae5805c3d9b7145abba"
+      },
+      "real_ytd": {
+        "value": "37649000000",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "filed": "2026-08-06",
+        "accession": "0001628280-26-054343",
+        "pointer": "/facts/us-gaap/NetIncomeLoss/units/USD/239",
+        "source_sha256": "a3b61caba754cb5beb47d15588fc59da0829a442e048fae5805c3d9b7145abba"
+      },
+      "real_instant": {
+        "value": "5015069000000",
+        "start": "None",
+        "end": "2026-06-30",
+        "filed": "2026-08-06",
+        "accession": "0001628280-26-054343",
+        "pointer": "/facts/us-gaap/Assets/units/USD/205",
+        "source_sha256": "a3b61caba754cb5beb47d15588fc59da0829a442e048fae5805c3d9b7145abba"
+      },
+      "subsequently_reported_period_groups": 297,
+      "changing_value_period_groups": 46,
+      "real_conflicts": [],
+      "historical_metric": "total_assets",
+      "historical_original": {
+        "value": "3386071000000",
+        "start": "None",
+        "end": "2020-12-31",
+        "filed": "2021-02-23",
+        "accession": "0000019617-21-000236",
+        "pointer": "/facts/us-gaap/Assets/units/USD/143",
+        "source_sha256": "a3b61caba754cb5beb47d15588fc59da0829a442e048fae5805c3d9b7145abba"
+      },
+      "historical_latest": {
+        "value": "3384757000000",
+        "start": "None",
+        "end": "2020-12-31",
+        "filed": "2023-02-21",
+        "accession": "0000019617-23-000231",
+        "pointer": "/facts/us-gaap/Assets/units/USD/148",
+        "source_sha256": "a3b61caba754cb5beb47d15588fc59da0829a442e048fae5805c3d9b7145abba"
+      },
+      "cutoff_before_first": "unavailable",
+      "compare_versions": 6,
+      "incompatible_unit_probes": {
+        "EUR": "unavailable",
+        "shares": "unavailable",
+        "USD/shares": "unavailable",
+        "pure": "unavailable"
+      },
+      "injected_ambiguity_reason": [
+        "conflicting_accession_observations"
+      ]
+    },
+    {
+      "cik": "0000320193",
+      "company": "Apple Inc.",
+      "raw_observations": 25135,
+      "canonical_facts": 25135,
+      "rejected": [],
+      "logical_sha256": "ac8d015dcdaa59b545e21956c25a236f091b79c72aa4b0265da176010beb3cde",
+      "deterministic_replay": true,
+      "all_observation_pointers_verified": 25135,
+      "source_definitions": {
+        "revenue": {
+          "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+          "description": "Amount, excluding tax collected from customer, of revenue from satisfaction of performance obligation by transferring promised good or service to customer. Tax collected from customer is tax assessed by governmental authority that is both imposed on and concurrent with specific revenue-producing transaction, including, but not limited to, sales, use, value added and excise."
+        },
+        "net_income": {
+          "label": "Net Income (Loss) Attributable to Parent",
+          "description": "The portion of profit or loss for the period, net of income taxes, which is attributable to the parent."
+        },
+        "operating_income": {
+          "label": "Operating Income (Loss)",
+          "description": "The net result for the period of deducting operating expenses from operating revenues."
+        },
+        "total_assets": {
+          "label": "Assets",
+          "description": "Sum of the carrying amounts as of the balance sheet date of all assets that are recognized. Assets are probable future economic benefits obtained or controlled by an entity as a result of past transactions or events."
+        },
+        "total_liabilities": {
+          "label": "Liabilities",
+          "description": "Sum of the carrying amounts as of the balance sheet date of all liabilities that are recognized. Liabilities are probable future sacrifices of economic benefits arising from present obligations of an entity to transfer assets or provide services to other entities in the future."
+        },
+        "stockholders_equity": {
+          "label": "Stockholders' Equity Attributable to Parent",
+          "description": "Total of all stockholders' equity (deficit) items, net of receivables from officers, directors, owners, and affiliates of the entity which are attributable to the parent. The amount of the economic entity's stockholders' equity attributable to the parent excludes the amount of stockholders' equity which is allocable to that ownership interest in subsidiary equity which is not attributable to the parent (noncontrolling interest, minority interest). This excludes temporary equity and is sometimes called permanent equity."
+        },
+        "operating_cash_flow": {
+          "label": "Net Cash Provided by (Used in) Operating Activities",
+          "description": "Amount of cash inflow (outflow) from operating activities, including discontinued operations. Operating activity cash flows include transactions, adjustments, and changes in value not defined as investing or financing activities."
+        }
+      },
+      "metric_status_counts": {
+        "selected": 7
+      },
+      "real_quarter": {
+        "value": "29789000000",
+        "start": "2026-03-29",
+        "end": "2026-06-27",
+        "filed": "2026-07-31",
+        "accession": "0000320193-26-000020",
+        "pointer": "/facts/us-gaap/NetIncomeLoss/units/USD/337",
+        "source_sha256": "73a86c6aedc31f77cac2ea4df5f80f0b3bd7e6eb58bb4e01444fbedf3afb9c43"
+      },
+      "real_ytd": {
+        "value": "101464000000",
+        "start": "2025-09-28",
+        "end": "2026-06-27",
+        "filed": "2026-07-31",
+        "accession": "0000320193-26-000020",
+        "pointer": "/facts/us-gaap/NetIncomeLoss/units/USD/336",
+        "source_sha256": "73a86c6aedc31f77cac2ea4df5f80f0b3bd7e6eb58bb4e01444fbedf3afb9c43"
+      },
+      "real_instant": {
+        "value": "383266000000",
+        "start": "None",
+        "end": "2026-06-27",
+        "filed": "2026-07-31",
+        "accession": "0000320193-26-000020",
+        "pointer": "/facts/us-gaap/Assets/units/USD/145",
+        "source_sha256": "73a86c6aedc31f77cac2ea4df5f80f0b3bd7e6eb58bb4e01444fbedf3afb9c43"
+      },
+      "subsequently_reported_period_groups": 392,
+      "changing_value_period_groups": 23,
+      "real_conflicts": [],
+      "historical_metric": "operating_cash_flow",
+      "historical_original": {
+        "value": "63598000000",
+        "start": "2016-09-25",
+        "end": "2017-09-30",
+        "filed": "2017-11-03",
+        "accession": "0000320193-17-000070",
+        "pointer": "/facts/us-gaap/NetCashProvidedByUsedInOperatingActivities/units/USD/59",
+        "source_sha256": "73a86c6aedc31f77cac2ea4df5f80f0b3bd7e6eb58bb4e01444fbedf3afb9c43"
+      },
+      "historical_latest": {
+        "value": "64225000000",
+        "start": "2016-09-25",
+        "end": "2017-09-30",
+        "filed": "2019-10-31",
+        "accession": "0000320193-19-000119",
+        "pointer": "/facts/us-gaap/NetCashProvidedByUsedInOperatingActivities/units/USD/61",
+        "source_sha256": "73a86c6aedc31f77cac2ea4df5f80f0b3bd7e6eb58bb4e01444fbedf3afb9c43"
+      },
+      "cutoff_before_first": "unavailable",
+      "compare_versions": 3,
+      "incompatible_unit_probes": {
+        "EUR": "unavailable",
+        "shares": "unavailable",
+        "USD/shares": "unavailable",
+        "pure": "unavailable"
+      },
+      "injected_ambiguity_reason": [
+        "conflicting_accession_observations"
+      ]
+    },
+    {
+      "cik": "0000789019",
+      "company": "MICROSOFT CORPORATION",
+      "raw_observations": 32671,
+      "canonical_facts": 32671,
+      "rejected": [],
+      "logical_sha256": "f5fe74f5259a8fe71c14671ce3dec0df647c860b6ae6044a5a4725648ec805f2",
+      "deterministic_replay": true,
+      "all_observation_pointers_verified": 32671,
+      "source_definitions": {
+        "revenue": {
+          "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+          "description": "Amount, excluding tax collected from customer, of revenue from satisfaction of performance obligation by transferring promised good or service to customer. Tax collected from customer is tax assessed by governmental authority that is both imposed on and concurrent with specific revenue-producing transaction, including, but not limited to, sales, use, value added and excise."
+        },
+        "net_income": {
+          "label": "Net Income (Loss) Attributable to Parent",
+          "description": "The portion of profit or loss for the period, net of income taxes, which is attributable to the parent."
+        },
+        "operating_income": {
+          "label": "Operating Income (Loss)",
+          "description": "The net result for the period of deducting operating expenses from operating revenues."
+        },
+        "total_assets": {
+          "label": "Assets",
+          "description": "Sum of the carrying amounts as of the balance sheet date of all assets that are recognized. Assets are probable future economic benefits obtained or controlled by an entity as a result of past transactions or events."
+        },
+        "total_liabilities": {
+          "label": "Liabilities",
+          "description": "Sum of the carrying amounts as of the balance sheet date of all liabilities that are recognized. Liabilities are probable future sacrifices of economic benefits arising from present obligations of an entity to transfer assets or provide services to other entities in the future."
+        },
+        "stockholders_equity": {
+          "label": "Stockholders' Equity Attributable to Parent",
+          "description": "Total of all stockholders' equity (deficit) items, net of receivables from officers, directors, owners, and affiliates of the entity which are attributable to the parent. The amount of the economic entity's stockholders' equity attributable to the parent excludes the amount of stockholders' equity which is allocable to that ownership interest in subsidiary equity which is not attributable to the parent (noncontrolling interest, minority interest). This excludes temporary equity and is sometimes called permanent equity."
+        },
+        "operating_cash_flow": {
+          "label": "Net Cash Provided by (Used in) Operating Activities",
+          "description": "Amount of cash inflow (outflow) from operating activities, including discontinued operations. Operating activity cash flows include transactions, adjustments, and changes in value not defined as investing or financing activities."
+        }
+      },
+      "metric_status_counts": {
+        "selected": 7
+      },
+      "real_quarter": {
+        "value": "31778000000",
+        "start": "2026-01-01",
+        "end": "2026-03-31",
+        "filed": "2026-04-29",
+        "accession": "0001193125-26-191507",
+        "pointer": "/facts/us-gaap/NetIncomeLoss/units/USD/338",
+        "source_sha256": "f8aae2965b20ad0df44bdf7ccbedf797d275b6b8dc030154a7a311361bb7246f"
+      },
+      "real_ytd": {
+        "value": "97983000000",
+        "start": "2025-07-01",
+        "end": "2026-03-31",
+        "filed": "2026-04-29",
+        "accession": "0001193125-26-191507",
+        "pointer": "/facts/us-gaap/NetIncomeLoss/units/USD/337",
+        "source_sha256": "f8aae2965b20ad0df44bdf7ccbedf797d275b6b8dc030154a7a311361bb7246f"
+      },
+      "real_instant": {
+        "value": "758376000000",
+        "start": "None",
+        "end": "2026-06-30",
+        "filed": "2026-07-29",
+        "accession": "0001193125-26-323660",
+        "pointer": "/facts/us-gaap/Assets/units/USD/141",
+        "source_sha256": "f8aae2965b20ad0df44bdf7ccbedf797d275b6b8dc030154a7a311361bb7246f"
+      },
+      "subsequently_reported_period_groups": 425,
+      "changing_value_period_groups": 30,
+      "real_conflicts": [],
+      "historical_metric": "net_income",
+      "historical_original": {
+        "value": "21204000000",
+        "start": "2016-07-01",
+        "end": "2017-06-30",
+        "filed": "2017-08-02",
+        "accession": "0001564590-17-014900",
+        "pointer": "/facts/us-gaap/NetIncomeLoss/units/USD/203",
+        "source_sha256": "f8aae2965b20ad0df44bdf7ccbedf797d275b6b8dc030154a7a311361bb7246f"
+      },
+      "historical_latest": {
+        "value": "25489000000",
+        "start": "2016-07-01",
+        "end": "2017-06-30",
+        "filed": "2019-08-01",
+        "accession": "0001564590-19-027952",
+        "pointer": "/facts/us-gaap/NetIncomeLoss/units/USD/205",
+        "source_sha256": "f8aae2965b20ad0df44bdf7ccbedf797d275b6b8dc030154a7a311361bb7246f"
+      },
+      "cutoff_before_first": "unavailable",
+      "compare_versions": 3,
+      "incompatible_unit_probes": {
+        "EUR": "unavailable",
+        "shares": "unavailable",
+        "USD/shares": "unavailable",
+        "pure": "unavailable"
+      },
+      "injected_ambiguity_reason": [
+        "conflicting_accession_observations"
+      ]
+    },
+    {
+      "cik": "0001018724",
+      "company": "AMAZON COM INC",
+      "raw_observations": 29761,
+      "canonical_facts": 29761,
+      "rejected": [],
+      "logical_sha256": "6b6174ae8fc46a40fc74a9f23da6de8aa03bfb9d85253d8163e098741e495f78",
+      "deterministic_replay": true,
+      "all_observation_pointers_verified": 29761,
+      "source_definitions": {
+        "revenue": {
+          "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+          "description": "Amount, excluding tax collected from customer, of revenue from satisfaction of performance obligation by transferring promised good or service to customer. Tax collected from customer is tax assessed by governmental authority that is both imposed on and concurrent with specific revenue-producing transaction, including, but not limited to, sales, use, value added and excise."
+        },
+        "net_income": {
+          "label": "Net Income (Loss) Attributable to Parent",
+          "description": "The portion of profit or loss for the period, net of income taxes, which is attributable to the parent."
+        },
+        "operating_income": {
+          "label": "Operating Income (Loss)",
+          "description": "The net result for the period of deducting operating expenses from operating revenues."
+        },
+        "total_assets": {
+          "label": "Assets",
+          "description": "Sum of the carrying amounts as of the balance sheet date of all assets that are recognized. Assets are probable future economic benefits obtained or controlled by an entity as a result of past transactions or events."
+        },
+        "total_liabilities": null,
+        "stockholders_equity": {
+          "label": "Stockholders' Equity Attributable to Parent",
+          "description": "Total of all stockholders' equity (deficit) items, net of receivables from officers, directors, owners, and affiliates of the entity which are attributable to the parent. The amount of the economic entity's stockholders' equity attributable to the parent excludes the amount of stockholders' equity which is allocable to that ownership interest in subsidiary equity which is not attributable to the parent (noncontrolling interest, minority interest). This excludes temporary equity and is sometimes called permanent equity."
+        },
+        "operating_cash_flow": {
+          "label": "Net Cash Provided by (Used in) Operating Activities",
+          "description": "Amount of cash inflow (outflow) from operating activities, including discontinued operations. Operating activity cash flows include transactions, adjustments, and changes in value not defined as investing or financing activities."
+        }
+      },
+      "metric_status_counts": {
+        "selected": 6,
+        "unsupported": 1
+      },
+      "real_quarter": {
+        "value": "62647000000",
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "filed": "2026-07-31",
+        "accession": "0001018724-26-000026",
+        "pointer": "/facts/us-gaap/NetIncomeLoss/units/USD/421",
+        "source_sha256": "7549fb68446eee40e1f50a166fa06b2d2ee6349e07c8553a4828757e032d3cd4"
+      },
+      "real_ytd": {
+        "value": "92902000000",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "filed": "2026-07-31",
+        "accession": "0001018724-26-000026",
+        "pointer": "/facts/us-gaap/NetIncomeLoss/units/USD/420",
+        "source_sha256": "7549fb68446eee40e1f50a166fa06b2d2ee6349e07c8553a4828757e032d3cd4"
+      },
+      "real_instant": {
+        "value": "1095689000000",
+        "start": "None",
+        "end": "2026-06-30",
+        "filed": "2026-07-31",
+        "accession": "0001018724-26-000026",
+        "pointer": "/facts/us-gaap/Assets/units/USD/148",
+        "source_sha256": "7549fb68446eee40e1f50a166fa06b2d2ee6349e07c8553a4828757e032d3cd4"
+      },
+      "subsequently_reported_period_groups": 522,
+      "changing_value_period_groups": 28,
+      "real_conflicts": [],
+      "historical_metric": "operating_cash_flow",
+      "historical_original": {
+        "value": "18434000000",
+        "start": "2017-01-01",
+        "end": "2017-12-31",
+        "filed": "2018-02-02",
+        "accession": "0001018724-18-000005",
+        "pointer": "/facts/us-gaap/NetCashProvidedByUsedInOperatingActivities/units/USD/175",
+        "source_sha256": "7549fb68446eee40e1f50a166fa06b2d2ee6349e07c8553a4828757e032d3cd4"
+      },
+      "historical_latest": {
+        "value": "18365000000",
+        "start": "2017-01-01",
+        "end": "2017-12-31",
+        "filed": "2020-01-31",
+        "accession": "0001018724-20-000004",
+        "pointer": "/facts/us-gaap/NetCashProvidedByUsedInOperatingActivities/units/USD/177",
+        "source_sha256": "7549fb68446eee40e1f50a166fa06b2d2ee6349e07c8553a4828757e032d3cd4"
+      },
+      "cutoff_before_first": "unavailable",
+      "compare_versions": 3,
+      "incompatible_unit_probes": {
+        "EUR": "unavailable",
+        "shares": "unavailable",
+        "USD/shares": "unavailable",
+        "pure": "unavailable"
+      },
+      "injected_ambiguity_reason": [
+        "conflicting_accession_observations"
+      ]
+    },
+    {
+      "cik": "0001652044",
+      "company": "Alphabet Inc.",
+      "raw_observations": 20907,
+      "canonical_facts": 20907,
+      "rejected": [],
+      "logical_sha256": "31a805e76143a6bd2ad34acec8d042e568fb3ba1f017b650be3a3267ad31e3ae",
+      "deterministic_replay": true,
+      "all_observation_pointers_verified": 20907,
+      "source_definitions": {
+        "revenue": {
+          "label": "Revenue from Contract with Customer, Excluding Assessed Tax",
+          "description": "Amount, excluding tax collected from customer, of revenue from satisfaction of performance obligation by transferring promised good or service to customer. Tax collected from customer is tax assessed by governmental authority that is both imposed on and concurrent with specific revenue-producing transaction, including, but not limited to, sales, use, value added and excise."
+        },
+        "net_income": {
+          "label": "Net Income (Loss) Attributable to Parent",
+          "description": "The portion of profit or loss for the period, net of income taxes, which is attributable to the parent."
+        },
+        "operating_income": {
+          "label": "Operating Income (Loss)",
+          "description": "The net result for the period of deducting operating expenses from operating revenues."
+        },
+        "total_assets": {
+          "label": "Assets",
+          "description": "Sum of the carrying amounts as of the balance sheet date of all assets that are recognized. Assets are probable future economic benefits obtained or controlled by an entity as a result of past transactions or events."
+        },
+        "total_liabilities": {
+          "label": "Liabilities",
+          "description": "Sum of the carrying amounts as of the balance sheet date of all liabilities that are recognized. Liabilities are probable future sacrifices of economic benefits arising from present obligations of an entity to transfer assets or provide services to other entities in the future."
+        },
+        "stockholders_equity": {
+          "label": "Stockholders' Equity Attributable to Parent",
+          "description": "Total of all stockholders' equity (deficit) items, net of receivables from officers, directors, owners, and affiliates of the entity which are attributable to the parent. The amount of the economic entity's stockholders' equity attributable to the parent excludes the amount of stockholders' equity which is allocable to that ownership interest in subsidiary equity which is not attributable to the parent (noncontrolling interest, minority interest). This excludes temporary equity and is sometimes called permanent equity."
+        },
+        "operating_cash_flow": {
+          "label": "Net Cash Provided by (Used in) Operating Activities",
+          "description": "Amount of cash inflow (outflow) from operating activities, including discontinued operations. Operating activity cash flows include transactions, adjustments, and changes in value not defined as investing or financing activities."
+        }
+      },
+      "metric_status_counts": {
+        "unavailable": 1,
+        "selected": 6
+      },
+      "real_quarter": {
+        "value": "112193000000",
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "filed": "2026-07-23",
+        "accession": "0001652044-26-000071",
+        "pointer": "/facts/us-gaap/NetIncomeLoss/units/USD/151",
+        "source_sha256": "a017f26ee88cb4a639d1c1ddb06d53b4afe22f0ac89cabec7cd67c88919fe1c5"
+      },
+      "real_ytd": {
+        "value": "174771000000",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "filed": "2026-07-23",
+        "accession": "0001652044-26-000071",
+        "pointer": "/facts/us-gaap/NetIncomeLoss/units/USD/150",
+        "source_sha256": "a017f26ee88cb4a639d1c1ddb06d53b4afe22f0ac89cabec7cd67c88919fe1c5"
+      },
+      "real_instant": {
+        "value": "921983000000",
+        "start": "None",
+        "end": "2026-06-30",
+        "filed": "2026-07-23",
+        "accession": "0001652044-26-000071",
+        "pointer": "/facts/us-gaap/Assets/units/USD/89",
+        "source_sha256": "a017f26ee88cb4a639d1c1ddb06d53b4afe22f0ac89cabec7cd67c88919fe1c5"
+      },
+      "subsequently_reported_period_groups": 260,
+      "changing_value_period_groups": 11,
+      "real_conflicts": [],
+      "historical_metric": "operating_income",
+      "historical_original": {
+        "value": "26321000000",
+        "start": "2018-01-01",
+        "end": "2018-12-31",
+        "filed": "2019-02-05",
+        "accession": "0001652044-19-000004",
+        "pointer": "/facts/us-gaap/OperatingIncomeLoss/units/USD/54",
+        "source_sha256": "a017f26ee88cb4a639d1c1ddb06d53b4afe22f0ac89cabec7cd67c88919fe1c5"
+      },
+      "historical_latest": {
+        "value": "27524000000",
+        "start": "2018-01-01",
+        "end": "2018-12-31",
+        "filed": "2021-02-03",
+        "accession": "0001652044-21-000010",
+        "pointer": "/facts/us-gaap/OperatingIncomeLoss/units/USD/56",
+        "source_sha256": "a017f26ee88cb4a639d1c1ddb06d53b4afe22f0ac89cabec7cd67c88919fe1c5"
+      },
+      "cutoff_before_first": "unavailable",
+      "compare_versions": 3,
+      "incompatible_unit_probes": {
+        "EUR": "unavailable",
+        "shares": "unavailable",
+        "USD/shares": "unavailable",
+        "pure": "unavailable"
+      },
+      "injected_ambiguity_reason": [
+        "conflicting_accession_observations"
+      ]
+    }
+  ],
+  "metric_definitions": [
+    {
+      "schema_version": "canonical-1",
+      "pipeline_version": "xbrl-1",
+      "id": "metric:48a2b9cdb62b59bf0e9e8d121a1174b489bb04ed78c00b619440233d3f9bca8b",
+      "metric_name": "revenue",
+      "metric_version": "reported-metrics-1",
+      "description": "Revenue from customer contracts excluding assessed tax; not total bank revenue",
+      "mapping_status": "supported",
+      "concepts": [
+        {
+          "taxonomy": "us-gaap",
+          "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "priority": 0
+        }
+      ],
+      "period_kind": "duration",
+      "unit": "USD",
+      "context_requirement": "company_facts_entity",
+      "selection_policy_version": "fact-selection-1",
+      "formula_id": null,
+      "formula_version": null,
+      "input_metric_ids": [],
+      "sign_policy": "as_reported",
+      "denominator_policy": "not_applicable",
+      "rounding_policy": "none",
+      "limitations": [
+        "Company Facts entity scope; XBRL dimensions remain unknown",
+        "Reported concept only; no cross-concept or cross-issuer equivalence implied"
+      ]
+    },
+    {
+      "schema_version": "canonical-1",
+      "pipeline_version": "xbrl-1",
+      "id": "metric:0866031b79735b200d1d7341805b22c0fd3ff8311e7487aa5eaec8a2196860e2",
+      "metric_name": "net_income",
+      "metric_version": "reported-metrics-1",
+      "description": "Net income attributable to parent",
+      "mapping_status": "supported",
+      "concepts": [
+        {
+          "taxonomy": "us-gaap",
+          "concept": "NetIncomeLoss",
+          "priority": 0
+        }
+      ],
+      "period_kind": "duration",
+      "unit": "USD",
+      "context_requirement": "company_facts_entity",
+      "selection_policy_version": "fact-selection-1",
+      "formula_id": null,
+      "formula_version": null,
+      "input_metric_ids": [],
+      "sign_policy": "as_reported",
+      "denominator_policy": "not_applicable",
+      "rounding_policy": "none",
+      "limitations": [
+        "Company Facts entity scope; XBRL dimensions remain unknown",
+        "Reported concept only; no cross-concept or cross-issuer equivalence implied"
+      ]
+    },
+    {
+      "schema_version": "canonical-1",
+      "pipeline_version": "xbrl-1",
+      "id": "metric:26cbadc4180e95303dcd4e9821e58fdef89582930c26d037a4b3e83d4ea00e17",
+      "metric_name": "operating_income",
+      "metric_version": "reported-metrics-1",
+      "description": "Operating income or loss",
+      "mapping_status": "supported",
+      "concepts": [
+        {
+          "taxonomy": "us-gaap",
+          "concept": "OperatingIncomeLoss",
+          "priority": 0
+        }
+      ],
+      "period_kind": "duration",
+      "unit": "USD",
+      "context_requirement": "company_facts_entity",
+      "selection_policy_version": "fact-selection-1",
+      "formula_id": null,
+      "formula_version": null,
+      "input_metric_ids": [],
+      "sign_policy": "as_reported",
+      "denominator_policy": "not_applicable",
+      "rounding_policy": "none",
+      "limitations": [
+        "Company Facts entity scope; XBRL dimensions remain unknown",
+        "Reported concept only; no cross-concept or cross-issuer equivalence implied"
+      ]
+    },
+    {
+      "schema_version": "canonical-1",
+      "pipeline_version": "xbrl-1",
+      "id": "metric:b3d09c4add0acdc88b2ae2b50f44ec963f0f5ec9f52731a98c1c073fc6a2d6b3",
+      "metric_name": "total_assets",
+      "metric_version": "reported-metrics-1",
+      "description": "Total recognized assets",
+      "mapping_status": "supported",
+      "concepts": [
+        {
+          "taxonomy": "us-gaap",
+          "concept": "Assets",
+          "priority": 0
+        }
+      ],
+      "period_kind": "instant",
+      "unit": "USD",
+      "context_requirement": "company_facts_entity",
+      "selection_policy_version": "fact-selection-1",
+      "formula_id": null,
+      "formula_version": null,
+      "input_metric_ids": [],
+      "sign_policy": "as_reported",
+      "denominator_policy": "not_applicable",
+      "rounding_policy": "none",
+      "limitations": [
+        "Company Facts entity scope; XBRL dimensions remain unknown",
+        "Reported concept only; no cross-concept or cross-issuer equivalence implied"
+      ]
+    },
+    {
+      "schema_version": "canonical-1",
+      "pipeline_version": "xbrl-1",
+      "id": "metric:2a91bdc6a89a33a53994aeb02e3aec7a7dd3e75d678e66db13e862e9bc6f5272",
+      "metric_name": "total_liabilities",
+      "metric_version": "reported-metrics-1",
+      "description": "Total recognized liabilities",
+      "mapping_status": "supported",
+      "concepts": [
+        {
+          "taxonomy": "us-gaap",
+          "concept": "Liabilities",
+          "priority": 0
+        }
+      ],
+      "period_kind": "instant",
+      "unit": "USD",
+      "context_requirement": "company_facts_entity",
+      "selection_policy_version": "fact-selection-1",
+      "formula_id": null,
+      "formula_version": null,
+      "input_metric_ids": [],
+      "sign_policy": "as_reported",
+      "denominator_policy": "not_applicable",
+      "rounding_policy": "none",
+      "limitations": [
+        "Company Facts entity scope; XBRL dimensions remain unknown",
+        "Reported concept only; no cross-concept or cross-issuer equivalence implied"
+      ]
+    },
+    {
+      "schema_version": "canonical-1",
+      "pipeline_version": "xbrl-1",
+      "id": "metric:a58dbf00683dfee799e9be0a002df9f1df5c82706f2ff1252ce8d32b5761b3da",
+      "metric_name": "stockholders_equity",
+      "metric_version": "reported-metrics-1",
+      "description": "Permanent equity attributable to parent, excluding noncontrolling interests",
+      "mapping_status": "supported",
+      "concepts": [
+        {
+          "taxonomy": "us-gaap",
+          "concept": "StockholdersEquity",
+          "priority": 0
+        }
+      ],
+      "period_kind": "instant",
+      "unit": "USD",
+      "context_requirement": "company_facts_entity",
+      "selection_policy_version": "fact-selection-1",
+      "formula_id": null,
+      "formula_version": null,
+      "input_metric_ids": [],
+      "sign_policy": "as_reported",
+      "denominator_policy": "not_applicable",
+      "rounding_policy": "none",
+      "limitations": [
+        "Company Facts entity scope; XBRL dimensions remain unknown",
+        "Reported concept only; no cross-concept or cross-issuer equivalence implied"
+      ]
+    },
+    {
+      "schema_version": "canonical-1",
+      "pipeline_version": "xbrl-1",
+      "id": "metric:ab21cafecd5e5976be9c96d3c288542e90243f8b159072201192694adc4c2379",
+      "metric_name": "operating_cash_flow",
+      "metric_version": "reported-metrics-1",
+      "description": "Operating cash flow including discontinued operations",
+      "mapping_status": "supported",
+      "concepts": [
+        {
+          "taxonomy": "us-gaap",
+          "concept": "NetCashProvidedByUsedInOperatingActivities",
+          "priority": 0
+        }
+      ],
+      "period_kind": "duration",
+      "unit": "USD",
+      "context_requirement": "company_facts_entity",
+      "selection_policy_version": "fact-selection-1",
+      "formula_id": null,
+      "formula_version": null,
+      "input_metric_ids": [],
+      "sign_policy": "as_reported",
+      "denominator_policy": "not_applicable",
+      "rounding_policy": "none",
+      "limitations": [
+        "Company Facts entity scope; XBRL dimensions remain unknown",
+        "Reported concept only; no cross-concept or cross-issuer equivalence implied"
+      ]
+    }
+  ],
+  "human_independent_accuracy_verification": "not_performed",
+  "bronze_unchanged": true,
+  "all_checks_passed": true
+}
